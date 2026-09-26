@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "木材 · Piroliswiss",
-    "description": "Piroliswiss 用于生产木炭的硬木技术资料：Curupaú（Anadenanthera colubrina）、Soto 和 Cuchi。"
+    "description": "Piroliswiss 用于生产木炭的硬木技术资料：Curupaú（Anadenanthera colubrina）和 Quebracho Colorado。"
   },
   "intro": {
     "label": "木材",
@@ -254,12 +254,8 @@
       "legend": "标 * 的数据来自来源 2。单位沿用原出版物，括号内为国际单位制换算值。"
     },
     {
-      "id": "soto",
-      "name": "Soto"
-    },
-    {
-      "id": "cuchi",
-      "name": "Cuchi"
+      "id": "quebracho",
+      "name": "Quebracho Colorado"
     }
   ],
   "cta": {

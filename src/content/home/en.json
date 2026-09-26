@@ -7,7 +7,7 @@
     "img": "hero",
     "alt": "Freshly discharged hardwood charcoal piled at the Piroliswiss production site under open sky",
     "title": "Hardwood charcoal from recovered forest residue.",
-    "sub": "Curupaú, Soto and Cuchi hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.",
+    "sub": "Curupaú and Quebracho Colorado hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.",
     "secondary": "See the process"
   },
   "plant": {
@@ -17,7 +17,7 @@
     "facts": [
       "16 metal retorts per plant",
       "80–⁠85 % fixed carbon",
-      "Curupaú, Soto and Cuchi",
+      "Curupaú and Quebracho Colorado",
       "Licensed forest residue only"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
-        "desc": "Our main product is a high-quality charcoal made from selected hardwoods such as Curupaú, Soto and Cuchi, known for their high density, strength and excellent energy yield.",
+        "desc": "Our main product is a high-quality charcoal made from selected hardwoods such as Curupaú and Quebracho Colorado, known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
           "High fixed carbon content: 80–⁠85 %",
@@ -111,7 +111,7 @@
           },
           {
             "k": "Species",
-            "v": "Curupaú, Soto, Cuchi"
+            "v": "Curupaú, Quebracho Colorado"
           },
           {
             "k": "Formats",

@@ -7,7 +7,7 @@
     "img": "hero",
     "alt": "Piroliswiss 生产场地露天堆放的刚出炉硬木木炭",
     "title": "以回收林业剩余物生产的硬木木炭。",
-    "sub": "Curupaú、Soto 和 Cuchi 硬木来自合法许可的土地用途变更，经工业金属干馏炉炭化，供应钢铁冶炼、农业和高端烧烤市场。",
+    "sub": "Curupaú 和 Quebracho Colorado 硬木来自合法许可的土地用途变更，经工业金属干馏炉炭化，供应钢铁冶炼、农业和高端烧烤市场。",
     "secondary": "了解工艺"
   },
   "plant": {
@@ -17,7 +17,7 @@
     "facts": [
       "每座工厂 16 台金属干馏炉",
       "固定碳 80–⁠85%",
-      "Curupaú、Soto、Cuchi",
+      "Curupaú、Quebracho Colorado",
       "仅限合法许可的林业剩余物"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "高品质块状木炭",
         "tag": "核心产品",
         "title": "高品质块状木炭",
-        "desc": "我们的主要产品是以精选硬木（如 Curupaú、Soto 和 Cuchi）制成的高品质木炭，这些树种以高密度、高强度和出色的能量产出著称。",
+        "desc": "我们的主要产品是以精选硬木（如 Curupaú 和 Quebracho Colorado）制成的高品质木炭，这些树种以高密度、高强度和出色的能量产出著称。",
         "featLabel": "主要特点",
         "features": [
           "固定碳含量高：80–⁠85%",
@@ -111,7 +111,7 @@
           },
           {
             "k": "树种",
-            "v": "Curupaú、Soto、Cuchi"
+            "v": "Curupaú、Quebracho Colorado"
           },
           {
             "k": "包装形式",

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Madeiras · Piroliswiss",
-    "description": "Fichas técnicas das madeiras duras com que a Piroliswiss produz carvão vegetal: Curupaú (Anadenanthera colubrina), Soto e Cuchi."
+    "description": "Fichas técnicas das madeiras duras com que a Piroliswiss produz carvão vegetal: Curupaú (Anadenanthera colubrina) e Quebracho Colorado."
   },
   "intro": {
     "label": "Madeiras",
@@ -254,12 +254,8 @@
       "legend": "Os dados marcados com * vêm da fonte 2. Unidades da publicação original; entre parênteses, o equivalente no Sistema Internacional."
     },
     {
-      "id": "soto",
-      "name": "Soto"
-    },
-    {
-      "id": "cuchi",
-      "name": "Cuchi"
+      "id": "quebracho",
+      "name": "Quebracho Colorado"
     }
   ],
   "cta": {

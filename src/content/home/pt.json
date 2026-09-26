@@ -7,7 +7,7 @@
     "img": "hero",
     "alt": "Carvão de madeira dura recém-descarregado, empilhado a céu aberto no local de produção da Piroliswiss",
     "title": "Carvão de madeira dura a partir de resíduo florestal recuperado.",
-    "sub": "Curupaú, Soto e Cuchi de mudança de uso do solo licenciada, carbonizados em retortas metálicas industriais para siderurgia, agricultura e churrasco premium.",
+    "sub": "Curupaú e Quebracho Colorado de mudança de uso do solo licenciada, carbonizados em retortas metálicas industriais para siderurgia, agricultura e churrasco premium.",
     "secondary": "Ver o processo"
   },
   "plant": {
@@ -17,7 +17,7 @@
     "facts": [
       "16 retortas metálicas por planta",
       "80–⁠85% de carbono fixo",
-      "Curupaú, Soto e Cuchi",
+      "Curupaú e Quebracho Colorado",
       "Somente resíduo florestal licenciado"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "Carvão vegetal premium",
         "tag": "Produto principal",
         "title": "Carvão vegetal premium",
-        "desc": "Nosso produto principal é um carvão vegetal de alta qualidade feito com madeiras duras selecionadas como Curupaú, Soto e Cuchi, conhecidas pela alta densidade, resistência e excelente rendimento energético.",
+        "desc": "Nosso produto principal é um carvão vegetal de alta qualidade feito com madeiras duras selecionadas como Curupaú e Quebracho Colorado, conhecidas pela alta densidade, resistência e excelente rendimento energético.",
         "featLabel": "Características principais",
         "features": [
           "Alto teor de carbono fixo: 80–⁠85%",
@@ -111,7 +111,7 @@
           },
           {
             "k": "Espécies",
-            "v": "Curupaú, Soto, Cuchi"
+            "v": "Curupaú, Quebracho Colorado"
           },
           {
             "k": "Formatos",

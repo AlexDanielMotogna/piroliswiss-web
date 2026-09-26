@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Woods · Piroliswiss",
-    "description": "Technical datasheets of the hardwoods Piroliswiss turns into charcoal: Curupaú (Anadenanthera colubrina), Soto and Cuchi."
+    "description": "Technical datasheets of the hardwoods Piroliswiss turns into charcoal: Curupaú (Anadenanthera colubrina) and Quebracho Colorado."
   },
   "intro": {
     "label": "Woods",
@@ -254,12 +254,8 @@
       "legend": "Values marked * come from source 2. Units as in the original publication; SI equivalents in brackets."
     },
     {
-      "id": "soto",
-      "name": "Soto"
-    },
-    {
-      "id": "cuchi",
-      "name": "Cuchi"
+      "id": "quebracho",
+      "name": "Quebracho Colorado"
     }
   ],
   "cta": {
