@@ -12,32 +12,17 @@
   },
   "plant": {
     "label": "Planta 01 · Santa Cruz de la Sierra, Bolivia",
-    "status": "En desarrollo · valores proyectados"
+    "status": "En desarrollo · valores proyectados",
+    "figure": "1.800",
+    "unit": "t / mes",
+    "figureLabel": "Capacidad proyectada de carbón por planta",
+    "facts": [
+      "16 retortas metálicas por planta",
+      "80–⁠85 % de carbono fijo",
+      "Curupaú, Soto y Cuchi",
+      "Solo residuo forestal autorizado"
+    ]
   },
-  "specs": [
-    {
-      "label": "Carbono fijo",
-      "v": "80–⁠85",
-      "unit": "%"
-    },
-    {
-      "label": "Especies",
-      "v": "Curupaú · Soto · Cuchi"
-    },
-    {
-      "label": "Retortas por planta",
-      "v": "16"
-    },
-    {
-      "label": "Capacidad proyectada por planta",
-      "v": "+1.800",
-      "unit": "t / mes"
-    },
-    {
-      "label": "Materia prima",
-      "v": "Solo residuo autorizado"
-    }
-  ],
   "problems": {
     "label": "Los problemas",
     "title": "Se quema buena madera dura en el campo mientras la industria y el agro pagan más por menos.",

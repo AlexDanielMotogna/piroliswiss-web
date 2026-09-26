@@ -12,32 +12,17 @@
   },
   "plant": {
     "label": "Planta 01 · Santa Cruz de la Sierra, Bolívia",
-    "status": "Em desenvolvimento · valores projetados"
+    "status": "Em desenvolvimento · valores projetados",
+    "figure": "1.800",
+    "unit": "t / mês",
+    "figureLabel": "Capacidade projetada de carvão por planta",
+    "facts": [
+      "16 retortas metálicas por planta",
+      "80–⁠85% de carbono fixo",
+      "Curupaú, Soto e Cuchi",
+      "Somente resíduo florestal licenciado"
+    ]
   },
-  "specs": [
-    {
-      "label": "Carbono fixo",
-      "v": "80–⁠85",
-      "unit": "%"
-    },
-    {
-      "label": "Espécies",
-      "v": "Curupaú · Soto · Cuchi"
-    },
-    {
-      "label": "Retortas por planta",
-      "v": "16"
-    },
-    {
-      "label": "Capacidade projetada por planta",
-      "v": "+1.800",
-      "unit": "t / mês"
-    },
-    {
-      "label": "Matéria-prima",
-      "v": "Somente resíduo licenciado"
-    }
-  ],
   "problems": {
     "label": "Os problemas",
     "title": "Boa madeira dura é queimada no campo enquanto a indústria e o agro pagam mais por menos.",

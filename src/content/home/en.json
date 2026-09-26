@@ -12,32 +12,17 @@
   },
   "plant": {
     "label": "Plant 01 · Santa Cruz de la Sierra, Bolivia",
-    "status": "In development · projected values"
+    "status": "In development · projected values",
+    "figure": "1,800",
+    "unit": "t / month",
+    "figureLabel": "Projected charcoal capacity per plant",
+    "facts": [
+      "16 metal retorts per plant",
+      "80–⁠85 % fixed carbon",
+      "Curupaú, Soto and Cuchi",
+      "Licensed forest residue only"
+    ]
   },
-  "specs": [
-    {
-      "label": "Fixed carbon",
-      "v": "80–⁠85",
-      "unit": "%"
-    },
-    {
-      "label": "Species",
-      "v": "Curupaú · Soto · Cuchi"
-    },
-    {
-      "label": "Retorts per plant",
-      "v": "16"
-    },
-    {
-      "label": "Projected capacity per plant",
-      "v": "+1,800",
-      "unit": "t / month"
-    },
-    {
-      "label": "Feedstock",
-      "v": "Licensed residue only"
-    }
-  ],
   "problems": {
     "label": "The problems",
     "title": "Good hardwood is burned in the field while industry and farms pay more for less.",

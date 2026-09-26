@@ -3,23 +3,18 @@ import type { Home } from '../lib/types';
 
 interface Props {
   plant: Home['plant'];
-  specs: Home['specs'];
 }
-const { plant, specs } = Astro.props;
+const { plant: p } = Astro.props;
 ---
 <div class="specs">
-  <div class="wrap">
-    <div class="plant-head">
-      <span class="plant-id">{plant.label}</span>
-      <span class="plant-status">{plant.status}</span>
+  <div class="wrap plant">
+    <div class="plant-main">
+      <p class="plant-id">{p.label}<span class="plant-status">{p.status}</span></p>
+      <p class="plant-figure"><span class="plus">+</span>{p.figure}<span class="plant-unit">{p.unit}</span></p>
+      <p class="plant-caption">{p.figureLabel}</p>
     </div>
-    <div class="spec-row">
-      {specs.map((s) => (
-        <div class="spec">
-          <span class="label">{s.label}</span>
-          <span class="v">{s.v}{s.unit && <Fragment>{' '}<small>{s.unit}</small></Fragment>}</span>
-        </div>
-      ))}
-    </div>
+    <ul class="plant-facts">
+      {p.facts.map((f) => <li>{f}</li>)}
+    </ul>
   </div>
 </div>
