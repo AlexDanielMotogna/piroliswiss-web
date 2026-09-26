@@ -283,8 +283,8 @@
     "label": "Controle e rastreabilidade",
     "title": "Cada forno, medido a cada 30 segundos.",
     "lede": "O Piroliswiss Control é o nosso sistema próprio de monitoramento de fornos. Registra a temperatura de cada retorta durante todo o ciclo, avisa quando algo sai da faixa e guarda a curva de cada carga.",
-    "img": "control-oven",
-    "alt": "Tela de detalhe de um forno no Piroliswiss Control: fases do ciclo, pontos de medição na retorta e curva de temperatura das últimas 8 horas",
+    "img": "control-tablet",
+    "alt": "Tablet com o Piroliswiss Control: detalhe de um forno com fases do ciclo, pontos de medição na retorta e curva de temperatura",
     "caption": "Piroliswiss Control · design do aplicativo com dados de exemplo. Sistema próprio em desenvolvimento.",
     "points": [
       {

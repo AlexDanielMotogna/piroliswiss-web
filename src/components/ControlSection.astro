@@ -13,7 +13,11 @@ const { control: c } = Astro.props;
     <SectionHead label={c.label} title={c.title} lede={c.lede} />
     <div class="control-grid">
       <figure class="control-shot">
-        <Photo src={c.img} alt={c.alt} sizes="(max-width: 1000px) 100vw, 58vw" />
+        <div class="tablet">
+          <div class="tablet-screen">
+            <Photo src={c.img} alt={c.alt} sizes="(max-width: 1000px) 100vw, 58vw" />
+          </div>
+        </div>
         <figcaption>{c.caption}</figcaption>
       </figure>
       <ul class="control-points">
