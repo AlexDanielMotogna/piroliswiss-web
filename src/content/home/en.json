@@ -240,42 +240,58 @@
   "process": {
     "label": "Process",
     "title": "Carbonisation is a temperature curve. We run it inside steel.",
-    "lede": "A retort heats wood without air. Each stage happens at its own temperature, and every stage is read off a gauge on the vessel.",
-    "aria": "Pyrolysis temperature scale from 0 to 600 degrees Celsius showing drying up to 200, torrefaction 200 to 280, carbonisation 280 to 450, and refining 450 to 550. Pyroligneous acid is condensed between 150 and 350 degrees.",
-    "unit": "Retort temperature, °C",
-    "stages": [
+    "lede": "A retort heats wood without air. Each stage happens at its own temperature, and each one is measured inside the kiln with four probes connected to Piroliswiss Control.",
+    "ui": {
+      "stage": "Inside the retort · phase {n} of 4",
+      "play": "Play cycle",
+      "pause": "Pause cycle",
+      "chimney": "Chimney",
+      "retort": "Steel retort",
+      "condenser": "Condenser",
+      "acid": "Pyroligneous acid",
+      "burner": "Burner",
+      "gasOut": "Gas outlet",
+      "returnGas": "Non-condensable gas → burner",
+      "phase": "Phase",
+      "outputs": "What leaves the kiln",
+      "reads": "Reading in Piroliswiss Control",
+      "door": "Door thermometer",
+      "note": "Illustrative temperatures per phase.",
+      "aria": "Retort in the {phase} phase; probes at {t} °C",
+      "phasesLabel": "Pyrolysis phases"
+    },
+    "outputs": {
+      "steam": "Water vapour",
+      "acid": "Pyroligneous acid",
+      "gas": "Combustible gas → burner",
+      "gasres": "Residual gas → burner",
+      "charcoal": "Charcoal"
+    },
+    "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
+    "phases": [
       {
         "name": "Drying",
-        "range": "< 200"
+        "range": "< 200 °C",
+        "text": "The wood loses its moisture. Water vapour leaves through the chimney before decomposition begins.",
+        "wood": "Wet wood"
       },
       {
         "name": "Torrefaction",
-        "range": "200–⁠280"
+        "range": "200–⁠280 °C",
+        "text": "Hemicellulose breaks down and the wood darkens. The first vapours condense as pyroligneous acid.",
+        "wood": "Roasted wood"
       },
       {
         "name": "Carbonisation",
-        "range": "280–⁠450"
+        "range": "280–⁠450 °C",
+        "text": "Cellulose and lignin break down. Gas that does not condense returns to the burner and heats the retort itself.",
+        "wood": "Carbonising"
       },
       {
         "name": "Refining",
-        "range": "450–⁠550"
-      }
-    ],
-    "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
-    "gaugeAlt": "Temperature gauge mounted on a retort door, scale 0 to 600 °C",
-    "gaugeCaption": "Retort door gauge, 0–⁠600 °C",
-    "notes": [
-      {
-        "title": "Industrial retort kilns",
-        "text": "Metal retorts recover the process gases to fuel the system itself and yield high-value by-products such as pyroligneous acid, improving energy efficiency."
-      },
-      {
-        "title": "Integrated system",
-        "text": "Mechanised biomass handling, controlled carbonisation, by-product separation and processing for export."
-      },
-      {
-        "title": "Modular and scalable",
-        "text": "A replicable system that expands production capacity quickly through new industrial plants."
+        "range": "450–⁠550 °C",
+        "text": "The last volatiles are driven off and fixed carbon rises. The result is a more stable charcoal of consistent quality.",
+        "wood": "Charcoal"
       }
     ]
   },

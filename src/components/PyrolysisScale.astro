@@ -1,48 +1,258 @@
 ---
-import Photo from './Photo.astro';
+/**
+ * Interactive retort: four pyrolysis phases on a 0–600 °C scale.
+ * Built from the owner's "Web · sección Proceso" mockup (2026-09-26).
+ * Copy comes from content; the per-phase visual values live here.
+ * Probe temperatures are illustrative and labelled as such.
+ */
 import type { Home } from '../lib/types';
 
 interface Props {
   process: Home['process'];
 }
 const { process: p } = Astro.props;
+const ui = p.ui;
 
-// Positions are derived from temperatures on a 0–600 °C axis.
-const MAX = 600;
-const pct = (t: number) => `${((t / MAX) * 100).toFixed(2)}%`;
-const stageStarts = [0, 200, 280, 450];
-const segments = [
-  { from: 0, to: 200, bg: '#3A4043' },
-  { from: 200, to: 280, bg: '#6B4A32' },
-  { from: 280, to: 450, bg: 'linear-gradient(90deg,#7A0000,#D40000)' },
-  { from: 450, to: 550, bg: '#EE7A42' },
-  { from: 550, to: 600, bg: '#23282A' },
+type Kind = 'steam' | 'acid' | 'gas' | 'gasres' | 'charcoal';
+const KIND_COLOR: Record<Kind, string> = {
+  steam: '#D6D8D2', acid: '#E0A23A', gas: '#D40000', gasres: '#D40000', charcoal: '#F2F2EE',
+};
+const V = [
+  { lo: 0, hi: 200, color: '#3A4043', atmos: '#4A5256', woodFill: '#C9A57A', edge: '#8C6A45', t: [148, 161, 172, 118], door: 160, steam: 1, acid: 0, gas: 0, flame: 0.6, level: 0, out: ['steam'] as Kind[] },
+  { lo: 200, hi: 280, color: '#6B4A32', atmos: '#6B4A32', woodFill: '#8A5530', edge: '#5A3518', t: [236, 249, 262, 198], door: 250, steam: 0.35, acid: 1, gas: 0.4, flame: 0.7, level: 8, out: ['acid', 'steam'] as Kind[] },
+  { lo: 280, hi: 450, color: '#A70000', atmos: '#A70000', woodFill: '#3A2418', edge: '#1E120B', t: [372, 386, 398, 331], door: 380, steam: 0, acid: 1, gas: 1, flame: 1, level: 18, out: ['acid', 'gas'] as Kind[] },
+  { lo: 450, hi: 550, color: '#EE7A42', atmos: '#C8551F', woodFill: '#141414', edge: '#000000', t: [492, 506, 516, 441], door: 500, steam: 0, acid: 0.15, gas: 0.5, flame: 0.8, level: 22, out: ['charcoal', 'gasres'] as Kind[] },
 ];
+const phases = V.map((v, i) => ({
+  ...v,
+  ...p.phases[i]!,
+  outputs: v.out.map((k) => ({ label: p.outputs[k], color: KIND_COLOR[k] })),
+}));
+
+const START = 2; // carbonisation, as in the mockup
+const s = phases[START]!;
+const needle = (door: number) => {
+  const a = ((135 + (door / 600) * 270) * Math.PI) / 180;
+  return { x: (80 + 52 * Math.cos(a)).toFixed(1), y: (80 + 52 * Math.sin(a)).toFixed(1) };
+};
+const n0 = needle(s.door);
+const avg = (t: number[]) => Math.round((t[0]! + t[1]! + t[2]!) / 3);
+const fill = (str: string, vars: Record<string, string | number>) =>
+  Object.entries(vars).reduce((acc, [k, v]) => acc.replace(`{${k}}`, String(v)), str);
 const ticks = [0, 100, 200, 300, 400, 500, 600];
-const acid = { from: 150, to: 350 };
+const data = JSON.stringify({ phases, ui, start: START });
 ---
-<div class="pyro">
-  <div class="scale-box">
-    <div class="scale" role="img" aria-label={p.aria}>
-      <span class="unit">{p.unit}</span>
-      {p.stages.map((s, i) => (
-        <div class="stage" style={`left:${pct(stageStarts[i] ?? 0)}`}><b>{s.name}</b><span>{s.range}</span></div>
+<div class="retort" data-retort={data}>
+  <div class="rt-bar">
+    <span class="rt-stage" data-k="stage">{fill(ui.stage, { n: START + 1 })}</span>
+    <button type="button" class="rt-play" data-k="play" aria-pressed="false"><span class="rt-play-dot"></span><span data-k="playLabel">{ui.play}</span></button>
+  </div>
+
+  <div class="rt-drawing">
+    <svg viewBox="0 0 1200 520" role="img" aria-label={fill(ui.aria, { phase: s.name.toLowerCase(), t: s.t.join(', ') })} data-k="svg">
+      <line x1="20" y1="470" x2="1180" y2="470" stroke="#2A302A" stroke-width="1.5" />
+      <g data-k="steam" style={`opacity:${s.steam}`} class="rt-fade">
+        <path d="M432,34 C422,22 442,14 432,2" fill="none" stroke="#D6D8D2" stroke-width="2" stroke-linecap="round" />
+        <path d="M446,36 C456,22 436,14 448,0" fill="none" stroke="#D6D8D2" stroke-width="2" stroke-linecap="round" />
+      </g>
+      <rect x="430" y="40" width="18" height="112" fill="#B9BCB6" stroke="#6E736D" />
+      <rect x="420" y="34" width="38" height="7" rx="2" fill="#B9BCB6" stroke="#6E736D" />
+      <circle cx="462" cy="124" r="8" fill="none" stroke="#D40000" stroke-width="3" />
+      <text x="472" y="60" class="rt-t">{ui.chimney}</text>
+      <rect x="652" y="92" width="18" height="60" fill="#B9BCB6" stroke="#6E736D" />
+      <rect x="712" y="92" width="18" height="60" fill="#B9BCB6" stroke="#6E736D" />
+      <rect x="644" y="76" width="376" height="18" rx="9" fill="#B9BCB6" stroke="#6E736D" />
+      <rect x="1000" y="90" width="18" height="142" fill="#B9BCB6" stroke="#6E736D" />
+      <path data-k="gas" class="rt-fade" d="M661,150 V85 H1009 V228" fill="none" stroke="#FF3B30" stroke-width="3" stroke-dasharray="8 7" style={`opacity:${s.gas}`} />
+      <rect x="950" y="230" width="120" height="140" rx="8" fill="#9EA29B" stroke="#6E736D" />
+      <polygon points="950,370 1070,370 1010,410" fill="#9EA29B" stroke="#6E736D" />
+      <line x1="962" y1="370" x2="962" y2="470" stroke="#6E736D" stroke-width="4" />
+      <line x1="1058" y1="370" x2="1058" y2="470" stroke="#6E736D" stroke-width="4" />
+      <text x="1080" y="262" class="rt-t">{ui.condenser}</text>
+      <g data-k="drops" class="rt-fade" style={`opacity:${s.acid}`}>
+        <circle cx="1010" cy="420" r="3.5" fill="#E0A23A" />
+        <circle cx="1010" cy="432" r="3" fill="#E0A23A" />
+      </g>
+      <rect x="985" y="440" width="50" height="28" rx="3" fill="#2A302A" stroke="#6E736D" />
+      <rect data-k="level" class="rt-anim" x="988" y={466 - s.level} width="44" height={s.level} fill="#C8861F" />
+      <text data-k="acidLabel" x="1045" y="458" class="rt-t" fill={s.acid > 0.5 ? '#E0A23A' : '#6E736D'}>{ui.acid}</text>
+      <rect x="240" y="150" width="660" height="290" rx="18" fill="#D6D8D2" stroke="#8E938C" stroke-width="1.5" />
+      <text x="240" y="140" class="rt-t">{ui.retort}</text>
+      <rect data-k="flue" class="rt-fade" x="255" y="165" width="630" height="260" rx="14" fill="none" stroke="#E8541E" stroke-width="4" stroke-dasharray="10 8" style={`opacity:${s.flame * 0.9}`} />
+      <rect x="270" y="180" width="600" height="230" rx="10" fill="#1A1D1B" />
+      <rect data-k="atmos" class="rt-anim" x="270" y="180" width="600" height="230" rx="10" fill={s.atmos} opacity="0.7" />
+      <rect x="222" y="160" width="18" height="270" rx="4" fill="#B9BCB6" stroke="#6E736D" />
+      <line x1="290" y1="404" x2="850" y2="404" stroke="#8E938C" stroke-width="3" />
+      <rect x="320" y="250" width="506" height="138" rx="3" fill="none" stroke="#8E938C" stroke-width="2" />
+      <circle cx="360" cy="396" r="8" fill="#6E736D" /><circle cx="470" cy="396" r="8" fill="#6E736D" /><circle cx="680" cy="396" r="8" fill="#6E736D" /><circle cx="790" cy="396" r="8" fill="#6E736D" />
+      <g data-k="wood" class="rt-anim" fill={s.woodFill} stroke={s.edge} stroke-width="1.5">
+        {[262, 292, 322, 352].map((y) => [334, 498, 662].map((x) => <rect x={x} y={y} width="150" height="26" rx="13" />))}
+      </g>
+      <text data-k="woodLabel" x="573" y="242" text-anchor="middle" class="rt-t" fill="#D6D8D2">{s.wood}</text>
+      <rect x="300" y="440" width="24" height="30" fill="#8E938C" /><rect x="816" y="440" width="24" height="30" fill="#8E938C" />
+      <rect x="200" y="362" width="40" height="18" fill="#B9BCB6" stroke="#6E736D" />
+      <rect x="60" y="350" width="140" height="110" rx="4" fill="#2A302A" stroke="#6E736D" />
+      <rect x="84" y="374" width="92" height="62" rx="2" fill="#141812" />
+      <g data-k="flame" class="rt-fade" style={`opacity:${s.flame}`}>
+        <path d="M98,436 Q104,404 112,418 Q116,396 124,436 Z" fill="#EE7A42" />
+        <path d="M120,436 Q128,398 136,414 Q142,390 150,436 Z" fill="#D40000" />
+        <path d="M144,436 Q150,408 156,420 Q160,404 166,436 Z" fill="#EE7A42" />
+      </g>
+      <text x="130" y="490" text-anchor="middle" class="rt-t">{ui.burner}</text>
+      <path d="M950,340 H922 V455 H202" fill="none" stroke="#B9BCB6" stroke-width="12" />
+      <path data-k="return" class="rt-fade" d="M950,340 H922 V455 H202" fill="none" stroke="#FF3B30" stroke-width="3" stroke-dasharray="8 7" style={`opacity:${s.gas}`} />
+      <text data-k="returnLabel" x="560" y="494" text-anchor="middle" class="rt-t" fill={s.gas > 0.3 ? '#FF6A5E' : '#4E554E'}>{ui.returnGas}</text>
+      {[330, 560, 780].map((x, k) => (
+        <Fragment>
+          <circle cx={x} cy="202" r="11" fill="#D40000" />
+          <text x={x} y="206" text-anchor="middle" class="rt-probe">T{k + 1}</text>
+          <text data-k={`t${k + 1}`} x={x + 18} y="207" class="rt-v">{s.t[k]} °C</text>
+        </Fragment>
       ))}
-      <div class="bar">
-        {segments.map((s) => <div class="seg" style={`width:${pct(s.to - s.from)};background:${s.bg}`}></div>)}
-      </div>
-      <div class="ticks">
-        {ticks.map((t) => <span class="tick" style={`left:${pct(t)}`}>{t}</span>)}
-      </div>
-      <div class="bracket" style={`left:${pct(acid.from)};width:${pct(acid.to - acid.from)}`}></div>
-      <span class="bracket-l" style={`left:${pct(acid.from)}`}>{p.bracket}</span>
+      <circle cx="860" cy="85" r="11" fill="#D40000" />
+      <text x="860" y="89" text-anchor="middle" class="rt-probe">T4</text>
+      <text data-k="t4" x="860" y="60" text-anchor="middle" class="rt-v">{s.t[3]} °C</text>
+      <text x="860" y="40" text-anchor="middle" class="rt-t">{ui.gasOut}</text>
+    </svg>
+  </div>
+
+  <div class="rt-scale">
+    <div class="rt-tabs" role="group" aria-label={ui.phasesLabel}>
+      {phases.map((ph, i) => (
+        <button type="button" data-go={i} aria-pressed={i === START ? 'true' : 'false'} style={`flex-grow:${ph.hi - ph.lo}`}>
+          <span class="rt-tab-text"><b>{ph.name}</b><span>{ph.range}</span></span>
+          <span class="rt-tab-bar" style={`background:${ph.color}`}></span>
+        </button>
+      ))}
+      <span class="rt-tab-tail"></span>
+    </div>
+    <div class="rt-ticks">
+      {ticks.map((v) => (
+        <Fragment>
+          <span class="rt-tick" style={`left:${((v / 600) * 100).toFixed(3)}%`}></span>
+          <span class="rt-tick-l" style={`left:${((v / 600) * 100).toFixed(3)}%;transform:translateX(${v === 0 ? '0' : v === 600 ? '-100%' : '-50%'})`}>{v}</span>
+        </Fragment>
+      ))}
+      <span class="rt-marker" data-k="marker" style={`left:${((avg(s.t) / 600) * 100).toFixed(2)}%`}></span>
+    </div>
+    <div class="rt-bracket">
+      <span class="rt-bracket-line"></span>
+      <span class="rt-bracket-l">{p.bracket}</span>
     </div>
   </div>
-  <figure class="gauge">
-    <Photo src="gauge" alt={p.gaugeAlt} sizes="340px" />
-    <figcaption>{p.gaugeCaption}</figcaption>
-  </figure>
+
+  <div class="rt-detail">
+    <div class="rt-phase">
+      <span class="rt-kicker" data-k="kicker">{ui.phase} 0{START + 1} · {s.range}</span>
+      <h3 data-k="name">{s.name}</h3>
+      <p data-k="text">{s.text}</p>
+    </div>
+    <div class="rt-col">
+      <span class="rt-kicker rt-muted">{ui.outputs}</span>
+      <ul class="rt-outputs" data-k="outputs">
+        {s.outputs.map((o) => <li><span style={`background:${o.color}`}></span>{o.label}</li>)}
+      </ul>
+    </div>
+    <div class="rt-col">
+      <span class="rt-kicker rt-muted">{ui.reads}</span>
+      <div class="rt-reads">
+        {s.t.map((v, k) => (
+          <div class="rt-read">
+            <b>T{k + 1}</b>
+            <span class="rt-read-track"><span data-k={`bar${k + 1}`} class="rt-anim" style={`width:${Math.round((v / 600) * 100)}%;background:${s.color}`}></span></span>
+            <span data-k={`read${k + 1}`}>{v} °C</span>
+          </div>
+        ))}
+      </div>
+      <p class="rt-note">{ui.note}</p>
+    </div>
+    <div class="rt-gauge">
+      <svg viewBox="0 0 160 160" role="img" data-k="gaugeSvg" aria-label={`${ui.door} · ${s.door} °C`}>
+        <rect width="160" height="160" fill="#B80000" />
+        <circle cx="80" cy="80" r="72" fill="#C9CCC6" />
+        <circle cx="80" cy="80" r="68" fill="#F2F1EC" />
+        <path d="M39.0,121.0 L33.3,126.7 M28.4,114.4 L25.1,116.7 M22.7,103.7 L19.0,105.3 M19.2,92.1 L15.3,92.9 M22.0,80.0 L14.0,80.0 M19.2,67.9 L15.3,67.1 M22.7,56.3 L19.0,54.7 M28.4,45.6 L25.1,43.3 M39.0,39.0 L33.3,33.3 M45.6,28.4 L43.3,25.1 M56.3,22.7 L54.7,19.0 M67.9,19.2 L67.1,15.3 M80.0,22.0 L80.0,14.0 M92.1,19.2 L92.9,15.3 M103.7,22.7 L105.3,19.0 M114.4,28.4 L116.7,25.1 M121.0,39.0 L126.7,33.3 M131.6,45.6 L134.9,43.3 M137.3,56.3 L141.0,54.7 M140.8,67.9 L144.7,67.1 M138.0,80.0 L146.0,80.0 M140.8,92.1 L144.7,92.9 M137.3,103.7 L141.0,105.3 M131.6,114.4 L134.9,116.7 M121.0,121.0 L126.7,126.7" stroke="#17181B" stroke-width="1.5" />
+        <g class="rt-dial" text-anchor="middle">
+          <text x="47.5" y="116.5">0</text><text x="34" y="84">100</text><text x="47.5" y="51.5">200</text><text x="80" y="38">300</text><text x="112.5" y="51.5">400</text><text x="126" y="84">500</text><text x="112.5" y="116.5">600</text>
+        </g>
+        <text x="80" y="112" text-anchor="middle" class="rt-dial rt-dial-u">°C</text>
+        <line data-k="needle" x1="80" y1="80" x2={n0.x} y2={n0.y} stroke="#17181B" stroke-width="3" stroke-linecap="round" />
+        <circle cx="80" cy="80" r="6" fill="#17181B" />
+      </svg>
+      <span class="rt-gauge-l" data-k="doorLabel">{ui.door} · {s.door} °C</span>
+    </div>
+  </div>
 </div>
-<div class="pyro-notes">
-  {p.notes.map((n) => <p><b>{n.title}</b>{n.text}</p>)}
-</div>
+
+<script>
+  type Out = { label: string; color: string };
+  type Phase = {
+    name: string; range: string; text: string; wood: string; woodFill: string; color: string; atmos: string; edge: string;
+    t: number[]; door: number; steam: number; acid: number; gas: number; flame: number; level: number; outputs: Out[];
+  };
+  type Data = { phases: Phase[]; ui: Record<string, string>; start: number };
+
+  const fill = (s: string, v: Record<string, string | number>) =>
+    Object.entries(v).reduce((a, [k, x]) => a.replace(`{${k}}`, String(x)), s);
+
+  document.querySelectorAll<HTMLElement>('[data-retort]').forEach((root) => {
+    const { phases, ui, start } = JSON.parse(root.dataset.retort!) as Data;
+    const $ = <T extends Element = SVGElement>(k: string) => root.querySelector<T>(`[data-k="${k}"]`)!;
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[data-go]')];
+    let i = start;
+
+    const show = (n: number) => {
+      i = n;
+      const p = phases[n]!;
+      const nb = { n: n + 1, phase: p.name.toLowerCase(), t: p.t.join(', ') };
+      $('stage').textContent = fill(ui.stage!, nb);
+      $('svg').setAttribute('aria-label', fill(ui.aria!, nb));
+      ($('steam') as SVGElement).style.opacity = String(p.steam);
+      ($('gas') as SVGElement).style.opacity = String(p.gas);
+      ($('return') as SVGElement).style.opacity = String(p.gas);
+      ($('drops') as SVGElement).style.opacity = String(p.acid);
+      ($('flue') as SVGElement).style.opacity = String(p.flame * 0.9);
+      ($('flame') as SVGElement).style.opacity = String(p.flame);
+      $('level').setAttribute('y', String(466 - p.level));
+      $('level').setAttribute('height', String(p.level));
+      $('acidLabel').setAttribute('fill', p.acid > 0.5 ? '#E0A23A' : '#6E736D');
+      $('returnLabel').setAttribute('fill', p.gas > 0.3 ? '#FF6A5E' : '#4E554E');
+      $('atmos').setAttribute('fill', p.atmos);
+      $('wood').setAttribute('fill', p.woodFill);
+      $('wood').setAttribute('stroke', p.edge);
+      $('woodLabel').textContent = p.wood;
+      p.t.forEach((v, k) => {
+        $(`t${k + 1}`).textContent = `${v} °C`;
+        $(`read${k + 1}`).textContent = `${v} °C`;
+        const bar = $(`bar${k + 1}`) as unknown as HTMLElement;
+        bar.style.width = `${Math.round((v / 600) * 100)}%`;
+        bar.style.background = p.color;
+      });
+      const avg = Math.round((p.t[0]! + p.t[1]! + p.t[2]!) / 3);
+      ($('marker') as unknown as HTMLElement).style.left = `${((avg / 600) * 100).toFixed(2)}%`;
+      $('kicker').textContent = `${ui.phase} 0${n + 1} · ${p.range}`;
+      $('name').textContent = p.name;
+      $('text').textContent = p.text;
+      $('outputs').innerHTML = p.outputs
+        .map((o) => `<li><span style="background:${o.color}"></span>${o.label}</li>`)
+        .join('');
+      const a = ((135 + (p.door / 600) * 270) * Math.PI) / 180;
+      $('needle').setAttribute('x2', (80 + 52 * Math.cos(a)).toFixed(1));
+      $('needle').setAttribute('y2', (80 + 52 * Math.sin(a)).toFixed(1));
+      $('doorLabel').textContent = `${ui.door} · ${p.door} °C`;
+      $('gaugeSvg').setAttribute('aria-label', `${ui.door} · ${p.door} °C`);
+      tabs.forEach((t, k) => t.setAttribute('aria-pressed', String(k === n)));
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => { show(Number(t.dataset.go)); }));
+
+    const play = $<HTMLButtonElement>('play');
+    let timer: number | undefined;
+    const setPlaying = (on: boolean) => {
+      play.setAttribute('aria-pressed', String(on));
+      $('playLabel').textContent = on ? ui.pause! : ui.play!;
+      if (on) timer = window.setInterval(() => show((i + 1) % phases.length), 2600);
+      else { clearInterval(timer); timer = undefined; }
+    };
+    play.addEventListener('click', () => setPlaying(!timer));
+  });
+</script>

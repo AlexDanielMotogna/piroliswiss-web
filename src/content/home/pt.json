@@ -240,42 +240,58 @@
   "process": {
     "label": "Processo",
     "title": "A carbonização é uma curva de temperatura. Nós a controlamos dentro do aço.",
-    "lede": "Uma retorta aquece a madeira sem ar. Cada etapa acontece em sua própria temperatura, e cada uma é lida em um termômetro instalado no equipamento.",
-    "aria": "Escala de temperatura da pirólise de 0 a 600 graus Celsius: secagem até 200, torrefação de 200 a 280, carbonização de 280 a 450 e refino de 450 a 550. O ácido pirolenhoso é condensado entre 150 e 350 graus.",
-    "unit": "Temperatura da retorta, °C",
-    "stages": [
+    "lede": "Uma retorta aquece a madeira sem ar. Cada etapa acontece em sua própria temperatura, e cada uma é medida dentro do forno com quatro sondas conectadas ao Piroliswiss Control.",
+    "ui": {
+      "stage": "Interior da retorta · fase {n} de 4",
+      "play": "Reproduzir ciclo",
+      "pause": "Pausar ciclo",
+      "chimney": "Chaminé",
+      "retort": "Retorta de aço",
+      "condenser": "Condensador",
+      "acid": "Ácido pirolenhoso",
+      "burner": "Queimador",
+      "gasOut": "Saída de gases",
+      "returnGas": "Gás não condensável → queimador",
+      "phase": "Fase",
+      "outputs": "O que sai do forno",
+      "reads": "Leitura no Piroliswiss Control",
+      "door": "Termômetro da porta",
+      "note": "Temperaturas ilustrativas por fase.",
+      "aria": "Retorta na fase de {phase}; sondas a {t} °C",
+      "phasesLabel": "Fases da pirólise"
+    },
+    "outputs": {
+      "steam": "Vapor de água",
+      "acid": "Ácido pirolenhoso",
+      "gas": "Gás combustível → queimador",
+      "gasres": "Gás residual → queimador",
+      "charcoal": "Carvão vegetal"
+    },
+    "bracket": "Condensação do ácido pirolenhoso · 150–⁠350 °C",
+    "phases": [
       {
         "name": "Secagem",
-        "range": "< 200"
+        "range": "< 200 °C",
+        "text": "A madeira perde a umidade. O vapor de água sai pela chaminé antes de começar a decomposição.",
+        "wood": "Madeira úmida"
       },
       {
         "name": "Torrefação",
-        "range": "200–⁠280"
+        "range": "200–⁠280 °C",
+        "text": "A hemicelulose se decompõe e a madeira escurece. Os primeiros vapores condensam como ácido pirolenhoso.",
+        "wood": "Madeira torrada"
       },
       {
         "name": "Carbonização",
-        "range": "280–⁠450"
+        "range": "280–⁠450 °C",
+        "text": "Celulose e lignina se decompõem. O gás que não condensa volta ao queimador e aquece a própria retorta.",
+        "wood": "Carbonizando"
       },
       {
         "name": "Refino",
-        "range": "450–⁠550"
-      }
-    ],
-    "bracket": "Condensação do ácido pirolenhoso · 150–⁠350 °C",
-    "gaugeAlt": "Termômetro de mostrador instalado na porta de uma retorta, escala de 0 a 600 °C",
-    "gaugeCaption": "Termômetro da porta da retorta, 0–⁠600 °C",
-    "notes": [
-      {
-        "title": "Fornos de retorta industriais",
-        "text": "As retortas metálicas recuperam os gases do processo para alimentar o próprio sistema e geram subprodutos de alto valor como o ácido pirolenhoso, melhorando a eficiência energética."
-      },
-      {
-        "title": "Sistema integrado",
-        "text": "Manuseio mecanizado da biomassa, carbonização controlada, separação de subprodutos e processamento para exportação."
-      },
-      {
-        "title": "Modular e escalável",
-        "text": "Um sistema replicável que amplia rapidamente a capacidade de produção por meio de novas plantas industriais."
+        "range": "450–⁠550 °C",
+        "text": "Os últimos voláteis são expulsos e o carbono fixo sobe. Sai um carvão mais estável e de qualidade constante.",
+        "wood": "Carvão vegetal"
       }
     ]
   },

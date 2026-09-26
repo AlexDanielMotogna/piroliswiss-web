@@ -191,33 +191,72 @@ section.flush{padding-top:0}
 .band{background:var(--band);color:var(--band-fg)}
 .band .label{color:var(--band-mute)}
 .band .lede{color:var(--band-fg)}
-.pyro{display:grid;grid-template-columns:1fr 340px;gap:clamp(24px,4vw,64px);align-items:end}
-.pyro>*{min-width:0}
-.scale-box{overflow-x:auto;padding-bottom:6px}
-.scale{position:relative;min-width:720px;height:250px;font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
-.scale .bar{position:absolute;left:0;right:0;top:118px;height:28px;display:flex}
-.scale .seg{height:100%;border-right:1px solid var(--band)}
-.scale .seg:last-child{border-right:0}
-.scale .ticks{position:absolute;left:0;right:0;top:146px;height:46px}
-/* fix: tick marks start at the bar edge and every label is centred on its
-   mark; the end labels are pinned to the edges without shifting the mark */
-.scale .tick{position:absolute;top:0;width:0;display:flex;flex-direction:column;align-items:center;color:var(--band-mute);white-space:nowrap}
-.scale .tick::before{content:"";width:1px;height:10px;background:var(--band-mute);margin-bottom:6px}
-.scale .tick:first-child{align-items:flex-start}
-.scale .tick:last-child{align-items:flex-end}
-.scale .stage{position:absolute;top:58px;border-left:1px solid var(--band-rule);padding-left:10px;height:60px;display:grid;align-content:start;gap:3px}
-.scale .stage b{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--band-fg);letter-spacing:0}
-.scale .stage span{color:var(--band-mute)}
-.scale .bracket{position:absolute;top:206px;height:12px;border:1px solid var(--ember);border-top:0}
-.scale .bracket-l{position:absolute;top:226px;color:var(--ember);white-space:nowrap}
-.scale .unit{position:absolute;top:10px;left:0;color:var(--band-mute)}
-.gauge{margin:0;display:grid;gap:12px}
-.gauge img{aspect-ratio:1;object-fit:cover;width:100%}
-.gauge figcaption{font-family:var(--mono);font-size:12px;color:var(--band-mute);letter-spacing:.02em}
-.pyro-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding-top:28px;border-top:1px solid var(--band-rule)}
-.pyro-notes p{color:var(--band-mute);font-size:15px}
-.pyro-notes b{display:block;color:var(--band-fg);font-weight:600;margin-bottom:6px}
-@media (max-width:1000px){.pyro{grid-template-columns:1fr}.gauge{max-width:340px}.pyro-notes{grid-template-columns:1fr}}
+/* interactive retort (Proceso), values from the owner's mockup */
+.retort{display:grid;gap:22px;color:var(--band-fg)}
+.rt-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.rt-stage{font-family:var(--mono);font-size:12px;color:#A4A8A1}
+.rt-play{height:44px;padding:0 18px;background:transparent;color:#F2F2EE;border:1px solid #3A4043;font-family:var(--mono);font-size:12px;display:flex;align-items:center;gap:10px;cursor:pointer}
+.rt-play:hover{border-color:#F2F2EE}
+.rt-play-dot{width:8px;height:8px;background:#F2F2EE}
+.rt-play[aria-pressed="true"] .rt-play-dot{background:var(--red)}
+.rt-drawing{overflow-x:auto}
+.rt-drawing svg{display:block;width:100%;height:auto;min-width:640px}
+.rt-t{font-family:var(--mono);font-size:12px}
+.rt-t:not([fill]){fill:#A4A8A1}
+.rt-probe{font-family:var(--sans);font-size:10px;font-weight:600;fill:#fff}
+.rt-v{font-family:var(--mono);font-size:14px;fill:#fff}
+.rt-fade{transition:opacity .6s}
+.rt-anim{transition:all .6s}
+.rt-scale{display:grid;gap:10px}
+.rt-tabs{display:flex;gap:2px}
+.rt-tabs button{flex-basis:0;min-width:0;min-height:88px;padding:0;border:0;background:transparent;color:#F2F2EE;text-align:left;font-family:inherit;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;opacity:.55;cursor:pointer;transition:opacity .3s}
+.rt-tabs button:hover,.rt-tabs button[aria-pressed="true"]{opacity:1}
+.rt-tab-text{display:flex;flex-direction:column;gap:3px;padding-left:8px;border-left:1px solid #3A4043;overflow:hidden}
+.rt-tab-text b{font-size:14px;font-weight:600;white-space:nowrap}
+.rt-tab-text span{font-family:var(--mono);font-size:11px;color:#A4A8A1;white-space:nowrap}
+.rt-tab-bar{display:block;width:100%;height:22px;transition:height .3s}
+.rt-tabs button[aria-pressed="true"] .rt-tab-bar{height:34px}
+.rt-tab-tail{flex-grow:50;flex-basis:0;align-self:flex-end;height:22px;background:#23282A}
+.rt-ticks{position:relative;height:44px;font-family:var(--mono);font-size:11px;color:#A4A8A1}
+.rt-ticks::before{content:"";position:absolute;left:0;top:0;width:100%;height:1px;background:#3A4043}
+.rt-tick{position:absolute;top:0;width:1px;height:8px;background:#6E736D}
+.rt-tick-l{position:absolute;top:14px}
+.rt-marker{position:absolute;top:-14px;width:2px;height:22px;margin-left:-1px;background:#fff;transition:left .6s}
+.rt-bracket{position:relative;height:34px}
+.rt-bracket-line{position:absolute;left:25%;width:33.33%;top:0;height:8px;border:1px solid #D40000;border-top:0}
+.rt-bracket-l{position:absolute;left:25%;top:14px;font-family:var(--mono);font-size:11px;color:#FF3B30;white-space:nowrap}
+.rt-detail{display:grid;grid-template-columns:1.5fr 1fr 1fr 170px;gap:40px;margin-top:34px;padding-top:32px;border-top:1px solid #2A302A}
+.rt-detail>*{min-width:0}
+.rt-phase,.rt-col{display:flex;flex-direction:column;gap:14px}
+.rt-kicker{font-family:var(--mono);font-size:12px;color:#FF3B30}
+.rt-kicker.rt-muted{color:#A4A8A1}
+.rt-phase h3{margin:0;font-size:40px;font-weight:500;letter-spacing:-.02em;line-height:1}
+.rt-phase p{font-size:16px;line-height:1.55;color:#D6D8D2}
+.rt-outputs{list-style:none;margin:0;padding:0;display:grid;gap:14px;font-size:15px}
+.rt-outputs li{display:flex;align-items:center;gap:10px}
+.rt-outputs li span{width:8px;height:8px;flex:none}
+.rt-reads{display:grid;gap:12px}
+.rt-read{display:grid;grid-template-columns:30px minmax(0,1fr) 64px;align-items:center;gap:10px}
+.rt-read b{font-size:12px;font-weight:600}
+.rt-read-track{height:4px;background:#23282A}
+.rt-read-track span{display:block;height:4px}
+.rt-read>span:last-child{font-family:var(--mono);font-size:13px;text-align:right}
+.rt-note{font-size:12px;color:#A4A8A1}
+.rt-gauge{display:flex;flex-direction:column;gap:10px;align-items:center}
+.rt-gauge svg{width:160px;height:160px}
+.rt-dial{font-family:var(--mono);font-size:10px;fill:#17181B}
+.rt-dial-u{font-size:9px;fill:#6E736D}
+.rt-gauge-l{font-family:var(--mono);font-size:11px;color:#A4A8A1;text-align:center}
+@media (max-width:1100px){.rt-detail{grid-template-columns:1fr 1fr}}
+/* narrow screens: equal phase buttons; the temperature axis no longer lines up, so it is hidden */
+@media (max-width:760px){
+  .rt-tabs button{flex-grow:1!important;min-height:72px}
+  .rt-tab-tail,.rt-ticks,.rt-bracket{display:none}
+  .rt-tab-text b{font-size:12px}
+  .rt-detail{grid-template-columns:1fr;gap:28px}
+  .rt-gauge{align-items:flex-start}
+  .rt-phase h3{font-size:32px}
+}
 
 /* control and traceability: app screenshot + four points */
 .control{background:var(--paper-2)}

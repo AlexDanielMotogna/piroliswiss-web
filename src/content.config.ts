@@ -113,13 +113,16 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
-          aria: text,
-          unit: text,
-          stages: z.array(z.object({ name: text, range: text }).strict()).length(4),
+          ui: z
+            .object({
+              stage: text, play: text, pause: text, chimney: text, retort: text, condenser: text, acid: text,
+              burner: text, gasOut: text, returnGas: text, phase: text, outputs: text, reads: text, door: text,
+              note: text, aria: text, phasesLabel: text,
+            })
+            .strict(),
+          outputs: z.object({ steam: text, acid: text, gas: text, gasres: text, charcoal: text }).strict(),
           bracket: text,
-          gaugeAlt: text,
-          gaugeCaption: text,
-          notes: z.array(titled).length(3),
+          phases: z.array(z.object({ name: text, range: text, text: text, wood: text }).strict()).length(4),
         })
         .strict(),
       control: z
