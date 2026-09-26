@@ -305,8 +305,6 @@
         "alt": "The app on a phone: alarms first and the list of kilns with their temperature"
       }
     ],
-    "prev": "Previous screen",
-    "next": "Next screen",
     "points": [
       {
         "title": "Four probes per kiln",
