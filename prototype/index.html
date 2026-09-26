@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Piroliswiss</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#E7E9E6; --paper-2:#DCDFDB; --ink:#15181A; --slate:#586166; --rule:#C3C8C4;
+  --forest:#24461F; --forest-2:#3B6B2E; --ember:#D4521C;
+  --band:#111314; --band-2:#1B1F21; --band-fg:#E4E7E4; --band-mute:#8D9699; --band-rule:#2C3235;
+  --field:#F2F3F1;
+  --display:"Geist","Helvetica Neue",Arial,sans-serif;
+  --sans:"Geist","Helvetica Neue",Arial,sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  --gut:clamp(16px,4vw,56px);
+  --max:1440px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
+  --forest:#8DB578; --forest-2:#A9C995; --ember:#EE7A42; --field:#1E2224;
+  --band:#0B0D0E; --band-2:#16191B;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
+  --forest:#8DB578; --forest-2:#A9C995; --ember:#EE7A42; --field:#1E2224;
+  --band:#0B0D0E; --band-2:#16191B;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+.h-xl,.h-l,.h-m{font-family:var(--display);font-weight:600;letter-spacing:-.04em;line-height:.98;text-wrap:balance;margin:0}
+.h-xl{font-size:clamp(42px,6.6vw,104px)}
+.h-l{font-size:clamp(32px,4.2vw,64px)}
+.h-m{font-size:clamp(22px,2vw,30px);line-height:1.1;letter-spacing:-.025em}
+.lede{font-size:clamp(18px,1.4vw,21px);line-height:1.5;max-width:40ch;color:var(--ink)}
+p{margin:0}
+.muted{color:var(--slate)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid transparent;transition:border-color .2s}
+.top.scrolled{border-bottom-color:var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:32px;height:68px}
+.wordmark{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.3em;text-decoration:none;white-space:nowrap}
+.wordmark span{color:var(--forest-2)}
+.nav{display:flex;gap:26px;margin-left:auto;font-size:14px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink);opacity:.82}
+.nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.lang{font-family:var(--mono);font-size:12px;letter-spacing:.06em;display:flex;gap:6px;color:var(--slate)}
+.lang b{color:var(--ink);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 14px/1 var(--sans);padding:14px 20px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn:hover{background:var(--forest);border-color:var(--forest)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn .arr{font-family:var(--mono);font-weight:400}
+.menu-btn{display:none}
+@media (max-width:1080px){.nav{display:none}.top .btn{margin-left:auto}}
+@media (max-width:560px){.top .btn{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;color:#F1F3F0;background:#1a1d1f;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;transform:scale(1.04);animation:settle 2.4s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,13,.05) 30%,rgba(10,12,13,.72) 100%)}
+.hero .wrap{position:relative;z-index:1;min-height:clamp(520px,74vh,800px);display:grid;align-content:end;padding-block:48px 56px;gap:28px}
+.hero .h-xl{max-width:14ch}
+.hero .sub{max-width:46ch;font-size:clamp(17px,1.3vw,20px);color:#DDE2DE}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn{background:#F1F3F0;color:#111;border-color:#F1F3F0}
+.hero .btn:hover{background:#fff}
+.hero .btn.ghost{background:transparent;color:#F1F3F0;border-color:rgba(241,243,240,.6)}
+.hero .coord{position:absolute;right:var(--gut);top:28px;z-index:1;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(241,243,240,.75);text-align:right;text-transform:uppercase}
+
+/* spec strip */
+.specs{border-bottom:1px solid var(--rule)}
+.specs .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.spec{padding:26px 24px 28px 0;display:grid;gap:10px;align-content:start}
+.spec+.spec{padding-left:24px;border-left:1px solid var(--rule)}
+.spec .v{font-family:var(--display);font-weight:560;font-size:clamp(20px,1.8vw,28px);line-height:1.1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.spec .v small{font-size:.6em;font-weight:500;color:var(--slate)}
+@media (max-width:860px){.specs .wrap{grid-template-columns:1fr 1fr}.spec:nth-child(3){padding-left:0;border-left:0}.spec:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+section{padding-block:clamp(72px,9vw,140px)}
+.sec-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-bottom:clamp(40px,5vw,72px)}
+.sec-head .label{grid-column:1/4;padding-top:10px}
+.sec-head .h-l{grid-column:4/11}
+.sec-head .lede{grid-column:4/10;margin-top:8px}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:16px}.sec-head>*{grid-column:1/-1!important}}
+
+/* problem */
+.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,40px)}
+.problem{display:grid;gap:18px;align-content:start}
+.problem figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--paper-2)}
+.problem img{width:100%;height:100%;object-fit:cover}
+.problem .h-m{font-size:clamp(20px,1.7vw,26px)}
+.problem p{color:var(--slate);max-width:40ch}
+@media (max-width:860px){.problems{grid-template-columns:1fr}}
+
+/* products */
+.products{background:var(--paper-2)}
+.lead-product{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,72px);align-items:stretch}
+.lead-product figure{margin:0;min-height:520px;position:relative;overflow:hidden}
+.lead-product figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lead-product figcaption{position:absolute;left:16px;bottom:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#EEF0ED;text-transform:uppercase}
+.lp-body{display:grid;gap:26px;align-content:start;padding-top:6px}
+.sheet{width:100%;border-collapse:collapse;font-size:15px}
+.sheet th,.sheet td{text-align:left;padding:12px 0;border-top:1px solid var(--rule);vertical-align:top}
+.sheet tr:last-child td,.sheet tr:last-child th{border-bottom:1px solid var(--rule)}
+.sheet th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);width:44%;padding-right:16px}
+.sheet td{font-variant-numeric:tabular-nums}
+.tbc{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.02em}
+.link{font-weight:600;font-size:15px;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;justify-self:start}
+.link:hover{color:var(--forest)}
+.secondary{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,72px);margin-top:clamp(48px,6vw,96px);padding-top:40px;border-top:1px solid var(--rule)}
+.sp{display:grid;grid-template-columns:200px 1fr;gap:28px}
+.sp figure{margin:0;aspect-ratio:3/4;overflow:hidden}
+.sp img{width:100%;height:100%;object-fit:cover}
+.sp .body{display:grid;gap:14px;align-content:start}
+.sp ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px}
+.sp li{display:flex;gap:10px}
+.sp li::before{content:"—";color:var(--slate)}
+@media (max-width:1000px){.lead-product{grid-template-columns:1fr}.lead-product figure{min-height:360px}.secondary{grid-template-columns:1fr}}
+@media (max-width:520px){.sp{grid-template-columns:1fr}.sp figure{aspect-ratio:16/10}}
+
+
+/* product datasheets */
+.prod-index{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-bottom:8px}
+.prod-index a{display:flex;gap:14px;align-items:baseline;padding:16px 16px 16px 0;text-decoration:none;font-weight:600;font-size:16px}
+.prod-index a+a{padding-left:16px;border-left:1px solid var(--rule)}
+.prod-index a:hover{color:var(--forest)}
+.prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);padding-block:clamp(40px,5vw,72px);border-top:1px solid var(--rule);scroll-margin-top:80px}
+.prod figure{margin:0;position:relative;overflow:hidden;min-height:460px;background:var(--paper)}
+.prod figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.prod figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.55));font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#EEF0ED;text-transform:uppercase}
+.prod-body{display:grid;gap:22px;align-content:start;min-width:0}
+.prod-title{font-size:clamp(30px,3.2vw,48px)}
+.prod-desc{font-size:clamp(17px,1.25vw,19px);max-width:56ch}
+.prod-sub{margin-bottom:-8px}
+.prod-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.feat{list-style:none;margin:0;padding:0;display:grid;font-size:15px;column-gap:32px}
+.feat.two{grid-template-columns:1fr 1fr}
+.feat li{padding:11px 0;border-top:1px solid var(--rule)}
+@media (max-width:1100px){.prod-cols{grid-template-columns:1fr}}
+@media (max-width:1000px){.prod{grid-template-columns:1fr}.prod figure{min-height:340px}}
+@media (max-width:640px){.feat.two{grid-template-columns:1fr}.prod-index{grid-template-columns:1fr}.prod-index a+a{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+
+/* pyrolysis band */
+.band{background:var(--band);color:var(--band-fg)}
+.band .label{color:var(--band-mute)}
+.band .lede{color:var(--band-fg)}
+.pyro{display:grid;grid-template-columns:1fr 340px;gap:clamp(24px,4vw,64px);align-items:end}
+.scale-box{overflow-x:auto;padding-bottom:6px}
+.scale{position:relative;min-width:720px;height:250px;font-family:var(--mono);font-size:12px}
+.scale .bar{position:absolute;left:0;right:0;top:118px;height:28px;display:flex}
+.scale .seg{height:100%;border-right:1px solid var(--band)}
+.scale .ticks{position:absolute;left:0;right:0;top:152px;height:40px}
+.scale .tick{position:absolute;top:0;transform:translateX(-50%);color:var(--band-mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.scale .tick::before{content:"";display:block;width:1px;height:8px;background:var(--band-mute);margin:0 auto 6px}
+.scale .tick:first-child{transform:none}.scale .tick:first-child::before{margin:0 0 6px}
+.scale .tick:last-child{transform:translateX(-100%)}.scale .tick:last-child::before{margin:0 0 6px auto}
+.scale .stage{position:absolute;top:58px;border-left:1px solid var(--band-rule);padding-left:10px;height:56px;display:grid;align-content:start;gap:3px}
+.scale .stage b{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--band-fg);letter-spacing:0}
+.scale .stage span{color:var(--band-mute)}
+.scale .bracket{position:absolute;top:206px;height:12px;border:1px solid var(--ember);border-top:0}
+.scale .bracket-l{position:absolute;top:226px;color:var(--ember);white-space:nowrap}
+.scale .unit{position:absolute;top:10px;left:0;color:var(--band-mute)}
+.gauge{margin:0;display:grid;gap:12px}
+.gauge img{aspect-ratio:1;object-fit:cover;width:100%}
+.gauge figcaption{font-family:var(--mono);font-size:12px;color:var(--band-mute);letter-spacing:.02em}
+.pyro-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;padding-top:28px;border-top:1px solid var(--band-rule)}
+.pyro-notes p{color:var(--band-mute);font-size:15px}
+.pyro-notes b{display:block;color:var(--band-fg);font-weight:600;margin-bottom:6px}
+@media (max-width:1000px){.pyro{grid-template-columns:1fr}.gauge{max-width:340px}.pyro-notes{grid-template-columns:1fr}}
+
+/* supply model */
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--ink)}
+.stg{display:grid;gap:14px;align-content:start;padding:20px 20px 0 0}
+.stg+.stg{padding-left:20px;border-left:1px solid var(--rule)}
+.stg .n{font-family:var(--display);font-weight:300;font-size:44px;line-height:1;color:var(--forest-2);font-variant-numeric:tabular-nums}
+.stg h3{font-family:var(--sans);font-size:17px;font-weight:600;margin:0;line-height:1.3}
+.stg p{font-size:15px;color:var(--slate)}
+.stg figure{margin:6px 0 0;aspect-ratio:1;overflow:hidden}
+.stg img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+@media (max-width:1100px){.stages{grid-template-columns:1fr 1fr;row-gap:40px}.stg,.stg+.stg{padding:20px 0 0;border-left:0}.stages{column-gap:28px}}
+@media (max-width:560px){.stages{grid-template-columns:1fr}.stg figure{aspect-ratio:16/10}}
+@media (max-width:700px){.hero .coord{display:none}}
+
+/* comparison */
+.compare{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);align-items:start}
+.compare figure{margin:0;display:grid;gap:10px}
+.compare figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.compare figcaption{font-family:var(--mono);font-size:12px;color:var(--slate)}
+.ctable-box{overflow-x:auto}
+.ctable{width:100%;border-collapse:collapse;min-width:560px;font-size:15px}
+.ctable th,.ctable td{text-align:left;padding:16px 16px 16px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.ctable thead th{font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);border-bottom:1px solid var(--ink)}
+.ctable thead th.us{color:var(--forest)}
+.ctable tbody th{font-weight:600;width:28%}
+.ctable td.us{color:var(--ink)}
+.ctable td.them{color:var(--slate)}
+@media (max-width:1000px){.compare{grid-template-columns:1fr}.compare figure img{aspect-ratio:16/10}}
+
+/* operations strip */
+.ops{padding-block:0 clamp(72px,9vw,140px)}
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:8px}
+.strip figure{margin:0;position:relative;overflow:hidden}
+.strip figure:first-child{grid-row:1/3}
+.strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#EEF0ED;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+@media (max-width:860px){.strip{grid-template-columns:1fr 1fr;grid-template-rows:280px 200px 200px}.strip figure:first-child{grid-row:auto;grid-column:1/-1}}
+
+/* roadmap */
+.roadmap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px)}
+.phase{display:grid;gap:18px;align-content:start}
+.phase figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden}
+.phase img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;background:var(--paper);color:var(--ink)}
+.tag.planned{background:var(--ink);color:var(--paper)}
+.phase .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid var(--ink);padding-top:14px}
+.phase p{color:var(--slate);max-width:52ch}
+@media (max-width:860px){.roadmap{grid-template-columns:1fr}}
+
+/* request */
+.request{background:var(--forest);color:#EEF2EC}
+:root[data-theme="dark"] .request{background:#1C2A18}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .request{background:#1C2A18}}
+.request .label{color:#B9C9B1}
+.req{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,5vw,96px)}
+.req .h-l{color:#F3F6F1}
+.req .intro{display:grid;gap:22px;align-content:start}
+.req .intro p{color:#CFDBC9;max-width:40ch}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.f{display:grid;gap:8px}
+.f.full{grid-column:1/-1}
+.f label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#B9C9B1}
+.f input,.f select,.f textarea{font:16px/1.4 var(--sans);color:#F3F6F1;background:transparent;border:0;border-bottom:1px solid rgba(238,242,236,.45);padding:10px 0;border-radius:0;appearance:none;-webkit-appearance:none}
+.f select{background-image:linear-gradient(45deg,transparent 50%,#CFDBC9 50%),linear-gradient(135deg,#CFDBC9 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.f select option{color:#111}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-bottom-color:#fff}
+.f textarea{resize:vertical;min-height:84px}
+.form-end{grid-column:1/-1;display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:10px}
+.request .btn{background:#F3F6F1;color:#15210F;border-color:#F3F6F1}
+.request .btn:hover{background:#fff}
+.form-note{font-size:14px;color:#CFDBC9}
+@media (max-width:900px){.req{grid-template-columns:1fr}}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+
+/* footer */
+footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
+.foot{display:grid;grid-template-columns:4fr 2fr 2fr 2fr;gap:32px}
+.foot h4{font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:0 0 14px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:15px}
+.foot a{text-decoration:none}.foot a:hover{text-decoration:underline}
+.foot .brand{display:grid;gap:18px;align-content:start}
+.foot .brand img{width:64px}
+.foot .brand p{color:var(--slate);font-size:15px;max-width:34ch}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--slate)}
+@media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot .brand{grid-column:1/-1}}
+
+.pyro>*,.compare>*,.req>*,.lead-product>*{min-width:0}
+
+/* about, solutions, scale, investors */
+.about{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,48px);border-top:1px solid var(--ink)}
+.about>div{display:grid;gap:10px;align-content:start;padding-top:18px}
+.about p:not(.label){max-width:42ch}
+.problems{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1100px){.problems{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.problems{grid-template-columns:1fr}}
+.solutions{margin-top:clamp(48px,6vw,88px);display:grid;grid-template-columns:3fr 9fr;gap:24px;padding-top:24px;border-top:1px solid var(--ink)}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px)}
+.sol-grid h3{font-size:17px;font-weight:600;margin:0 0 8px;line-height:1.3;letter-spacing:-.01em}
+.sol-grid p{color:var(--slate);font-size:15px}
+.apps{display:grid;gap:6px;padding:14px 16px;background:var(--paper);border-left:2px solid var(--forest-2)}
+.apps p{font-size:15px}
+.scale-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,64px);align-items:start}
+.ctable.num td{font-variant-numeric:tabular-nums;font-size:clamp(20px,1.8vw,26px);font-weight:500;letter-spacing:-.02em}
+.ctable.num{min-width:0}
+.investors{background:var(--paper-2)}
+.inv{display:grid;grid-template-columns:4fr 4fr 4fr;gap:clamp(24px,3vw,48px);align-items:start}
+.inv-note{font-size:15px;margin-top:16px}
+.inv-cta{display:grid;gap:20px;padding:24px;background:var(--ink);color:var(--paper)}
+.inv-cta .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);justify-self:start}
+.inv-cta .btn:hover{background:var(--forest-2);border-color:var(--forest-2);color:#fff}
+.stages{grid-template-columns:repeat(6,1fr)}
+@media (max-width:1200px){.stages{grid-template-columns:repeat(3,1fr);row-gap:40px;column-gap:28px}.stg,.stg+.stg{padding:20px 0 0;border-left:0}}
+@media (max-width:1000px){.about,.sol-grid,.inv{grid-template-columns:1fr}.solutions,.scale-grid{grid-template-columns:1fr}}
+@media (max-width:700px){.stages{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.stages{grid-template-columns:1fr}}
+
+@media (prefers-reduced-motion:reduce){.hero img{animation:none;transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="wordmark" href="#">PIROLI<span>SWISS</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">Company</a>
+      <a href="#products">Products</a>
+      <a href="#process">Process</a>
+      <a href="#provenance">Operating model</a>
+      <a href="#scale">Scale</a>
+      <a href="#investors">Investors</a>
+    </nav>
+    <div class="lang" aria-label="Language"><b>EN</b><span>/</span><span>ES</span></div>
+    <a class="btn" href="#request">Request specifications <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <img src="img/hero.jpg" alt="Freshly discharged hardwood charcoal piled at the Piroliswiss production site under open sky">
+  <div class="coord">Santa Cruz de la Sierra<br>Bolivia</div>
+  <div class="wrap">
+    <p class="label" style="color:#C9D0CB">Producer and exporter · Hardwood charcoal · Pyrolysis by-products</p>
+    <h1 class="h-xl">Hardwood charcoal from recovered forest residue.</h1>
+    <p class="sub">Curupaú, Soto and Cuchi hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.</p>
+    <div class="actions">
+      <a class="btn" href="#request">Request specifications <span class="arr">→</span></a>
+      <a class="btn ghost" href="#process">See the process</a>
+    </div>
+  </div>
+</div>
+
+<div class="specs">
+  <div class="wrap">
+    <div class="spec"><span class="label">Fixed carbon</span><span class="v">80–85 <small>%</small></span></div>
+    <div class="spec"><span class="label">Species</span><span class="v">Curupaú · Soto · Cuchi</span></div>
+    <div class="spec"><span class="label">Design capacity per plant</span><span class="v">60 <small>t / day</small></span></div>
+    <div class="spec"><span class="label">Feedstock</span><span class="v">Licensed residue only</span></div>
+  </div>
+</div>
+
+<section id="about" class="about-sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Who we are</p>
+      <h2 class="h-l">An industrial producer and exporter of premium charcoal and pyrolysis by-products.</h2>
+    </div>
+    <div class="about">
+      <div><p class="label">Industrial production</p><p>We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets.</p></div>
+      <div><p class="label">Responsible sourcing</p><p>We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue.</p></div>
+      <div><p class="label">Based in</p><p>Santa Cruz de la Sierra, Bolivia. Developed with Grupo Zwald S.R.L., which provides operating know-how, technology and commercial channels.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="provenance-why" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">The problems</p>
+      <h2 class="h-l">Good hardwood is burned in the field while industry and farms pay more for less.</h2>
+    </div>
+    <div class="problems">
+      <article class="problem">
+        <figure><img src="img/burn.jpg" alt="Forest residue burning after a land clearing"></figure>
+        <h3 class="h-m">Forest residue is wasted</h3>
+        <p>Millions of tonnes of forest residue are burned, abandoned or underused, causing pollution and economic loss.</p>
+      </article>
+      <article class="problem">
+        <figure><img src="img/clearing.jpg" alt="Bulldozer on an authorised land clearing, aerial view"></figure>
+        <h3 class="h-m">Licensed clearing is expensive</h3>
+        <p>Landowners with an approved clearing plan (PDM) spend much of their capital on removal, capital their farms then lack.</p>
+      </article>
+      <article class="problem">
+        <figure><img src="img/steel.jpg" alt="Steel plant with raw material yard"></figure>
+        <h3 class="h-m">Industrial charcoal is scarce</h3>
+        <p>In Brazil, growing demand from pulp companies has created a shortage of industrial charcoal for steelworks.</p>
+      </article>
+      <article class="problem">
+        <figure><img src="img/tractor.jpg" alt="Tractor working on farmland in Santa Cruz"></figure>
+        <h3 class="h-m">Farm inputs cost too much</h3>
+        <p>High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives.</p>
+      </article>
+    </div>
+
+    <div class="solutions">
+      <p class="label">Our solution</p>
+      <div class="sol-grid">
+        <div><h3>Turn forest residue into industrial products</h3><p>Controlled pyrolysis converts forest residue into high-value industrial products.</p></div>
+        <div><h3>Constant industrial supply</h3><p>Steady, scalable charcoal production for steelworks, especially in Brazil and Asia.</p></div>
+        <div><h3>Natural agricultural inputs</h3><p>A biomass-derived bio-input that reduces dependence on agrochemicals and supports more sustainable farming.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Products</p>
+      <h2 class="h-l">One process, three products.</h2>
+      <p class="lede muted">Charcoal is the core. The liquid and the fines that other kilns lose become two more product lines.</p>
+    </div>
+
+    <nav class="prod-index" aria-label="Products">
+      <a href="#p-charcoal"><span class="label">01</span>Premium lump charcoal</a>
+      <a href="#p-acid"><span class="label">02</span>Pyroligneous acid</a>
+      <a href="#p-briquettes"><span class="label">03</span>Eco charcoal briquettes</a>
+    </nav>
+
+    <article class="prod" id="p-charcoal">
+      <figure>
+        <img src="img/hand.jpg" alt="Piece of dense hardwood charcoal held in hand, showing a glassy fracture">
+        <figcaption>Lump charcoal · Curupaú</figcaption>
+      </figure>
+      <div class="prod-body">
+        <p class="label">01 · Core product</p>
+        <h3 class="h-l prod-title">Premium lump charcoal</h3>
+        <p class="prod-desc">Our main product is a high-quality charcoal made from selected hardwoods such as Curupaú, Soto and Cuchi, known for their high density, strength and excellent energy yield.</p>
+        <div class="prod-cols">
+          <div>
+            <p class="label prod-sub">Key characteristics</p>
+            <ul class="feat">
+              <li>High fixed carbon content: 80–85 %</li>
+              <li>High calorific value</li>
+              <li>Made from premium hardwoods</li>
+              <li>Higher thermal yield</li>
+              <li>Stable, long-lasting combustion</li>
+              <li>Low moisture and impurities</li>
+              <li>Suitable for industrial and export markets</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label prod-sub">Specification</p>
+            <table class="sheet">
+              <tr><th>Fixed carbon</th><td>80–85 %</td></tr>
+              <tr><th>Species</th><td>Curupaú, Soto, Cuchi</td></tr>
+              <tr><th>Moisture</th><td><span class="tbc">[lab value]</span></td></tr>
+              <tr><th>Ash</th><td><span class="tbc">[lab value]</span></td></tr>
+              <tr><th>Calorific value</th><td><span class="tbc">[kcal/kg]</span></td></tr>
+              <tr><th>Formats</th><td>Big-bag · retail bags</td></tr>
+              <tr><th>Output per plant</th><td>60 t / day <span class="muted">(projected)</span></td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="apps"><span class="label">Application · Industry</span><p>Iron foundry and steelmaking.</p></div>
+        <a class="link" href="#request">Request the datasheet</a>
+      </div>
+    </article>
+
+    <article class="prod" id="p-acid">
+      <figure>
+        <img src="img/retort.jpg" alt="Metal retort with condenser column where pyroligneous acid is recovered">
+        <figcaption>Recovered at the retort condenser</figcaption>
+      </figure>
+      <div class="prod-body">
+        <p class="label">02 · Agricultural and bio-input line</p>
+        <h3 class="h-l prod-title">Pyroligneous acid</h3>
+        <p class="prod-desc">Pyroligneous acid, also known as wood vinegar, is a liquid by-product obtained during the pyrolysis of biomass. Recovering it lets us use the entire production process, producing an input with agricultural, forestry and industrial applications and adding value to the operation.</p>
+        <p class="label prod-sub">Key characteristics</p>
+        <ul class="feat two">
+          <li>Activates and stimulates soil microbiology</li>
+          <li>Helps balance soil pH</li>
+          <li>Improves nutrient uptake by plants</li>
+          <li>Can be used as an agricultural biostimulant</li>
+          <li>Acts as a natural insect repellent</li>
+          <li>Can support the control of soil fungi and diseases</li>
+          <li>Applied diluted with water, liquid compost, biofertilisers or organic preparations</li>
+          <li>Helps reduce dependence on synthetic chemicals</li>
+        </ul>
+        <div class="apps"><span class="label">Application · Agriculture</span><p>Crop protection, natural pest control and fewer chemical inputs. Output per plant: 12.97 t / day <span class="muted">(projected)</span>.</p></div>
+        <a class="link" href="#request">Ask about availability</a>
+      </div>
+    </article>
+
+    <article class="prod" id="p-briquettes">
+      <figure>
+        <img src="img/embers.jpg" alt="Charcoal burning evenly on a test grate">
+        <figcaption>Even, long burn</figcaption>
+      </figure>
+      <div class="prod-body">
+        <p class="label">03 · Clean, efficient energy line</p>
+        <h3 class="h-l prod-title">Eco charcoal briquettes</h3>
+        <p class="prod-desc">Made from compacted charcoal fines, briquettes turn a residue of our production process into a higher-value commercial product.</p>
+        <p class="label prod-sub">Key characteristics</p>
+        <ul class="feat two">
+          <li>Uniform, long-lasting combustion</li>
+          <li>High energy yield</li>
+          <li>Standardised size and shape</li>
+          <li>Easy to store, transport and dose</li>
+          <li>Less waste</li>
+          <li>Full use of charcoal fines</li>
+          <li>Ideal for gastronomy and grilling</li>
+        </ul>
+        <div class="apps"><span class="label">Application · Premium BBQ</span><p>High-performance fuel for grills, gastronomy and gourmet export. Output per plant: 9.26 t / day <span class="muted">(projected)</span>.</p></div>
+        <a class="link" href="#request">Ask about availability</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Process</p>
+      <h2 class="h-l">Carbonisation is a temperature curve. We run it inside steel.</h2>
+      <p class="lede">A retort heats wood without air. Each stage happens at its own temperature, and every stage is read off a gauge on the vessel.</p>
+    </div>
+
+    <div class="pyro">
+      <div class="scale-box">
+        <div class="scale" role="img" aria-label="Pyrolysis temperature scale from 0 to 600 degrees Celsius showing drying up to 200, torrefaction 200 to 280, carbonisation 280 to 450, and refining 450 to 550. Pyroligneous acid is condensed between 150 and 350 degrees.">
+          <span class="unit">Retort temperature, °C</span>
+          <div class="stage" style="left:0%"><b>Drying</b><span>&lt; 200</span></div>
+          <div class="stage" style="left:33.33%"><b>Torrefaction</b><span>200–280</span></div>
+          <div class="stage" style="left:46.67%"><b>Carbonisation</b><span>280–450</span></div>
+          <div class="stage" style="left:75%"><b>Refining</b><span>450–550</span></div>
+          <div class="bar">
+            <div class="seg" style="width:33.33%;background:#3A4043"></div>
+            <div class="seg" style="width:13.34%;background:#6B4A32"></div>
+            <div class="seg" style="width:28.33%;background:linear-gradient(90deg,#9B4A22,#D4521C)"></div>
+            <div class="seg" style="width:16.67%;background:#EE7A42"></div>
+            <div class="seg" style="width:8.33%;background:#23282A"></div>
+          </div>
+          <div class="ticks">
+            <span class="tick" style="left:0%">0</span>
+            <span class="tick" style="left:16.67%">100</span>
+            <span class="tick" style="left:33.33%">200</span>
+            <span class="tick" style="left:50%">300</span>
+            <span class="tick" style="left:66.67%">400</span>
+            <span class="tick" style="left:83.33%">500</span>
+            <span class="tick" style="left:100%">600</span>
+          </div>
+          <div class="bracket" style="left:25%;width:33.33%"></div>
+          <span class="bracket-l" style="left:25%">Pyroligneous acid condensed · 150–350 °C</span>
+        </div>
+      </div>
+      <figure class="gauge">
+        <img src="img/gauge.jpg" alt="Temperature gauge mounted on a retort door, scale 0 to 600 °C">
+        <figcaption>Retort door gauge, 0–600 °C</figcaption>
+      </figure>
+    </div>
+
+    <div class="pyro-notes">
+      <p><b>Industrial retort kilns</b>Metal retorts recover the process gases to fuel the system itself and yield high-value by-products such as pyroligneous acid, improving energy efficiency.</p>
+      <p><b>Integrated system</b>Mechanised biomass handling, controlled carbonisation, by-product separation and processing for export.</p>
+      <p><b>Modular and scalable</b>A replicable system that expands production capacity quickly through new industrial plants.</p>
+    </div>
+  </div>
+</section>
+
+<section id="provenance">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Operating model</p>
+      <h2 class="h-l">From biomass to final product, in six steps.</h2>
+      <p class="lede muted">Every project starts with a legal document, not a chainsaw. We only work on land with an approved change-of-use plan, under a contract with the owner.</p>
+    </div>
+    <ol class="stages" style="list-style:none;margin:0;padding:0">
+      <li class="stg"><span class="n">1</span><h3>Forest study and legal confirmation</h3><p>Title check, satellite forest study and a field census with foresters.</p><figure><img src="img/census.jpg" alt="Forester measuring trees during a census"></figure></li>
+      <li class="stg"><span class="n">2</span><h3>Organised clearing and biomass sorting</h3><p>Mechanised clearing of the approved area; biomass is classified before processing.</p><figure><img src="img/loader.jpg" alt="Loader and heavy machinery on site"></figure></li>
+      <li class="stg"><span class="n">3</span><h3>Wood processing</h3><p>Logs are cut and prepared on site for loading into the retorts.</p><figure><img src="img/sawmill.jpg" alt="Log saw and conveyor at the camp"></figure></li>
+      <li class="stg"><span class="n">4</span><h3>Industrial carbonisation</h3><p>Controlled pyrolysis in metal retorts.</p><figure><img src="img/retort-fire.jpg" alt="Retort firing at night"></figure></li>
+      <li class="stg"><span class="n">5</span><h3>By-product separation and processing</h3><p>Pyroligneous acid is condensed; charcoal fines go to briquetting.</p><figure><img src="img/condenser.jpg" alt="Retort condenser column and piping"></figure></li>
+      <li class="stg"><span class="n">6</span><h3>Packaging, logistics and export</h3><p>Bagged on site and shipped to industrial and international buyers.</p><figure><img src="img/bigbags.jpg" alt="Filled big-bags ready for dispatch"></figure></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap compare">
+    <figure>
+      <img src="img/brick-kiln.jpg" alt="Traditional brick charcoal kiln releasing smoke">
+      <figcaption>The regional standard: a brick kiln, sealed with mud and read by eye.</figcaption>
+    </figure>
+    <div>
+      <p class="label" style="margin-bottom:18px">Retort vs. brick kiln</p>
+      <h2 class="h-l" style="margin-bottom:36px;font-size:clamp(28px,3vw,46px)">What changes when the kiln is steel.</h2>
+      <div class="ctable-box">
+        <table class="ctable">
+          <thead><tr><th></th><th class="us">Piroliswiss retort</th><th>Brick kiln</th></tr></thead>
+          <tbody>
+            <tr><th>Temperature</th><td class="us">Read on a gauge, adjusted by damper</td><td class="them">Judged by smoke colour</td></tr>
+            <tr><th>Smoke</th><td class="us">Condensed; gases burned in the firebox</td><td class="them">Released to the air</td></tr>
+            <tr><th>By-products</th><td class="us">Pyroligneous acid and fines recovered</td><td class="them">Lost</td></tr>
+            <tr><th>Batch quality</th><td class="us">Even carbonisation, fewer brands</td><td class="them">Mixed: raw cores and ash</td></tr>
+            <tr><th>Unloading</th><td class="us">Door opens, cooled load comes out</td><td class="them">Workers enter the kiln</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ops" id="operations">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Operations</p>
+      <h2 class="h-l">A working site, not a render.</h2>
+    </div>
+    <div class="strip">
+      <figure><img src="img/pile.jpg" alt="Charcoal stock at the production site"><figcaption>Stock after discharge</figcaption></figure>
+      <figure><img src="img/sections.jpg" alt="Cross-sections of charcoal showing radial cracks"><figcaption>Fully carbonised cores</figcaption></figure>
+      <figure><img src="img/quality.jpg" alt="Burn test of charcoal on a grate at night"><figcaption>Burn test</figcaption></figure>
+      <figure><img src="img/logs.jpg" alt="Hardwood logs loaded into a retort"><figcaption>Retort loaded with hardwood</figcaption></figure>
+      <figure><img src="img/truck.jpg" alt="Truck bed loaded with lump charcoal"><figcaption>Loading for transport</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="scale" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Scale</p>
+      <h2 class="h-l">One plant is one project. Five plants is the plan.</h2>
+      <p class="lede muted">Each project covers about 800 hectares over roughly 1,000 operating days and runs as an independent unit, so new plants can be replicated on other forest properties.</p>
+    </div>
+    <div class="scale-grid">
+      <div class="ctable-box">
+        <table class="ctable num">
+          <thead><tr><th>Daily output, projected</th><th>Per plant</th><th>With 5 plants</th></tr></thead>
+          <tbody>
+            <tr><th>Premium charcoal</th><td>60 t</td><td>300 t</td></tr>
+            <tr><th>Pyroligneous acid</th><td>12.97 t</td><td>64.8 t</td></tr>
+            <tr><th>Eco charcoal briquettes</th><td>9.26 t</td><td>46.3 t</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="roadmap">
+        <article class="phase">
+          <figure><img src="img/site.jpg" alt="First production site in a forest clearing"><span class="tag">Plant 1 · In production</span></figure>
+          <h3 class="h-m">First plant</h3>
+        </article>
+        <article class="phase">
+          <figure><img src="img/plant-render.jpg" alt="Rendering of a planned covered retort plant"><span class="tag planned">Plants 2–5 · Planned · Rendering</span></figure>
+          <h3 class="h-m">Modular expansion</h3>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="investors" class="investors">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="label">Investors and strategic partners</p>
+      <h2 class="h-l">We are looking for partners to build the next plants.</h2>
+      <p class="lede muted">Running several projects at once creates recurring cash flow and steady growth.</p>
+    </div>
+    <div class="inv">
+      <div>
+        <p class="label prod-sub">The opportunity</p>
+        <ul class="feat">
+          <li>High industrial and agricultural demand</li>
+          <li>Scalable, diversified production</li>
+          <li>Export markets and sustainable use of biomass</li>
+          <li>Replicable projects in forest regions</li>
+        </ul>
+      </div>
+      <div>
+        <p class="label prod-sub">Structure per plant</p>
+        <table class="sheet">
+          <tr><th>Grupo Zwald S.R.L.</th><td>51 %</td></tr>
+          <tr><th>Investors and partners</th><td>49 %</td></tr>
+        </table>
+        <p class="muted inv-note">Grupo Zwald provides operating know-how and technology, clients and commercial channels, and production management with technical supervision. Partners can join through equity or a joint venture.</p>
+      </div>
+      <div class="inv-cta">
+        <p>Projections, return scenarios and terms are shared with qualified investors under NDA.</p>
+        <a class="btn" href="#request" data-investor>Request the investor deck <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="request" id="request">
+  <div class="wrap req">
+    <div class="intro">
+      <p class="label">Specifications and quotes</p>
+      <h2 class="h-l">Tell us what you need to burn.</h2>
+      <p>We reply with the lab datasheet, available volumes and a price basis for your Incoterm, usually within two business days.</p>
+    </div>
+    <form id="spec-form" novalidate>
+      <div class="f"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization" required></div>
+      <div class="f"><label for="f-country">Country</label><input id="f-country" name="country" autocomplete="country-name"></div>
+      <div class="f"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="f-product">Product</label>
+        <select id="f-product" name="product"><option>Lump charcoal</option><option>Pyroligneous acid</option><option>Briquettes</option><option>Several products</option><option>Investment / partnership</option></select></div>
+      <div class="f"><label for="f-volume">Monthly volume</label>
+        <select id="f-volume" name="volume"><option>Under 20 t</option><option>20–100 t</option><option>100–500 t</option><option>Over 500 t</option></select></div>
+      <div class="f"><label for="f-inco">Incoterm</label>
+        <select id="f-inco" name="incoterm"><option>FCA</option><option>FOB</option><option>CIF</option><option>DAP</option><option>Not sure yet</option></select></div>
+      <div class="f full"><label for="f-msg">Application and requirements</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+      <div class="form-end">
+        <button class="btn" type="submit">Send request <span class="arr">→</span></button>
+        <span class="form-note" id="form-note" aria-live="polite">Your details are used only to answer this request.</span>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <img src="img/mark.png" alt="Piroliswiss mark">
+        <p>Piroliswiss S.R.L. produces and exports premium charcoal and pyrolysis by-products from licensed forest residue. Santa Cruz de la Sierra, Bolivia.</p>
+      </div>
+      <div><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#provenance">Operating model</a></li><li><a href="#scale">Scale</a></li><li><a href="#investors">Investors</a></li></ul></div>
+      <div><h4>Products</h4><ul><li><a href="#products">Lump charcoal</a></li><li><a href="#products">Pyroligneous acid</a></li><li><a href="#products">Briquettes</a></li><li><a href="#request">Export & logistics</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><span class="tbc">[sales email]</span></li><li>Santa Cruz de la Sierra, Bolivia</li><li><span class="tbc">[street address]</span></li><li><span class="tbc">[phone]</span></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Piroliswiss S.R.L.</span><span>Imprint · Privacy</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function s(){top.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',s,{passive:true});s();
+  document.querySelectorAll('[data-investor]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('f-product').value='Investment / partnership'})});
+  var form=document.getElementById('spec-form'),note=document.getElementById('form-note');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var c=document.getElementById('f-company').value.trim(),m=document.getElementById('f-email').value.trim();
+    if(!c||!/.+@.+\..+/.test(m)){note.textContent='Add your company name and a valid work email to send the request.';return}
+    note.textContent='Request prepared. In this prototype the form is not connected to an inbox yet.';
+  });
+})();
+</script>
+</body>
+</html>

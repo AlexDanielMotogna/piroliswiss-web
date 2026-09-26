@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "Piroliswiss · Carbón de maderas duras a partir de residuo forestal recuperado",
+    "description": "Productor y exportador de carbón vegetal de maderas duras, ácido piroleñoso y briquetas de carbón, elaborados en retortas metálicas a partir de residuo forestal autorizado. Santa Cruz de la Sierra, Bolivia."
+  },
+  "hero": {
+    "img": "hero",
+    "alt": "Carbón de maderas duras recién descargado, apilado al aire libre en el sitio de producción de Piroliswiss",
+    "location": ["Santa Cruz de la Sierra", "Bolivia"],
+    "eyebrow": "Productor y exportador · Carbón de maderas duras · Subproductos de pirólisis",
+    "title": "Carbón de maderas duras a partir de residuo forestal recuperado.",
+    "sub": "Curupaú, Soto y Cuchi de desmontes autorizados, carbonizados en retortas metálicas industriales para siderurgia, agricultura y parrilla premium.",
+    "secondary": "Ver el proceso"
+  },
+  "specs": [
+    { "label": "Carbono fijo", "v": "80–⁠85", "unit": "%" },
+    { "label": "Especies", "v": "Curupaú · Soto · Cuchi" },
+    { "label": "Capacidad de diseño por planta", "v": "60", "unit": "t / día" },
+    { "label": "Materia prima", "v": "Solo residuo autorizado" }
+  ],
+  "about": {
+    "label": "Quiénes somos",
+    "title": "Productor y exportador industrial de carbón vegetal premium y subproductos de pirólisis.",
+    "items": [
+      { "label": "Producción industrial", "text": "Producimos carbón vegetal premium y subproductos como ácido piroleñoso y briquetas de carbón para usos metalúrgicos, industriales y agrícolas, y para el mercado de parrilla premium." },
+      { "label": "Abastecimiento responsable", "text": "Trabajamos solo con residuo forestal y biomasa de origen legal, provenientes de áreas autorizadas para cambio de uso de suelo. Evitamos la quema a cielo abierto y generamos valor a partir del residuo." },
+      { "label": "Sede", "text": "Santa Cruz de la Sierra, Bolivia. Desarrollado con Grupo Zwald S.R.L., que aporta know-how operativo, tecnología y canales comerciales." }
+    ]
+  },
+  "problems": {
+    "label": "Los problemas",
+    "title": "Se quema buena madera dura en el campo mientras la industria y el agro pagan más por menos.",
+    "items": [
+      { "img": "burn", "alt": "Residuo forestal ardiendo después de un desmonte", "title": "El residuo forestal se desperdicia", "text": "Millones de toneladas de residuo forestal se queman, se abandonan o se aprovechan mal, con contaminación y pérdidas económicas." },
+      { "img": "clearing", "alt": "Topadora en un desmonte autorizado, vista aérea", "title": "El desmonte autorizado es caro", "text": "Los propietarios con un Plan de Desmonte (PDM) aprobado gastan gran parte de su capital en retirar la madera, capital que después le falta a su predio." },
+      { "img": "steel", "alt": "Planta siderúrgica con patio de materias primas", "title": "Escasea el carbón industrial", "text": "En Brasil, la creciente demanda de las empresas de celulosa ha generado un déficit de carbón vegetal industrial para la siderurgia." },
+      { "img": "tractor", "alt": "Tractor trabajando en un campo agrícola en Santa Cruz", "title": "Los insumos agrícolas cuestan demasiado", "text": "Los altos precios de fertilizantes y agroquímicos reducen el margen del productor y aumentan la necesidad de alternativas locales y sostenibles." }
+    ],
+    "solutionLabel": "Nuestra solución",
+    "solutions": [
+      { "title": "Convertir residuo forestal en productos industriales", "text": "La pirólisis controlada transforma el residuo forestal en productos industriales de alto valor." },
+      { "title": "Suministro industrial constante", "text": "Producción de carbón estable y escalable para la siderurgia, en especial en Brasil y Asia." },
+      { "title": "Insumos agrícolas naturales", "text": "Un bioinsumo derivado de la biomasa que reduce la dependencia de agroquímicos y favorece una agricultura más sostenible." }
+    ]
+  },
+  "products": {
+    "label": "Productos",
+    "title": "Un proceso, tres productos.",
+    "lede": "El carbón es el núcleo. El líquido y los finos que otros hornos pierden se convierten en dos líneas de producto más.",
+    "indexLabel": "Productos",
+    "items": [
+      {
+        "id": "p-charcoal",
+        "img": "hand",
+        "alt": "Trozo de carbón denso de madera dura en la mano, con fractura vítrea",
+        "caption": "Carbón en trozos · Curupaú",
+        "navLabel": "Carbón vegetal premium",
+        "tag": "Producto principal",
+        "title": "Carbón vegetal premium",
+        "desc": "Nuestro producto principal es un carbón vegetal de alta calidad elaborado con maderas duras seleccionadas como Curupaú, Soto y Cuchi, reconocidas por su alta densidad, resistencia y excelente rendimiento energético.",
+        "featLabel": "Características principales",
+        "features": [
+          "Alto contenido de carbono fijo: 80–⁠85 %",
+          "Alto poder calorífico",
+          "Elaborado con maderas duras premium",
+          "Mayor rendimiento térmico",
+          "Combustión estable y duradera",
+          "Baja humedad e impurezas",
+          "Apto para mercados industriales y de exportación"
+        ],
+        "specLabel": "Especificación",
+        "spec": [
+          { "k": "Carbono fijo", "v": "80–⁠85 %" },
+          { "k": "Especies", "v": "Curupaú, Soto, Cuchi" },
+          { "k": "Humedad", "tbc": "[valor de laboratorio]" },
+          { "k": "Cenizas", "tbc": "[valor de laboratorio]" },
+          { "k": "Poder calorífico", "tbc": "[kcal/kg]" },
+          { "k": "Formatos", "v": "Big-bag · bolsas minoristas" },
+          { "k": "Producción por planta", "v": "60 t / día", "note": "(proyectado)" }
+        ],
+        "appLabel": "Aplicación · Industria",
+        "app": "Fundición de hierro y siderurgia.",
+        "cta": "Solicitar la ficha técnica"
+      },
+      {
+        "id": "p-acid",
+        "img": "retort",
+        "alt": "Retorta metálica con columna de condensación donde se recupera el ácido piroleñoso",
+        "caption": "Recuperado en el condensador de la retorta",
+        "navLabel": "Ácido piroleñoso",
+        "tag": "Línea agrícola y de bioinsumos",
+        "title": "Ácido piroleñoso",
+        "desc": "El ácido piroleñoso, también conocido como vinagre de madera, es un subproducto líquido que se obtiene durante la pirólisis de la biomasa. Recuperarlo nos permite aprovechar todo el proceso productivo, obtener un insumo con aplicaciones agrícolas, forestales e industriales y agregar valor a la operación.",
+        "featLabel": "Características principales",
+        "features": [
+          "Activa y estimula la microbiología del suelo",
+          "Ayuda a equilibrar el pH del suelo",
+          "Mejora la absorción de nutrientes por las plantas",
+          "Puede usarse como bioestimulante agrícola",
+          "Actúa como repelente natural de insectos",
+          "Puede contribuir al control de hongos y enfermedades del suelo",
+          "Se aplica diluido en agua, compost líquido, biofertilizantes o preparados orgánicos",
+          "Ayuda a reducir la dependencia de químicos sintéticos"
+        ],
+        "appLabel": "Aplicación · Agricultura",
+        "app": "Protección de cultivos, control natural de plagas y menos insumos químicos.",
+        "outputLabel": "Producción por planta:",
+        "output": { "v": "12,97 t / día", "note": "(proyectado)" },
+        "cta": "Consultar disponibilidad"
+      },
+      {
+        "id": "p-briquettes",
+        "img": "embers",
+        "alt": "Carbón ardiendo de forma pareja en una parrilla de prueba",
+        "caption": "Combustión pareja y larga",
+        "navLabel": "Briquetas ecológicas de carbón",
+        "tag": "Línea de energía limpia y eficiente",
+        "title": "Briquetas ecológicas de carbón",
+        "desc": "Elaboradas con finos de carbón compactados, las briquetas convierten un residuo de nuestro proceso productivo en un producto comercial de mayor valor.",
+        "featLabel": "Características principales",
+        "features": [
+          "Combustión uniforme y duradera",
+          "Alto rendimiento energético",
+          "Tamaño y forma estandarizados",
+          "Fáciles de almacenar, transportar y dosificar",
+          "Menos desperdicio",
+          "Aprovechamiento total de los finos de carbón",
+          "Ideales para gastronomía y parrilla"
+        ],
+        "appLabel": "Aplicación · Parrilla premium",
+        "app": "Combustible de alto rendimiento para parrillas, gastronomía y exportación gourmet.",
+        "outputLabel": "Producción por planta:",
+        "output": { "v": "9,26 t / día", "note": "(proyectado)" },
+        "cta": "Consultar disponibilidad"
+      }
+    ]
+  },
+  "process": {
+    "label": "Proceso",
+    "title": "La carbonización es una curva de temperatura. La controlamos dentro del acero.",
+    "lede": "Una retorta calienta la madera sin aire. Cada etapa ocurre a su propia temperatura y cada una se lee en un termómetro instalado en el equipo.",
+    "aria": "Escala de temperatura de pirólisis de 0 a 600 grados Celsius: secado hasta 200, torrefacción de 200 a 280, carbonización de 280 a 450 y refinado de 450 a 550. El ácido piroleñoso se condensa entre 150 y 350 grados.",
+    "unit": "Temperatura de la retorta, °C",
+    "stages": [
+      { "name": "Secado", "range": "< 200" },
+      { "name": "Torrefacción", "range": "200–⁠280" },
+      { "name": "Carbonización", "range": "280–⁠450" },
+      { "name": "Refinado", "range": "450–⁠550" }
+    ],
+    "bracket": "Condensación del ácido piroleñoso · 150–⁠350 °C",
+    "gaugeAlt": "Termómetro de esfera montado en la puerta de una retorta, escala de 0 a 600 °C",
+    "gaugeCaption": "Termómetro de la puerta de la retorta, 0–⁠600 °C",
+    "notes": [
+      { "title": "Hornos de retorta industriales", "text": "Las retortas metálicas recuperan los gases del proceso para alimentar el propio sistema y generan subproductos de alto valor como el ácido piroleñoso, mejorando la eficiencia energética." },
+      { "title": "Sistema integrado", "text": "Manejo mecanizado de la biomasa, carbonización controlada, separación de subproductos y procesamiento para exportación." },
+      { "title": "Modular y escalable", "text": "Un sistema replicable que amplía rápidamente la capacidad de producción mediante nuevas plantas industriales." }
+    ]
+  },
+  "model": {
+    "label": "Modelo operativo",
+    "title": "De la biomasa al producto final, en seis pasos.",
+    "lede": "Cada proyecto empieza con un documento legal, no con una motosierra. Solo trabajamos en predios con un plan de cambio de uso de suelo aprobado y con contrato con el propietario.",
+    "steps": [
+      { "img": "census", "alt": "Ingeniero forestal midiendo árboles durante un censo", "title": "Estudio forestal y confirmación legal", "text": "Revisión de títulos, estudio forestal satelital y censo de campo con ingenieros forestales." },
+      { "img": "loader", "alt": "Cargadora y maquinaria pesada en el sitio", "title": "Desmonte ordenado y clasificación de biomasa", "text": "Desmonte mecanizado del área aprobada; la biomasa se clasifica antes de procesarla." },
+      { "img": "sawmill", "alt": "Sierra de troncos y transportadora en el campamento", "title": "Procesamiento de la madera", "text": "Los troncos se cortan y preparan en el sitio para cargar las retortas." },
+      { "img": "retort-fire", "alt": "Retorta encendida de noche", "title": "Carbonización industrial", "text": "Pirólisis controlada en retortas metálicas." },
+      { "img": "condenser", "alt": "Columna de condensación y tuberías de la retorta", "title": "Separación y procesamiento de subproductos", "text": "El ácido piroleñoso se condensa; los finos de carbón van a briquetado." },
+      { "img": "bigbags", "alt": "Big-bags llenos listos para despacho", "title": "Empaque, logística y exportación", "text": "Embolsado en el sitio y despachado a compradores industriales e internacionales." }
+    ]
+  },
+  "compare": {
+    "img": "brick-kiln",
+    "alt": "Horno tradicional de ladrillo para carbón liberando humo",
+    "caption": "El estándar regional: un horno de ladrillo, sellado con barro y controlado a ojo.",
+    "label": "Retorta vs. horno de ladrillo",
+    "title": "Qué cambia cuando el horno es de acero.",
+    "rowHead": "Criterio",
+    "us": "Retorta Piroliswiss",
+    "them": "Horno de ladrillo",
+    "rows": [
+      { "k": "Temperatura", "us": "Se lee en un termómetro y se ajusta con la compuerta", "them": "Se estima por el color del humo" },
+      { "k": "Humo", "us": "Se condensa; los gases se queman en el hogar", "them": "Se libera al aire" },
+      { "k": "Subproductos", "us": "Se recuperan ácido piroleñoso y finos", "them": "Se pierden" },
+      { "k": "Calidad del lote", "us": "Carbonización pareja, menos tizones", "them": "Irregular: núcleos crudos y ceniza" },
+      { "k": "Descarga", "us": "Se abre la puerta y sale la carga ya fría", "them": "Los trabajadores entran al horno" }
+    ]
+  },
+  "ops": {
+    "label": "Operaciones",
+    "title": "Un sitio en marcha, no un render.",
+    "photos": [
+      { "img": "pile", "alt": "Stock de carbón en el sitio de producción", "caption": "Stock tras la descarga" },
+      { "img": "sections", "alt": "Cortes transversales de carbón con grietas radiales", "caption": "Núcleos totalmente carbonizados" },
+      { "img": "quality", "alt": "Prueba de combustión de carbón en una parrilla de noche", "caption": "Prueba de combustión" },
+      { "img": "logs", "alt": "Troncos de madera dura cargados en una retorta", "caption": "Retorta cargada con madera dura" },
+      { "img": "truck", "alt": "Carrocería de camión cargada con carbón en trozos", "caption": "Carga para transporte" }
+    ]
+  },
+  "scale": {
+    "label": "Escala",
+    "title": "Una planta es un proyecto. El plan son cinco plantas.",
+    "lede": "Cada proyecto abarca unas 800 hectáreas durante aproximadamente 1000 días de operación y funciona como unidad independiente, de modo que nuevas plantas pueden replicarse en otros predios forestales.",
+    "head": ["Producción diaria proyectada", "Por planta", "Con 5 plantas"],
+    "unit": "t",
+    "rows": [
+      { "k": "Carbón vegetal premium", "plant": "60", "five": "300" },
+      { "k": "Ácido piroleñoso", "plant": "12,97", "five": "64,8" },
+      { "k": "Briquetas ecológicas de carbón", "plant": "9,26", "five": "46,3" }
+    ],
+    "phases": [
+      { "img": "site", "alt": "Primer sitio de producción en un claro del bosque", "tag": "Planta 1 · En producción", "planned": false, "title": "Primera planta" },
+      { "img": "plant-render", "alt": "Render de una planta de retortas techada, planificada", "tag": "Plantas 2–⁠5 · Planificado · Render", "planned": true, "title": "Expansión modular" }
+    ]
+  },
+  "investors": {
+    "label": "Inversionistas y socios estratégicos",
+    "title": "Buscamos socios para construir las próximas plantas.",
+    "lede": "Operar varios proyectos a la vez genera flujo de caja recurrente y crecimiento sostenido.",
+    "oppLabel": "La oportunidad",
+    "opportunity": [
+      "Alta demanda industrial y agrícola",
+      "Producción escalable y diversificada",
+      "Mercados de exportación y uso sostenible de la biomasa",
+      "Proyectos replicables en regiones forestales"
+    ],
+    "structLabel": "Estructura por planta",
+    "structure": [
+      { "k": "Grupo Zwald S.R.L.", "v": "51 %" },
+      { "k": "Inversionistas y socios", "v": "49 %" }
+    ],
+    "note": "Grupo Zwald aporta know-how operativo y tecnología, clientes y canales comerciales, y la gestión de la producción con supervisión técnica. Los socios pueden participar mediante capital o un joint venture.",
+    "ctaText": "Las proyecciones, escenarios de retorno y condiciones se comparten con inversionistas calificados bajo acuerdo de confidencialidad (NDA).",
+    "cta": "Solicitar la presentación para inversionistas"
+  },
+  "request": {
+    "label": "Especificaciones y cotizaciones",
+    "title": "Cuéntenos qué necesita quemar.",
+    "text": "Respondemos con la ficha de laboratorio, los volúmenes disponibles y una base de precio según su Incoterm, normalmente en dos días hábiles.",
+    "fields": {
+      "company": "Empresa",
+      "country": "País",
+      "email": "Correo corporativo",
+      "product": "Producto",
+      "volume": "Volumen mensual",
+      "incoterm": "Incoterm",
+      "message": "Aplicación y requisitos"
+    },
+    "productOptions": [
+      { "value": "charcoal", "label": "Carbón en trozos" },
+      { "value": "acid", "label": "Ácido piroleñoso" },
+      { "value": "briquettes", "label": "Briquetas" },
+      { "value": "several", "label": "Varios productos" },
+      { "value": "investment", "label": "Inversión / alianza" }
+    ],
+    "volumeOptions": ["Menos de 20 t", "20–⁠100 t", "100–⁠500 t", "Más de 500 t"],
+    "incotermOptions": ["FCA", "FOB", "CIF", "DAP", "Aún no lo sé"],
+    "submit": "Enviar solicitud",
+    "note": "Sus datos se usan solo para responder a esta solicitud.",
+    "error": "Indique el nombre de su empresa y un correo corporativo válido para enviar la solicitud.",
+    "done": "Solicitud preparada. En este prototipo el formulario todavía no está conectado a un buzón."
+  }
+}

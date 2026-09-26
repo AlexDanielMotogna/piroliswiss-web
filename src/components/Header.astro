@@ -1,0 +1,47 @@
+---
+import type { Ui } from '../lib/types';
+import { locales, localeRoot, switchLabel, htmlLang, type Locale } from '../i18n/locales';
+
+interface Props {
+  ui: Ui;
+  locale: Locale;
+}
+const { ui, locale } = Astro.props;
+---
+<a class="skip" href="#main">{ui.skip}</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="wordmark" href={localeRoot(locale)} aria-label={ui.home}>PIROLI<span>SWISS</span></a>
+    <nav class="nav" aria-label={ui.navLabel}>
+      {ui.nav.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+    <nav class="lang" aria-label={ui.langLabel}>
+      {locales.map((l, i) => (
+        <Fragment>
+          {i > 0 && <span aria-hidden="true">/</span>}
+          {l === locale
+            ? <span aria-current="true" lang={htmlLang[l]}>{switchLabel[l]}</span>
+            : <a href={localeRoot(l)} hreflang={htmlLang[l]} lang={htmlLang[l]}>{switchLabel[l]}</a>}
+        </Fragment>
+      ))}
+    </nav>
+    <a class="btn" href="#request">{ui.requestCta} <span class="arr" aria-hidden="true">→</span></a>
+    <details class="menu">
+      <summary>{ui.menu}</summary>
+      <div class="menu-panel">
+        <ul>
+          {ui.nav.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+          <li><a href="#request">{ui.requestCta} <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</header>
+<script>
+  const top = document.getElementById('top')!;
+  const onScroll = () => top.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  const menu = top.querySelector<HTMLDetailsElement>('.menu');
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => (menu.open = false)));
+</script>

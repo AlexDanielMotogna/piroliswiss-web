@@ -1,0 +1,29 @@
+---
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  compare: Home['compare'];
+}
+const { compare: c } = Astro.props;
+---
+<div class="wrap compare">
+  <figure>
+    <Photo src={c.img} alt={c.alt} sizes="(max-width: 1000px) 100vw, 40vw" />
+    <figcaption>{c.caption}</figcaption>
+  </figure>
+  <div>
+    <p class="label">{c.label}</p>
+    <h2 class="h-l">{c.title}</h2>
+    <div class="ctable-box">
+      <table class="ctable">
+        <thead>
+          <tr><th scope="col"><span class="sr-only">{c.rowHead}</span></th><th scope="col" class="us">{c.us}</th><th scope="col">{c.them}</th></tr>
+        </thead>
+        <tbody>
+          {c.rows.map((r) => <tr><th scope="row">{r.k}</th><td class="us">{r.us}</td><td class="them">{r.them}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

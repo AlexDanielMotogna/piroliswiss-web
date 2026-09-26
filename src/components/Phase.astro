@@ -1,0 +1,16 @@
+---
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  phase: Home['scale']['phases'][number];
+}
+const { phase } = Astro.props;
+---
+<article class="phase">
+  <figure>
+    <Photo src={phase.img} alt={phase.alt} sizes="(max-width: 860px) 100vw, 30vw" />
+    <span class:list={['tag', { planned: phase.planned }]}>{phase.tag}</span>
+  </figure>
+  <h3 class="h-m">{phase.title}</h3>
+</article>

@@ -1,0 +1,33 @@
+# Piroliswiss website
+
+Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): producer and exporter of hardwood lump charcoal, pyroligneous acid and charcoal briquettes, made in metal retorts from licensed forest residue.
+
+## Read first
+- `docs/BRIEF.md`: sitemap, page-by-page content, design tokens, launch checklist. Source of truth.
+- `prototype/index.html`: approved homepage design. Match it pixel-for-pixel when porting; reuse its CSS tokens and component patterns for every other page.
+- `prototype/img/`: approved photos. Use only these (or files the user adds later).
+
+## Stack
+- Astro (static output), TypeScript, plain CSS with custom properties in `src/styles/tokens.css`. No Tailwind, no component libraries, no icon packs.
+- Fonts: Geist (brand font, display + body; headlines weight 600, letter-spacing -0.04em) and Geist Mono (labels/specs), self-hosted from `public/fonts/`. Geist Mono has a slashed zero; the mono stack starts with "Geist Digits" (digits 0–9 from Geist Sans) so every number shows an open 0. Keep it that way.
+- i18n: Spanish (default) at `/`, Brazilian Portuguese at `/pt/`, English at `/en/`, Simplified Chinese at `/zh/`. All copy lives in content collections (`src/content/home/<locale>.json`, `src/content/ui/<locale>.json`), never hard-coded in components. The schema in `src/content.config.ts` is strict, so a missing key in any language fails the build. Numbers follow each locale (es/pt: `12,97`; en/zh: `12.97`).
+- Images through `astro:assets` (AVIF/WebP, responsive `srcset`).
+
+## Design rules (non-negotiable)
+- Square corners. No box-shadows. No gradients except photo scrims and the pyrolysis scale.
+- No icons, emoji or illustration. Structure comes from type, rules and tables.
+- Left-aligned layouts on a 12-column grid. Nothing centred except where the prototype does it.
+- Ember orange (`--ember`) is only for temperatures and `[missing data]` placeholders.
+- Numbered markers only where the order is real (the 5 supply stages).
+- Every page must work at 360 px wide without horizontal scroll, and in light and dark mode.
+
+## Content rules
+- Never invent facts, figures, names, emails, certifications or quotes. Missing data stays as a visible placeholder: `<span class="tbc">[lab value]</span>`.
+- Never publish coordinates, parcel maps, landowner names, permit numbers or the forest census.
+- Renders must carry the tag "Planned · Rendering".
+- Product copy (description + key characteristics) comes from the client deck and is already in the prototype. Do not add new claims. The wood vinegar claims (insect repellent, fungi control) are pending legal review for the target market.
+
+## Workflow
+- Build page by page in sitemap order. After each page: `npm run build`, check for errors, then stop and summarise what's done and which placeholders remain.
+- Never publish prices, profits, ROI or investment terms from the investor deck. The Investors section is a teaser that leads to "Request the investor deck".
+- Keep components small: `Header`, `Footer`, `Hero`, `SpecStrip`, `SectionHead`, `SpecTable`, `PyrolysisScale`, `StageList`, `CompareTable`, `PhotoStrip`, `Phase`, `ScaleTable`, `InvestorTeaser`, `RequestForm`.

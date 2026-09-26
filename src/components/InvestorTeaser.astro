@@ -1,0 +1,30 @@
+---
+import SectionHead from './SectionHead.astro';
+import SpecTable from './SpecTable.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  inv: Home['investors'];
+}
+const { inv } = Astro.props;
+---
+<section id="investors" class="investors">
+  <div class="wrap">
+    <SectionHead label={inv.label} title={inv.title} lede={inv.lede} />
+    <div class="inv">
+      <div>
+        <p class="label prod-sub">{inv.oppLabel}</p>
+        <ul class="feat">{inv.opportunity.map((o) => <li>{o}</li>)}</ul>
+      </div>
+      <div>
+        <p class="label prod-sub">{inv.structLabel}</p>
+        <SpecTable rows={inv.structure} />
+        <p class="muted inv-note">{inv.note}</p>
+      </div>
+      <div class="inv-cta">
+        <p>{inv.ctaText}</p>
+        <a class="btn" href="#request" data-investor>{inv.cta} <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

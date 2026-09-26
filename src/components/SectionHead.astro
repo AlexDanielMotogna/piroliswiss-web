@@ -1,0 +1,14 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  lede?: string;
+  mutedLede?: boolean;
+}
+const { label, title, lede, mutedLede = true } = Astro.props;
+---
+<div class="sec-head">
+  <p class="label">{label}</p>
+  <h2 class="h-l">{title}</h2>
+  {lede && <p class:list={['lede', { muted: mutedLede }]}>{lede}</p>}
+</div>

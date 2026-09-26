@@ -1,0 +1,38 @@
+{
+  "skip": "Saltar al contenido",
+  "home": "Inicio de Piroliswiss",
+  "nav": [
+    { "href": "#about", "label": "Empresa" },
+    { "href": "#products", "label": "Productos" },
+    { "href": "#process", "label": "Proceso" },
+    { "href": "#provenance", "label": "Modelo operativo" },
+    { "href": "#scale", "label": "Escala" },
+    { "href": "#investors", "label": "Inversionistas" }
+  ],
+  "navLabel": "Principal",
+  "menu": "Menú",
+  "langLabel": "Idioma",
+  "requestCta": "Solicitar especificaciones",
+  "footer": {
+    "about": "Piroliswiss S.R.L. produce y exporta carbón vegetal premium y subproductos de pirólisis a partir de residuo forestal autorizado. Santa Cruz de la Sierra, Bolivia.",
+    "markAlt": "Isotipo de Piroliswiss",
+    "columns": [
+      { "title": "Empresa", "links": [
+        { "href": "#about", "label": "Quiénes somos" },
+        { "href": "#provenance", "label": "Modelo operativo" },
+        { "href": "#scale", "label": "Escala" },
+        { "href": "#investors", "label": "Inversionistas" }
+      ] },
+      { "title": "Productos", "links": [
+        { "href": "#p-charcoal", "label": "Carbón en trozos" },
+        { "href": "#p-acid", "label": "Ácido piroleñoso" },
+        { "href": "#p-briquettes", "label": "Briquetas" },
+        { "href": "#request", "label": "Exportación y logística" }
+      ] }
+    ],
+    "contact": { "title": "Contacto", "city": "Santa Cruz de la Sierra, Bolivia", "email": "[correo de ventas]", "address": "[dirección]", "phone": "[teléfono]" },
+    "copyright": "© 2026 Piroliswiss S.R.L.",
+    "imprint": "Aviso legal",
+    "privacy": "Privacidad"
+  }
+}

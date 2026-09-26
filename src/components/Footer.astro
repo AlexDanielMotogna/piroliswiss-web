@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import { img } from '../lib/images';
+import Tbc from './Tbc.astro';
+import type { Ui } from '../lib/types';
+
+interface Props {
+  ui: Ui;
+}
+const { footer: f } = Astro.props.ui;
+---
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <Image src={img('mark')} alt={f.markAlt} width={128} />
+        <p>{f.about}</p>
+      </div>
+      {f.columns.map((c) => (
+        <div>
+          <h2>{c.title}</h2>
+          <ul>{c.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+        </div>
+      ))}
+      <div>
+        <h2>{f.contact.title}</h2>
+        <ul>
+          <li><Tbc text={f.contact.email} /></li>
+          <li>{f.contact.city}</li>
+          <li><Tbc text={f.contact.address} /></li>
+          <li><Tbc text={f.contact.phone} /></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>{f.copyright}</span><span>{f.imprint} · {f.privacy}</span></div>
+  </div>
+</footer>

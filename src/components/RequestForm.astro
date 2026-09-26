@@ -1,0 +1,47 @@
+---
+import type { Home } from '../lib/types';
+
+interface Props {
+  req: Home['request'];
+}
+const { req: r } = Astro.props;
+---
+<section class="request" id="request">
+  <div class="wrap req">
+    <div class="intro">
+      <p class="label">{r.label}</p>
+      <h2 class="h-l">{r.title}</h2>
+      <p>{r.text}</p>
+    </div>
+    <form id="spec-form" novalidate data-error={r.error} data-done={r.done}>
+      <div class="f"><label for="f-company">{r.fields.company}</label><input id="f-company" name="company" autocomplete="organization" required /></div>
+      <div class="f"><label for="f-country">{r.fields.country}</label><input id="f-country" name="country" autocomplete="country-name" /></div>
+      <div class="f"><label for="f-email">{r.fields.email}</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+      <div class="f"><label for="f-product">{r.fields.product}</label>
+        <select id="f-product" name="product">{r.productOptions.map((o) => <option value={o.value}>{o.label}</option>)}</select></div>
+      <div class="f"><label for="f-volume">{r.fields.volume}</label>
+        <select id="f-volume" name="volume">{r.volumeOptions.map((o) => <option>{o}</option>)}</select></div>
+      <div class="f"><label for="f-inco">{r.fields.incoterm}</label>
+        <select id="f-inco" name="incoterm">{r.incotermOptions.map((o) => <option>{o}</option>)}</select></div>
+      <div class="f full"><label for="f-msg">{r.fields.message}</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+      <div class="form-end">
+        <button class="btn" type="submit">{r.submit} <span class="arr" aria-hidden="true">→</span></button>
+        <span class="form-note" id="form-note" aria-live="polite">{r.note}</span>
+      </div>
+    </form>
+  </div>
+</section>
+<script>
+  const form = document.getElementById('spec-form') as HTMLFormElement;
+  const note = document.getElementById('form-note') as HTMLElement;
+  const product = document.getElementById('f-product') as HTMLSelectElement;
+  document.querySelectorAll('[data-investor]').forEach((a) =>
+    a.addEventListener('click', () => (product.value = 'investment')),
+  );
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const company = (document.getElementById('f-company') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('f-email') as HTMLInputElement).value.trim();
+    note.textContent = (!company || !/.+@.+\..+/.test(email) ? form.dataset.error : form.dataset.done) ?? '';
+  });
+</script>

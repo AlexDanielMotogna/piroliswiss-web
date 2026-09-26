@@ -1,0 +1,120 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import Hero from './Hero.astro';
+import SpecStrip from './SpecStrip.astro';
+import SectionHead from './SectionHead.astro';
+import Photo from './Photo.astro';
+import Product from './Product.astro';
+import PyrolysisScale from './PyrolysisScale.astro';
+import StageList from './StageList.astro';
+import CompareTable from './CompareTable.astro';
+import PhotoStrip from './PhotoStrip.astro';
+import ScaleTable from './ScaleTable.astro';
+import Phase from './Phase.astro';
+import InvestorTeaser from './InvestorTeaser.astro';
+import RequestForm from './RequestForm.astro';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const homeEntry = await getEntry('home', locale);
+const uiEntry = await getEntry('ui', locale);
+if (!homeEntry || !uiEntry) throw new Error(`Missing content for locale "${locale}"`);
+const t = homeEntry.data;
+const ui = uiEntry.data;
+---
+<Base locale={locale} title={t.meta.title} description={t.meta.description}>
+  <Header ui={ui} locale={locale} />
+  <main id="main">
+    <Hero hero={t.hero} cta={ui.requestCta} />
+    <SpecStrip specs={t.specs} />
+
+    <section id="about">
+      <div class="wrap">
+        <SectionHead label={t.about.label} title={t.about.title} />
+        <div class="about">
+          {t.about.items.map((a) => <div><p class="label">{a.label}</p><p>{a.text}</p></div>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="flush">
+      <div class="wrap">
+        <SectionHead label={t.problems.label} title={t.problems.title} />
+        <div class="problems">
+          {t.problems.items.map((p) => (
+            <article class="problem">
+              <figure><Photo src={p.img} alt={p.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" /></figure>
+              <h3 class="h-m">{p.title}</h3>
+              <p>{p.text}</p>
+            </article>
+          ))}
+        </div>
+        <div class="solutions">
+          <p class="label">{t.problems.solutionLabel}</p>
+          <div class="sol-grid">
+            {t.problems.solutions.map((s) => <div><h3>{s.title}</h3><p>{s.text}</p></div>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="wrap">
+        <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} />
+        <nav class="prod-index" aria-label={t.products.indexLabel}>
+          {t.products.items.map((p, i) => (
+            <a href={`#${p.id}`}><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
+          ))}
+        </nav>
+        {t.products.items.map((p, i) => <Product p={p} n={i + 1} />)}
+      </div>
+    </section>
+
+    <section class="band" id="process">
+      <div class="wrap">
+        <SectionHead label={t.process.label} title={t.process.title} lede={t.process.lede} mutedLede={false} />
+        <PyrolysisScale process={t.process} />
+      </div>
+    </section>
+
+    <section id="provenance">
+      <div class="wrap">
+        <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} />
+        <StageList steps={t.model.steps} />
+      </div>
+    </section>
+
+    <section class="flush">
+      <CompareTable compare={t.compare} />
+    </section>
+
+    <section class="ops" id="operations">
+      <div class="wrap">
+        <SectionHead label={t.ops.label} title={t.ops.title} />
+        <PhotoStrip photos={t.ops.photos} />
+      </div>
+    </section>
+
+    <section id="scale" class="flush">
+      <div class="wrap">
+        <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} />
+        <div class="scale-grid">
+          <ScaleTable scale={t.scale} />
+          <div class="roadmap">
+            {t.scale.phases.map((ph) => <Phase phase={ph} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <InvestorTeaser inv={t.investors} />
+    <RequestForm req={t.request} />
+  </main>
+  <Footer ui={ui} />
+</Base>

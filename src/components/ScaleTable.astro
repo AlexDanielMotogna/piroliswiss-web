@@ -1,0 +1,22 @@
+---
+import type { Home } from '../lib/types';
+
+interface Props {
+  scale: Home['scale'];
+}
+const { scale: s } = Astro.props;
+---
+<div class="ctable-box">
+  <table class="ctable num">
+    <thead><tr>{s.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+    <tbody>
+      {s.rows.map((r) => (
+        <tr>
+          <th scope="row">{r.k}</th>
+          <td>{r.plant} <small>{s.unit}</small></td>
+          <td>{r.five} <small>{s.unit}</small></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

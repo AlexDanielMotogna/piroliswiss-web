@@ -1,0 +1,38 @@
+{
+  "skip": "跳到正文",
+  "home": "Piroliswiss 首页",
+  "nav": [
+    { "href": "#about", "label": "公司" },
+    { "href": "#products", "label": "产品" },
+    { "href": "#process", "label": "工艺" },
+    { "href": "#provenance", "label": "运营模式" },
+    { "href": "#scale", "label": "规模" },
+    { "href": "#investors", "label": "投资者" }
+  ],
+  "navLabel": "主导航",
+  "menu": "菜单",
+  "langLabel": "语言",
+  "requestCta": "索取规格",
+  "footer": {
+    "about": "Piroliswiss S.R.L. 以合法许可的林业剩余物为原料，生产并出口高品质木炭及热解副产品。玻利维亚圣克鲁斯。",
+    "markAlt": "Piroliswiss 标志",
+    "columns": [
+      { "title": "公司", "links": [
+        { "href": "#about", "label": "关于我们" },
+        { "href": "#provenance", "label": "运营模式" },
+        { "href": "#scale", "label": "规模" },
+        { "href": "#investors", "label": "投资者" }
+      ] },
+      { "title": "产品", "links": [
+        { "href": "#p-charcoal", "label": "块状木炭" },
+        { "href": "#p-acid", "label": "木醋液" },
+        { "href": "#p-briquettes", "label": "木炭压块" },
+        { "href": "#request", "label": "出口与物流" }
+      ] }
+    ],
+    "contact": { "title": "联系方式", "city": "玻利维亚圣克鲁斯", "email": "[销售邮箱]", "address": "[街道地址]", "phone": "[电话]" },
+    "copyright": "© 2026 Piroliswiss S.R.L.",
+    "imprint": "法律声明",
+    "privacy": "隐私政策"
+  }
+}

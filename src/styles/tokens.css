@@ -1,0 +1,34 @@
+/* Fonts: Geist (display + body) and Geist Mono (labels, specs).
+   Geist Mono draws a slashed zero in every variant. "Geist Digits" maps only
+   0-9 to Geist Sans (plain, open zero) and sits first in the mono stack, so
+   labels keep the mono letters while every number shows an empty 0. */
+@font-face{font-family:"Geist";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-latin-wght-normal.woff2") format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geist";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-latin-ext-wght-normal.woff2") format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-mono-latin-wght-normal.woff2") format("woff2-variations");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Geist Mono";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-mono-latin-ext-wght-normal.woff2") format("woff2-variations");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Geist Digits";font-style:normal;font-weight:100 900;font-display:swap;src:url("/fonts/geist-latin-wght-normal.woff2") format("woff2-variations");unicode-range:U+0030-0039}
+
+:root{
+  --paper:#E7E9E6; --paper-2:#DCDFDB; --ink:#15181A; --slate:#586166; --rule:#C3C8C4;
+  --forest:#24461F; --forest-2:#3B6B2E; --ember:#D4521C;
+  --band:#111314; --band-2:#1B1F21; --band-fg:#E4E7E4; --band-mute:#8D9699; --band-rule:#2C3235;
+  --field:#F2F3F1;
+  --cjk:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC";
+  --display:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
+  --sans:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
+  --mono:"Geist Digits","Geist Mono",ui-monospace,Menlo,var(--cjk),monospace;
+  --gut:clamp(16px,4vw,56px);
+  --max:1440px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
+  --forest:#8DB578; --forest-2:#A9C995; --ember:#EE7A42; --field:#1E2224;
+  --band:#0B0D0E; --band-2:#16191B;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
+  --forest:#8DB578; --forest-2:#A9C995; --ember:#EE7A42; --field:#1E2224;
+  --band:#0B0D0E; --band-2:#16191B;
+}

@@ -1,0 +1,27 @@
+---
+import Tbc from './Tbc.astro';
+
+interface Row {
+  k: string;
+  v?: string;
+  tbc?: string;
+  note?: string;
+}
+interface Props {
+  rows: Row[];
+}
+---
+<table class="sheet">
+  <tbody>
+    {Astro.props.rows.map((r) => (
+      <tr>
+        <th scope="row">{r.k}</th>
+        <td>
+          {r.v}
+          {r.tbc && <Tbc text={r.tbc} />}
+          {r.note && <Fragment>{' '}<span class="muted">{r.note}</span></Fragment>}
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+---
+import type { Home } from '../lib/types';
+
+interface Props {
+  specs: Home['specs'];
+}
+---
+<div class="specs">
+  <div class="wrap">
+    {Astro.props.specs.map((s) => (
+      <div class="spec">
+        <span class="label">{s.label}</span>
+        <span class="v">{s.v}{s.unit && <Fragment>{' '}<small>{s.unit}</small></Fragment>}</span>
+      </div>
+    ))}
+  </div>
+</div>

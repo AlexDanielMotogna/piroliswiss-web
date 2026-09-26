@@ -1,0 +1,18 @@
+---
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  steps: Home['model']['steps'];
+}
+---
+<ol class="stages">
+  {Astro.props.steps.map((s, i) => (
+    <li class="stg">
+      <span class="n" aria-hidden="true">{i + 1}</span>
+      <h3>{s.title}</h3>
+      <p>{s.text}</p>
+      <figure><Photo src={s.img} alt={s.alt} sizes="(max-width: 480px) 100vw, (max-width: 1200px) 33vw, 16vw" /></figure>
+    </li>
+  ))}
+</ol>

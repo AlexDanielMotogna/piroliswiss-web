@@ -1,0 +1,48 @@
+---
+import Photo from './Photo.astro';
+import SpecTable from './SpecTable.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  p: Home['products']['items'][number];
+  n: number;
+}
+const { p, n } = Astro.props;
+const num = String(n).padStart(2, '0');
+---
+<article class="prod" id={p.id}>
+  <figure>
+    <Photo src={p.img} alt={p.alt} sizes="(max-width: 1000px) 100vw, 40vw" />
+    <figcaption>{p.caption}</figcaption>
+  </figure>
+  <div class="prod-body">
+    <p class="label">{num} · {p.tag}</p>
+    <h3 class="h-l prod-title">{p.title}</h3>
+    <p class="prod-desc">{p.desc}</p>
+    {p.spec ? (
+      <div class="prod-cols">
+        <div>
+          <p class="label prod-sub">{p.featLabel}</p>
+          <ul class="feat">{p.features.map((f) => <li>{f}</li>)}</ul>
+        </div>
+        <div>
+          <p class="label prod-sub">{p.specLabel}</p>
+          <SpecTable rows={p.spec} />
+        </div>
+      </div>
+    ) : (
+      <Fragment>
+        <p class="label prod-sub">{p.featLabel}</p>
+        <ul class="feat two">{p.features.map((f) => <li>{f}</li>)}</ul>
+      </Fragment>
+    )}
+    <div class="apps">
+      <span class="label">{p.appLabel}</span>
+      <p>
+        {p.app}
+        {p.output && <Fragment>{` ${p.outputLabel} ${p.output.v} `}<span class="muted">{p.output.note}</span></Fragment>}
+      </p>
+    </div>
+    <a class="link" href="#request">{p.cta}</a>
+  </div>
+</article>

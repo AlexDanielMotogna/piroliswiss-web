@@ -1,0 +1,48 @@
+---
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  process: Home['process'];
+}
+const { process: p } = Astro.props;
+
+// Positions are derived from temperatures on a 0–600 °C axis.
+const MAX = 600;
+const pct = (t: number) => `${((t / MAX) * 100).toFixed(2)}%`;
+const stageStarts = [0, 200, 280, 450];
+const segments = [
+  { from: 0, to: 200, bg: '#3A4043' },
+  { from: 200, to: 280, bg: '#6B4A32' },
+  { from: 280, to: 450, bg: 'linear-gradient(90deg,#9B4A22,#D4521C)' },
+  { from: 450, to: 550, bg: '#EE7A42' },
+  { from: 550, to: 600, bg: '#23282A' },
+];
+const ticks = [0, 100, 200, 300, 400, 500, 600];
+const acid = { from: 150, to: 350 };
+---
+<div class="pyro">
+  <div class="scale-box">
+    <div class="scale" role="img" aria-label={p.aria}>
+      <span class="unit">{p.unit}</span>
+      {p.stages.map((s, i) => (
+        <div class="stage" style={`left:${pct(stageStarts[i] ?? 0)}`}><b>{s.name}</b><span>{s.range}</span></div>
+      ))}
+      <div class="bar">
+        {segments.map((s) => <div class="seg" style={`width:${pct(s.to - s.from)};background:${s.bg}`}></div>)}
+      </div>
+      <div class="ticks">
+        {ticks.map((t) => <span class="tick" style={`left:${pct(t)}`}>{t}</span>)}
+      </div>
+      <div class="bracket" style={`left:${pct(acid.from)};width:${pct(acid.to - acid.from)}`}></div>
+      <span class="bracket-l" style={`left:${pct(acid.from)}`}>{p.bracket}</span>
+    </div>
+  </div>
+  <figure class="gauge">
+    <Photo src="gauge" alt={p.gaugeAlt} sizes="340px" />
+    <figcaption>{p.gaugeCaption}</figcaption>
+  </figure>
+</div>
+<div class="pyro-notes">
+  {p.notes.map((n) => <p><b>{n.title}</b>{n.text}</p>)}
+</div>
