@@ -27,7 +27,7 @@ const ui = uiEntry.data;
 ---
 <Base locale={locale} page="home" title={t.meta.title} description={t.meta.description}>
   <Hero hero={t.hero} cta={ui.requestCta} />
-  <SpecStrip specs={t.specs} />
+  <SpecStrip plant={t.plant} specs={t.specs} />
 
   <section>
     <div class="wrap">
@@ -52,7 +52,7 @@ const ui = uiEntry.data;
 
   <section class="products" id="products">
     <div class="wrap">
-      <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} />
+      <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} wide />
       <nav class="prod-index" aria-label={t.products.indexLabel}>
         {t.products.items.map((p, i) => (
           <a href={`#${p.id}`}><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
@@ -71,7 +71,7 @@ const ui = uiEntry.data;
 
   <section id="provenance">
     <div class="wrap">
-      <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} />
+      <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} wide />
       <StageList steps={t.model.steps} />
     </div>
   </section>
@@ -89,7 +89,7 @@ const ui = uiEntry.data;
 
   <section id="scale" class="flush">
     <div class="wrap">
-      <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} />
+      <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} wide />
       <div class="scale-grid">
         <ScaleTable scale={t.scale} />
         <div class="roadmap">

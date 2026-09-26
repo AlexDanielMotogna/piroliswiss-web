@@ -15,6 +15,10 @@
     "sub": "Curupaú, Soto e Cuchi de mudança de uso do solo licenciada, carbonizados em retortas metálicas industriais para siderurgia, agricultura e churrasco premium.",
     "secondary": "Ver o processo"
   },
+  "plant": {
+    "label": "Planta 01 · Santa Cruz de la Sierra, Bolívia",
+    "status": "Em desenvolvimento · valores projetados"
+  },
   "specs": [
     {
       "label": "Carbono fixo",
@@ -24,6 +28,10 @@
     {
       "label": "Espécies",
       "v": "Curupaú · Soto · Cuchi"
+    },
+    {
+      "label": "Retortas por planta",
+      "v": "16"
     },
     {
       "label": "Capacidade projetada por planta",

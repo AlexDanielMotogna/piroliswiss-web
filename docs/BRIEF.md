@@ -106,7 +106,9 @@ Industrial datasheet direction. Square corners, no shadows, no icons, no stock i
 | Text (graphite) | #15181A | #E3E6E3 |
 | Secondary text (slate) | #586166 | #9AA3A6 |
 | Rules | #C3C8C4 | #2E3437 |
-| Brand (forest green) | #24461F | #8DB578 |
+| Brand red (logo flag) | #D40000 | #E8201A |
+| Brand green (logo leaf) | #769B17; text-safe #4A650D | #A6C94A |
+| Deep olive bands | #22300B | #1A240A |
 | Heat accent (ember): temperatures and missing data only | #D4521C | #EE7A42 |
 | Process band | #111314 | #0B0D0E |
 

@@ -83,7 +83,8 @@ const home = defineCollection({
           secondary: text,
         })
         .strict(),
-      specs: z.array(z.object({ label: text, v: text, unit: z.string().optional() }).strict()).length(4),
+      plant: z.object({ label: text, status: text }).strict(),
+      specs: z.array(z.object({ label: text, v: text, unit: z.string().optional() }).strict()).length(5),
       problems: z
         .object({
           label: text,

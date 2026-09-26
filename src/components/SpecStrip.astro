@@ -2,16 +2,24 @@
 import type { Home } from '../lib/types';
 
 interface Props {
+  plant: Home['plant'];
   specs: Home['specs'];
 }
+const { plant, specs } = Astro.props;
 ---
 <div class="specs">
   <div class="wrap">
-    {Astro.props.specs.map((s) => (
-      <div class="spec">
-        <span class="label">{s.label}</span>
-        <span class="v">{s.v}{s.unit && <Fragment>{' '}<small>{s.unit}</small></Fragment>}</span>
-      </div>
-    ))}
+    <div class="plant-head">
+      <span class="plant-id">{plant.label}</span>
+      <span class="plant-status">{plant.status}</span>
+    </div>
+    <div class="spec-row">
+      {specs.map((s) => (
+        <div class="spec">
+          <span class="label">{s.label}</span>
+          <span class="v">{s.v}{s.unit && <Fragment>{' '}<small>{s.unit}</small></Fragment>}</span>
+        </div>
+      ))}
+    </div>
   </div>
 </div>

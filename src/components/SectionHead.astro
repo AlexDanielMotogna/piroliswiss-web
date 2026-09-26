@@ -6,11 +6,13 @@ interface Props {
   mutedLede?: boolean;
   /** 1 for the page title, 2 for section titles. */
   level?: 1 | 2;
+  /** Headline starts at the left edge and runs wider, instead of column 4. */
+  wide?: boolean;
 }
-const { label, title, lede, mutedLede = true, level = 2 } = Astro.props;
+const { label, title, lede, mutedLede = true, level = 2, wide = false } = Astro.props;
 const Heading = level === 1 ? 'h1' : 'h2';
 ---
-<div class="sec-head">
+<div class:list={['sec-head', { wide }]}>
   <p class="label">{label}</p>
   <Heading class="h-l">{title}</Heading>
   {lede && <p class:list={['lede', { muted: mutedLede }]}>{lede}</p>}

@@ -15,6 +15,10 @@
     "sub": "Curupaú, Soto and Cuchi hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.",
     "secondary": "See the process"
   },
+  "plant": {
+    "label": "Plant 01 · Santa Cruz de la Sierra, Bolivia",
+    "status": "In development · projected values"
+  },
   "specs": [
     {
       "label": "Fixed carbon",
@@ -24,6 +28,10 @@
     {
       "label": "Species",
       "v": "Curupaú · Soto · Cuchi"
+    },
+    {
+      "label": "Retorts per plant",
+      "v": "16"
     },
     {
       "label": "Projected capacity per plant",
