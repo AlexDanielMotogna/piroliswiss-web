@@ -58,7 +58,7 @@ const ui = uiEntry.data;
           <a href={`#${p.id}`}><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
         ))}
       </nav>
-      {t.products.items.map((p, i) => <Product p={p} n={i + 1} />)}
+      {t.products.items.map((p, i) => <Product p={p} n={i + 1} supplyLabel={t.products.supplyLabel} appsLabel={t.products.appsLabel} />)}
     </div>
   </section>
 

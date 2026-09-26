@@ -1,14 +1,17 @@
 ---
 import Photo from './Photo.astro';
-import SpecTable from './SpecTable.astro';
 import type { Home } from '../lib/types';
 
 interface Props {
   p: Home['products']['items'][number];
   n: number;
+  supplyLabel: string;
+  appsLabel: string;
 }
-const { p, n } = Astro.props;
+const { p, n, supplyLabel, appsLabel } = Astro.props;
 const num = String(n).padStart(2, '0');
+// Short values (numbers) read as data; long ones (descriptions) as text.
+const isText = (v: string) => v.length > 30;
 ---
 <article class="prod" id={p.id}>
   <figure>
@@ -16,33 +19,48 @@ const num = String(n).padStart(2, '0');
     <figcaption>{p.caption}</figcaption>
   </figure>
   <div class="prod-body">
-    <p class="label">{num} · {p.tag}</p>
+    <p class="label"><span class="prod-num">{num}</span> · {p.tag}</p>
     <h3 class="h-l prod-title">{p.title}</h3>
     <p class="prod-desc">{p.desc}</p>
-    {p.spec ? (
-      <div class="prod-cols">
-        <div>
-          <p class="label prod-sub">{p.featLabel}</p>
-          <ul class="feat">{p.features.map((f) => <li>{f}</li>)}</ul>
-        </div>
-        <div>
-          <p class="label prod-sub">{p.specLabel}</p>
-          <SpecTable rows={p.spec} />
-        </div>
-      </div>
-    ) : (
-      <Fragment>
+
+    <div class="prod-cols">
+      <div>
         <p class="label prod-sub">{p.featLabel}</p>
-        <ul class="feat two">{p.features.map((f) => <li>{f}</li>)}</ul>
-      </Fragment>
-    )}
-    <div class="apps">
-      <span class="label">{p.appLabel}</span>
-      <p>
-        {p.app}
-        {p.output && <Fragment>{` ${p.outputLabel} ${p.output.v} `}<span class="muted">{p.output.note}</span></Fragment>}
-      </p>
+        <ul class="feat-list">{p.features.map((f) => <li>{f}</li>)}</ul>
+      </div>
+      <div>
+        <p class="label prod-sub">{p.specLabel}</p>
+        <dl class="spec-list">
+          {p.spec.map((r) => (
+            <div class:list={[{ text: isText(r.v) }]}>
+              <dt>{r.k}</dt>
+              <dd>{r.v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </div>
+
+    <div class="supply">
+      <p class="label prod-sub">{supplyLabel}</p>
+      <div class="supply-grid">
+        {p.supply.map((b) => (
+          <div>
+            <p class="supply-k">{b.k}</p>
+            {b.lines?.map((l) => <p>{l}</p>)}
+            {b.figure && <p class="supply-fig">{b.figure}<small>{b.unit}</small></p>}
+            {b.note && <p class="supply-note">{b.note}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="uses">
+      <p class="label prod-sub">{appsLabel}</p>
+      <p class="uses-title">{p.appLabel}</p>
+      <p class="uses-text">{p.app}</p>
+    </div>
+
     <a class="link" href="#request">{p.cta}</a>
   </div>
 </article>

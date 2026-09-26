@@ -67,6 +67,8 @@
     "title": "Um processo, três produtos.",
     "lede": "O carvão é o núcleo. O líquido e os finos que outros fornos perdem viram mais duas linhas de produto.",
     "indexLabel": "Produtos",
+    "supplyLabel": "Fornecimento",
+    "appsLabel": "Aplicações",
     "items": [
       {
         "id": "p-charcoal",
@@ -79,7 +81,7 @@
         "desc": "Nosso produto principal é um carvão vegetal de alta qualidade feito com madeiras duras selecionadas como Curupaú, Soto e Cuchi, conhecidas pela alta densidade, resistência e excelente rendimento energético.",
         "featLabel": "Características principais",
         "features": [
-          "Alto teor de carbono fixo: 80–⁠85%",
+          "Alto teor de carbono fixo",
           "Alto poder calorífico",
           "Feito com madeiras duras premium",
           "Maior rendimento térmico",
@@ -95,41 +97,51 @@
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "mín. 7.300 kcal/kg"
           },
           {
             "k": "Umidade",
-            "v": "< 5%"
+            "v": "máx. 5%"
           },
           {
-            "k": "Finos (< 10 mm)",
-            "v": "< 4%"
+            "k": "Finos menores que 10 mm",
+            "v": "máx. 4%"
           },
           {
             "k": "Tamanho predominante",
-            "v": "> 50 mm"
+            "v": "mais de 50 mm"
           },
           {
-            "k": "Espécies",
-            "v": "Curupaú, Soto, Cuchi"
-          },
-          {
-            "k": "Formatos",
-            "v": "A granel · big bag 400 kg · sacos de 5, 10 e 30 kg"
-          },
-          {
-            "k": "Contêiner 40' HC",
-            "v": "≈ 22 t"
-          },
-          {
-            "k": "Capacidade por planta",
-            "v": "+1.800 t / mês",
-            "note": "(projetado)"
+            "k": "Madeiras",
+            "v": "Curupaú · Soto · Cuchi"
           }
         ],
         "appLabel": "Indústria",
         "app": "Fundição de ferro e siderurgia.",
-        "cta": "Solicitar a ficha técnica"
+        "cta": "Solicitar a ficha técnica",
+        "supply": [
+          {
+            "k": "Formatos",
+            "lines": [
+              "A granel",
+              "Big bag de 400 kg",
+              "Sacos de 5, 10 e 30 kg"
+            ]
+          },
+          {
+            "k": "Contêiner",
+            "lines": [
+              "40' HC",
+              "aprox. 22 t"
+            ]
+          },
+          {
+            "k": "Capacidade",
+            "figure": "+1.800",
+            "unit": "t/mês",
+            "note": "capacidade projetada por planta"
+          }
+        ]
       },
       {
         "id": "p-acid",
@@ -153,11 +165,6 @@
         ],
         "appLabel": "Agricultura",
         "app": "Proteção de cultivos, controle natural de pragas e menos insumos químicos.",
-        "outputLabel": "Produção por planta:",
-        "output": {
-          "v": "≈ 389 t / mês",
-          "note": "(projetado)"
-        },
         "cta": "Consultar disponibilidade",
         "specLabel": "Especificação típica",
         "spec": [
@@ -171,15 +178,23 @@
           },
           {
             "k": "Densidade",
-            "v": "≥ 1,005 g/mL"
+            "v": "mín. 1,005 g/mL"
           },
           {
             "k": "Maturação e decantação",
-            "v": "≥ 6 meses"
+            "v": "mín. 6 meses"
           },
           {
             "k": "Pureza",
             "v": "Filtrado, decantado e livre de sólidos em suspensão"
+          }
+        ],
+        "supply": [
+          {
+            "k": "Capacidade",
+            "figure": "389",
+            "unit": "t/mês",
+            "note": "aprox., capacidade projetada por planta"
           }
         ]
       },
@@ -207,33 +222,36 @@
         ],
         "appLabel": "Churrasco premium",
         "app": "Combustível de alto desempenho para churrasqueiras, gastronomia e exportação gourmet.",
-        "outputLabel": "Produção por planta:",
-        "output": {
-          "v": "≈ 278 t / mês",
-          "note": "(projetado)"
-        },
         "cta": "Consultar disponibilidade",
         "specLabel": "Especificação típica",
         "spec": [
           {
             "k": "Carbono fixo",
-            "v": "≥ 80%"
+            "v": "mín. 80%"
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "mín. 7.300 kcal/kg"
           },
           {
             "k": "Umidade",
-            "v": "< 5%"
+            "v": "máx. 5%"
           },
           {
             "k": "Cinzas",
-            "v": "< 4%"
+            "v": "máx. 4%"
           },
           {
             "k": "Tamanho",
-            "v": "Uniforme, > 30 mm"
+            "v": "uniforme, mais de 30 mm"
+          }
+        ],
+        "supply": [
+          {
+            "k": "Capacidade",
+            "figure": "278",
+            "unit": "t/mês",
+            "note": "aprox., capacidade projetada por planta"
           }
         ]
       }
@@ -248,7 +266,7 @@
     "stages": [
       {
         "name": "Secagem",
-        "range": "< 200"
+        "range": "< 200"
       },
       {
         "name": "Torrefação",
@@ -263,9 +281,9 @@
         "range": "450–⁠550"
       }
     ],
-    "bracket": "Condensação do ácido pirolenhoso · 150–⁠350 °C",
-    "gaugeAlt": "Termômetro de mostrador instalado na porta de uma retorta, escala de 0 a 600 °C",
-    "gaugeCaption": "Termômetro da porta da retorta, 0–⁠600 °C",
+    "bracket": "Condensação do ácido pirolenhoso · 150–⁠350 °C",
+    "gaugeAlt": "Termômetro de mostrador instalado na porta de uma retorta, escala de 0 a 600 °C",
+    "gaugeCaption": "Termômetro da porta da retorta, 0–⁠600 °C",
     "notes": [
       {
         "title": "Fornos de retorta industriais",
@@ -404,13 +422,13 @@
       },
       {
         "k": "Ácido pirolenhoso",
-        "plant": "≈ 389",
-        "five": "≈ 1.945"
+        "plant": "≈ 389",
+        "five": "≈ 1.945"
       },
       {
         "k": "Briquetes ecológicos de carvão",
-        "plant": "≈ 278",
-        "five": "≈ 1.390"
+        "plant": "≈ 278",
+        "five": "≈ 1.390"
       }
     ],
     "phases": [
