@@ -285,7 +285,6 @@
     "lede": "O Piroliswiss Control é o nosso sistema próprio de monitoramento de fornos. Registra a temperatura de cada retorta durante todo o ciclo, avisa quando algo sai da faixa e guarda a curva de cada carga.",
     "img": "control-tablet",
     "alt": "Tablet com o Piroliswiss Control: detalhe de um forno com fases do ciclo, pontos de medição na retorta e curva de temperatura",
-    "caption": "Piroliswiss Control · design do aplicativo com dados de exemplo. Sistema próprio em desenvolvimento.",
     "points": [
       {
         "title": "Quatro sondas por forno",
@@ -303,7 +302,8 @@
         "title": "Registro por lote",
         "text": "Cada ciclo fica registrado e pode ser exportado, de modo que cada lote pode ser rastreado até a sua curva de temperatura."
       }
-    ]
+    ],
+    "note": "O Piroliswiss Control é um sistema próprio em desenvolvimento. A tela mostra o design do aplicativo com dados de exemplo."
   },
   "model": {
     "label": "Modelo operacional",

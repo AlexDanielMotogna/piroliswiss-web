@@ -129,8 +129,8 @@ const home = defineCollection({
           lede: text,
           img: imgKey,
           alt: text,
-          caption: text,
           points: z.array(titled).length(4),
+          note: text,
         })
         .strict(),
       model: z

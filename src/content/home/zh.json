@@ -285,7 +285,6 @@
     "lede": "Piroliswiss Control 是我们自主开发的炉温监控系统。它记录每台干馏炉在整个周期内的温度，在出现超限时发出提醒，并保存每一炉的温度曲线。",
     "img": "control-tablet",
     "alt": "平板电脑上的 Piroliswiss Control：炉体详情，包括周期阶段、干馏炉测温点和温度曲线",
-    "caption": "Piroliswiss Control · 应用设计，示例数据。自主系统，开发中。",
     "points": [
       {
         "title": "每炉四个探头",
@@ -303,7 +302,8 @@
         "title": "按批次记录",
         "text": "每个周期都会保存并可导出，因此每一批产品都能追溯到其温度曲线。"
       }
-    ]
+    ],
+    "note": "Piroliswiss Control 是我们自主开发、仍在开发中的系统。屏幕展示的是应用设计，数据为示例。"
   },
   "model": {
     "label": "运营模式",

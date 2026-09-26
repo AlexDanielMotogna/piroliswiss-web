@@ -285,7 +285,6 @@
     "lede": "Piroliswiss Control is our own kiln-monitoring system. It records the temperature of every retort through the whole cycle, warns when something goes out of range and keeps the curve of every load.",
     "img": "control-tablet",
     "alt": "Tablet showing Piroliswiss Control: kiln detail with cycle phases, measurement points on the retort and temperature curve",
-    "caption": "Piroliswiss Control · application design with sample data. In-house system in development.",
     "points": [
       {
         "title": "Four probes per kiln",
@@ -303,7 +302,8 @@
         "title": "Per-lot record",
         "text": "Every cycle is stored and can be exported, so each lot can be traced back to its temperature curve."
       }
-    ]
+    ],
+    "note": "Piroliswiss Control is an in-house system in development. The screen shows the application design with sample data."
   },
   "model": {
     "label": "Operating model",
