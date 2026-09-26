@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Woods · Piroliswiss",
+    "description": "Technical datasheets of the hardwoods Piroliswiss turns into charcoal: Curupaú (Anadenanthera colubrina), Soto and Cuchi."
+  },
+  "intro": {
+    "label": "Woods",
+    "title": "The woods behind our charcoal.",
+    "lede": "We make charcoal from hardwoods native to Santa Cruz. These are their technical datasheets, based on Bolivia's reference forestry publications."
+  },
+  "pending": "Datasheet in preparation",
+  "species": [
+    {
+      "id": "curupau",
+      "name": "Curupaú",
+      "scientific": "Anadenanthera colubrina (Vell.) Brenan",
+      "keyLabel": "Key figures",
+      "key": [
+        {
+          "label": "Basic density",
+          "v": "0.85",
+          "unit": "g/cm³"
+        },
+        {
+          "label": "Density at 12 % moisture",
+          "v": "1.03",
+          "unit": "g/cm³"
+        },
+        {
+          "label": "Side hardness",
+          "v": "1,990",
+          "unit": "kg"
+        },
+        {
+          "label": "Green moisture content",
+          "v": "40",
+          "unit": "%"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Species identification",
+          "rows": [
+            {
+              "k": "Scientific name",
+              "v": "Anadenanthera colubrina (Vell.) Brenan"
+            },
+            {
+              "k": "Family",
+              "v": "Leguminosae – Mimosoideae (Mimosaceae*)"
+            },
+            {
+              "k": "Trade name",
+              "v": "Curupaú (Curupay)"
+            },
+            {
+              "k": "Other names",
+              "v": "Cebil colorado (Argentina), Acacia (Bolivia), Angico-preto (Brazil), Kurupay* (Paraguay)"
+            },
+            {
+              "k": "Distribution",
+              "v": "Forests ranging from humid subtropical to dry temperate*. Departments of Santa Cruz, Beni, Cochabamba, Chuquisaca, Tarija and La Paz"
+            },
+            {
+              "k": "Region and frequency",
+              "v": "Very common in the Chiquitanía, Guarayos and Choré"
+            }
+          ]
+        },
+        {
+          "title": "Tree description",
+          "rows": [
+            {
+              "k": "Crown",
+              "v": "Open and sparse, medium-sized, yellowish-green foliage, compound alternate leaves"
+            },
+            {
+              "k": "Bole",
+              "v": "Straight. Commercial heights up to 30 m*"
+            },
+            {
+              "k": "Bark",
+              "v": "Greyish, rough, fissured and cracked"
+            }
+          ]
+        },
+        {
+          "title": "General characteristics",
+          "rows": [
+            {
+              "k": "Sapwood colour",
+              "v": "Pale pink"
+            },
+            {
+              "k": "Heartwood colour",
+              "v": "Dark brown*"
+            },
+            {
+              "k": "Odour",
+              "v": "Indistinct"
+            },
+            {
+              "k": "Taste",
+              "v": "Characteristic and astringent"
+            },
+            {
+              "k": "Lustre",
+              "v": "Medium to high"
+            },
+            {
+              "k": "Grain",
+              "v": "Interlocked"
+            },
+            {
+              "k": "Figure",
+              "v": "Faint"
+            },
+            {
+              "k": "Texture",
+              "v": "Medium to fine"
+            }
+          ]
+        },
+        {
+          "title": "Anatomical description",
+          "rows": [
+            {
+              "k": "Growth rings",
+              "v": "Visible to the naked eye. Average of 26 rings in a 10 cm radius"
+            },
+            {
+              "k": "Pores",
+              "v": "Visible to the naked eye. Diffuse porosity. Solitary and numerous, round to oval"
+            },
+            {
+              "k": "Parenchyma",
+              "v": "Visible to the naked eye. Abundant. Paratracheal vasicentric"
+            },
+            {
+              "k": "Rays",
+              "v": "Visible with a 10x lens. No contrast. Not storied"
+            }
+          ]
+        },
+        {
+          "title": "Physical properties",
+          "rows": [
+            {
+              "k": "Moisture content (green wood)",
+              "v": "40 %"
+            },
+            {
+              "k": "Basic density",
+              "v": "0.85 g/cm³"
+            },
+            {
+              "k": "Density at 12 % moisture",
+              "v": "1.03 g/cm³"
+            },
+            {
+              "k": "Radial shrinkage",
+              "v": "4.2 %"
+            },
+            {
+              "k": "Tangential shrinkage",
+              "v": "8.4 %"
+            },
+            {
+              "k": "Volumetric shrinkage",
+              "v": "12.7 %"
+            },
+            {
+              "k": "T/R ratio",
+              "v": "2.0"
+            }
+          ]
+        },
+        {
+          "title": "Mechanical strength",
+          "rows": [
+            {
+              "k": "Modulus of elasticity",
+              "v": "192,000 kg/cm² (18,829 MPa)"
+            },
+            {
+              "k": "Modulus of rupture",
+              "v": "1,672 kg/cm² (164.0 MPa)"
+            },
+            {
+              "k": "Compression parallel to grain",
+              "v": "839 kg/cm² (82.3 MPa)"
+            },
+            {
+              "k": "Compression perpendicular to grain",
+              "v": "163 kg/cm² (16.0 MPa)"
+            },
+            {
+              "k": "Side hardness",
+              "v": "1,990 kg (19.5 kN)"
+            },
+            {
+              "k": "Impact resistance",
+              "v": "6.43 kg·m (63.1 J)"
+            }
+          ]
+        },
+        {
+          "title": "Processing",
+          "rows": [
+            {
+              "k": "Machining",
+              "v": "Good planing at a 15° cutting angle. Regular moulding and boring*, excellent sanding, good turning and finishing*. High blunting effect on tools*"
+            },
+            {
+              "k": "Preservation",
+              "v": "Impermeable to preservative treatments"
+            },
+            {
+              "k": "Natural durability",
+              "v": "Very durable, even in ground contact"
+            },
+            {
+              "k": "Drying",
+              "v": "Relatively fast air drying*, with a tendency to warp and check*. Kiln schedules T8–B3 and T5–B1 (USA)*"
+            }
+          ]
+        }
+      ],
+      "usesLabel": "End uses",
+      "uses": [
+        "Heavy construction*",
+        "Door and window frames",
+        "Garden furniture*",
+        "Decking*",
+        "Decorative veneer*",
+        "Turnery*",
+        "Railway sleepers",
+        "Flooring",
+        "Stairs*",
+        "Carving*",
+        "Truck bodies*"
+      ],
+      "sourcesLabel": "Sources",
+      "sources": [
+        {
+          "label": "Source 1",
+          "text": "MDSP, FAO PAF-BOL, IBAMA, LPF. Información técnica para el procesamiento industrial de 134 especies maderables de Bolivia. Serie Técnica XI, 2002."
+        },
+        {
+          "label": "Source 2 (*)",
+          "text": "CFB, PROMABOSQUE, BOLFOR, SCC, FAO PAF-BOL. Bolivian Woods, 1999."
+        }
+      ],
+      "legend": "Values marked * come from source 2. Units as in the original publication; SI equivalents in brackets."
+    },
+    {
+      "id": "soto",
+      "name": "Soto"
+    },
+    {
+      "id": "cuchi",
+      "name": "Cuchi"
+    }
+  ],
+  "cta": {
+    "title": "Need the datasheet for a specific species?",
+    "text": "Write to us and we will send the technical information available together with the charcoal specification."
+  }
+}

@@ -129,7 +129,8 @@
         ],
         "appLabel": "Industria",
         "app": "Fundición de hierro y siderurgia.",
-        "cta": "Solicitar la ficha técnica"
+        "cta": "Solicitar la ficha técnica",
+        "woodsLink": "Ficha técnica de las maderas"
       },
       {
         "id": "p-acid",

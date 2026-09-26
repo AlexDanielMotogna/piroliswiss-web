@@ -1,0 +1,88 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionHead from './SectionHead.astro';
+import SpecTable from './SpecTable.astro';
+import Tbc from './Tbc.astro';
+import { resolveHref, type Locale } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const entry = await getEntry('woods', locale);
+const uiEntry = await getEntry('ui', locale);
+if (!entry || !uiEntry) throw new Error(`Missing woods content for locale "${locale}"`);
+const w = entry.data;
+const ui = uiEntry.data;
+---
+<Base locale={locale} page="woods" title={w.meta.title} description={w.meta.description}>
+  <section class="page-intro">
+    <div class="wrap">
+      <SectionHead label={w.intro.label} title={w.intro.title} lede={w.intro.lede} level={1} />
+      <nav class="wood-index" aria-label={w.intro.label}>
+        {w.species.map((s) => (
+          <a href={`#${s.id}`}>
+            <b>{s.name}</b>
+            {s.scientific ? <i>{s.scientific}</i> : <Tbc text={`[${w.pending}]`} />}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  {w.species.map((s) => (
+    <section class="flush wood" id={s.id}>
+      <div class="wrap">
+        <header class="wood-head">
+          <h2 class="h-l">{s.name}</h2>
+          {s.scientific ? <p class="wood-sci">{s.scientific}</p> : <p><Tbc text={`[${w.pending}]`} /></p>}
+        </header>
+
+        {s.key && (
+          <div class="wood-key" aria-label={s.keyLabel}>
+            {s.key.map((k) => (
+              <div>
+                <span class="wood-key-l">{k.label}</span>
+                <span class="wood-key-v">{k.v}<small>{k.unit}</small></span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {s.sections && (
+          <div class="wood-sheets">
+            {s.sections.map((sec) => (
+              <div class="wood-sheet">
+                <h3 class="label">{sec.title}</h3>
+                <SpecTable rows={sec.rows} />
+              </div>
+            ))}
+            {s.uses && (
+              <div class="wood-sheet">
+                <h3 class="label">{s.usesLabel}</h3>
+                <p class="wood-uses">{s.uses.join(' · ')}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {s.sources && (
+          <footer class="wood-sources">
+            <h3 class="label">{s.sourcesLabel}</h3>
+            <ul>{s.sources.map((src) => <li><b>{src.label}.</b> {src.text}</li>)}</ul>
+            <p>{s.legend}</p>
+          </footer>
+        )}
+      </div>
+    </section>
+  ))}
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 class="h-l">{w.cta.title}</h2>
+      <p>{w.cta.text}</p>
+      <a class="btn" href={resolveHref('#request', locale)}>{ui.requestCta} <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</Base>

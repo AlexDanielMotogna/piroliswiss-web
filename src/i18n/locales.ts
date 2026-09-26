@@ -30,6 +30,7 @@ export const langName: Record<Locale, string> = {
 export const pages = {
   home: { es: '/', pt: '/pt/', en: '/en/', zh: '/zh/' },
   company: { es: '/empresa/', pt: '/pt/empresa/', en: '/en/company/', zh: '/zh/company/' },
+  woods: { es: '/maderas/', pt: '/pt/madeiras/', en: '/en/woods/', zh: '/zh/woods/' },
 } as const satisfies Record<string, Record<Locale, string>>;
 export type PageKey = keyof typeof pages;
 

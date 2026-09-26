@@ -72,6 +72,10 @@
             "label": "Briquetes"
           },
           {
+            "href": "woods",
+            "label": "Madeiras"
+          },
+          {
             "href": "#request",
             "label": "Exportação e logística"
           }

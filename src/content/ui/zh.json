@@ -72,6 +72,10 @@
             "label": "木炭压块"
           },
           {
+            "href": "woods",
+            "label": "木材"
+          },
+          {
             "href": "#request",
             "label": "出口与物流"
           }

@@ -129,7 +129,8 @@
         ],
         "appLabel": "Industry",
         "app": "Iron foundry and steelmaking.",
-        "cta": "Request the datasheet"
+        "cta": "Request the datasheet",
+        "woodsLink": "Wood datasheets"
       },
       {
         "id": "p-acid",

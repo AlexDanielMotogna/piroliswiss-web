@@ -72,6 +72,10 @@
             "label": "Briquettes"
           },
           {
+            "href": "woods",
+            "label": "Woods"
+          },
+          {
             "href": "#request",
             "label": "Export & logistics"
           }

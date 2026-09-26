@@ -37,6 +37,7 @@ const product = z
     output: cell.optional(),
     outputLabel: z.string().optional(),
     cta: text,
+    woodsLink: z.string().optional(),
   })
   .strict();
 
@@ -231,4 +232,36 @@ const company = defineCollection({
     .strict(),
 });
 
-export const collections = { ui, home, company };
+const woods = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/woods' }),
+  schema: z
+    .object({
+      meta: z.object({ title: text, description: text }).strict(),
+      intro: z.object({ label: text, title: text, lede: text }).strict(),
+      pending: text,
+      species: z
+        .array(
+          z
+            .object({
+              id: text,
+              name: text,
+              // species without a datasheet yet only carry id + name
+              scientific: z.string().optional(),
+              keyLabel: z.string().optional(),
+              key: z.array(z.object({ label: text, v: text, unit: text }).strict()).optional(),
+              sections: z.array(z.object({ title: text, rows: z.array(z.object({ k: text, v: text }).strict()) }).strict()).optional(),
+              usesLabel: z.string().optional(),
+              uses: z.array(text).optional(),
+              sourcesLabel: z.string().optional(),
+              sources: z.array(z.object({ label: text, text: text }).strict()).optional(),
+              legend: z.string().optional(),
+            })
+            .strict(),
+        )
+        .min(1),
+      cta: z.object({ title: text, text: text }).strict(),
+    })
+    .strict(),
+});
+
+export const collections = { ui, home, company, woods };

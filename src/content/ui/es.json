@@ -72,6 +72,10 @@
             "label": "Briquetas"
           },
           {
+            "href": "woods",
+            "label": "Maderas"
+          },
+          {
             "href": "#request",
             "label": "Exportación y logística"
           }

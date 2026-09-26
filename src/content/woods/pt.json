@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Madeiras · Piroliswiss",
+    "description": "Fichas técnicas das madeiras duras com que a Piroliswiss produz carvão vegetal: Curupaú (Anadenanthera colubrina), Soto e Cuchi."
+  },
+  "intro": {
+    "label": "Madeiras",
+    "title": "As madeiras por trás do nosso carvão.",
+    "lede": "Produzimos carvão com madeiras duras nativas de Santa Cruz. Estas são as suas fichas técnicas, segundo as publicações florestais de referência da Bolívia."
+  },
+  "pending": "Ficha técnica em preparação",
+  "species": [
+    {
+      "id": "curupau",
+      "name": "Curupaú",
+      "scientific": "Anadenanthera colubrina (Vell.) Brenan",
+      "keyLabel": "Dados principais",
+      "key": [
+        {
+          "label": "Densidade básica",
+          "v": "0,85",
+          "unit": "g/cm³"
+        },
+        {
+          "label": "Densidade a 12% de umidade",
+          "v": "1,03",
+          "unit": "g/cm³"
+        },
+        {
+          "label": "Dureza lateral",
+          "v": "1.990",
+          "unit": "kg"
+        },
+        {
+          "label": "Umidade verde",
+          "v": "40",
+          "unit": "%"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Identificação da espécie",
+          "rows": [
+            {
+              "k": "Nome científico",
+              "v": "Anadenanthera colubrina (Vell.) Brenan"
+            },
+            {
+              "k": "Família",
+              "v": "Leguminosae – Mimosoideae (Mimosaceae*)"
+            },
+            {
+              "k": "Nome comercial",
+              "v": "Curupaú (Curupay)"
+            },
+            {
+              "k": "Outros nomes",
+              "v": "Cebil colorado (Argentina), Acacia (Bolívia), Angico-preto (Brasil), Kurupay* (Paraguai)"
+            },
+            {
+              "k": "Área de distribuição",
+              "v": "Florestas desde úmidas subtropicais até secas temperadas*. Departamentos de Santa Cruz, Beni, Cochabamba, Chuquisaca, Tarija e La Paz"
+            },
+            {
+              "k": "Região e frequência",
+              "v": "Muito frequente na Chiquitanía, Guarayos e Choré"
+            }
+          ]
+        },
+        {
+          "title": "Descrição da árvore",
+          "rows": [
+            {
+              "k": "Copa",
+              "v": "Aberta e rala, de tamanho médio, folhagem verde-amarelada, folhas compostas e alternas"
+            },
+            {
+              "k": "Fuste",
+              "v": "Reto. Atinge alturas comerciais de até 30 m*"
+            },
+            {
+              "k": "Casca",
+              "v": "Acinzentada, áspera, fissurada e rachada"
+            }
+          ]
+        },
+        {
+          "title": "Características gerais",
+          "rows": [
+            {
+              "k": "Cor do alburno",
+              "v": "Rosa-pálido"
+            },
+            {
+              "k": "Cor do cerne",
+              "v": "Marrom-escuro*"
+            },
+            {
+              "k": "Odor",
+              "v": "Indistinto"
+            },
+            {
+              "k": "Sabor",
+              "v": "Característico e adstringente"
+            },
+            {
+              "k": "Brilho",
+              "v": "Médio a alto"
+            },
+            {
+              "k": "Grã",
+              "v": "Entrecruzada"
+            },
+            {
+              "k": "Desenho",
+              "v": "Tênue"
+            },
+            {
+              "k": "Textura",
+              "v": "Média a fina"
+            }
+          ]
+        },
+        {
+          "title": "Descrição anatômica",
+          "rows": [
+            {
+              "k": "Anéis de crescimento",
+              "v": "Visíveis a olho nu. Média de 26 anéis em um raio de 10 cm"
+            },
+            {
+              "k": "Poros",
+              "v": "Visíveis a olho nu. Porosidade difusa. Solitários e numerosos, de forma redonda a ovalada"
+            },
+            {
+              "k": "Parênquima",
+              "v": "Visível a olho nu. Abundante. Paratraqueal vasicêntrico"
+            },
+            {
+              "k": "Raios",
+              "v": "Visíveis com lupa de 10x. Sem contraste. Não estratificados"
+            }
+          ]
+        },
+        {
+          "title": "Propriedades físicas",
+          "rows": [
+            {
+              "k": "Teor de umidade (madeira verde)",
+              "v": "40%"
+            },
+            {
+              "k": "Densidade básica",
+              "v": "0,85 g/cm³"
+            },
+            {
+              "k": "Densidade a 12% de umidade",
+              "v": "1,03 g/cm³"
+            },
+            {
+              "k": "Contração radial",
+              "v": "4,2%"
+            },
+            {
+              "k": "Contração tangencial",
+              "v": "8,4%"
+            },
+            {
+              "k": "Contração volumétrica",
+              "v": "12,7%"
+            },
+            {
+              "k": "Relação T/R",
+              "v": "2,0"
+            }
+          ]
+        },
+        {
+          "title": "Resistência mecânica",
+          "rows": [
+            {
+              "k": "Módulo de elasticidade",
+              "v": "192.000 kg/cm² (18.829 MPa)"
+            },
+            {
+              "k": "Módulo de ruptura",
+              "v": "1.672 kg/cm² (164,0 MPa)"
+            },
+            {
+              "k": "Compressão paralela às fibras",
+              "v": "839 kg/cm² (82,3 MPa)"
+            },
+            {
+              "k": "Compressão perpendicular às fibras",
+              "v": "163 kg/cm² (16,0 MPa)"
+            },
+            {
+              "k": "Dureza lateral",
+              "v": "1.990 kg (19,5 kN)"
+            },
+            {
+              "k": "Resistência ao impacto",
+              "v": "6,43 kg·m (63,1 J)"
+            }
+          ]
+        },
+        {
+          "title": "Condições técnicas de processamento",
+          "rows": [
+            {
+              "k": "Usinagem",
+              "v": "Bom aplainamento com ângulo de corte de 15°. Moldurado e furação regulares*, lixamento excelente, bom torneamento e acabamento*. Alto efeito de desgaste nas ferramentas*"
+            },
+            {
+              "k": "Preservação",
+              "v": "Impermeável aos tratamentos preservativos"
+            },
+            {
+              "k": "Durabilidade natural",
+              "v": "Muito durável, inclusive em contato com o solo"
+            },
+            {
+              "k": "Secagem",
+              "v": "Secagem ao ar relativamente rápida*, com tendência a torcer e rachar*. Programas de secagem em estufa T8–B3 e T5–B1 (EUA)*"
+            }
+          ]
+        }
+      ],
+      "usesLabel": "Usos finais",
+      "uses": [
+        "Construção pesada*",
+        "Batentes de portas e janelas",
+        "Móveis de jardim*",
+        "Decks*",
+        "Lâmina decorativa*",
+        "Torneados*",
+        "Dormentes",
+        "Pisos",
+        "Escadas*",
+        "Entalhes*",
+        "Carrocerias de caminhão*"
+      ],
+      "sourcesLabel": "Fontes",
+      "sources": [
+        {
+          "label": "Fonte 1",
+          "text": "MDSP, FAO PAF-BOL, IBAMA, LPF. Información técnica para el procesamiento industrial de 134 especies maderables de Bolivia. Serie Técnica XI, 2002."
+        },
+        {
+          "label": "Fonte 2 (*)",
+          "text": "CFB, PROMABOSQUE, BOLFOR, SCC, FAO PAF-BOL. Bolivian Woods, 1999."
+        }
+      ],
+      "legend": "Os dados marcados com * vêm da fonte 2. Unidades da publicação original; entre parênteses, o equivalente no Sistema Internacional."
+    },
+    {
+      "id": "soto",
+      "name": "Soto"
+    },
+    {
+      "id": "cuchi",
+      "name": "Cuchi"
+    }
+  ],
+  "cta": {
+    "title": "Precisa da ficha de uma espécie específica?",
+    "text": "Escreva-nos e enviamos as informações técnicas disponíveis junto com a especificação do carvão."
+  }
+}
