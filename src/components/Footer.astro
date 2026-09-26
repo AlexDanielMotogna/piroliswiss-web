@@ -3,11 +3,14 @@ import { Image } from 'astro:assets';
 import { img } from '../lib/images';
 import Tbc from './Tbc.astro';
 import type { Ui } from '../lib/types';
+import { resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
   ui: Ui;
+  locale: Locale;
 }
-const { footer: f } = Astro.props.ui;
+const { ui, locale } = Astro.props;
+const f = ui.footer;
 ---
 <footer>
   <div class="wrap">
@@ -19,7 +22,7 @@ const { footer: f } = Astro.props.ui;
       {f.columns.map((c) => (
         <div>
           <h2>{c.title}</h2>
-          <ul>{c.links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}</ul>
+          <ul>{c.links.map((l) => <li><a href={resolveHref(l.href, locale)}>{l.label}</a></li>)}</ul>
         </div>
       ))}
       <div>

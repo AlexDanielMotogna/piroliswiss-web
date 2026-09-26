@@ -10,7 +10,7 @@ export const htmlLang: Record<Locale, string> = {
   zh: 'zh-Hans',
 };
 
-/** Short label shown in the language switcher. */
+/** Short code shown on the language button. */
 export const switchLabel: Record<Locale, string> = {
   es: 'ES',
   pt: 'PT',
@@ -18,7 +18,35 @@ export const switchLabel: Record<Locale, string> = {
   zh: '中文',
 };
 
-/** Root path of a locale; Spanish is served at "/". */
+/** Language name, written in that language, for the dropdown. */
+export const langName: Record<Locale, string> = {
+  es: 'Español',
+  pt: 'Português',
+  en: 'English',
+  zh: '中文',
+};
+
+/** Every page and its URL per locale. Spanish is served without a prefix. */
+export const pages = {
+  home: { es: '/', pt: '/pt/', en: '/en/', zh: '/zh/' },
+  company: { es: '/empresa/', pt: '/pt/empresa/', en: '/en/company/', zh: '/zh/company/' },
+} as const satisfies Record<string, Record<Locale, string>>;
+export type PageKey = keyof typeof pages;
+
+export function pagePath(page: PageKey, locale: Locale): string {
+  return pages[page][locale];
+}
+
 export function localeRoot(locale: Locale): string {
-  return locale === defaultLocale ? '/' : `/${locale}/`;
+  return pagePath('home', locale);
+}
+
+/**
+ * Resolves a content link: "#products" points at a homepage section,
+ * "company" or "company#team" at another page.
+ */
+export function resolveHref(href: string, locale: Locale): string {
+  const [page, hash] = href.split('#');
+  const base = page ? pagePath(page as PageKey, locale) : localeRoot(locale);
+  return hash ? `${base}#${hash}` : base;
 }

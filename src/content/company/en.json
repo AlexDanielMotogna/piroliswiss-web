@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Company · Piroliswiss",
+    "description": "Piroliswiss S.R.L. by Grupo Zwald S.R.L.: producer and exporter of premium charcoal and pyrolysis by-products. Team and company details. Santa Cruz de la Sierra, Bolivia."
+  },
+  "intro": {
+    "label": "Who we are",
+    "title": "An industrial producer and exporter of premium charcoal and pyrolysis by-products.",
+    "items": [
+      {
+        "label": "Industrial production",
+        "text": "We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets."
+      },
+      {
+        "label": "Responsible sourcing",
+        "text": "We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue."
+      },
+      {
+        "label": "Based in",
+        "text": "Santa Cruz de la Sierra, Bolivia. Developed with Grupo Zwald S.R.L., which provides operating know-how, technology and commercial channels."
+      }
+    ]
+  },
+  "team": {
+    "label": "Team",
+    "title": "Who runs Piroliswiss.",
+    "photo": "[photo]",
+    "members": [
+      {
+        "name": "Federico Zwald",
+        "role": "Founder & CEO"
+      },
+      {
+        "name": "Christian Vargas",
+        "role": "Co-Founder & CFO"
+      },
+      {
+        "name": "Alex Motogna",
+        "role": "Co-Founder & CTO"
+      }
+    ]
+  },
+  "facts": {
+    "label": "Company details",
+    "rows": [
+      {
+        "k": "Legal name",
+        "v": "Piroliswiss S.R.L. by Grupo Zwald S.R.L."
+      },
+      {
+        "k": "Office",
+        "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolivia"
+      },
+      {
+        "k": "Email",
+        "tbc": "[email @piroliswiss.com]"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need a specification or a quote?",
+    "text": "Tell us your application and volume; we reply with the datasheet and a private quotation."
+  }
+}

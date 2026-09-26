@@ -84,15 +84,6 @@ const home = defineCollection({
         })
         .strict(),
       specs: z.array(z.object({ label: text, v: text, unit: z.string().optional() }).strict()).length(4),
-      about: z
-        .object({
-          label: text,
-          title: text,
-          items: z.array(z.object({ label: text, text: text }).strict()).length(3),
-          teamLabel: text,
-          team: z.array(z.object({ k: text, v: text }).strict()).min(1),
-        })
-        .strict(),
       problems: z
         .object({
           label: text,
@@ -195,4 +186,30 @@ const home = defineCollection({
     .strict(),
 });
 
-export const collections = { ui, home };
+const company = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/company' }),
+  schema: z
+    .object({
+      meta: z.object({ title: text, description: text }).strict(),
+      intro: z
+        .object({
+          label: text,
+          title: text,
+          items: z.array(z.object({ label: text, text: text }).strict()).length(3),
+        })
+        .strict(),
+      team: z
+        .object({
+          label: text,
+          title: text,
+          photo: text,
+          members: z.array(z.object({ name: text, role: text }).strict()).min(1),
+        })
+        .strict(),
+      facts: z.object({ label: text, rows: z.array(z.object({ k: text, ...cell.shape }).strict()) }).strict(),
+      cta: z.object({ title: text, text: text }).strict(),
+    })
+    .strict(),
+});
+
+export const collections = { ui, home, company };

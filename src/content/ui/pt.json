@@ -3,8 +3,8 @@
   "home": "Início da Piroliswiss",
   "nav": [
     {
-      "href": "#about",
-      "label": "Empresa"
+      "href": "company",
+      "label": "Quem somos"
     },
     {
       "href": "#products",
@@ -35,8 +35,12 @@
         "title": "Empresa",
         "links": [
           {
-            "href": "#about",
+            "href": "company",
             "label": "Quem somos"
+          },
+          {
+            "href": "company#team",
+            "label": "Equipe"
           },
           {
             "href": "#provenance",

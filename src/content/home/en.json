@@ -35,39 +35,6 @@
       "v": "Licensed residue only"
     }
   ],
-  "about": {
-    "label": "Who we are",
-    "title": "An industrial producer and exporter of premium charcoal and pyrolysis by-products.",
-    "items": [
-      {
-        "label": "Industrial production",
-        "text": "We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets."
-      },
-      {
-        "label": "Responsible sourcing",
-        "text": "We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue."
-      },
-      {
-        "label": "Based in",
-        "text": "Santa Cruz de la Sierra, Bolivia. Developed with Grupo Zwald S.R.L., which provides operating know-how, technology and commercial channels."
-      }
-    ],
-    "teamLabel": "Team",
-    "team": [
-      {
-        "k": "Founder & CEO",
-        "v": "Federico Zwald"
-      },
-      {
-        "k": "Co-Founder & CFO",
-        "v": "Christian Vargas"
-      },
-      {
-        "k": "Co-Founder & CTO",
-        "v": "Alex Motogna"
-      }
-    ]
-  },
   "problems": {
     "label": "The problems",
     "title": "Good hardwood is burned in the field while industry and farms pay more for less.",

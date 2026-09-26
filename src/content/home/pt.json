@@ -35,39 +35,6 @@
       "v": "Somente resíduo licenciado"
     }
   ],
-  "about": {
-    "label": "Quem somos",
-    "title": "Produtor e exportador industrial de carvão vegetal premium e subprodutos da pirólise.",
-    "items": [
-      {
-        "label": "Produção industrial",
-        "text": "Produzimos carvão vegetal premium e subprodutos como ácido pirolenhoso e briquetes de carvão para usos metalúrgicos, industriais e agrícolas e para o mercado de churrasco premium."
-      },
-      {
-        "label": "Suprimento responsável",
-        "text": "Trabalhamos apenas com resíduo florestal e biomassa de origem legal, provenientes de áreas autorizadas para mudança de uso do solo. Evitamos a queima a céu aberto e geramos valor a partir do resíduo."
-      },
-      {
-        "label": "Sede",
-        "text": "Santa Cruz de la Sierra, Bolívia. Desenvolvido com o Grupo Zwald S.R.L., que fornece know-how operacional, tecnologia e canais comerciais."
-      }
-    ],
-    "teamLabel": "Equipe",
-    "team": [
-      {
-        "k": "Fundador e CEO",
-        "v": "Federico Zwald"
-      },
-      {
-        "k": "Cofundador e CFO",
-        "v": "Christian Vargas"
-      },
-      {
-        "k": "Cofundador e CTO",
-        "v": "Alex Motogna"
-      }
-    ]
-  },
   "problems": {
     "label": "Os problemas",
     "title": "Boa madeira dura é queimada no campo enquanto a indústria e o agro pagam mais por menos.",

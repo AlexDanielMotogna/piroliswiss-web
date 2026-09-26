@@ -35,39 +35,6 @@
       "v": "Solo residuo autorizado"
     }
   ],
-  "about": {
-    "label": "Quiénes somos",
-    "title": "Productor y exportador industrial de carbón vegetal premium y subproductos de pirólisis.",
-    "items": [
-      {
-        "label": "Producción industrial",
-        "text": "Producimos carbón vegetal premium y subproductos como ácido piroleñoso y briquetas de carbón para usos metalúrgicos, industriales y agrícolas, y para el mercado de parrilla premium."
-      },
-      {
-        "label": "Abastecimiento responsable",
-        "text": "Trabajamos solo con residuo forestal y biomasa de origen legal, provenientes de áreas autorizadas para cambio de uso de suelo. Evitamos la quema a cielo abierto y generamos valor a partir del residuo."
-      },
-      {
-        "label": "Sede",
-        "text": "Santa Cruz de la Sierra, Bolivia. Desarrollado con Grupo Zwald S.R.L., que aporta know-how operativo, tecnología y canales comerciales."
-      }
-    ],
-    "teamLabel": "Equipo",
-    "team": [
-      {
-        "k": "Fundador y CEO",
-        "v": "Federico Zwald"
-      },
-      {
-        "k": "Cofundador y CFO",
-        "v": "Christian Vargas"
-      },
-      {
-        "k": "Cofundador y CTO",
-        "v": "Alex Motogna"
-      }
-    ]
-  },
   "problems": {
     "label": "Los problemas",
     "title": "Se quema buena madera dura en el campo mientras la industria y el agro pagan más por menos.",

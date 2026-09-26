@@ -4,11 +4,14 @@ interface Props {
   title: string;
   lede?: string;
   mutedLede?: boolean;
+  /** 1 for the page title, 2 for section titles. */
+  level?: 1 | 2;
 }
-const { label, title, lede, mutedLede = true } = Astro.props;
+const { label, title, lede, mutedLede = true, level = 2 } = Astro.props;
+const Heading = level === 1 ? 'h1' : 'h2';
 ---
 <div class="sec-head">
   <p class="label">{label}</p>
-  <h2 class="h-l">{title}</h2>
+  <Heading class="h-l">{title}</Heading>
   {lede && <p class:list={['lede', { muted: mutedLede }]}>{lede}</p>}
 </div>

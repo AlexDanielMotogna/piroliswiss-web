@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Quiénes somos · Piroliswiss",
+    "description": "Piroliswiss S.R.L. by Grupo Zwald S.R.L.: productor y exportador de carbón vegetal premium y subproductos de pirólisis. Equipo y datos de la empresa. Santa Cruz de la Sierra, Bolivia."
+  },
+  "intro": {
+    "label": "Quiénes somos",
+    "title": "Productor y exportador industrial de carbón vegetal premium y subproductos de pirólisis.",
+    "items": [
+      {
+        "label": "Producción industrial",
+        "text": "Producimos carbón vegetal premium y subproductos como ácido piroleñoso y briquetas de carbón para usos metalúrgicos, industriales y agrícolas, y para el mercado de parrilla premium."
+      },
+      {
+        "label": "Abastecimiento responsable",
+        "text": "Trabajamos solo con residuo forestal y biomasa de origen legal, provenientes de áreas autorizadas para cambio de uso de suelo. Evitamos la quema a cielo abierto y generamos valor a partir del residuo."
+      },
+      {
+        "label": "Sede",
+        "text": "Santa Cruz de la Sierra, Bolivia. Desarrollado con Grupo Zwald S.R.L., que aporta know-how operativo, tecnología y canales comerciales."
+      }
+    ]
+  },
+  "team": {
+    "label": "Equipo",
+    "title": "Quién dirige Piroliswiss.",
+    "photo": "[foto]",
+    "members": [
+      {
+        "name": "Federico Zwald",
+        "role": "Fundador y CEO"
+      },
+      {
+        "name": "Christian Vargas",
+        "role": "Cofundador y CFO"
+      },
+      {
+        "name": "Alex Motogna",
+        "role": "Cofundador y CTO"
+      }
+    ]
+  },
+  "facts": {
+    "label": "Datos de la empresa",
+    "rows": [
+      {
+        "k": "Razón social",
+        "v": "Piroliswiss S.R.L. by Grupo Zwald S.R.L."
+      },
+      {
+        "k": "Oficina",
+        "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolivia"
+      },
+      {
+        "k": "Correo",
+        "tbc": "[correo @piroliswiss.com]"
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Necesita una especificación o una cotización?",
+    "text": "Escríbanos con su aplicación y volumen; respondemos con la ficha técnica y una cotización privada."
+  }
+}

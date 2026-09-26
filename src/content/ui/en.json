@@ -3,7 +3,7 @@
   "home": "Piroliswiss home",
   "nav": [
     {
-      "href": "#about",
+      "href": "company",
       "label": "Company"
     },
     {
@@ -35,8 +35,12 @@
         "title": "Company",
         "links": [
           {
-            "href": "#about",
+            "href": "company",
             "label": "About"
+          },
+          {
+            "href": "company#team",
+            "label": "Team"
           },
           {
             "href": "#provenance",

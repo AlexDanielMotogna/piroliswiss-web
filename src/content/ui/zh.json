@@ -3,8 +3,8 @@
   "home": "Piroliswiss 首页",
   "nav": [
     {
-      "href": "#about",
-      "label": "公司"
+      "href": "company",
+      "label": "关于我们"
     },
     {
       "href": "#products",
@@ -35,8 +35,12 @@
         "title": "公司",
         "links": [
           {
-            "href": "#about",
+            "href": "company",
             "label": "关于我们"
+          },
+          {
+            "href": "company#team",
+            "label": "团队"
           },
           {
             "href": "#provenance",
