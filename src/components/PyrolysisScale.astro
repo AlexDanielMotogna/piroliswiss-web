@@ -4,8 +4,8 @@
  * Built from the owner's "Web · sección Proceso" mockup (2026-09-26).
  * Copy comes from content; the per-phase visual values live here.
  * Probe temperatures are illustrative and labelled as such. T1–T3 (inside the
- * retort) stay within ~5 °C of each other to show an even load (owner request);
- * T4 sits on the gas outlet and reads lower.
+ * retort) read the same value per phase: the brand message is an even burn
+ * (owner request). T4 sits on the gas outlet and reads lower.
  */
 import type { Home } from '../lib/types';
 
@@ -20,10 +20,10 @@ const KIND_COLOR: Record<Kind, string> = {
   steam: '#D6D8D2', acid: '#E0A23A', gas: '#D40000', gasres: '#D40000', charcoal: '#F2F2EE',
 };
 const V = [
-  { lo: 0, hi: 200, color: '#3A4043', atmos: '#4A5256', woodFill: '#C9A57A', edge: '#8C6A45', t: [158, 161, 163, 118], door: 160, steam: 1, acid: 0, gas: 0, flame: 0.6, level: 0, out: ['steam'] as Kind[] },
-  { lo: 200, hi: 280, color: '#6B4A32', atmos: '#6B4A32', woodFill: '#8A5530', edge: '#5A3518', t: [246, 249, 251, 198], door: 250, steam: 0.35, acid: 1, gas: 0.4, flame: 0.7, level: 8, out: ['acid', 'steam'] as Kind[] },
-  { lo: 280, hi: 450, color: '#A70000', atmos: '#A70000', woodFill: '#3A2418', edge: '#1E120B', t: [383, 386, 388, 331], door: 380, steam: 0, acid: 1, gas: 1, flame: 1, level: 18, out: ['acid', 'gas'] as Kind[] },
-  { lo: 450, hi: 550, color: '#EE7A42', atmos: '#C8551F', woodFill: '#141414', edge: '#000000', t: [502, 505, 507, 441], door: 500, steam: 0, acid: 0.15, gas: 0.5, flame: 0.8, level: 22, out: ['charcoal', 'gasres'] as Kind[] },
+  { lo: 0, hi: 200, color: '#3A4043', atmos: '#4A5256', woodFill: '#C9A57A', edge: '#8C6A45', t: [150, 150, 150, 118], door: 150, steam: 1, acid: 0, gas: 0, flame: 0.6, level: 0, out: ['steam'] as Kind[] },
+  { lo: 200, hi: 280, color: '#6B4A32', atmos: '#6B4A32', woodFill: '#8A5530', edge: '#5A3518', t: [250, 250, 250, 198], door: 250, steam: 0.35, acid: 1, gas: 0.4, flame: 0.7, level: 8, out: ['acid', 'steam'] as Kind[] },
+  { lo: 280, hi: 450, color: '#A70000', atmos: '#A70000', woodFill: '#3A2418', edge: '#1E120B', t: [380, 380, 380, 331], door: 380, steam: 0, acid: 1, gas: 1, flame: 1, level: 18, out: ['acid', 'gas'] as Kind[] },
+  { lo: 450, hi: 550, color: '#EE7A42', atmos: '#C8551F', woodFill: '#141414', edge: '#000000', t: [500, 500, 500, 441], door: 500, steam: 0, acid: 0.15, gas: 0.5, flame: 0.8, level: 22, out: ['charcoal', 'gasres'] as Kind[] },
 ];
 const phases = V.map((v, i) => ({
   ...v,
