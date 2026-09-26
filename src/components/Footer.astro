@@ -28,7 +28,7 @@ const f = ui.footer;
       <div>
         <h2>{f.contact.title}</h2>
         <ul>
-          <li><Tbc text={f.contact.email} /></li>
+          <li><a href={`mailto:${f.contact.email}`}>{f.contact.email}</a></li>
           <li>{f.contact.address}</li>
           <li>{f.contact.city}</li>
           <li><Tbc text={f.contact.phone} /></li>

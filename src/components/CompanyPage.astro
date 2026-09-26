@@ -35,6 +35,7 @@ const ui = uiEntry.data;
             <figure><Tbc text={c.team.photo} /></figure>
             <h3 class="h-m">{m.name}</h3>
             <p class="label">{m.role}</p>
+            <a class="mail" href={`mailto:${m.email}`}>{m.email}</a>
           </li>
         ))}
       </ul>

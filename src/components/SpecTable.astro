@@ -10,6 +10,7 @@ interface Row {
 interface Props {
   rows: Row[];
 }
+const isEmail = (v?: string) => !!v && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 ---
 <table class="sheet">
   <tbody>
@@ -17,7 +18,7 @@ interface Props {
       <tr>
         <th scope="row">{r.k}</th>
         <td>
-          {r.v}
+          {isEmail(r.v) ? <a href={`mailto:${r.v}`}>{r.v}</a> : r.v}
           {r.tbc && <Tbc text={r.tbc} />}
           {r.note && <Fragment>{' '}<span class="muted">{r.note}</span></Fragment>}
         </td>

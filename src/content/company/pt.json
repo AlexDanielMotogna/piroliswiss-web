@@ -27,16 +27,19 @@
     "photo": "[foto]",
     "members": [
       {
-        "name": "Federico Zwald",
-        "role": "Fundador e CEO"
+        "name": "Frederico Zwald",
+        "role": "Fundador e CEO",
+        "email": "fredericozwald@piroliswiss.com"
       },
       {
         "name": "Christian Vargas",
-        "role": "Cofundador e CFO"
+        "role": "Cofundador e CFO",
+        "email": "christianvargas@piroliswiss.com"
       },
       {
         "name": "Alex Motogna",
-        "role": "Cofundador e CTO"
+        "role": "Cofundador e CTO",
+        "email": "alexdanielmotogna@piroliswiss.com"
       }
     ]
   },
@@ -52,8 +55,12 @@
         "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolívia"
       },
       {
-        "k": "E-mail",
-        "tbc": "[e-mail @piroliswiss.com]"
+        "k": "E-mail geral",
+        "v": "office@piroliswiss.com"
+      },
+      {
+        "k": "Vendas",
+        "v": "sales@piroliswiss.com"
       }
     ]
   },

@@ -166,8 +166,9 @@ Logo: current file is a raster with gradients; needs a vector redraw (full lock-
 - Capacity: +1,800 t/month per plant, 16 metal retorts, projected (Plant 1 not built yet). Plant 2: 2028, Plant 3: 2029, Plants 4–5 within five years.
 - Formats: bulk, big-bag 400 kg, 5/10/30 kg bags (BBQ). ≈ 22 t per 40' HC. No MOQ, Incoterms, ports or lead times on the site: private quotation only.
 - Legal name: Piroliswiss S.R.L. by Grupo Zwald S.R.L. NIT pending. Office: Calle Clara 2885, Santa Cruz de la Sierra. Domain: piroliswiss.com.
-- Team: Federico Zwald (Founder & CEO, first name to confirm), Christian Vargas (Co-Founder & CFO), Alex Motogna (Co-Founder & CTO). No portraits yet.
+- Team: Frederico Zwald (Founder & CEO), Christian Vargas (Co-Founder & CFO), Alex Motogna (Co-Founder & CTO). No portraits yet.
 - No investors section (51/49, fundraising) on the public site.
 - Swiss cross: owners accept it. Legal risk noted in §1 remains their decision.
 - Operating model: 5 steps; step "forest study" removed, "clearing" reworded as biomass collection from the authorised area.
-- Open: wood vinegar claims, function emails, phone, photo origin, vector logo, PT/ZH native review.
+- Emails: office@, sales@ and personal addresses (fredericozwald@, christianvargas@, alexdanielmotogna@) at piroliswiss.com.
+- Open: wood vinegar claims, phone, photo origin, vector logo, PT/ZH native review.
