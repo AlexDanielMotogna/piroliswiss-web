@@ -15,6 +15,10 @@
       "label": "Process"
     },
     {
+      "href": "#control",
+      "label": "Traceability"
+    },
+    {
       "href": "#provenance",
       "label": "Operating model"
     },

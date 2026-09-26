@@ -46,7 +46,7 @@ const ui = defineCollection({
     .object({
       skip: text,
       home: text,
-      nav: z.array(link).length(5),
+      nav: z.array(link).length(6),
       navLabel: text,
       menu: text,
       langLabel: text,
@@ -120,6 +120,17 @@ const home = defineCollection({
           gaugeAlt: text,
           gaugeCaption: text,
           notes: z.array(titled).length(3),
+        })
+        .strict(),
+      control: z
+        .object({
+          label: text,
+          title: text,
+          lede: text,
+          img: imgKey,
+          alt: text,
+          caption: text,
+          points: z.array(titled).length(4),
         })
         .strict(),
       model: z

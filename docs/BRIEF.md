@@ -174,3 +174,4 @@ Logo: current file is a raster with gradients; needs a vector redraw (full lock-
 - Operating model: 5 steps; step "forest study" removed, "clearing" reworded as biomass collection from the authorised area.
 - Emails: office@, sales@ and personal addresses (fredericozwald@, christianvargas@, alexdanielmotogna@) at piroliswiss.com.
 - Open: wood vinegar claims, phone, photo origin, vector logo, PT/ZH native review.
+- Piroliswiss Control (oven-monitoring app, design in ../piroliswiss-control/design): 4 probes per kiln, reading every 30 s, cycle phases by threshold, alarms, offline queue, CSV export. On the homepage as "Control y trazabilidad", always labelled as in-house system in development with sample data.

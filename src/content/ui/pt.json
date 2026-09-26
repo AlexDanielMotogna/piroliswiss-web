@@ -15,6 +15,10 @@
       "label": "Processo"
     },
     {
+      "href": "#control",
+      "label": "Rastreabilidade"
+    },
+    {
       "href": "#provenance",
       "label": "Modelo operacional"
     },

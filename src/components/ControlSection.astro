@@ -1,0 +1,29 @@
+---
+import SectionHead from './SectionHead.astro';
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  control: Home['control'];
+}
+const { control: c } = Astro.props;
+---
+<section id="control" class="control">
+  <div class="wrap">
+    <SectionHead label={c.label} title={c.title} lede={c.lede} />
+    <div class="control-grid">
+      <figure class="control-shot">
+        <Photo src={c.img} alt={c.alt} sizes="(max-width: 1000px) 100vw, 58vw" />
+        <figcaption>{c.caption}</figcaption>
+      </figure>
+      <ul class="control-points">
+        {c.points.map((p) => (
+          <li>
+            <h3>{p.title}</h3>
+            <p>{p.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

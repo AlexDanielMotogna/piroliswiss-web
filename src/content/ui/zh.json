@@ -15,6 +15,10 @@
       "label": "工艺"
     },
     {
+      "href": "#control",
+      "label": "可追溯性"
+    },
+    {
       "href": "#provenance",
       "label": "运营模式"
     },

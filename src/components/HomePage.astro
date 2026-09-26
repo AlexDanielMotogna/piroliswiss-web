@@ -9,6 +9,7 @@ import SolutionIcon from './SolutionIcon.astro';
 import Product from './Product.astro';
 import PyrolysisScale from './PyrolysisScale.astro';
 import StageList from './StageList.astro';
+import ControlSection from './ControlSection.astro';
 import CompareTable from './CompareTable.astro';
 import PhotoStrip from './PhotoStrip.astro';
 import ScaleTable from './ScaleTable.astro';
@@ -69,6 +70,8 @@ const ui = uiEntry.data;
       <PyrolysisScale process={t.process} />
     </div>
   </section>
+
+  <ControlSection control={t.control} />
 
   <section id="provenance">
     <div class="wrap">

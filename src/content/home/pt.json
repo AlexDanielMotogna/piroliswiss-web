@@ -279,6 +279,32 @@
       }
     ]
   },
+  "control": {
+    "label": "Controle e rastreabilidade",
+    "title": "Cada forno, medido a cada 30 segundos.",
+    "lede": "O Piroliswiss Control é o nosso sistema próprio de monitoramento de fornos. Registra a temperatura de cada retorta durante todo o ciclo, avisa quando algo sai da faixa e guarda a curva de cada carga.",
+    "img": "control-oven",
+    "alt": "Tela de detalhe de um forno no Piroliswiss Control: fases do ciclo, pontos de medição na retorta e curva de temperatura das últimas 8 horas",
+    "caption": "Piroliswiss Control · design do aplicativo com dados de exemplo. Sistema próprio em desenvolvimento.",
+    "points": [
+      {
+        "title": "Quatro sondas por forno",
+        "text": "Frente, centro, fundo e saída de gases. A diferença entre as sondas mostra se a carga carboniza de forma uniforme."
+      },
+      {
+        "title": "Fases do ciclo",
+        "text": "Carga, aquecimento e pirólise são detectados pela temperatura, com hora de início e duração de cada fase."
+      },
+      {
+        "title": "Alarmes em tempo real",
+        "text": "Aviso imediato se um forno passa do limite, se uma sonda falha ou se um nó para de enviar dados. Sem conexão, as leituras ficam guardadas e são enviadas depois."
+      },
+      {
+        "title": "Registro por lote",
+        "text": "Cada ciclo fica registrado e pode ser exportado, de modo que cada lote pode ser rastreado até a sua curva de temperatura."
+      }
+    ]
+  },
   "model": {
     "label": "Modelo operacional",
     "title": "Da biomassa ao produto final, em cinco etapas.",
