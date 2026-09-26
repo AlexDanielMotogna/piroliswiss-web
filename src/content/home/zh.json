@@ -283,8 +283,30 @@
     "label": "控制与可追溯性",
     "title": "每座炉，每 30 秒测量一次。",
     "lede": "Piroliswiss Control 是我们自主开发的炉温监控系统。它记录每台干馏炉在整个周期内的温度，在出现超限时发出提醒，并保存每一炉的温度曲线。",
-    "img": "control-tablet",
-    "alt": "平板电脑上的 Piroliswiss Control：炉体详情，包括周期阶段、干馏炉测温点和温度曲线",
+    "slides": [
+      {
+        "img": "control-all",
+        "label": "全部界面",
+        "alt": "Piroliswiss Control 在电脑、平板和手机上的界面：工厂总览、炉体详情和报警列表"
+      },
+      {
+        "img": "control-desktop",
+        "label": "电脑",
+        "alt": "电脑上的工厂总览：各炉状态、当前报警和最近事件"
+      },
+      {
+        "img": "control-tablet-mock",
+        "label": "平板",
+        "alt": "平板上的炉体详情：探头、周期阶段、测温点和温度曲线"
+      },
+      {
+        "img": "control-mobile",
+        "label": "手机",
+        "alt": "手机应用：报警优先显示，以及各炉温度列表"
+      }
+    ],
+    "prev": "上一屏",
+    "next": "下一屏",
     "points": [
       {
         "title": "每炉四个探头",

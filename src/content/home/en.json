@@ -283,8 +283,30 @@
     "label": "Control and traceability",
     "title": "Every kiln, measured every 30 seconds.",
     "lede": "Piroliswiss Control is our own kiln-monitoring system. It records the temperature of every retort through the whole cycle, warns when something goes out of range and keeps the curve of every load.",
-    "img": "control-tablet",
-    "alt": "Tablet showing Piroliswiss Control: kiln detail with cycle phases, measurement points on the retort and temperature curve",
+    "slides": [
+      {
+        "img": "control-all",
+        "label": "All screens",
+        "alt": "Piroliswiss Control on desktop, tablet and phone: plant view, kiln detail and alarm list"
+      },
+      {
+        "img": "control-desktop",
+        "label": "Desktop",
+        "alt": "Plant overview on desktop: status of every kiln, active alarms and recent events"
+      },
+      {
+        "img": "control-tablet-mock",
+        "label": "Tablet",
+        "alt": "Kiln detail on tablet: probes, cycle phases, measurement points and temperature curve"
+      },
+      {
+        "img": "control-mobile",
+        "label": "Mobile",
+        "alt": "The app on a phone: alarms first and the list of kilns with their temperature"
+      }
+    ],
+    "prev": "Previous screen",
+    "next": "Next screen",
     "points": [
       {
         "title": "Four probes per kiln",

@@ -12,13 +12,24 @@ const { control: c } = Astro.props;
   <div class="wrap">
     <SectionHead label={c.label} title={c.title} lede={c.lede} />
     <div class="control-grid">
-      <figure class="control-shot">
-        <div class="tablet">
-          <div class="tablet-screen">
-            <Photo src={c.img} alt={c.alt} sizes="(max-width: 1000px) 100vw, 58vw" />
-          </div>
+      <div class="shots" data-slider>
+        <div class="shots-track" tabindex="0">
+          {c.slides.map((s, i) => (
+            <figure class="shot" id={`shot-${i}`} aria-label={s.label}>
+              <Photo src={s.img} alt={s.alt} sizes="(max-width: 1000px) 100vw, 58vw" eager={i === 0} />
+            </figure>
+          ))}
         </div>
-      </figure>
+        <div class="shots-nav">
+          <button type="button" class="shots-arrow" data-prev aria-label={c.prev}>←</button>
+          <div class="shots-tabs" role="tablist">
+            {c.slides.map((s, i) => (
+              <button type="button" role="tab" aria-selected={i === 0 ? 'true' : 'false'} aria-controls={`shot-${i}`} data-go={i}>{s.label}</button>
+            ))}
+          </div>
+          <button type="button" class="shots-arrow" data-next aria-label={c.next}>→</button>
+        </div>
+      </div>
       <div>
         <ul class="control-points">
           {c.points.map((p) => (
@@ -33,3 +44,34 @@ const { control: c } = Astro.props;
     </div>
   </div>
 </section>
+<script>
+  // Scroll-snap carousel: tabs and arrows scroll the track; the tab follows the visible slide.
+  document.querySelectorAll<HTMLElement>('[data-slider]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('.shots-track')!;
+    const slides = [...track.children] as HTMLElement[];
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('[data-go]')];
+    let current = 0;
+    const mark = (i: number) => {
+      current = i;
+      tabs.forEach((t, j) => t.setAttribute('aria-selected', String(j === i)));
+    };
+    const go = (i: number) => {
+      const n = (i + slides.length) % slides.length;
+      mark(n);
+      track.scrollTo({ left: n * track.clientWidth, behavior: 'smooth' });
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => go(Number(t.dataset.go))));
+    root.querySelector('[data-prev]')!.addEventListener('click', () => go(current - 1));
+    root.querySelector('[data-next]')!.addEventListener('click', () => go(current + 1));
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    });
+    // swipe on touch: follow the slide that ends up in view
+    let t: number | undefined;
+    track.addEventListener('scroll', () => {
+      clearTimeout(t);
+      t = window.setTimeout(() => mark(Math.round(track.scrollLeft / track.clientWidth)), 120);
+    }, { passive: true });
+  });
+</script>

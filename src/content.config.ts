@@ -127,8 +127,9 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
-          img: imgKey,
-          alt: text,
+          slides: z.array(z.object({ img: imgKey, label: text, alt: text }).strict()).min(1),
+          prev: text,
+          next: text,
           points: z.array(titled).length(4),
           note: text,
         })

@@ -283,8 +283,30 @@
     "label": "Control y trazabilidad",
     "title": "Cada horno, medido cada 30 segundos.",
     "lede": "Piroliswiss Control es nuestro sistema propio de monitoreo de hornos. Registra la temperatura de cada retorta durante todo el ciclo, avisa cuando algo sale de rango y guarda la curva de cada carga.",
-    "img": "control-tablet",
-    "alt": "Tablet con Piroliswiss Control: detalle de un horno con fases del ciclo, puntos de medición en la retorta y curva de temperatura",
+    "slides": [
+      {
+        "img": "control-all",
+        "label": "Todas las pantallas",
+        "alt": "Piroliswiss Control en ordenador, tablet y móvil: vista de planta, detalle de horno y lista de alarmas"
+      },
+      {
+        "img": "control-desktop",
+        "label": "Ordenador",
+        "alt": "Vista general de la planta en ordenador: estado de cada horno, alarmas activas y eventos recientes"
+      },
+      {
+        "img": "control-tablet-mock",
+        "label": "Tablet",
+        "alt": "Detalle de un horno en tablet: sondas, fases del ciclo, puntos de medición y curva de temperatura"
+      },
+      {
+        "img": "control-mobile",
+        "label": "Móvil",
+        "alt": "Aplicación en el móvil: alarmas primero y lista de hornos con su temperatura"
+      }
+    ],
+    "prev": "Pantalla anterior",
+    "next": "Pantalla siguiente",
     "points": [
       {
         "title": "Cuatro sondas por horno",
