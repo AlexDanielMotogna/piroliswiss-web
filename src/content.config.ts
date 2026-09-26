@@ -76,8 +76,6 @@ const home = defineCollection({
         .object({
           img: imgKey,
           alt: text,
-          location: z.array(text).length(2),
-          eyebrow: text,
           title: text,
           sub: text,
           secondary: text,

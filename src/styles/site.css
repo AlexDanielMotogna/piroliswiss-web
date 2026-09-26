@@ -68,17 +68,13 @@ p{margin:0}
 .hero{position:relative;color:#F1F3F0;background:#1a1d1f;overflow:hidden}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;transform:scale(1.04);animation:settle 2.4s cubic-bezier(.2,.7,.2,1) forwards}
 @keyframes settle{to{transform:scale(1)}}
-/* fix: stronger scrim so the eyebrow and location stay legible over sky in longer languages */
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,13,.28) 0%,rgba(10,12,13,.22) 25%,rgba(10,12,13,.45) 55%,rgba(10,12,13,.78) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,13,.05) 30%,rgba(10,12,13,.45) 60%,rgba(10,12,13,.78) 100%)}
 .hero .wrap{position:relative;z-index:1;min-height:clamp(520px,74vh,800px);display:grid;align-content:end;padding-block:48px 56px;gap:28px}
-.hero .label{color:#C9D0CB}
 .hero .h-xl{max-width:14ch}
 .hero .sub{max-width:46ch;font-size:clamp(17px,1.3vw,20px);color:#DDE2DE}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
 
 .hero .btn.ghost{background:transparent;color:#F1F3F0;border-color:rgba(241,243,240,.6)}
-.hero .coord{position:absolute;right:var(--gut);top:28px;z-index:1;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(241,243,240,.75);text-align:right;text-transform:uppercase}
-@media (max-width:700px){.hero .coord{display:none}}
 
 /* plant sheet: the KPI strip reads as a data sheet for Plant 01, on brand olive */
 .specs{background:var(--olive);color:var(--olive-fg)}

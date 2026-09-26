@@ -10,9 +10,7 @@ const { hero, cta } = Astro.props;
 ---
 <div class="hero">
   <Photo src={hero.img} alt={hero.alt} sizes="100vw" eager />
-  <div class="coord">{hero.location[0]}<br />{hero.location[1]}</div>
   <div class="wrap">
-    <p class="label">{hero.eyebrow}</p>
     <h1 class="h-xl">{hero.title}</h1>
     <p class="sub">{hero.sub}</p>
     <div class="actions">
