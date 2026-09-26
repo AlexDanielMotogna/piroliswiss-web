@@ -26,8 +26,11 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 - Never publish coordinates, parcel maps, landowner names, permit numbers or the forest census.
 - Renders must carry the tag "Planned · Rendering".
 - Product copy (description + key characteristics) comes from the client deck and is already in the prototype. Do not add new claims. The wood vinegar claims (insect repellent, fungi control) are pending legal review for the target market.
+- Specs are typical values from the owners' previous production, not a lab report: always label them "Typical specification".
+- Capacity is always shown as "+1,800 t / month" per plant (never t/day) and always marked projected. Plant 1 is in development, not in production.
+- Feedstock: say "collection of wood and forest residue from authorised areas / authorised land-use change". Do not lead with "clearing / desmonte", but never claim the biomass comes from anywhere else.
 
 ## Workflow
 - Build page by page in sitemap order. After each page: `npm run build`, check for errors, then stop and summarise what's done and which placeholders remain.
-- Never publish prices, profits, ROI or investment terms from the investor deck. The Investors section is a teaser that leads to "Request the investor deck".
-- Keep components small: `Header`, `Footer`, `Hero`, `SpecStrip`, `SectionHead`, `SpecTable`, `PyrolysisScale`, `StageList`, `CompareTable`, `PhotoStrip`, `Phase`, `ScaleTable`, `InvestorTeaser`, `RequestForm`.
+- Never publish prices, profits, ROI, equity split or investment terms. Owners decided (2026-09-26): no investors section on the public site.
+- Keep components small: `Header`, `Footer`, `Hero`, `SpecStrip`, `SectionHead`, `SpecTable`, `PyrolysisScale`, `StageList`, `CompareTable`, `PhotoStrip`, `Phase`, `ScaleTable`, `RequestForm`.

@@ -14,7 +14,7 @@ import CompareTable from './CompareTable.astro';
 import PhotoStrip from './PhotoStrip.astro';
 import ScaleTable from './ScaleTable.astro';
 import Phase from './Phase.astro';
-import InvestorTeaser from './InvestorTeaser.astro';
+import SpecTable from './SpecTable.astro';
 import RequestForm from './RequestForm.astro';
 import type { Locale } from '../i18n/locales';
 
@@ -39,6 +39,10 @@ const ui = uiEntry.data;
         <SectionHead label={t.about.label} title={t.about.title} />
         <div class="about">
           {t.about.items.map((a) => <div><p class="label">{a.label}</p><p>{a.text}</p></div>)}
+        </div>
+        <div class="team">
+          <p class="label">{t.about.teamLabel}</p>
+          <SpecTable rows={t.about.team} />
         </div>
       </div>
     </section>
@@ -113,7 +117,6 @@ const ui = uiEntry.data;
       </div>
     </section>
 
-    <InvestorTeaser inv={t.investors} />
     <RequestForm req={t.request} />
   </main>
   <Footer ui={ui} />

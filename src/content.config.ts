@@ -47,7 +47,7 @@ const ui = defineCollection({
     .object({
       skip: text,
       home: text,
-      nav: z.array(link).length(6),
+      nav: z.array(link).length(5),
       navLabel: text,
       menu: text,
       langLabel: text,
@@ -89,13 +89,15 @@ const home = defineCollection({
           label: text,
           title: text,
           items: z.array(z.object({ label: text, text: text }).strict()).length(3),
+          teamLabel: text,
+          team: z.array(z.object({ k: text, v: text }).strict()).min(1),
         })
         .strict(),
       problems: z
         .object({
           label: text,
           title: text,
-          items: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(4),
+          items: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(3),
           solutionLabel: text,
           solutions: z.array(titled).length(3),
         })
@@ -128,7 +130,7 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
-          steps: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(6),
+          steps: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(5),
         })
         .strict(),
       compare: z
@@ -160,22 +162,8 @@ const home = defineCollection({
           unit: text,
           rows: z.array(z.object({ k: text, plant: text, five: text }).strict()).length(3),
           phases: z
-            .array(z.object({ img: imgKey, alt: text, tag: text, planned: z.boolean(), title: text }).strict())
+            .array(z.object({ img: imgKey, alt: text, tag: text, planned: z.boolean(), title: text, text: text }).strict())
             .length(2),
-        })
-        .strict(),
-      investors: z
-        .object({
-          label: text,
-          title: text,
-          lede: text,
-          oppLabel: text,
-          opportunity: z.array(text).min(1),
-          structLabel: text,
-          structure: z.array(z.object({ k: text, v: text }).strict()),
-          note: text,
-          ctaText: text,
-          cta: text,
         })
         .strict(),
       request: z

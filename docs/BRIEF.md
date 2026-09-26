@@ -159,3 +159,15 @@ Logo: current file is a raster with gradients; needs a vector redraw (full lock-
 - Structure per plant: Grupo Zwald S.R.L. 51 %, investors/partners 49 %. Zwald provides know-how and technology, clients and channels, production management and technical supervision. Equity or joint-venture.
 - NOT on the public site: selling prices (236 / 650 / 500 USD/t), daily profit, 21.6 M revenue, 11 M net profit, ROI (320 % / 217 %), investor shares and payouts. These go in the investor deck under NDA.
 - Deck images not used: stock/AI photos (vinegar bottle, briquettes, handshake, refinery, factory smokestacks).
+
+## 9. Owners' answers (2026-09-26)
+
+- No lab report. Specs are typical values from previous production: charcoal FC 80–85 %, > 7,300 kcal/kg, moisture < 5 %, fines (< 10 mm) < 4 %, size > 50 mm; briquettes FC ≥ 80 %, > 7,300 kcal/kg, moisture < 5 %, ash < 4 %, > 30 mm; pyroligneous acid pH 2.5–3.2, acidity 4–7 %, density ≥ 1.005 g/mL, ≥ 6 months maturation, filtered and decanted.
+- Capacity: +1,800 t/month per plant, 16 metal retorts, projected (Plant 1 not built yet). Plant 2: 2028, Plant 3: 2029, Plants 4–5 within five years.
+- Formats: bulk, big-bag 400 kg, 5/10/30 kg bags (BBQ). ≈ 22 t per 40' HC. No MOQ, Incoterms, ports or lead times on the site: private quotation only.
+- Legal name: Piroliswiss S.R.L. by Grupo Zwald S.R.L. NIT pending. Office: Calle Clara 2885, Santa Cruz de la Sierra. Domain: piroliswiss.com.
+- Team: Federico Zwald (Founder & CEO, first name to confirm), Christian Vargas (Co-Founder & CFO), Alex Motogna (Co-Founder & CTO). No portraits yet.
+- No investors section (51/49, fundraising) on the public site.
+- Swiss cross: owners accept it. Legal risk noted in §1 remains their decision.
+- Operating model: 5 steps; step "forest study" removed, "clearing" reworded as biomass collection from the authorised area.
+- Open: wood vinegar claims, function emails, phone, photo origin, vector logo, PT/ZH native review.

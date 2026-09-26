@@ -34,10 +34,6 @@ const { req: r } = Astro.props;
 <script>
   const form = document.getElementById('spec-form') as HTMLFormElement;
   const note = document.getElementById('form-note') as HTMLElement;
-  const product = document.getElementById('f-product') as HTMLSelectElement;
-  document.querySelectorAll('[data-investor]').forEach((a) =>
-    a.addEventListener('click', () => (product.value = 'investment')),
-  );
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const company = (document.getElementById('f-company') as HTMLInputElement).value.trim();

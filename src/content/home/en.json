@@ -6,41 +6,105 @@
   "hero": {
     "img": "hero",
     "alt": "Freshly discharged hardwood charcoal piled at the Piroliswiss production site under open sky",
-    "location": ["Santa Cruz de la Sierra", "Bolivia"],
+    "location": [
+      "Santa Cruz de la Sierra",
+      "Bolivia"
+    ],
     "eyebrow": "Producer and exporter · Hardwood charcoal · Pyrolysis by-products",
     "title": "Hardwood charcoal from recovered forest residue.",
     "sub": "Curupaú, Soto and Cuchi hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.",
     "secondary": "See the process"
   },
   "specs": [
-    { "label": "Fixed carbon", "v": "80–⁠85", "unit": "%" },
-    { "label": "Species", "v": "Curupaú · Soto · Cuchi" },
-    { "label": "Design capacity per plant", "v": "60", "unit": "t / day" },
-    { "label": "Feedstock", "v": "Licensed residue only" }
+    {
+      "label": "Fixed carbon",
+      "v": "80–⁠85",
+      "unit": "%"
+    },
+    {
+      "label": "Species",
+      "v": "Curupaú · Soto · Cuchi"
+    },
+    {
+      "label": "Projected capacity per plant",
+      "v": "+1,800",
+      "unit": "t / month"
+    },
+    {
+      "label": "Feedstock",
+      "v": "Licensed residue only"
+    }
   ],
   "about": {
     "label": "Who we are",
     "title": "An industrial producer and exporter of premium charcoal and pyrolysis by-products.",
     "items": [
-      { "label": "Industrial production", "text": "We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets." },
-      { "label": "Responsible sourcing", "text": "We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue." },
-      { "label": "Based in", "text": "Santa Cruz de la Sierra, Bolivia. Developed with Grupo Zwald S.R.L., which provides operating know-how, technology and commercial channels." }
+      {
+        "label": "Industrial production",
+        "text": "We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets."
+      },
+      {
+        "label": "Responsible sourcing",
+        "text": "We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue."
+      },
+      {
+        "label": "Based in",
+        "text": "Santa Cruz de la Sierra, Bolivia. Developed with Grupo Zwald S.R.L., which provides operating know-how, technology and commercial channels."
+      }
+    ],
+    "teamLabel": "Team",
+    "team": [
+      {
+        "k": "Founder & CEO",
+        "v": "Federico Zwald"
+      },
+      {
+        "k": "Co-Founder & CFO",
+        "v": "Christian Vargas"
+      },
+      {
+        "k": "Co-Founder & CTO",
+        "v": "Alex Motogna"
+      }
     ]
   },
   "problems": {
     "label": "The problems",
     "title": "Good hardwood is burned in the field while industry and farms pay more for less.",
     "items": [
-      { "img": "burn", "alt": "Forest residue burning after a land clearing", "title": "Forest residue is wasted", "text": "Millions of tonnes of forest residue are burned, abandoned or underused, causing pollution and economic loss." },
-      { "img": "clearing", "alt": "Bulldozer on an authorised land clearing, aerial view", "title": "Licensed clearing is expensive", "text": "Landowners with an approved clearing plan (PDM) spend much of their capital on removal, capital their farms then lack." },
-      { "img": "steel", "alt": "Steel plant with raw material yard", "title": "Industrial charcoal is scarce", "text": "In Brazil, growing demand from pulp companies has created a shortage of industrial charcoal for steelworks." },
-      { "img": "tractor", "alt": "Tractor working on farmland in Santa Cruz", "title": "Farm inputs cost too much", "text": "High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives." }
+      {
+        "img": "burn",
+        "alt": "Forest residue burning in the field",
+        "title": "Forest residue is wasted",
+        "text": "Millions of tonnes of forest residue are burned, abandoned or underused, causing pollution and economic loss."
+      },
+      {
+        "img": "steel",
+        "alt": "Steel plant with raw material yard",
+        "title": "Industrial charcoal is scarce",
+        "text": "In Brazil, growing demand from pulp companies has created a shortage of industrial charcoal for steelworks."
+      },
+      {
+        "img": "tractor",
+        "alt": "Tractor working on farmland in Santa Cruz",
+        "title": "Farm inputs cost too much",
+        "text": "High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives."
+      }
     ],
     "solutionLabel": "Our solution",
     "solutions": [
-      { "title": "Turn forest residue into industrial products", "text": "Controlled pyrolysis converts forest residue into high-value industrial products." },
-      { "title": "Constant industrial supply", "text": "Steady, scalable charcoal production for steelworks, especially in Brazil and Asia." },
-      { "title": "Natural agricultural inputs", "text": "A biomass-derived bio-input that reduces dependence on agrochemicals and supports more sustainable farming." }
+      {
+        "title": "Turn forest residue into industrial products",
+        "text": "Controlled pyrolysis converts forest residue into high-value industrial products."
+      },
+      {
+        "title": "Constant industrial supply",
+        "text": "Steady, scalable charcoal production for steelworks, especially in Brazil and Asia."
+      },
+      {
+        "title": "Natural agricultural inputs",
+        "text": "A biomass-derived bio-input that reduces dependence on agrochemicals and supports more sustainable farming."
+      }
     ]
   },
   "products": {
@@ -68,15 +132,45 @@
           "Low moisture and impurities",
           "Suitable for industrial and export markets"
         ],
-        "specLabel": "Specification",
+        "specLabel": "Typical specification",
         "spec": [
-          { "k": "Fixed carbon", "v": "80–⁠85 %" },
-          { "k": "Species", "v": "Curupaú, Soto, Cuchi" },
-          { "k": "Moisture", "tbc": "[lab value]" },
-          { "k": "Ash", "tbc": "[lab value]" },
-          { "k": "Calorific value", "tbc": "[kcal/kg]" },
-          { "k": "Formats", "v": "Big-bag · retail bags" },
-          { "k": "Output per plant", "v": "60 t / day", "note": "(projected)" }
+          {
+            "k": "Fixed carbon",
+            "v": "80–⁠85 %"
+          },
+          {
+            "k": "Calorific value",
+            "v": "> 7,300 kcal/kg"
+          },
+          {
+            "k": "Moisture",
+            "v": "< 5 %"
+          },
+          {
+            "k": "Fines (< 10 mm)",
+            "v": "< 4 %"
+          },
+          {
+            "k": "Predominant size",
+            "v": "> 50 mm"
+          },
+          {
+            "k": "Species",
+            "v": "Curupaú, Soto, Cuchi"
+          },
+          {
+            "k": "Formats",
+            "v": "Bulk · 400 kg big-bag · 5, 10 and 30 kg bags"
+          },
+          {
+            "k": "40' HC container",
+            "v": "≈ 22 t"
+          },
+          {
+            "k": "Capacity per plant",
+            "v": "+1,800 t / month",
+            "note": "(projected)"
+          }
         ],
         "appLabel": "Application · Industry",
         "app": "Iron foundry and steelmaking.",
@@ -105,8 +199,34 @@
         "appLabel": "Application · Agriculture",
         "app": "Crop protection, natural pest control and fewer chemical inputs.",
         "outputLabel": "Output per plant:",
-        "output": { "v": "12.97 t / day", "note": "(projected)" },
-        "cta": "Ask about availability"
+        "output": {
+          "v": "≈ 389 t / month",
+          "note": "(projected)"
+        },
+        "cta": "Ask about availability",
+        "specLabel": "Typical specification",
+        "spec": [
+          {
+            "k": "pH",
+            "v": "2.5–⁠3.2"
+          },
+          {
+            "k": "Total acidity",
+            "v": "4–⁠7 %"
+          },
+          {
+            "k": "Density",
+            "v": "≥ 1.005 g/mL"
+          },
+          {
+            "k": "Maturation and settling",
+            "v": "≥ 6 months"
+          },
+          {
+            "k": "Purity",
+            "v": "Filtered, settled and free of suspended solids"
+          }
+        ]
       },
       {
         "id": "p-briquettes",
@@ -119,19 +239,48 @@
         "desc": "Made from compacted charcoal fines, briquettes turn a residue of our production process into a higher-value commercial product.",
         "featLabel": "Key characteristics",
         "features": [
-          "Uniform, long-lasting combustion",
-          "High energy yield",
-          "Standardised size and shape",
-          "Easy to store, transport and dose",
-          "Less waste",
+          "100 % natural ingredients",
+          "Premium South American hardwood",
+          "Natural vegetable binder",
+          "No chemical accelerants",
+          "No mineral fillers",
+          "High heat",
+          "Long and consistent burn",
+          "Low ash",
           "Full use of charcoal fines",
           "Ideal for gastronomy and grilling"
         ],
         "appLabel": "Application · Premium BBQ",
         "app": "High-performance fuel for grills, gastronomy and gourmet export.",
         "outputLabel": "Output per plant:",
-        "output": { "v": "9.26 t / day", "note": "(projected)" },
-        "cta": "Ask about availability"
+        "output": {
+          "v": "≈ 278 t / month",
+          "note": "(projected)"
+        },
+        "cta": "Ask about availability",
+        "specLabel": "Typical specification",
+        "spec": [
+          {
+            "k": "Fixed carbon",
+            "v": "≥ 80 %"
+          },
+          {
+            "k": "Calorific value",
+            "v": "> 7,300 kcal/kg"
+          },
+          {
+            "k": "Moisture",
+            "v": "< 5 %"
+          },
+          {
+            "k": "Ash",
+            "v": "< 4 %"
+          },
+          {
+            "k": "Size",
+            "v": "Uniform, > 30 mm"
+          }
+        ]
       }
     ]
   },
@@ -142,31 +291,76 @@
     "aria": "Pyrolysis temperature scale from 0 to 600 degrees Celsius showing drying up to 200, torrefaction 200 to 280, carbonisation 280 to 450, and refining 450 to 550. Pyroligneous acid is condensed between 150 and 350 degrees.",
     "unit": "Retort temperature, °C",
     "stages": [
-      { "name": "Drying", "range": "< 200" },
-      { "name": "Torrefaction", "range": "200–⁠280" },
-      { "name": "Carbonisation", "range": "280–⁠450" },
-      { "name": "Refining", "range": "450–⁠550" }
+      {
+        "name": "Drying",
+        "range": "< 200"
+      },
+      {
+        "name": "Torrefaction",
+        "range": "200–⁠280"
+      },
+      {
+        "name": "Carbonisation",
+        "range": "280–⁠450"
+      },
+      {
+        "name": "Refining",
+        "range": "450–⁠550"
+      }
     ],
     "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
     "gaugeAlt": "Temperature gauge mounted on a retort door, scale 0 to 600 °C",
     "gaugeCaption": "Retort door gauge, 0–⁠600 °C",
     "notes": [
-      { "title": "Industrial retort kilns", "text": "Metal retorts recover the process gases to fuel the system itself and yield high-value by-products such as pyroligneous acid, improving energy efficiency." },
-      { "title": "Integrated system", "text": "Mechanised biomass handling, controlled carbonisation, by-product separation and processing for export." },
-      { "title": "Modular and scalable", "text": "A replicable system that expands production capacity quickly through new industrial plants." }
+      {
+        "title": "Industrial retort kilns",
+        "text": "Metal retorts recover the process gases to fuel the system itself and yield high-value by-products such as pyroligneous acid, improving energy efficiency."
+      },
+      {
+        "title": "Integrated system",
+        "text": "Mechanised biomass handling, controlled carbonisation, by-product separation and processing for export."
+      },
+      {
+        "title": "Modular and scalable",
+        "text": "A replicable system that expands production capacity quickly through new industrial plants."
+      }
     ]
   },
   "model": {
     "label": "Operating model",
-    "title": "From biomass to final product, in six steps.",
+    "title": "From biomass to final product, in five steps.",
     "lede": "Every project starts with a legal document, not a chainsaw. We only work on land with an approved change-of-use plan, under a contract with the owner.",
     "steps": [
-      { "img": "census", "alt": "Forester measuring trees during a census", "title": "Forest study and legal confirmation", "text": "Title check, satellite forest study and a field census with foresters." },
-      { "img": "loader", "alt": "Loader and heavy machinery on site", "title": "Organised clearing and biomass sorting", "text": "Mechanised clearing of the approved area; biomass is classified before processing." },
-      { "img": "sawmill", "alt": "Log saw and conveyor at the camp", "title": "Wood processing", "text": "Logs are cut and prepared on site for loading into the retorts." },
-      { "img": "retort-fire", "alt": "Retort firing at night", "title": "Industrial carbonisation", "text": "Controlled pyrolysis in metal retorts." },
-      { "img": "condenser", "alt": "Retort condenser column and piping", "title": "By-product separation and processing", "text": "Pyroligneous acid is condensed; charcoal fines go to briquetting." },
-      { "img": "bigbags", "alt": "Filled big-bags ready for dispatch", "title": "Packaging, logistics and export", "text": "Bagged on site and shipped to industrial and international buyers." }
+      {
+        "img": "loader",
+        "alt": "Loader and machinery on site",
+        "title": "Biomass collection and sorting",
+        "text": "We collect wood and forest residue from the authorised area and sort it before processing."
+      },
+      {
+        "img": "sawmill",
+        "alt": "Log saw and conveyor at the camp",
+        "title": "Wood processing",
+        "text": "Logs are cut and prepared on site for loading into the retorts."
+      },
+      {
+        "img": "retort-fire",
+        "alt": "Retort firing at night",
+        "title": "Industrial carbonisation",
+        "text": "Controlled pyrolysis in metal retorts."
+      },
+      {
+        "img": "condenser",
+        "alt": "Retort condenser column and piping",
+        "title": "By-product separation and processing",
+        "text": "Pyroligneous acid is condensed; charcoal fines go to briquetting."
+      },
+      {
+        "img": "bigbags",
+        "alt": "Filled big-bags ready for dispatch",
+        "title": "Packaging, logistics and export",
+        "text": "Bagged on site and shipped to industrial and international buyers."
+      }
     ]
   },
   "compare": {
@@ -179,64 +373,114 @@
     "us": "Piroliswiss retort",
     "them": "Brick kiln",
     "rows": [
-      { "k": "Temperature", "us": "Read on a gauge, adjusted by damper", "them": "Judged by smoke colour" },
-      { "k": "Smoke", "us": "Condensed; gases burned in the firebox", "them": "Released to the air" },
-      { "k": "By-products", "us": "Pyroligneous acid and fines recovered", "them": "Lost" },
-      { "k": "Batch quality", "us": "Even carbonisation, fewer brands", "them": "Mixed: raw cores and ash" },
-      { "k": "Unloading", "us": "Door opens, cooled load comes out", "them": "Workers enter the kiln" }
+      {
+        "k": "Temperature",
+        "us": "Read on a gauge, adjusted by damper",
+        "them": "Judged by smoke colour"
+      },
+      {
+        "k": "Smoke",
+        "us": "Condensed; gases burned in the firebox",
+        "them": "Released to the air"
+      },
+      {
+        "k": "By-products",
+        "us": "Pyroligneous acid and fines recovered",
+        "them": "Lost"
+      },
+      {
+        "k": "Batch quality",
+        "us": "Even carbonisation, fewer brands",
+        "them": "Mixed: raw cores and ash"
+      },
+      {
+        "k": "Unloading",
+        "us": "Door opens, cooled load comes out",
+        "them": "Workers enter the kiln"
+      }
     ]
   },
   "ops": {
     "label": "Operations",
-    "title": "A working site, not a render.",
+    "title": "Wood, retorts and charcoal.",
     "photos": [
-      { "img": "pile", "alt": "Charcoal stock at the production site", "caption": "Stock after discharge" },
-      { "img": "sections", "alt": "Cross-sections of charcoal showing radial cracks", "caption": "Fully carbonised cores" },
-      { "img": "quality", "alt": "Burn test of charcoal on a grate at night", "caption": "Burn test" },
-      { "img": "logs", "alt": "Hardwood logs loaded into a retort", "caption": "Retort loaded with hardwood" },
-      { "img": "truck", "alt": "Truck bed loaded with lump charcoal", "caption": "Loading for transport" }
+      {
+        "img": "pile",
+        "alt": "Charcoal stock at the production site",
+        "caption": "Stock after discharge"
+      },
+      {
+        "img": "sections",
+        "alt": "Cross-sections of charcoal showing radial cracks",
+        "caption": "Fully carbonised cores"
+      },
+      {
+        "img": "quality",
+        "alt": "Burn test of charcoal on a grate at night",
+        "caption": "Burn test"
+      },
+      {
+        "img": "logs",
+        "alt": "Hardwood logs loaded into a retort",
+        "caption": "Retort loaded with hardwood"
+      },
+      {
+        "img": "truck",
+        "alt": "Truck bed loaded with lump charcoal",
+        "caption": "Loading for transport"
+      }
     ]
   },
   "scale": {
     "label": "Scale",
     "title": "One plant is one project. Five plants is the plan.",
-    "lede": "Each project covers about 800 hectares over roughly 1,000 operating days and runs as an independent unit, so new plants can be replicated on other forest properties.",
-    "head": ["Daily output, projected", "Per plant", "With 5 plants"],
+    "lede": "Each plant runs as an independent unit, so new plants can be replicated on other forest properties.",
+    "head": [
+      "Monthly output, projected",
+      "Per plant",
+      "With 5 plants"
+    ],
     "unit": "t",
     "rows": [
-      { "k": "Premium charcoal", "plant": "60", "five": "300" },
-      { "k": "Pyroligneous acid", "plant": "12.97", "five": "64.8" },
-      { "k": "Eco charcoal briquettes", "plant": "9.26", "five": "46.3" }
+      {
+        "k": "Premium charcoal",
+        "plant": "+1,800",
+        "five": "+9,000"
+      },
+      {
+        "k": "Pyroligneous acid",
+        "plant": "≈ 389",
+        "five": "≈ 1,945"
+      },
+      {
+        "k": "Eco charcoal briquettes",
+        "plant": "≈ 278",
+        "five": "≈ 1,390"
+      }
     ],
     "phases": [
-      { "img": "site", "alt": "First production site in a forest clearing", "tag": "Plant 1 · In production", "planned": false, "title": "First plant" },
-      { "img": "plant-render", "alt": "Rendering of a planned covered retort plant", "tag": "Plants 2–⁠5 · Planned · Rendering", "planned": true, "title": "Modular expansion" }
+      {
+        "img": "site",
+        "alt": "Site of the first plant",
+        "tag": "Plant 1 · In development",
+        "planned": false,
+        "title": "First plant",
+        "text": "16 metal retort kilns · +1,800 t/month of charcoal (projected)."
+      },
+      {
+        "img": "plant-render",
+        "alt": "Rendering of a planned covered retort plant",
+        "tag": "Plants 2–⁠5 · Planned · Rendering",
+        "planned": true,
+        "title": "Modular expansion",
+        "text": "Plant 2: 2028 · Plant 3: 2029 · Plants 4 and 5: within the next five years."
+      }
     ]
-  },
-  "investors": {
-    "label": "Investors and strategic partners",
-    "title": "We are looking for partners to build the next plants.",
-    "lede": "Running several projects at once creates recurring cash flow and steady growth.",
-    "oppLabel": "The opportunity",
-    "opportunity": [
-      "High industrial and agricultural demand",
-      "Scalable, diversified production",
-      "Export markets and sustainable use of biomass",
-      "Replicable projects in forest regions"
-    ],
-    "structLabel": "Structure per plant",
-    "structure": [
-      { "k": "Grupo Zwald S.R.L.", "v": "51 %" },
-      { "k": "Investors and partners", "v": "49 %" }
-    ],
-    "note": "Grupo Zwald provides operating know-how and technology, clients and commercial channels, and production management with technical supervision. Partners can join through equity or a joint venture.",
-    "ctaText": "Projections, return scenarios and terms are shared with qualified investors under NDA.",
-    "cta": "Request the investor deck"
   },
   "request": {
     "label": "Specifications and quotes",
     "title": "Tell us what you need to burn.",
-    "text": "We reply with the lab datasheet, available volumes and a price basis for your Incoterm, usually within two business days.",
+    "text": "We reply with the datasheet, available volumes and a quotation for your Incoterm, usually within two business days.",
     "fields": {
       "company": "Company",
       "country": "Country",
@@ -247,14 +491,36 @@
       "message": "Application and requirements"
     },
     "productOptions": [
-      { "value": "charcoal", "label": "Lump charcoal" },
-      { "value": "acid", "label": "Pyroligneous acid" },
-      { "value": "briquettes", "label": "Briquettes" },
-      { "value": "several", "label": "Several products" },
-      { "value": "investment", "label": "Investment / partnership" }
+      {
+        "value": "charcoal",
+        "label": "Lump charcoal"
+      },
+      {
+        "value": "acid",
+        "label": "Pyroligneous acid"
+      },
+      {
+        "value": "briquettes",
+        "label": "Briquettes"
+      },
+      {
+        "value": "several",
+        "label": "Several products"
+      }
     ],
-    "volumeOptions": ["Under 20 t", "20–⁠100 t", "100–⁠500 t", "Over 500 t"],
-    "incotermOptions": ["FCA", "FOB", "CIF", "DAP", "Not sure yet"],
+    "volumeOptions": [
+      "Under 20 t",
+      "20–⁠100 t",
+      "100–⁠500 t",
+      "Over 500 t"
+    ],
+    "incotermOptions": [
+      "FCA",
+      "FOB",
+      "CIF",
+      "DAP",
+      "Not sure yet"
+    ],
     "submit": "Send request",
     "note": "Your details are used only to answer this request.",
     "error": "Add your company name and a valid work email to send the request.",

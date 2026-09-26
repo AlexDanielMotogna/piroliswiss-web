@@ -101,19 +101,24 @@ section.flush{padding-top:0}
 /* problems
    fix: photo, title and text share subgrid rows, so every text block starts
    at the same height even when a title wraps */
-.problems{display:grid;grid-template-columns:repeat(4,1fr);gap:18px clamp(20px,2.4vw,40px)}
+.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:18px clamp(20px,2.4vw,40px)}
 .problem{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:18px;align-content:start}
 .problem figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--paper-2)}
 .problem img{width:100%;height:100%;object-fit:cover}
 .problem .h-m{font-size:clamp(20px,1.7vw,26px)}
 .problem p{color:var(--slate);max-width:40ch}
-@media (max-width:1100px){.problems{grid-template-columns:1fr 1fr;row-gap:18px}.problem:nth-child(n+3){margin-top:22px}}
-@media (max-width:560px){.problems{grid-template-columns:1fr}.problem+.problem{margin-top:22px}}
+@media (max-width:860px){.problems{grid-template-columns:1fr}.problem+.problem{margin-top:22px}}
 .solutions{margin-top:clamp(48px,6vw,88px);display:grid;grid-template-columns:3fr 9fr;gap:24px;padding-top:24px;border-top:1px solid var(--ink)}
 .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:clamp(20px,3vw,40px)}
 .sol-grid>div{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:8px}
 .sol-grid h3{font-size:17px;font-weight:600;margin:0;line-height:1.3;letter-spacing:-.01em}
 .sol-grid p{color:var(--slate);font-size:15px}
+
+/* team */
+.team{display:grid;grid-template-columns:3fr 9fr;gap:24px;margin-top:clamp(48px,6vw,88px);padding-top:24px;border-top:1px solid var(--ink)}
+.team .sheet{max-width:640px}
+.team .sheet td{font-weight:600}
+@media (max-width:1000px){.team{grid-template-columns:1fr}}
 
 /* products */
 .products{background:var(--paper-2)}
@@ -186,7 +191,7 @@ section.flush{padding-top:0}
 /* operating model
    fix: number, title, text and photo share subgrid rows, so all six photos
    sit on one line even when titles wrap differently */
-.stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--ink)}
+.stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--ink)}
 .stages{column-gap:40px}
 .stg{position:relative;display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:14px;align-content:start;padding-top:20px}
 /* fix: the divider sits in the middle of the gap, so all six photos get the same width */
@@ -240,6 +245,7 @@ section.flush{padding-top:0}
 .ctable.num tbody th{width:auto}
 .roadmap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px)}
 .phase{display:grid;gap:18px;align-content:start}
+.phase p{color:var(--slate);max-width:52ch}
 .phase figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden}
 .phase img{width:100%;height:100%;object-fit:cover}
 .tag{position:absolute;top:14px;left:14px;right:14px;justify-self:start;width:max-content;max-width:calc(100% - 28px);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;background:var(--paper);color:var(--ink)}
@@ -247,17 +253,8 @@ section.flush{padding-top:0}
 @media (max-width:860px){.roadmap{grid-template-columns:1fr}}
 @media (max-width:1000px){.scale-grid{grid-template-columns:1fr}}
 
-/* investors */
-.investors{background:var(--paper-2)}
-.inv{display:grid;grid-template-columns:4fr 4fr 4fr;gap:clamp(24px,3vw,48px);align-items:start}
-.inv>div:not(.inv-cta){display:grid;gap:22px;align-content:start}
-.inv .sheet th{width:auto}
-.inv .sheet td{text-align:right;white-space:nowrap}
-.inv-note{font-size:15px}
-.inv-cta{display:grid;gap:20px;padding:24px;background:var(--ink);color:var(--paper)}
-.inv-cta .btn{background:var(--paper);color:var(--ink);border-color:var(--paper);justify-self:start;white-space:normal;line-height:1.2}
-.inv-cta .btn:hover{background:var(--forest-2);border-color:var(--forest-2);color:#fff}
-@media (max-width:1000px){.about,.sol-grid,.inv{grid-template-columns:1fr}.solutions{grid-template-columns:1fr}.sol-grid>div+div{margin-top:24px}}
+
+@media (max-width:1000px){.about,.sol-grid{grid-template-columns:1fr}.solutions{grid-template-columns:1fr}.sol-grid>div+div{margin-top:24px}}
 
 /* request */
 .request{background:var(--forest);color:#EEF2EC}

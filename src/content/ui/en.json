@@ -2,12 +2,26 @@
   "skip": "Skip to content",
   "home": "Piroliswiss home",
   "nav": [
-    { "href": "#about", "label": "Company" },
-    { "href": "#products", "label": "Products" },
-    { "href": "#process", "label": "Process" },
-    { "href": "#provenance", "label": "Operating model" },
-    { "href": "#scale", "label": "Scale" },
-    { "href": "#investors", "label": "Investors" }
+    {
+      "href": "#about",
+      "label": "Company"
+    },
+    {
+      "href": "#products",
+      "label": "Products"
+    },
+    {
+      "href": "#process",
+      "label": "Process"
+    },
+    {
+      "href": "#provenance",
+      "label": "Operating model"
+    },
+    {
+      "href": "#scale",
+      "label": "Scale"
+    }
   ],
   "navLabel": "Main",
   "menu": "Menu",
@@ -17,21 +31,53 @@
     "about": "Piroliswiss S.R.L. produces and exports premium charcoal and pyrolysis by-products from licensed forest residue. Santa Cruz de la Sierra, Bolivia.",
     "markAlt": "Piroliswiss mark",
     "columns": [
-      { "title": "Company", "links": [
-        { "href": "#about", "label": "About" },
-        { "href": "#provenance", "label": "Operating model" },
-        { "href": "#scale", "label": "Scale" },
-        { "href": "#investors", "label": "Investors" }
-      ] },
-      { "title": "Products", "links": [
-        { "href": "#p-charcoal", "label": "Lump charcoal" },
-        { "href": "#p-acid", "label": "Pyroligneous acid" },
-        { "href": "#p-briquettes", "label": "Briquettes" },
-        { "href": "#request", "label": "Export & logistics" }
-      ] }
+      {
+        "title": "Company",
+        "links": [
+          {
+            "href": "#about",
+            "label": "About"
+          },
+          {
+            "href": "#provenance",
+            "label": "Operating model"
+          },
+          {
+            "href": "#scale",
+            "label": "Scale"
+          }
+        ]
+      },
+      {
+        "title": "Products",
+        "links": [
+          {
+            "href": "#p-charcoal",
+            "label": "Lump charcoal"
+          },
+          {
+            "href": "#p-acid",
+            "label": "Pyroligneous acid"
+          },
+          {
+            "href": "#p-briquettes",
+            "label": "Briquettes"
+          },
+          {
+            "href": "#request",
+            "label": "Export & logistics"
+          }
+        ]
+      }
     ],
-    "contact": { "title": "Contact", "city": "Santa Cruz de la Sierra, Bolivia", "email": "[sales email]", "address": "[street address]", "phone": "[phone]" },
-    "copyright": "© 2026 Piroliswiss S.R.L.",
+    "contact": {
+      "title": "Contact",
+      "city": "Santa Cruz de la Sierra, Bolivia",
+      "email": "[email @piroliswiss.com]",
+      "address": "Calle Clara 2885",
+      "phone": "[phone]"
+    },
+    "copyright": "© 2026 Piroliswiss S.R.L. by Grupo Zwald S.R.L.",
     "imprint": "Imprint",
     "privacy": "Privacy"
   }

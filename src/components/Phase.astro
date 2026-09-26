@@ -13,4 +13,5 @@ const { phase } = Astro.props;
     <span class:list={['tag', { planned: phase.planned }]}>{phase.tag}</span>
   </figure>
   <h3 class="h-m">{phase.title}</h3>
+  <p>{phase.text}</p>
 </article>

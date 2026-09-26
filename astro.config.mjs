@@ -4,10 +4,10 @@ import { defineConfig } from 'astro/config';
 /** @type {Record<string, string | undefined>} */
 const env = /** @type {any} */ (globalThis).process?.env ?? {};
 
-// SITE_URL once the real domain exists; on Railway fall back to its public domain.
+// SITE_URL overrides; on Railway use its public domain until piroliswiss.com is live.
 const site =
   env.SITE_URL ??
-  (env.RAILWAY_PUBLIC_DOMAIN ? `https://${env.RAILWAY_PUBLIC_DOMAIN}` : 'https://www.example.com');
+  (env.RAILWAY_PUBLIC_DOMAIN ? `https://${env.RAILWAY_PUBLIC_DOMAIN}` : 'https://piroliswiss.com');
 
 export default defineConfig({
   site,
