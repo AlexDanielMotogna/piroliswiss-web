@@ -75,7 +75,6 @@
         "id": "p-charcoal",
         "img": "hand",
         "alt": "Piece of dense hardwood charcoal held in hand, showing a glassy fracture",
-        "caption": "Lump charcoal · Curupaú",
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
@@ -138,7 +137,6 @@
         "id": "p-acid",
         "img": "retort",
         "alt": "Metal retort with condenser column where pyroligneous acid is recovered",
-        "caption": "Recovered at the retort condenser",
         "navLabel": "Pyroligneous acid",
         "tag": "Agricultural and bio-input line",
         "title": "Pyroligneous acid",
@@ -190,7 +188,6 @@
         "id": "p-briquettes",
         "img": "embers",
         "alt": "Charcoal burning evenly on a test grate",
-        "caption": "Even, long burn",
         "navLabel": "Eco charcoal briquettes",
         "tag": "Clean, efficient energy line",
         "title": "Eco charcoal briquettes",
@@ -364,28 +361,23 @@
     "photos": [
       {
         "img": "pile",
-        "alt": "Charcoal stock at the production site",
-        "caption": "Stock after discharge"
+        "alt": "Charcoal stock at the production site"
       },
       {
         "img": "sections",
-        "alt": "Cross-sections of charcoal showing radial cracks",
-        "caption": "Fully carbonised cores"
+        "alt": "Cross-sections of charcoal showing radial cracks"
       },
       {
         "img": "quality",
-        "alt": "Burn test of charcoal on a grate at night",
-        "caption": "Burn test"
+        "alt": "Burn test of charcoal on a grate at night"
       },
       {
         "img": "logs",
-        "alt": "Hardwood logs loaded into a retort",
-        "caption": "Retort loaded with hardwood"
+        "alt": "Hardwood logs loaded into a retort"
       },
       {
         "img": "truck",
-        "alt": "Truck bed loaded with lump charcoal",
-        "caption": "Loading for transport"
+        "alt": "Truck bed loaded with lump charcoal"
       }
     ]
   },

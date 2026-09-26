@@ -75,7 +75,6 @@
         "id": "p-charcoal",
         "img": "hand",
         "alt": "Pedaço de carvão denso de madeira dura na mão, com fratura vítrea",
-        "caption": "Carvão em pedaços · Curupaú",
         "navLabel": "Carvão vegetal premium",
         "tag": "Produto principal",
         "title": "Carvão vegetal premium",
@@ -138,7 +137,6 @@
         "id": "p-acid",
         "img": "retort",
         "alt": "Retorta metálica com coluna de condensação onde o ácido pirolenhoso é recuperado",
-        "caption": "Recuperado no condensador da retorta",
         "navLabel": "Ácido pirolenhoso",
         "tag": "Linha agrícola e de bioinsumos",
         "title": "Ácido pirolenhoso",
@@ -190,7 +188,6 @@
         "id": "p-briquettes",
         "img": "embers",
         "alt": "Carvão queimando de forma uniforme em uma grelha de teste",
-        "caption": "Queima uniforme e longa",
         "navLabel": "Briquetes ecológicos de carvão",
         "tag": "Linha de energia limpa e eficiente",
         "title": "Briquetes ecológicos de carvão",
@@ -364,28 +361,23 @@
     "photos": [
       {
         "img": "pile",
-        "alt": "Estoque de carvão no local de produção",
-        "caption": "Estoque após a descarga"
+        "alt": "Estoque de carvão no local de produção"
       },
       {
         "img": "sections",
-        "alt": "Cortes transversais de carvão com fissuras radiais",
-        "caption": "Núcleos totalmente carbonizados"
+        "alt": "Cortes transversais de carvão com fissuras radiais"
       },
       {
         "img": "quality",
-        "alt": "Teste de queima de carvão em uma grelha à noite",
-        "caption": "Teste de queima"
+        "alt": "Teste de queima de carvão em uma grelha à noite"
       },
       {
         "img": "logs",
-        "alt": "Toras de madeira dura carregadas em uma retorta",
-        "caption": "Retorta carregada com madeira dura"
+        "alt": "Toras de madeira dura carregadas em uma retorta"
       },
       {
         "img": "truck",
-        "alt": "Caçamba de caminhão carregada com carvão em pedaços",
-        "caption": "Carregamento para transporte"
+        "alt": "Caçamba de caminhão carregada com carvão em pedaços"
       }
     ]
   },

@@ -14,7 +14,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 - Images through `astro:assets` (AVIF/WebP, responsive `srcset`).
 
 ## Design rules (non-negotiable)
-- Square corners, except the application cards in Products (white, 10px radius, owner request). No box-shadows. No gradients except photo scrims and the pyrolysis scale.
+- Square corners, except photos (8px radius) and the application cards in Products (white, 10px radius). No text over photos (hero excepted): captions and status go below the image. No box-shadows. No gradients except photo scrims and the pyrolysis scale.
 - No icons, emoji or illustration, except the three custom line icons in "Our solution" (`SolutionIcon.astro`, owner request). Never use icon packs. Structure comes from type, rules and tables.
 - Left-aligned layouts on a 12-column grid. Nothing centred except where the prototype does it.
 - Brand colours come from the logo (2026-09-26): flag red `--red` #D40000 and leaf green `--leaf` #769B17, with deep olive `--olive` for bands (plant sheet, request form, CTA). Red is for primary buttons, the small square before section labels, step and product numbers, hover and the carbonisation segment; use it sparingly, never for body text. Green for the wordmark, "our" column in comparisons and application notes.
@@ -25,7 +25,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 ## Content rules
 - Never invent facts, figures, names, emails, certifications or quotes. Missing data stays as a visible placeholder: `<span class="tbc">[lab value]</span>`.
 - Never publish coordinates, parcel maps, landowner names, permit numbers or the forest census.
-- Renders must carry the tag "Planned · Rendering".
+- Renders must carry the tag "Planned · Rendering", shown under the image.
 - Product copy (description + key characteristics) comes from the client deck and is already in the prototype. Do not add new claims. The wood vinegar claims (insect repellent, fungi control) are pending legal review for the target market.
 - Specs are typical values from the owners' previous production, not a lab report: always label them "Typical specification".
 - Capacity is always shown as "+1,800 t / month" per plant (never t/day) and always marked projected. Plant 1 is in development, not in production.

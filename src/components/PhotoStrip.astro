@@ -10,7 +10,6 @@ interface Props {
   {Astro.props.photos.map((p, i) => (
     <figure>
       <Photo src={p.img} alt={p.alt} sizes={i === 0 ? '(max-width: 860px) 100vw, 50vw' : '(max-width: 860px) 50vw, 25vw'} />
-      <figcaption>{p.caption}</figcaption>
     </figure>
   ))}
 </div>

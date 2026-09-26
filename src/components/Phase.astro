@@ -10,8 +10,8 @@ const { phase } = Astro.props;
 <article class="phase">
   <figure>
     <Photo src={phase.img} alt={phase.alt} sizes="(max-width: 860px) 100vw, 30vw" />
-    <span class:list={['tag', { planned: phase.planned }]}>{phase.tag}</span>
   </figure>
+  <p class:list={['label', 'phase-tag', { planned: phase.planned }]}>{phase.tag}</p>
   <h3 class="h-m">{phase.title}</h3>
   <p>{phase.text}</p>
 </article>

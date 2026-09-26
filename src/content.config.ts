@@ -24,7 +24,6 @@ const product = z
     id: text,
     img: imgKey,
     alt: text,
-    caption: text,
     navLabel: text,
     tag: text,
     title: text,
@@ -150,7 +149,7 @@ const home = defineCollection({
         .object({
           label: text,
           title: text,
-          photos: z.array(z.object({ img: imgKey, alt: text, caption: text }).strict()).length(5),
+          photos: z.array(z.object({ img: imgKey, alt: text }).strict()).length(5),
         })
         .strict(),
       scale: z

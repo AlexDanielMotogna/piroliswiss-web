@@ -167,7 +167,6 @@ section.flush{padding-top:0}
 .prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);padding-block:clamp(40px,5vw,72px);border-top:1px solid var(--rule);scroll-margin-top:80px}
 .prod figure{margin:0;position:relative;overflow:hidden;min-height:460px;background:var(--paper)}
 .prod figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.prod figcaption,.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.55));font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:#EEF0ED;text-transform:uppercase}
 .prod-body{display:grid;gap:22px;align-content:start;min-width:0}
 .prod-title{font-size:clamp(30px,3.2vw,48px)}
 .prod-desc{font-size:clamp(17px,1.25vw,19px);max-width:56ch}
@@ -266,7 +265,6 @@ section.flush{padding-top:0}
 .strip figure{margin:0;position:relative;overflow:hidden}
 .strip figure:first-child{grid-row:1/3}
 .strip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.strip figcaption{background:linear-gradient(transparent,rgba(0,0,0,.6));letter-spacing:.05em}
 @media (max-width:860px){.strip{grid-template-columns:1fr 1fr;grid-template-rows:280px 200px 200px}.strip figure:first-child{grid-row:auto;grid-column:1/-1}}
 
 /* scale + roadmap */
@@ -284,8 +282,6 @@ section.flush{padding-top:0}
 .phase p{color:var(--slate);max-width:52ch}
 .phase figure{margin:0;position:relative;aspect-ratio:16/10;overflow:hidden}
 .phase img{width:100%;height:100%;object-fit:cover}
-.tag{position:absolute;top:14px;left:14px;right:14px;justify-self:start;width:max-content;max-width:calc(100% - 28px);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;background:var(--paper);color:var(--ink)}
-.tag.planned{background:var(--ink);color:var(--paper)}
 @media (max-width:860px){.roadmap{grid-template-columns:1fr}}
 @media (max-width:1000px){.scale-grid{grid-template-columns:1fr}}
 
@@ -335,5 +331,11 @@ footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
 :lang(zh) .label,:lang(zh) .f label,:lang(zh) .tag,:lang(zh) .foot h2{letter-spacing:.04em}
 :lang(zh) .label{font-size:13px}
 :lang(zh) .lede{max-width:28em}
+
+/* photos: 8px radius, no text over the image (owner request 2026-09-26) */
+.problem figure,.prod figure,.gauge img,.stg figure,.compare figure img,.strip figure,.phase figure,.person figure{border-radius:8px;overflow:hidden}
+/* phase status sits under the photo; renders keep their "Planned · Rendering" label */
+.phase-tag{margin-top:-6px;display:flex;align-items:center;gap:10px}
+.phase-tag.planned::before{content:"";width:8px;height:8px;background:var(--red);flex:none}
 
 @media (prefers-reduced-motion:reduce){.hero img{animation:none;transform:none}*{transition:none!important}}

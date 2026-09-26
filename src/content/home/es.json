@@ -75,7 +75,6 @@
         "id": "p-charcoal",
         "img": "hand",
         "alt": "Trozo de carbón denso de madera dura en la mano, con fractura vítrea",
-        "caption": "Carbón en trozos · Curupaú",
         "navLabel": "Carbón vegetal premium",
         "tag": "Producto principal",
         "title": "Carbón vegetal premium",
@@ -138,7 +137,6 @@
         "id": "p-acid",
         "img": "retort",
         "alt": "Retorta metálica con columna de condensación donde se recupera el ácido piroleñoso",
-        "caption": "Recuperado en el condensador de la retorta",
         "navLabel": "Ácido piroleñoso",
         "tag": "Línea agrícola y de bioinsumos",
         "title": "Ácido piroleñoso",
@@ -190,7 +188,6 @@
         "id": "p-briquettes",
         "img": "embers",
         "alt": "Carbón ardiendo de forma pareja en una parrilla de prueba",
-        "caption": "Combustión pareja y larga",
         "navLabel": "Briquetas ecológicas de carbón",
         "tag": "Línea de energía limpia y eficiente",
         "title": "Briquetas ecológicas de carbón",
@@ -364,28 +361,23 @@
     "photos": [
       {
         "img": "pile",
-        "alt": "Stock de carbón en el sitio de producción",
-        "caption": "Stock tras la descarga"
+        "alt": "Stock de carbón en el sitio de producción"
       },
       {
         "img": "sections",
-        "alt": "Cortes transversales de carbón con grietas radiales",
-        "caption": "Núcleos totalmente carbonizados"
+        "alt": "Cortes transversales de carbón con grietas radiales"
       },
       {
         "img": "quality",
-        "alt": "Prueba de combustión de carbón en una parrilla de noche",
-        "caption": "Prueba de combustión"
+        "alt": "Prueba de combustión de carbón en una parrilla de noche"
       },
       {
         "img": "logs",
-        "alt": "Troncos de madera dura cargados en una retorta",
-        "caption": "Retorta cargada con madera dura"
+        "alt": "Troncos de madera dura cargados en una retorta"
       },
       {
         "img": "truck",
-        "alt": "Carrocería de camión cargada con carbón en trozos",
-        "caption": "Carga para transporte"
+        "alt": "Carrocería de camión cargada con carbón en trozos"
       }
     ]
   },
