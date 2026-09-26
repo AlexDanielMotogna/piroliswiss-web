@@ -49,14 +49,17 @@
     "solutionLabel": "Nossa solução",
     "solutions": [
       {
+        "icon": "residue",
         "title": "Transformar resíduo florestal em produtos industriais",
         "text": "A pirólise controlada converte o resíduo florestal em produtos industriais de alto valor."
       },
       {
+        "icon": "supply",
         "title": "Fornecimento industrial constante",
         "text": "Produção de carvão estável e escalável para a siderurgia, especialmente no Brasil e na Ásia."
       },
       {
+        "icon": "agro",
         "title": "Insumos agrícolas naturais",
         "text": "Um bioinsumo derivado da biomassa que reduz a dependência de agroquímicos e favorece uma agricultura mais sustentável."
       }

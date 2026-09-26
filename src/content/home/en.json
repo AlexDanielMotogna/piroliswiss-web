@@ -49,14 +49,17 @@
     "solutionLabel": "Our solution",
     "solutions": [
       {
+        "icon": "residue",
         "title": "Turn forest residue into industrial products",
         "text": "Controlled pyrolysis converts forest residue into high-value industrial products."
       },
       {
+        "icon": "supply",
         "title": "Constant industrial supply",
         "text": "Steady, scalable charcoal production for steelworks, especially in Brazil and Asia."
       },
       {
+        "icon": "agro",
         "title": "Natural agricultural inputs",
         "text": "A biomass-derived bio-input that reduces dependence on agrochemicals and supports more sustainable farming."
       }

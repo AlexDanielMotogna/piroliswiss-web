@@ -97,7 +97,9 @@ const home = defineCollection({
           title: text,
           items: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(3),
           solutionLabel: text,
-          solutions: z.array(titled).length(3),
+          solutions: z
+            .array(z.object({ icon: z.enum(['residue', 'supply', 'agro']), title: text, text: text }).strict())
+            .length(3),
         })
         .strict(),
       products: z

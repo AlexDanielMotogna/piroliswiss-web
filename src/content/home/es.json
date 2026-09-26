@@ -49,14 +49,17 @@
     "solutionLabel": "Nuestra solución",
     "solutions": [
       {
+        "icon": "residue",
         "title": "Convertir residuo forestal en productos industriales",
         "text": "La pirólisis controlada transforma el residuo forestal en productos industriales de alto valor."
       },
       {
+        "icon": "supply",
         "title": "Suministro industrial constante",
         "text": "Producción de carbón estable y escalable para la siderurgia, en especial en Brasil y Asia."
       },
       {
+        "icon": "agro",
         "title": "Insumos agrícolas naturales",
         "text": "Un bioinsumo derivado de la biomasa que reduce la dependencia de agroquímicos y favorece una agricultura más sostenible."
       }
