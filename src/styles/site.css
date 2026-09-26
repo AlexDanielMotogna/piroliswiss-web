@@ -157,7 +157,7 @@ section.flush{padding-top:0}
 .prod-index a{display:flex;gap:14px;align-items:baseline;padding:16px 16px 16px 0;text-decoration:none;font-weight:600;font-size:16px}
 .prod-index a+a{padding-left:16px;border-left:1px solid var(--rule)}
 .prod-index a:hover{color:var(--red)}
-.prod-index .label,.prod-num{color:var(--red)}
+.prod-index .label{color:var(--red)}
 .prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);padding-block:clamp(40px,5vw,72px);border-top:1px solid var(--rule);scroll-margin-top:80px}
 .prod figure{margin:0;position:relative;overflow:hidden;min-height:460px;background:var(--paper)}
 .prod figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -179,24 +179,9 @@ section.flush{padding-top:0}
 .sheet tr:last-child td,.sheet tr:last-child th{border-bottom:1px solid var(--rule)}
 .sheet th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);width:44%;padding-right:16px}
 .sheet td{font-variant-numeric:tabular-nums}
-/* product sheet: plain list of benefits, then measured values with hierarchy,
-   then supply and applications as text; no row rules, no cards */
-.prod-body .prod-sub{margin-bottom:-6px}
-.feat-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:16px;line-height:1.45}
-.spec-list{margin:0;display:grid;gap:16px}
-.spec-list dt{font-size:13px;color:var(--slate)}
-.spec-list dd{margin:4px 0 0;font-size:clamp(19px,1.5vw,23px);font-weight:600;letter-spacing:-.015em;line-height:1.2;font-variant-numeric:tabular-nums}
-.spec-list>div:first-child dd{font-size:clamp(34px,3.4vw,52px);letter-spacing:-.04em;line-height:1}
-.spec-list>div.text dd{font-size:16px;font-weight:500;letter-spacing:0;line-height:1.4}
-.supply{display:grid;gap:14px;padding-top:22px;border-top:1px solid var(--ink)}
-.supply-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px 28px;font-size:16px;line-height:1.45}
-.supply-k{font-size:13px;color:var(--slate);margin-bottom:6px}
-.supply-fig{font-size:clamp(34px,3.2vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
-.supply-fig small{font-size:.38em;font-weight:500;letter-spacing:0;color:var(--slate);margin-left:.25em}
-.supply-note{font-size:13px;color:var(--slate);margin-top:6px}
-.uses{display:grid;gap:4px}
-.uses-title{font-size:18px;font-weight:600;margin-top:6px}
-.uses-text{color:var(--slate);max-width:56ch}
+/* application note: plain white card, rounded (owner request 2026-09-26) */
+.apps{display:grid;gap:8px;padding:18px 22px;background:var(--card);border-radius:10px}
+.apps p{font-size:15px}
 @media (max-width:1100px){.prod-cols{grid-template-columns:1fr}}
 @media (max-width:1000px){.prod{grid-template-columns:1fr}.prod figure{min-height:340px}}
 @media (max-width:640px){.feat.two{grid-template-columns:1fr}.prod-index{grid-template-columns:1fr}.prod-index a+a{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}

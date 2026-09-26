@@ -67,8 +67,6 @@
     "title": "One process, three products.",
     "lede": "Charcoal is the core. The liquid and the fines that other kilns lose become two more product lines.",
     "indexLabel": "Products",
-    "supplyLabel": "Supply",
-    "appsLabel": "Applications",
     "items": [
       {
         "id": "p-charcoal",
@@ -81,7 +79,7 @@
         "desc": "Our main product is a high-quality charcoal made from selected hardwoods such as Curupaú, Soto and Cuchi, known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
-          "High fixed carbon content",
+          "High fixed carbon content: 80–⁠85 %",
           "High calorific value",
           "Made from premium hardwoods",
           "Higher thermal yield",
@@ -97,51 +95,41 @@
           },
           {
             "k": "Calorific value",
-            "v": "min. 7,300 kcal/kg"
+            "v": "> 7,300 kcal/kg"
           },
           {
             "k": "Moisture",
-            "v": "max. 5 %"
+            "v": "< 5 %"
           },
           {
-            "k": "Fines under 10 mm",
-            "v": "max. 4 %"
+            "k": "Fines (< 10 mm)",
+            "v": "< 4 %"
           },
           {
             "k": "Predominant size",
-            "v": "over 50 mm"
+            "v": "> 50 mm"
           },
           {
-            "k": "Woods",
-            "v": "Curupaú · Soto · Cuchi"
+            "k": "Species",
+            "v": "Curupaú, Soto, Cuchi"
+          },
+          {
+            "k": "Formats",
+            "v": "Bulk · 400 kg big-bag · 5, 10 and 30 kg bags"
+          },
+          {
+            "k": "40' HC container",
+            "v": "≈ 22 t"
+          },
+          {
+            "k": "Capacity per plant",
+            "v": "+1,800 t / month",
+            "note": "(projected)"
           }
         ],
         "appLabel": "Industry",
         "app": "Iron foundry and steelmaking.",
-        "cta": "Request the datasheet",
-        "supply": [
-          {
-            "k": "Formats",
-            "lines": [
-              "Bulk",
-              "400 kg big bag",
-              "5, 10 and 30 kg bags"
-            ]
-          },
-          {
-            "k": "Container",
-            "lines": [
-              "40' HC",
-              "approx. 22 t"
-            ]
-          },
-          {
-            "k": "Capacity",
-            "figure": "+1,800",
-            "unit": "t/month",
-            "note": "projected capacity per plant"
-          }
-        ]
+        "cta": "Request the datasheet"
       },
       {
         "id": "p-acid",
@@ -165,6 +153,11 @@
         ],
         "appLabel": "Agriculture",
         "app": "Crop protection, natural pest control and fewer chemical inputs.",
+        "outputLabel": "Output per plant:",
+        "output": {
+          "v": "≈ 389 t / month",
+          "note": "(projected)"
+        },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
         "spec": [
@@ -178,23 +171,15 @@
           },
           {
             "k": "Density",
-            "v": "min. 1.005 g/mL"
+            "v": "≥ 1.005 g/mL"
           },
           {
             "k": "Maturation and settling",
-            "v": "min. 6 months"
+            "v": "≥ 6 months"
           },
           {
             "k": "Purity",
             "v": "Filtered, settled and free of suspended solids"
-          }
-        ],
-        "supply": [
-          {
-            "k": "Capacity",
-            "figure": "389",
-            "unit": "t/month",
-            "note": "approx., projected capacity per plant"
           }
         ]
       },
@@ -222,36 +207,33 @@
         ],
         "appLabel": "Premium BBQ",
         "app": "High-performance fuel for grills, gastronomy and gourmet export.",
+        "outputLabel": "Output per plant:",
+        "output": {
+          "v": "≈ 278 t / month",
+          "note": "(projected)"
+        },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
         "spec": [
           {
             "k": "Fixed carbon",
-            "v": "min. 80 %"
+            "v": "≥ 80 %"
           },
           {
             "k": "Calorific value",
-            "v": "min. 7,300 kcal/kg"
+            "v": "> 7,300 kcal/kg"
           },
           {
             "k": "Moisture",
-            "v": "max. 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Ash",
-            "v": "max. 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Size",
-            "v": "uniform, over 30 mm"
-          }
-        ],
-        "supply": [
-          {
-            "k": "Capacity",
-            "figure": "278",
-            "unit": "t/month",
-            "note": "approx., projected capacity per plant"
+            "v": "Uniform, > 30 mm"
           }
         ]
       }
@@ -266,7 +248,7 @@
     "stages": [
       {
         "name": "Drying",
-        "range": "< 200"
+        "range": "< 200"
       },
       {
         "name": "Torrefaction",
@@ -281,9 +263,9 @@
         "range": "450–⁠550"
       }
     ],
-    "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
-    "gaugeAlt": "Temperature gauge mounted on a retort door, scale 0 to 600 °C",
-    "gaugeCaption": "Retort door gauge, 0–⁠600 °C",
+    "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
+    "gaugeAlt": "Temperature gauge mounted on a retort door, scale 0 to 600 °C",
+    "gaugeCaption": "Retort door gauge, 0–⁠600 °C",
     "notes": [
       {
         "title": "Industrial retort kilns",
@@ -422,13 +404,13 @@
       },
       {
         "k": "Pyroligneous acid",
-        "plant": "≈ 389",
-        "five": "≈ 1,945"
+        "plant": "≈ 389",
+        "five": "≈ 1,945"
       },
       {
         "k": "Eco charcoal briquettes",
-        "plant": "≈ 278",
-        "five": "≈ 1,390"
+        "plant": "≈ 278",
+        "five": "≈ 1,390"
       }
     ],
     "phases": [

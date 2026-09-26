@@ -19,16 +19,6 @@ const cell = z
   })
   .strict();
 
-const supplyBlock = z
-  .object({
-    k: text,
-    lines: z.array(text).optional(),
-    figure: z.string().optional(),
-    unit: z.string().optional(),
-    note: z.string().optional(),
-  })
-  .strict();
-
 const product = z
   .object({
     id: text,
@@ -41,11 +31,12 @@ const product = z
     desc: text,
     featLabel: text,
     features: z.array(text).min(1),
-    specLabel: text,
-    spec: z.array(z.object({ k: text, v: text }).strict()).min(1),
-    supply: z.array(supplyBlock).min(1),
+    specLabel: z.string().optional(),
+    spec: z.array(z.object({ k: text, ...cell.shape }).strict()).optional(),
     appLabel: text,
     app: text,
+    output: cell.optional(),
+    outputLabel: z.string().optional(),
     cta: text,
   })
   .strict();
@@ -115,8 +106,6 @@ const home = defineCollection({
           title: text,
           lede: text,
           indexLabel: text,
-          supplyLabel: text,
-          appsLabel: text,
           items: z.array(product).length(3),
         })
         .strict(),

@@ -67,8 +67,6 @@
     "title": "Un proceso, tres productos.",
     "lede": "El carbón es el núcleo. El líquido y los finos que otros hornos pierden se convierten en dos líneas de producto más.",
     "indexLabel": "Productos",
-    "supplyLabel": "Suministro",
-    "appsLabel": "Aplicaciones",
     "items": [
       {
         "id": "p-charcoal",
@@ -81,7 +79,7 @@
         "desc": "Nuestro producto principal es un carbón vegetal de alta calidad elaborado con maderas duras seleccionadas como Curupaú, Soto y Cuchi, reconocidas por su alta densidad, resistencia y excelente rendimiento energético.",
         "featLabel": "Características principales",
         "features": [
-          "Alto contenido de carbono fijo",
+          "Alto contenido de carbono fijo: 80–⁠85 %",
           "Alto poder calorífico",
           "Elaborado con maderas duras premium",
           "Mayor rendimiento térmico",
@@ -97,51 +95,41 @@
           },
           {
             "k": "Poder calorífico",
-            "v": "mín. 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Humedad",
-            "v": "máx. 5 %"
+            "v": "< 5 %"
           },
           {
-            "k": "Finos menores de 10 mm",
-            "v": "máx. 4 %"
+            "k": "Finos (< 10 mm)",
+            "v": "< 4 %"
           },
           {
             "k": "Tamaño predominante",
-            "v": "más de 50 mm"
+            "v": "> 50 mm"
           },
           {
-            "k": "Maderas",
-            "v": "Curupaú · Soto · Cuchi"
+            "k": "Especies",
+            "v": "Curupaú, Soto, Cuchi"
+          },
+          {
+            "k": "Formatos",
+            "v": "A granel · big-bag 400 kg · bolsas de 5, 10 y 30 kg"
+          },
+          {
+            "k": "Contenedor 40' HC",
+            "v": "≈ 22 t"
+          },
+          {
+            "k": "Capacidad por planta",
+            "v": "+1.800 t / mes",
+            "note": "(proyectado)"
           }
         ],
         "appLabel": "Industria",
         "app": "Fundición de hierro y siderurgia.",
-        "cta": "Solicitar la ficha técnica",
-        "supply": [
-          {
-            "k": "Formatos",
-            "lines": [
-              "A granel",
-              "Big bag de 400 kg",
-              "Bolsas de 5, 10 y 30 kg"
-            ]
-          },
-          {
-            "k": "Contenedor",
-            "lines": [
-              "40' HC",
-              "aprox. 22 t"
-            ]
-          },
-          {
-            "k": "Capacidad",
-            "figure": "+1.800",
-            "unit": "t/mes",
-            "note": "capacidad proyectada por planta"
-          }
-        ]
+        "cta": "Solicitar la ficha técnica"
       },
       {
         "id": "p-acid",
@@ -165,6 +153,11 @@
         ],
         "appLabel": "Agricultura",
         "app": "Protección de cultivos, control natural de plagas y menos insumos químicos.",
+        "outputLabel": "Producción por planta:",
+        "output": {
+          "v": "≈ 389 t / mes",
+          "note": "(proyectado)"
+        },
         "cta": "Consultar disponibilidad",
         "specLabel": "Especificación típica",
         "spec": [
@@ -178,23 +171,15 @@
           },
           {
             "k": "Densidad",
-            "v": "mín. 1,005 g/mL"
+            "v": "≥ 1,005 g/mL"
           },
           {
             "k": "Maduración y decantación",
-            "v": "mín. 6 meses"
+            "v": "≥ 6 meses"
           },
           {
             "k": "Pureza",
             "v": "Filtrado, decantado y libre de sólidos suspendidos"
-          }
-        ],
-        "supply": [
-          {
-            "k": "Capacidad",
-            "figure": "389",
-            "unit": "t/mes",
-            "note": "aprox., capacidad proyectada por planta"
           }
         ]
       },
@@ -222,36 +207,33 @@
         ],
         "appLabel": "Parrilla premium",
         "app": "Combustible de alto rendimiento para parrillas, gastronomía y exportación gourmet.",
+        "outputLabel": "Producción por planta:",
+        "output": {
+          "v": "≈ 278 t / mes",
+          "note": "(proyectado)"
+        },
         "cta": "Consultar disponibilidad",
         "specLabel": "Especificación típica",
         "spec": [
           {
             "k": "Carbono fijo",
-            "v": "mín. 80 %"
+            "v": "≥ 80 %"
           },
           {
             "k": "Poder calorífico",
-            "v": "mín. 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Humedad",
-            "v": "máx. 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Cenizas",
-            "v": "máx. 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Tamaño",
-            "v": "uniforme, más de 30 mm"
-          }
-        ],
-        "supply": [
-          {
-            "k": "Capacidad",
-            "figure": "278",
-            "unit": "t/mes",
-            "note": "aprox., capacidad proyectada por planta"
+            "v": "Uniforme, > 30 mm"
           }
         ]
       }
@@ -266,7 +248,7 @@
     "stages": [
       {
         "name": "Secado",
-        "range": "< 200"
+        "range": "< 200"
       },
       {
         "name": "Torrefacción",
@@ -281,9 +263,9 @@
         "range": "450–⁠550"
       }
     ],
-    "bracket": "Condensación del ácido piroleñoso · 150–⁠350 °C",
-    "gaugeAlt": "Termómetro de esfera montado en la puerta de una retorta, escala de 0 a 600 °C",
-    "gaugeCaption": "Termómetro de la puerta de la retorta, 0–⁠600 °C",
+    "bracket": "Condensación del ácido piroleñoso · 150–⁠350 °C",
+    "gaugeAlt": "Termómetro de esfera montado en la puerta de una retorta, escala de 0 a 600 °C",
+    "gaugeCaption": "Termómetro de la puerta de la retorta, 0–⁠600 °C",
     "notes": [
       {
         "title": "Hornos de retorta industriales",
@@ -422,13 +404,13 @@
       },
       {
         "k": "Ácido piroleñoso",
-        "plant": "≈ 389",
-        "five": "≈ 1.945"
+        "plant": "≈ 389",
+        "five": "≈ 1.945"
       },
       {
         "k": "Briquetas ecológicas de carbón",
-        "plant": "≈ 278",
-        "five": "≈ 1.390"
+        "plant": "≈ 278",
+        "five": "≈ 1.390"
       }
     ],
     "phases": [
