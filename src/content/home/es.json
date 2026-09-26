@@ -127,7 +127,7 @@
             "note": "(proyectado)"
           }
         ],
-        "appLabel": "Aplicación · Industria",
+        "appLabel": "Industria",
         "app": "Fundición de hierro y siderurgia.",
         "cta": "Solicitar la ficha técnica"
       },
@@ -151,7 +151,7 @@
           "Se aplica diluido en agua, compost líquido, biofertilizantes o preparados orgánicos",
           "Ayuda a reducir la dependencia de químicos sintéticos"
         ],
-        "appLabel": "Aplicación · Agricultura",
+        "appLabel": "Agricultura",
         "app": "Protección de cultivos, control natural de plagas y menos insumos químicos.",
         "outputLabel": "Producción por planta:",
         "output": {
@@ -205,7 +205,7 @@
           "Aprovechamiento total de los finos de carbón",
           "Ideales para gastronomía y parrilla"
         ],
-        "appLabel": "Aplicación · Parrilla premium",
+        "appLabel": "Parrilla premium",
         "app": "Combustible de alto rendimiento para parrillas, gastronomía y exportación gourmet.",
         "outputLabel": "Producción por planta:",
         "output": {

@@ -127,7 +127,7 @@
             "note": "(projetado)"
           }
         ],
-        "appLabel": "Aplicação · Indústria",
+        "appLabel": "Indústria",
         "app": "Fundição de ferro e siderurgia.",
         "cta": "Solicitar a ficha técnica"
       },
@@ -151,7 +151,7 @@
           "Aplicado diluído em água, composto líquido, biofertilizantes ou preparados orgânicos",
           "Ajuda a reduzir a dependência de químicos sintéticos"
         ],
-        "appLabel": "Aplicação · Agricultura",
+        "appLabel": "Agricultura",
         "app": "Proteção de cultivos, controle natural de pragas e menos insumos químicos.",
         "outputLabel": "Produção por planta:",
         "output": {
@@ -205,7 +205,7 @@
           "Aproveitamento total dos finos de carvão",
           "Ideais para gastronomia e churrasco"
         ],
-        "appLabel": "Aplicação · Churrasco premium",
+        "appLabel": "Churrasco premium",
         "app": "Combustível de alto desempenho para churrasqueiras, gastronomia e exportação gourmet.",
         "outputLabel": "Produção por planta:",
         "output": {

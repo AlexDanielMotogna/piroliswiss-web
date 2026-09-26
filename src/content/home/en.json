@@ -127,7 +127,7 @@
             "note": "(projected)"
           }
         ],
-        "appLabel": "Application · Industry",
+        "appLabel": "Industry",
         "app": "Iron foundry and steelmaking.",
         "cta": "Request the datasheet"
       },
@@ -151,7 +151,7 @@
           "Applied diluted with water, liquid compost, biofertilisers or organic preparations",
           "Helps reduce dependence on synthetic chemicals"
         ],
-        "appLabel": "Application · Agriculture",
+        "appLabel": "Agriculture",
         "app": "Crop protection, natural pest control and fewer chemical inputs.",
         "outputLabel": "Output per plant:",
         "output": {
@@ -205,7 +205,7 @@
           "Full use of charcoal fines",
           "Ideal for gastronomy and grilling"
         ],
-        "appLabel": "Application · Premium BBQ",
+        "appLabel": "Premium BBQ",
         "app": "High-performance fuel for grills, gastronomy and gourmet export.",
         "outputLabel": "Output per plant:",
         "output": {
