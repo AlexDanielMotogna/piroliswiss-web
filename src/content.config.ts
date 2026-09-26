@@ -82,8 +82,6 @@ const home = defineCollection({
         .strict(),
       plant: z
         .object({
-          label: text,
-          status: text,
           figure: text,
           unit: text,
           figureLabel: text,

@@ -11,8 +11,6 @@
     "secondary": "了解工艺"
   },
   "plant": {
-    "label": "第 01 座工厂 · 玻利维亚圣克鲁斯",
-    "status": "开发中 · 预计数值",
     "figure": "1,800",
     "unit": "吨 / 月",
     "figureLabel": "单厂预计木炭产能",

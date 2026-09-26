@@ -11,8 +11,6 @@
     "secondary": "Ver o processo"
   },
   "plant": {
-    "label": "Planta 01 · Santa Cruz de la Sierra, Bolívia",
-    "status": "Em desenvolvimento · valores projetados",
     "figure": "1.800",
     "unit": "t / mês",
     "figureLabel": "Capacidade projetada de carvão por planta",

@@ -80,14 +80,10 @@ p{margin:0}
    instead of five equal KPI boxes */
 .specs{background:var(--olive);color:var(--olive-fg)}
 .plant{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,72px);align-items:center;padding-block:clamp(32px,4vw,56px)}
-.plant-id{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--olive-fg)}
-.plant-id::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);margin-right:10px;vertical-align:.05em}
-.plant-figure{margin:16px 0 8px;font-family:var(--display);font-weight:600;font-size:clamp(52px,6.4vw,96px);line-height:.9;letter-spacing:-.045em;font-variant-numeric:tabular-nums;color:#fff;white-space:nowrap}
+.plant-figure{margin:0 0 8px;font-family:var(--display);font-weight:600;font-size:clamp(52px,6.4vw,96px);line-height:.9;letter-spacing:-.045em;font-variant-numeric:tabular-nums;color:#fff;white-space:nowrap}
 .plant-figure .plus{color:var(--red);margin-right:.04em}
 .plant-unit{font-size:.26em;font-weight:500;letter-spacing:0;margin-left:.35em;color:var(--olive-mute)}
 .plant-caption{font-size:clamp(16px,1.2vw,19px);color:var(--olive-fg);max-width:44ch}
-.plant-status{color:var(--olive-mute);opacity:.8}
-.plant-status::before{content:" — "}
 .plant-facts{list-style:none;margin:0;padding:0;font-size:clamp(18px,1.5vw,22px);line-height:1.35;letter-spacing:-.01em}
 .plant-facts li{padding:12px 0;border-top:1px solid var(--olive-rule)}
 .plant-facts li:last-child{border-bottom:1px solid var(--olive-rule)}
