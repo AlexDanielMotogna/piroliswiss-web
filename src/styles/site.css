@@ -179,7 +179,8 @@ section.flush{padding-top:0}
 .sheet tr:last-child td,.sheet tr:last-child th{border-bottom:1px solid var(--rule)}
 .sheet th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);width:44%;padding-right:16px}
 .sheet td{font-variant-numeric:tabular-nums}
-.apps{display:grid;gap:6px;padding:14px 16px;background:var(--paper);border-left:3px solid var(--leaf)}
+/* application note: plain white card, rounded (owner request 2026-09-26) */
+.apps{display:grid;gap:8px;padding:18px 22px;background:var(--card);border-radius:10px}
 .apps p{font-size:15px}
 @media (max-width:1100px){.prod-cols{grid-template-columns:1fr}}
 @media (max-width:1000px){.prod{grid-template-columns:1fr}.prod figure{min-height:340px}}

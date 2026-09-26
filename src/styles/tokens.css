@@ -15,7 +15,7 @@
   --forest:#4A650D; --forest-2:#6A8C14; --ember:#D4521C;
   --olive:#22300B; --olive-fg:#EEF2E4; --olive-mute:#A9B98A; --olive-rule:rgba(238,242,228,.16);
   --band:#0F130B; --band-2:#1A2013; --band-fg:#E4E7E4; --band-mute:#8D9699; --band-rule:#2C3235;
-  --field:#F2F3F1;
+  --field:#F2F3F1; --card:#FFFFFF;
   --cjk:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC";
   --display:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
   --sans:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
@@ -26,14 +26,14 @@
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   color-scheme:dark;
   --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
-  --forest:#A6C94A; --forest-2:#93B838; --ember:#EE7A42; --field:#1E2224;
+  --forest:#A6C94A; --forest-2:#93B838; --ember:#EE7A42; --field:#1E2224; --card:#22272A;
   --red:#E8201A; --red-2:#FF4A40; --olive:#1A240A;
   --band:#0A0D08; --band-2:#141A10;
 }}
 :root[data-theme="dark"]{
   color-scheme:dark;
   --paper:#141718; --paper-2:#1C2022; --ink:#E3E6E3; --slate:#9AA3A6; --rule:#2E3437;
-  --forest:#A6C94A; --forest-2:#93B838; --ember:#EE7A42; --field:#1E2224;
+  --forest:#A6C94A; --forest-2:#93B838; --ember:#EE7A42; --field:#1E2224; --card:#22272A;
   --red:#E8201A; --red-2:#FF4A40; --olive:#1A240A;
   --band:#0A0D08; --band-2:#141A10;
 }
