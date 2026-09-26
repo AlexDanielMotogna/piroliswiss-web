@@ -45,7 +45,6 @@ const data = JSON.stringify({ phases, ui, start: START });
 <div class="retort" data-retort={data}>
   <div class="rt-bar">
     <span class="rt-stage" data-k="stage">{fill(ui.stage, { n: START + 1 })}</span>
-    <button type="button" class="rt-play" data-k="play" aria-pressed="false"><span class="rt-play-dot"></span><span data-k="playLabel">{ui.play}</span></button>
   </div>
 
   <div class="rt-drawing">
@@ -245,14 +244,19 @@ const data = JSON.stringify({ phases, ui, start: START });
     };
     tabs.forEach((t) => t.addEventListener('click', () => { show(Number(t.dataset.go)); }));
 
-    const play = $<HTMLButtonElement>('play');
+    // The cycle always runs (owner request): every 2.6 s to the next phase.
+    // A click on a phase jumps there and the cycle continues from it.
+    // It only ticks while the diagram is on screen, and not with prefers-reduced-motion.
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let timer: number | undefined;
-    const setPlaying = (on: boolean) => {
-      play.setAttribute('aria-pressed', String(on));
-      $('playLabel').textContent = on ? ui.pause! : ui.play!;
-      if (on) timer = window.setInterval(() => show((i + 1) % phases.length), 2600);
-      else { clearInterval(timer); timer = undefined; }
+    let visible = false;
+    const pauseCycle = () => { clearInterval(timer); timer = undefined; };
+    const runCycle = () => {
+      if (reduced || !visible || document.hidden || timer) return;
+      timer = window.setInterval(() => show((i + 1) % phases.length), 2600);
     };
-    play.addEventListener('click', () => setPlaying(!timer));
+    tabs.forEach((t) => t.addEventListener('click', () => { pauseCycle(); runCycle(); }));
+    new IntersectionObserver(([e]) => { visible = !!e?.isIntersecting; visible ? runCycle() : pauseCycle(); }, { threshold: 0.2 }).observe(root);
+    document.addEventListener('visibilitychange', () => (document.hidden ? pauseCycle() : runCycle()));
   });
 </script>

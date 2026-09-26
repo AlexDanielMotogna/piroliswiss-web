@@ -115,7 +115,7 @@ const home = defineCollection({
           lede: text,
           ui: z
             .object({
-              stage: text, play: text, pause: text, chimney: text, retort: text, condenser: text, acid: text,
+              stage: text, chimney: text, retort: text, condenser: text, acid: text,
               burner: text, gasOut: text, returnGas: text, phase: text, outputs: text, reads: text, door: text,
               note: text, aria: text, phasesLabel: text,
             })

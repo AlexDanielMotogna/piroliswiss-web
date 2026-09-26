@@ -243,8 +243,6 @@
     "lede": "A retort heats wood without air. Each stage happens at its own temperature, and each one is measured inside the kiln with four probes connected to Piroliswiss Control.",
     "ui": {
       "stage": "Inside the retort · phase {n} of 4",
-      "play": "Play cycle",
-      "pause": "Pause cycle",
       "chimney": "Chimney",
       "retort": "Steel retort",
       "condenser": "Condenser",

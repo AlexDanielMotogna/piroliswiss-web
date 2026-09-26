@@ -243,8 +243,6 @@
     "lede": "Una retorta calienta la madera sin aire. Cada etapa ocurre a su propia temperatura, y cada una se mide dentro del horno con cuatro sondas conectadas a Piroliswiss Control.",
     "ui": {
       "stage": "Interior de la retorta · fase {n} de 4",
-      "play": "Reproducir ciclo",
-      "pause": "Pausar ciclo",
       "chimney": "Chimenea",
       "retort": "Retorta de acero",
       "condenser": "Condensador",

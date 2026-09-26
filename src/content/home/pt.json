@@ -243,8 +243,6 @@
     "lede": "Uma retorta aquece a madeira sem ar. Cada etapa acontece em sua própria temperatura, e cada uma é medida dentro do forno com quatro sondas conectadas ao Piroliswiss Control.",
     "ui": {
       "stage": "Interior da retorta · fase {n} de 4",
-      "play": "Reproduzir ciclo",
-      "pause": "Pausar ciclo",
       "chimney": "Chaminé",
       "retort": "Retorta de aço",
       "condenser": "Condensador",
