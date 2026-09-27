@@ -4,6 +4,11 @@ import Base from '../layouts/Base.astro';
 import AboutSection from './AboutSection.astro';
 import TeamSection from './TeamSection.astro';
 import CtaBand from './CtaBand.astro';
+import SectionHead from './SectionHead.astro';
+import StageList from './StageList.astro';
+import PhotoStrip from './PhotoStrip.astro';
+import ScaleTable from './ScaleTable.astro';
+import Phase from './Phase.astro';
 import { resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
@@ -13,11 +18,41 @@ const { locale } = Astro.props;
 const entry = await getEntry('company', locale);
 const uiEntry = await getEntry('ui', locale);
 if (!entry || !uiEntry) throw new Error(`Missing company content for locale "${locale}"`);
+const homeEntry = await getEntry('home', locale);
+if (!homeEntry) throw new Error(`Missing home content for locale "${locale}"`);
+const t = homeEntry.data;
 const c = entry.data;
 const ui = uiEntry.data;
 ---
-<Base locale={locale} page="company" title={c.meta.title} description={c.meta.description}>
+<Base locale={locale} page="company" title={c.meta.title} description={c.meta.description} crumb={ui.nav.find((n) => n.href === 'company')?.label}>
   <AboutSection intro={c.intro} level={1} class="page-intro" />
+
+  <section id="model" class="flush">
+    <div class="wrap">
+      <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} wide />
+      <StageList steps={t.model.steps} />
+    </div>
+  </section>
+
+  <section class="ops" id="operations">
+    <div class="wrap">
+      <SectionHead label={t.ops.label} title={t.ops.title} />
+      <PhotoStrip photos={t.ops.photos} />
+    </div>
+  </section>
+
+  <section id="scale" class="flush">
+    <div class="wrap">
+      <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} wide />
+      <div class="scale-grid">
+        <ScaleTable scale={t.scale} />
+        <div class="roadmap">
+          {t.scale.phases.map((ph) => <Phase phase={ph} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <TeamSection team={c.team} facts={c.facts} />
 
   <CtaBand title={c.cta.title} text={c.cta.text} cta={ui.requestCta} href={resolveHref('contact', locale)} />

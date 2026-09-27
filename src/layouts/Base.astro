@@ -11,8 +11,10 @@ interface Props {
   page: PageKey;
   title: string;
   description: string;
+  /** Name of the page in the breadcrumb (inner pages only). */
+  crumb?: string;
 }
-const { locale, page, title, description } = Astro.props;
+const { locale, page, title, description, crumb } = Astro.props;
 const uiEntry = await getEntry('ui', locale);
 if (!uiEntry) throw new Error(`Missing ui content for locale "${locale}"`);
 const ui = uiEntry.data;
@@ -38,6 +40,13 @@ const abs = (path: string) => new URL(path, Astro.site).href;
   <body>
     <Header ui={ui} locale={locale} page={page} />
     <main id="main">
+      {crumb && (
+        <nav class="crumbs wrap" aria-label="Breadcrumb">
+          <a href={pagePath('home', locale)}>{ui.crumbHome}</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{crumb}</span>
+        </nav>
+      )}
       <slot />
     </main>
     <Footer ui={ui} locale={locale} />

@@ -3,28 +3,20 @@
   "home": "Inicio de Piroliswiss",
   "nav": [
     {
-      "href": "company",
-      "label": "Quiénes somos"
-    },
-    {
       "href": "products",
       "label": "Productos"
     },
     {
       "href": "process",
-      "label": "Proceso"
+      "label": "Proceso y calidad"
     },
     {
-      "href": "traceability",
-      "label": "Trazabilidad"
+      "href": "export",
+      "label": "Exportación"
     },
     {
-      "href": "model",
-      "label": "Modelo operativo"
-    },
-    {
-      "href": "scale",
-      "label": "Escalabilidad"
+      "href": "company",
+      "label": "Empresa"
     }
   ],
   "navLabel": "Principal",
@@ -47,11 +39,11 @@
             "label": "Equipo"
           },
           {
-            "href": "model",
+            "href": "company#model",
             "label": "Modelo operativo"
           },
           {
-            "href": "scale",
+            "href": "company#scale",
             "label": "Escalabilidad"
           }
         ]
@@ -76,7 +68,7 @@
             "label": "Fichas técnicas"
           },
           {
-            "href": "contact",
+            "href": "export",
             "label": "Exportación y logística"
           }
         ]
@@ -92,5 +84,6 @@
     "imprint": "Aviso legal",
     "privacy": "Privacidad"
   },
-  "more": "Ver más"
+  "more": "Ver más",
+  "crumbHome": "Inicio"
 }

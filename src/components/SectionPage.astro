@@ -1,7 +1,7 @@
 ---
 /**
- * Inner pages built from the home content: products, process, traceability,
- * operating model, scalability and contact. The first heading on each page is
+ * Inner pages built from the home content: products, process & quality
+ * (retort, comparison, Piroliswiss Control), export and contact. The first heading on each page is
  * its <h1>; every page except contact closes with the contact band.
  */
 import { getEntry } from 'astro:content';
@@ -10,17 +10,13 @@ import SectionHead from './SectionHead.astro';
 import Photo from './Photo.astro';
 import Product from './Product.astro';
 import PyrolysisScale from './PyrolysisScale.astro';
-import StageList from './StageList.astro';
 import ControlSection from './ControlSection.astro';
 import CompareTable from './CompareTable.astro';
-import PhotoStrip from './PhotoStrip.astro';
-import ScaleTable from './ScaleTable.astro';
-import Phase from './Phase.astro';
 import RequestForm from './RequestForm.astro';
 import CtaBand from './CtaBand.astro';
 import { resolveHref, type Locale } from '../i18n/locales';
 
-export type InnerPage = 'products' | 'process' | 'traceability' | 'model' | 'scale' | 'contact';
+export type InnerPage = 'products' | 'process' | 'export' | 'contact';
 
 interface Props {
   locale: Locale;
@@ -41,13 +37,13 @@ const co = companyEntry.data;
 const meta = {
   products: { label: t.products.label, text: t.products.lede },
   process: { label: t.process.label, text: t.process.lede },
-  traceability: { label: t.control.label, text: t.control.lede },
-  model: { label: t.model.label, text: t.model.lede },
-  scale: { label: t.scale.label, text: t.scale.lede },
+  export: { label: t.export.label, text: t.export.lede },
   contact: { label: t.request.label, text: t.request.text },
 }[page];
+// Breadcrumb/title: the menu label where the page is in the menu, otherwise the section label.
+const crumb = ui.nav.find((n) => n.href === page)?.label ?? meta.label;
 ---
-<Base locale={locale} page={page} title={`${meta.label} · Piroliswiss`} description={meta.text}>
+<Base locale={locale} page={page} title={`${crumb} · Piroliswiss`} description={meta.text} crumb={crumb}>
   {page === 'products' && (
     <section class="products page-top">
       <div class="wrap">
@@ -73,37 +69,24 @@ const meta = {
       <section>
         <CompareTable compare={t.compare} />
       </section>
+      <ControlSection control={t.control} />
     </Fragment>
   )}
 
-  {page === 'traceability' && <ControlSection control={t.control} level={1} />}
-
-  {page === 'model' && (
-    <Fragment>
-      <section class="page-top">
-        <div class="wrap">
-          <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} wide level={1} />
-          <StageList steps={t.model.steps} />
-        </div>
-      </section>
-      <section class="ops">
-        <div class="wrap">
-          <SectionHead label={t.ops.label} title={t.ops.title} />
-          <PhotoStrip photos={t.ops.photos} />
-        </div>
-      </section>
-    </Fragment>
-  )}
-
-  {page === 'scale' && (
+  {page === 'export' && (
     <section class="page-top">
       <div class="wrap">
-        <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} wide level={1} />
-        <div class="scale-grid">
-          <ScaleTable scale={t.scale} />
-          <div class="roadmap">
-            {t.scale.phases.map((ph) => <Phase phase={ph} />)}
-          </div>
+        <SectionHead label={t.export.label} title={t.export.title} lede={t.export.lede} wide level={1} />
+        <div class="export-grid">
+          {t.export.blocks.map((b) => (
+            <div>
+              <h2 class="label">{b.title}</h2>
+              <ul>{b.lines.map((l) => <li>{l}</li>)}</ul>
+            </div>
+          ))}
+        </div>
+        <div class="export-photos">
+          {t.export.photos.map((ph) => <figure><Photo src={ph.img} alt={ph.alt} sizes="(max-width: 700px) 100vw, 50vw" /></figure>)}
         </div>
       </div>
     </section>

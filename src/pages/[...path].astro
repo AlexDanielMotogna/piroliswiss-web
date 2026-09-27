@@ -5,7 +5,7 @@ import SectionPage, { type InnerPage } from '../components/SectionPage.astro';
 import { locales, pages, type Locale } from '../i18n/locales';
 
 export const getStaticPaths = (() => {
-  const inner: InnerPage[] = ['products', 'process', 'traceability', 'model', 'scale', 'contact'];
+  const inner: InnerPage[] = ['products', 'process', 'export', 'contact'];
   return inner.flatMap((page) =>
     locales.map((locale) => ({
       params: { path: pages[page][locale].replace(/^\/|\/$/g, '') },

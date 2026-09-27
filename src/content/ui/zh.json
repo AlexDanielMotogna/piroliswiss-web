@@ -3,28 +3,20 @@
   "home": "Piroliswiss 首页",
   "nav": [
     {
-      "href": "company",
-      "label": "关于我们"
-    },
-    {
       "href": "products",
       "label": "产品"
     },
     {
       "href": "process",
-      "label": "工艺"
+      "label": "工艺与质量"
     },
     {
-      "href": "traceability",
-      "label": "可追溯性"
+      "href": "export",
+      "label": "出口"
     },
     {
-      "href": "model",
-      "label": "运营模式"
-    },
-    {
-      "href": "scale",
-      "label": "可扩展性"
+      "href": "company",
+      "label": "公司"
     }
   ],
   "navLabel": "主导航",
@@ -47,11 +39,11 @@
             "label": "团队"
           },
           {
-            "href": "model",
+            "href": "company#model",
             "label": "运营模式"
           },
           {
-            "href": "scale",
+            "href": "company#scale",
             "label": "可扩展性"
           }
         ]
@@ -76,7 +68,7 @@
             "label": "木材"
           },
           {
-            "href": "contact",
+            "href": "export",
             "label": "出口与物流"
           }
         ]
@@ -92,5 +84,6 @@
     "imprint": "法律声明",
     "privacy": "隐私政策"
   },
-  "more": "了解更多"
+  "more": "了解更多",
+  "crumbHome": "首页"
 }

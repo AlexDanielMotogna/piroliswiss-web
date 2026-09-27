@@ -32,9 +32,7 @@ export const pages = {
   company: { es: '/empresa/', pt: '/pt/empresa/', en: '/en/company/', zh: '/zh/company/' },
   products: { es: '/productos/', pt: '/pt/produtos/', en: '/en/products/', zh: '/zh/products/' },
   process: { es: '/proceso/', pt: '/pt/processo/', en: '/en/process/', zh: '/zh/process/' },
-  traceability: { es: '/trazabilidad/', pt: '/pt/rastreabilidade/', en: '/en/traceability/', zh: '/zh/traceability/' },
-  model: { es: '/modelo-operativo/', pt: '/pt/modelo-operacional/', en: '/en/operating-model/', zh: '/zh/operating-model/' },
-  scale: { es: '/escalabilidad/', pt: '/pt/escalabilidade/', en: '/en/scalability/', zh: '/zh/scalability/' },
+  export: { es: '/exportacion/', pt: '/pt/exportacao/', en: '/en/export/', zh: '/zh/export/' },
   contact: { es: '/contacto/', pt: '/pt/contato/', en: '/en/contact/', zh: '/zh/contact/' },
   // Datasheets were supplied in Spanish only; other locales link to the Spanish page.
   fichas: { es: '/fichas-tecnicas/' },

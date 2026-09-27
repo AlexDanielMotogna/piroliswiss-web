@@ -16,9 +16,31 @@
     "figureLabel": "Capacidad de producción por planta",
     "facts": [
       "+16 retortas metálicas por planta",
-      "80–⁠85 % de carbono fijo",
+      "80–⁠85 % de carbono fijo",
       "Carbonización industrial controlada",
       "Maderas duras seleccionadas de alta densidad"
+    ]
+  },
+  "why": {
+    "label": "Por qué Piroliswiss",
+    "title": "Calidad que se controla, no que se promete.",
+    "items": [
+      {
+        "title": "Retortas metálicas industriales",
+        "text": "Carbonización en acero, con recuperación de gases y subproductos."
+      },
+      {
+        "title": "Temperatura controlada",
+        "text": "Cuatro sondas por horno conectadas a Piroliswiss Control, en tiempo real."
+      },
+      {
+        "title": "Trazabilidad por lote",
+        "text": "Cada ciclo queda registrado con su curva térmica."
+      },
+      {
+        "title": "Maderas duras de alta densidad",
+        "text": "Curupaú y Quebracho Colorado, de origen legal."
+      }
     ]
   },
   "problems": {
@@ -82,7 +104,7 @@
         "desc": "Nuestro producto principal es un carbón vegetal de alta calidad elaborado con maderas duras seleccionadas: Curupaú (Anadenanthera colubrina) y Quebracho Colorado (Schinopsis brasiliensis), reconocidas por su alta densidad, resistencia y excelente rendimiento energético.",
         "featLabel": "Características principales",
         "features": [
-          "Alto contenido de carbono fijo: 80–⁠85 %",
+          "Alto contenido de carbono fijo: 80–⁠85 %",
           "Alto poder calorífico",
           "Elaborado con maderas duras premium",
           "Mayor rendimiento térmico",
@@ -94,23 +116,23 @@
         "spec": [
           {
             "k": "Carbono fijo",
-            "v": "80–⁠85 %"
+            "v": "80–⁠85 %"
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Humedad",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
-            "k": "Finos (< 10 mm)",
-            "v": "< 4 %"
+            "k": "Finos (< 10 mm)",
+            "v": "< 4 %"
           },
           {
             "k": "Tamaño predominante",
-            "v": "> 50 mm"
+            "v": "> 50 mm"
           },
           {
             "k": "Especies",
@@ -122,7 +144,7 @@
           },
           {
             "k": "Contenedor 40' HC",
-            "v": "≈ 22 t"
+            "v": "≈ 22 t"
           },
           {
             "k": "Capacidad de producción por planta",
@@ -170,15 +192,15 @@
           },
           {
             "k": "Acidez total",
-            "v": "4–⁠7 %"
+            "v": "4–⁠7 %"
           },
           {
             "k": "Densidad",
-            "v": "≥ 1,005 g/mL"
+            "v": "≥ 1,005 g/mL"
           },
           {
             "k": "Maduración y decantación",
-            "v": "≥ 6 meses"
+            "v": "≥ 6 meses"
           },
           {
             "k": "Pureza",
@@ -202,7 +224,7 @@
           "Combustión prolongada y uniforme",
           "Ideales para gastronomía y parrilla",
           "Baja generación de cenizas",
-          "Ingredientes 100 % naturales",
+          "Ingredientes 100 % naturales",
           "Maderas duras premium de Sudamérica",
           "Aglutinante vegetal natural",
           "Sin acelerantes químicos",
@@ -220,23 +242,23 @@
         "spec": [
           {
             "k": "Carbono fijo",
-            "v": "≥ 80 %"
+            "v": "≥ 80 %"
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Humedad",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Cenizas",
-            "v": "< 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Tamaño",
-            "v": "Uniforme, > 30 mm"
+            "v": "Uniforme, > 30 mm"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
@@ -272,29 +294,29 @@
       "gasres": "Gas residual → quemador",
       "charcoal": "Carbón vegetal"
     },
-    "bracket": "Condensación del ácido piroleñoso · 200–⁠400 °C",
+    "bracket": "Condensación del ácido piroleñoso · 200–⁠400 °C",
     "phases": [
       {
         "name": "Secado",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "La madera pierde su humedad. El vapor de agua sale por la chimenea antes de que empiece la descomposición.",
         "wood": "Madera húmeda"
       },
       {
         "name": "Torrefacción",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "La hemicelulosa se descompone y la madera se oscurece. Los primeros vapores se condensan como ácido piroleñoso.",
         "wood": "Madera tostada"
       },
       {
         "name": "Carbonización",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "Celulosa y lignina se descomponen. El gas que no condensa vuelve al quemador y calienta la propia retorta.",
         "wood": "Carbonizando"
       },
       {
         "name": "Refinado",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "Se expulsan los últimos volátiles y sube el carbono fijo. Sale un carbón más estable y de calidad constante.",
         "wood": "Carbón vegetal"
       }
@@ -483,7 +505,7 @@
         "title": "Primera planta",
         "lines": [
           "+16 hornos metálicos de retorta para operación continua",
-          "+1.800 t/mes de carbón vegetal"
+          "+1.800 t/mes de carbón vegetal"
         ]
       },
       {
@@ -506,6 +528,52 @@
             "label": "Plantas 4 & 5"
           }
         ]
+      }
+    ]
+  },
+  "export": {
+    "label": "Exportación y logística",
+    "title": "Del horno al contenedor.",
+    "lede": "Preparamos cada envío según el destino y la aplicación del cliente. Formato, carga y documentación se definen junto con la cotización.",
+    "blocks": [
+      {
+        "title": "Formatos",
+        "lines": [
+          "A granel",
+          "Big bags",
+          "Bolsas de 5, 10 y 30 kg"
+        ]
+      },
+      {
+        "title": "Carga de referencia",
+        "lines": [
+          "Contenedor 40' HC",
+          "aprox. 22 t de carbón vegetal"
+        ]
+      },
+      {
+        "title": "Documentación",
+        "lines": [
+          "Certificado Forestal de Origen (CFO)",
+          "Certificado SENASAG",
+          "Documentación adicional según el país de destino"
+        ]
+      },
+      {
+        "title": "Condiciones",
+        "lines": [
+          "Incoterms, puerto de salida y plazo de entrega se acuerdan en cada cotización."
+        ]
+      }
+    ],
+    "photos": [
+      {
+        "img": "bigbags",
+        "alt": "Big bags llenos listos para despacho"
+      },
+      {
+        "img": "07-operaciones/foto-5",
+        "alt": "Camión cargado de carbón vegetal"
       }
     ]
   },

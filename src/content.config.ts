@@ -49,12 +49,13 @@ const ui = defineCollection({
     .object({
       skip: text,
       home: text,
-      nav: z.array(link).length(6),
+      nav: z.array(link).length(4),
       navLabel: text,
       menu: text,
       langLabel: text,
       requestCta: text,
       more: text,
+      crumbHome: text,
       footer: z
         .object({
           about: text,
@@ -127,6 +128,18 @@ const home = defineCollection({
           outputs: z.object({ steam: text, acid: text, gas: text, gasres: text, charcoal: text }).strict(),
           bracket: text,
           phases: z.array(z.object({ name: text, range: text, text: text, wood: text }).strict()).length(4),
+        })
+        .strict(),
+      why: z
+        .object({ label: text, title: text, items: z.array(titled).length(4) })
+        .strict(),
+      export: z
+        .object({
+          label: text,
+          title: text,
+          lede: text,
+          blocks: z.array(z.object({ title: text, lines: z.array(text).min(1) }).strict()).length(4),
+          photos: z.array(z.object({ img: imgKey, alt: text }).strict()).length(2),
         })
         .strict(),
       control: z

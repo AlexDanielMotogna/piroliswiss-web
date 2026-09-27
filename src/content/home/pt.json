@@ -21,6 +21,28 @@
       "Madeiras duras selecionadas de alta densidade"
     ]
   },
+  "why": {
+    "label": "Por que a Piroliswiss",
+    "title": "Qualidade que se controla, não que se promete.",
+    "items": [
+      {
+        "title": "Retortas metálicas industriais",
+        "text": "Carbonização em aço, com recuperação de gases e subprodutos."
+      },
+      {
+        "title": "Temperatura controlada",
+        "text": "Quatro sondas por forno conectadas ao Piroliswiss Control, em tempo real."
+      },
+      {
+        "title": "Rastreabilidade por lote",
+        "text": "Cada ciclo fica registrado com sua curva térmica."
+      },
+      {
+        "title": "Madeiras duras de alta densidade",
+        "text": "Curupaú e Quebracho Colorado, de origem legal."
+      }
+    ]
+  },
   "problems": {
     "label": "Os problemas",
     "title": "Um recurso desperdiçado diante de uma demanda cada vez maior.",
@@ -98,19 +120,19 @@
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Umidade",
-            "v": "< 5%"
+            "v": "< 5%"
           },
           {
-            "k": "Finos (< 10 mm)",
-            "v": "< 4%"
+            "k": "Finos (< 10 mm)",
+            "v": "< 4%"
           },
           {
             "k": "Tamanho predominante",
-            "v": "> 50 mm"
+            "v": "> 50 mm"
           },
           {
             "k": "Espécies",
@@ -122,7 +144,7 @@
           },
           {
             "k": "Contêiner 40' HC",
-            "v": "≈ 22 t"
+            "v": "≈ 22 t"
           },
           {
             "k": "Capacidade de produção por planta",
@@ -174,11 +196,11 @@
           },
           {
             "k": "Densidade",
-            "v": "≥ 1,005 g/mL"
+            "v": "≥ 1,005 g/mL"
           },
           {
             "k": "Maturação e decantação",
-            "v": "≥ 6 meses"
+            "v": "≥ 6 meses"
           },
           {
             "k": "Pureza",
@@ -220,23 +242,23 @@
         "spec": [
           {
             "k": "Carbono fixo",
-            "v": "≥ 80%"
+            "v": "≥ 80%"
           },
           {
             "k": "Poder calorífico",
-            "v": "> 7.300 kcal/kg"
+            "v": "> 7.300 kcal/kg"
           },
           {
             "k": "Umidade",
-            "v": "< 5%"
+            "v": "< 5%"
           },
           {
             "k": "Cinzas",
-            "v": "< 4%"
+            "v": "< 4%"
           },
           {
             "k": "Tamanho",
-            "v": "Uniforme, > 30 mm"
+            "v": "Uniforme, > 30 mm"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
@@ -272,29 +294,29 @@
       "gasres": "Gás residual → queimador",
       "charcoal": "Carvão vegetal"
     },
-    "bracket": "Condensação do ácido pirolenhoso · 200–⁠400 °C",
+    "bracket": "Condensação do ácido pirolenhoso · 200–⁠400 °C",
     "phases": [
       {
         "name": "Secagem",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "A madeira perde a umidade. O vapor de água sai pela chaminé antes de começar a decomposição.",
         "wood": "Madeira úmida"
       },
       {
         "name": "Torrefação",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "A hemicelulose se decompõe e a madeira escurece. Os primeiros vapores condensam como ácido pirolenhoso.",
         "wood": "Madeira torrada"
       },
       {
         "name": "Carbonização",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "Celulose e lignina se decompõem. O gás que não condensa volta ao queimador e aquece a própria retorta.",
         "wood": "Carbonizando"
       },
       {
         "name": "Refino",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "Os últimos voláteis são expulsos e o carbono fixo sobe. Sai um carvão mais estável e de qualidade constante.",
         "wood": "Carvão vegetal"
       }
@@ -490,6 +512,52 @@
         "planned": true,
         "title": "Expansão modular",
         "text": "Planta 2: 2028 · Planta 3: 2029 · Plantas 4 e 5: nos próximos cinco anos."
+      }
+    ]
+  },
+  "export": {
+    "label": "Exportação e logística",
+    "title": "Do forno ao contêiner.",
+    "lede": "Preparamos cada envio de acordo com o destino e a aplicação do cliente. Formato, carga e documentação são definidos junto com a cotação.",
+    "blocks": [
+      {
+        "title": "Formatos",
+        "lines": [
+          "A granel",
+          "Big bags",
+          "Sacos de 5, 10 e 30 kg"
+        ]
+      },
+      {
+        "title": "Carga de referência",
+        "lines": [
+          "Contêiner 40' HC",
+          "aprox. 22 t de carvão vegetal"
+        ]
+      },
+      {
+        "title": "Documentação",
+        "lines": [
+          "Certificado Florestal de Origem (CFO)",
+          "Certificado SENASAG",
+          "Documentação adicional conforme o país de destino"
+        ]
+      },
+      {
+        "title": "Condições",
+        "lines": [
+          "Incoterms, porto de saída e prazo de entrega são acordados em cada cotação."
+        ]
+      }
+    ],
+    "photos": [
+      {
+        "img": "bigbags",
+        "alt": "Big bags cheios prontos para expedição"
+      },
+      {
+        "img": "07-operaciones/foto-5",
+        "alt": "Caminhão carregado de carvão vegetal"
       }
     ]
   },

@@ -12,7 +12,7 @@ const entry = await getEntry('fichas', 'es');
 if (!entry) throw new Error('Missing datasheet content');
 const f = entry.data;
 ---
-<Base locale="es" page="fichas" title={f.meta.title} description={f.meta.description}>
+<Base locale="es" page="fichas" title={f.meta.title} description={f.meta.description} crumb={f.title}>
   <section class="page-intro">
     <div class="wrap">
       <SectionHead label={f.label} title={f.title} level={1} />

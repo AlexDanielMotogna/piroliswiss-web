@@ -16,9 +16,31 @@
     "figureLabel": "Production capacity per plant",
     "facts": [
       "+16 metal retorts per plant",
-      "80–⁠85 % fixed carbon",
+      "80–⁠85 % fixed carbon",
       "Controlled industrial carbonization",
       "Selected high-density hardwoods"
+    ]
+  },
+  "why": {
+    "label": "Why Piroliswiss",
+    "title": "Quality that is controlled, not promised.",
+    "items": [
+      {
+        "title": "Industrial metal retorts",
+        "text": "Carbonisation in steel, with gas and by-product recovery."
+      },
+      {
+        "title": "Controlled temperature",
+        "text": "Four probes per kiln connected to Piroliswiss Control, in real time."
+      },
+      {
+        "title": "Per-lot traceability",
+        "text": "Every cycle is recorded with its thermal curve."
+      },
+      {
+        "title": "High-density hardwoods",
+        "text": "Curupaú and Quebracho Colorado, of legal origin."
+      }
     ]
   },
   "problems": {
@@ -82,7 +104,7 @@
         "desc": "Our main product is a high-quality charcoal made from selected hardwoods: Curupaú (Anadenanthera colubrina) and Quebracho Colorado (Schinopsis brasiliensis), known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
-          "High fixed carbon content: 80–⁠85 %",
+          "High fixed carbon content: 80–⁠85 %",
           "High calorific value",
           "Made from premium hardwoods",
           "Higher thermal yield",
@@ -94,23 +116,23 @@
         "spec": [
           {
             "k": "Fixed carbon",
-            "v": "80–⁠85 %"
+            "v": "80–⁠85 %"
           },
           {
             "k": "Calorific value",
-            "v": "> 7,300 kcal/kg"
+            "v": "> 7,300 kcal/kg"
           },
           {
             "k": "Moisture",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
-            "k": "Fines (< 10 mm)",
-            "v": "< 4 %"
+            "k": "Fines (< 10 mm)",
+            "v": "< 4 %"
           },
           {
             "k": "Predominant size",
-            "v": "> 50 mm"
+            "v": "> 50 mm"
           },
           {
             "k": "Species",
@@ -122,7 +144,7 @@
           },
           {
             "k": "40' HC container",
-            "v": "≈ 22 t"
+            "v": "≈ 22 t"
           },
           {
             "k": "Production capacity per plant",
@@ -170,15 +192,15 @@
           },
           {
             "k": "Total acidity",
-            "v": "4–⁠7 %"
+            "v": "4–⁠7 %"
           },
           {
             "k": "Density",
-            "v": "≥ 1.005 g/mL"
+            "v": "≥ 1.005 g/mL"
           },
           {
             "k": "Maturation and settling",
-            "v": "≥ 6 months"
+            "v": "≥ 6 months"
           },
           {
             "k": "Purity",
@@ -202,7 +224,7 @@
           "Long and consistent burn",
           "Ideal for gastronomy and grilling",
           "Low ash",
-          "100 % natural ingredients",
+          "100 % natural ingredients",
           "Premium South American hardwood",
           "Natural vegetable binder",
           "No chemical accelerants",
@@ -220,23 +242,23 @@
         "spec": [
           {
             "k": "Fixed carbon",
-            "v": "≥ 80 %"
+            "v": "≥ 80 %"
           },
           {
             "k": "Calorific value",
-            "v": "> 7,300 kcal/kg"
+            "v": "> 7,300 kcal/kg"
           },
           {
             "k": "Moisture",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Ash",
-            "v": "< 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Size",
-            "v": "Uniform, > 30 mm"
+            "v": "Uniform, > 30 mm"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
@@ -272,29 +294,29 @@
       "gasres": "Residual gas → burner",
       "charcoal": "Charcoal"
     },
-    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
+    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
     "phases": [
       {
         "name": "Drying",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "The wood loses its moisture. Water vapour leaves through the chimney before decomposition begins.",
         "wood": "Wet wood"
       },
       {
         "name": "Torrefaction",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "Hemicellulose breaks down and the wood darkens. The first vapours condense as pyroligneous acid.",
         "wood": "Roasted wood"
       },
       {
         "name": "Carbonisation",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "Cellulose and lignin break down. Gas that does not condense returns to the burner and heats the retort itself.",
         "wood": "Carbonising"
       },
       {
         "name": "Refining",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "The last volatiles are driven off and fixed carbon rises. The result is a more stable charcoal of consistent quality.",
         "wood": "Charcoal"
       }
@@ -483,7 +505,7 @@
         "title": "First plant",
         "lines": [
           "+16 metal retort kilns for continuous operation",
-          "+1,800 t/month of charcoal"
+          "+1,800 t/month of charcoal"
         ]
       },
       {
@@ -506,6 +528,52 @@
             "label": "Plants 4 & 5"
           }
         ]
+      }
+    ]
+  },
+  "export": {
+    "label": "Export and logistics",
+    "title": "From kiln to container.",
+    "lede": "We prepare every shipment for the customer's destination and application. Format, load and documents are defined together with the quote.",
+    "blocks": [
+      {
+        "title": "Formats",
+        "lines": [
+          "Bulk",
+          "Big bags",
+          "5, 10 and 30 kg bags"
+        ]
+      },
+      {
+        "title": "Reference load",
+        "lines": [
+          "40' HC container",
+          "approx. 22 t of charcoal"
+        ]
+      },
+      {
+        "title": "Documents",
+        "lines": [
+          "Forest Certificate of Origin (CFO)",
+          "SENASAG certificate",
+          "Additional documents as required by the destination country"
+        ]
+      },
+      {
+        "title": "Terms",
+        "lines": [
+          "Incoterms, port of loading and lead time are agreed in each quote."
+        ]
+      }
+    ],
+    "photos": [
+      {
+        "img": "bigbags",
+        "alt": "Filled big bags ready for dispatch"
+      },
+      {
+        "img": "07-operaciones/foto-5",
+        "alt": "Truck loaded with charcoal"
       }
     ]
   },

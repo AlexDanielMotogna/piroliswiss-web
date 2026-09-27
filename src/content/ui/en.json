@@ -3,28 +3,20 @@
   "home": "Piroliswiss home",
   "nav": [
     {
-      "href": "company",
-      "label": "Company"
-    },
-    {
       "href": "products",
       "label": "Products"
     },
     {
       "href": "process",
-      "label": "Process"
+      "label": "Process & quality"
     },
     {
-      "href": "traceability",
-      "label": "Traceability"
+      "href": "export",
+      "label": "Export"
     },
     {
-      "href": "model",
-      "label": "Operating model"
-    },
-    {
-      "href": "scale",
-      "label": "Scalability"
+      "href": "company",
+      "label": "Company"
     }
   ],
   "navLabel": "Main",
@@ -47,11 +39,11 @@
             "label": "Team"
           },
           {
-            "href": "model",
+            "href": "company#model",
             "label": "Operating model"
           },
           {
-            "href": "scale",
+            "href": "company#scale",
             "label": "Scalability"
           }
         ]
@@ -76,7 +68,7 @@
             "label": "Woods"
           },
           {
-            "href": "contact",
+            "href": "export",
             "label": "Export & logistics"
           }
         ]
@@ -92,5 +84,6 @@
     "imprint": "Imprint",
     "privacy": "Privacy"
   },
-  "more": "Learn more"
+  "more": "Learn more",
+  "crumbHome": "Home"
 }

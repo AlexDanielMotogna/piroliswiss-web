@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { img } from '../lib/images';
 import type { Ui } from '../lib/types';
-import { resolveHref, type Locale } from '../i18n/locales';
+import { resolveHref, localeRoot, type Locale } from '../i18n/locales';
 
 interface Props {
   ui: Ui;
@@ -15,7 +15,7 @@ const f = ui.footer;
   <div class="wrap">
     <div class="foot">
       <div class="brand">
-        <Image src={img('mark')} alt={f.markAlt} width={240} class="foot-logo" />
+        <a href={localeRoot(locale)} aria-label={ui.home}><Image src={img('mark')} alt={f.markAlt} width={240} class="foot-logo" /></a>
       </div>
       {f.columns.map((c) => (
         <div>
