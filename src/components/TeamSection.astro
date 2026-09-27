@@ -1,0 +1,31 @@
+---
+import SectionHead from './SectionHead.astro';
+import SpecTable from './SpecTable.astro';
+import Tbc from './Tbc.astro';
+import type { Company } from '../lib/types';
+
+interface Props {
+  team: Company['team'];
+  facts: Company['facts'];
+}
+const { team, facts } = Astro.props;
+---
+<section id="team" class="flush team-sec">
+  <div class="wrap">
+    <SectionHead label={team.label} title={team.title} />
+    <ul class="people">
+      {team.members.map((m) => (
+        <li class="person">
+          <figure><Tbc text={team.photo} /></figure>
+          <h3 class="h-m">{m.name}</h3>
+          <p class="label">{m.role}</p>
+          <a class="mail" href={`mailto:${m.email}`}>{m.email}</a>
+        </li>
+      ))}
+    </ul>
+    <div class="facts">
+      <p class="label">{facts.label}</p>
+      <SpecTable rows={facts.rows} />
+    </div>
+  </div>
+</section>

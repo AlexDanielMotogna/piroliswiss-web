@@ -1,9 +1,8 @@
 ---
 import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import SectionHead from './SectionHead.astro';
-import SpecTable from './SpecTable.astro';
-import Tbc from './Tbc.astro';
+import AboutSection from './AboutSection.astro';
+import TeamSection from './TeamSection.astro';
 import { resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
@@ -17,39 +16,8 @@ const c = entry.data;
 const ui = uiEntry.data;
 ---
 <Base locale={locale} page="company" title={c.meta.title} description={c.meta.description}>
-  <section class="page-intro">
-    <div class="wrap">
-      <SectionHead label={c.intro.label} title={c.intro.title} lede={c.intro.lede} level={1} />
-      <div class="about">
-        {c.intro.items.map((a) => <div><p class="label">{a.label}</p><p>{a.text}</p></div>)}
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="flush">
-    <div class="wrap">
-      <SectionHead label={c.team.label} title={c.team.title} />
-      <ul class="people">
-        {c.team.members.map((m) => (
-          <li class="person">
-            <figure><Tbc text={c.team.photo} /></figure>
-            <h3 class="h-m">{m.name}</h3>
-            <p class="label">{m.role}</p>
-            <a class="mail" href={`mailto:${m.email}`}>{m.email}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <section class="flush">
-    <div class="wrap">
-      <div class="facts">
-        <p class="label">{c.facts.label}</p>
-        <SpecTable rows={c.facts.rows} />
-      </div>
-    </div>
-  </section>
+  <AboutSection intro={c.intro} level={1} class="page-intro" />
+  <TeamSection team={c.team} facts={c.facts} />
 
   <section class="cta-band">
     <div class="wrap">

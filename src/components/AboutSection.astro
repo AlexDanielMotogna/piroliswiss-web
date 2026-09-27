@@ -1,0 +1,20 @@
+---
+import SectionHead from './SectionHead.astro';
+import type { Company } from '../lib/types';
+
+interface Props {
+  intro: Company['intro'];
+  /** The company page uses this block as its page title. */
+  level?: 1 | 2;
+  class?: string;
+}
+const { intro, level = 2, class: cls } = Astro.props;
+---
+<section id="about" class={cls}>
+  <div class="wrap">
+    <SectionHead label={intro.label} title={intro.title} lede={intro.lede} level={level} />
+    <div class="about">
+      {intro.items.map((a) => <div><p class="label">{a.label}</p><p>{a.text}</p></div>)}
+    </div>
+  </div>
+</section>

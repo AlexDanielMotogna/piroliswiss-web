@@ -48,7 +48,7 @@ const small = src.width < 900;
     </div>
     <div class="prod-links">
       <a class="link" href="#request">{p.cta}</a>
-      {p.woodsLink && <a class="link link-2" href={pagePath('woods', locale)}>{p.woodsLink} <span aria-hidden="true">→</span></a>}
+      {p.woodsLink && <a class="link link-2" href={pagePath('fichas', locale)} hreflang={locale === 'es' ? undefined : 'es'}>{p.woodsLink} <span aria-hidden="true">→</span></a>}
     </div>
   </div>
 </article>

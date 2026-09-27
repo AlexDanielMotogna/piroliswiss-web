@@ -12,6 +12,13 @@ const site =
 export default defineConfig({
   site,
   output: 'static',
+  // The woods page became /fichas-tecnicas/ (Spanish only).
+  redirects: {
+    '/maderas': '/fichas-tecnicas',
+    '/pt/madeiras': '/fichas-tecnicas',
+    '/en/woods': '/fichas-tecnicas',
+    '/zh/woods': '/fichas-tecnicas',
+  },
   // `astro preview` serves dist/ on Railway; allow its generated domain.
   server: { host: true, allowedHosts: true },
   i18n: {

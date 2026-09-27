@@ -14,6 +14,8 @@ import PhotoStrip from './PhotoStrip.astro';
 import ScaleTable from './ScaleTable.astro';
 import Phase from './Phase.astro';
 import RequestForm from './RequestForm.astro';
+import AboutSection from './AboutSection.astro';
+import TeamSection from './TeamSection.astro';
 import type { Locale } from '../i18n/locales';
 
 interface Props {
@@ -23,6 +25,9 @@ const { locale } = Astro.props;
 const homeEntry = await getEntry('home', locale);
 const uiEntry = await getEntry('ui', locale);
 if (!homeEntry || !uiEntry) throw new Error(`Missing content for locale "${locale}"`);
+const companyEntry = await getEntry('company', locale);
+if (!companyEntry) throw new Error(`Missing company content for locale "${locale}"`);
+const co = companyEntry.data;
 const t = homeEntry.data;
 const ui = uiEntry.data;
 ---
@@ -30,7 +35,9 @@ const ui = uiEntry.data;
   <Hero hero={t.hero} cta={ui.requestCta} />
   <SpecStrip plant={t.plant} />
 
-  <section>
+  <AboutSection intro={co.intro} />
+
+  <section class="flush">
     <div class="wrap">
       <SectionHead label={t.problems.label} title={t.problems.title} />
       <div class="problems">
@@ -101,6 +108,8 @@ const ui = uiEntry.data;
       </div>
     </div>
   </section>
+
+  <TeamSection team={co.team} facts={co.facts} />
 
   <RequestForm req={t.request} />
 </Base>

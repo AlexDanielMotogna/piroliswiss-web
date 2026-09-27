@@ -3,7 +3,7 @@
   "home": "Piroliswiss 首页",
   "nav": [
     {
-      "href": "company",
+      "href": "#about",
       "label": "关于我们"
     },
     {
@@ -39,11 +39,11 @@
         "title": "公司",
         "links": [
           {
-            "href": "company",
+            "href": "#about",
             "label": "关于我们"
           },
           {
-            "href": "company#team",
+            "href": "#team",
             "label": "团队"
           },
           {
@@ -72,7 +72,7 @@
             "label": "木炭压块"
           },
           {
-            "href": "woods",
+            "href": "fichas",
             "label": "木材"
           },
           {

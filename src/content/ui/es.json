@@ -3,7 +3,7 @@
   "home": "Inicio de Piroliswiss",
   "nav": [
     {
-      "href": "company",
+      "href": "#about",
       "label": "Quiénes somos"
     },
     {
@@ -39,11 +39,11 @@
         "title": "Empresa",
         "links": [
           {
-            "href": "company",
+            "href": "#about",
             "label": "Quiénes somos"
           },
           {
-            "href": "company#team",
+            "href": "#team",
             "label": "Equipo"
           },
           {
@@ -72,8 +72,8 @@
             "label": "Briquetas"
           },
           {
-            "href": "woods",
-            "label": "Maderas"
+            "href": "fichas",
+            "label": "Fichas técnicas"
           },
           {
             "href": "#request",

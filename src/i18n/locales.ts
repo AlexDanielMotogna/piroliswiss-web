@@ -30,12 +30,20 @@ export const langName: Record<Locale, string> = {
 export const pages = {
   home: { es: '/', pt: '/pt/', en: '/en/', zh: '/zh/' },
   company: { es: '/empresa/', pt: '/pt/empresa/', en: '/en/company/', zh: '/zh/company/' },
-  woods: { es: '/maderas/', pt: '/pt/madeiras/', en: '/en/woods/', zh: '/zh/woods/' },
-} as const satisfies Record<string, Record<Locale, string>>;
+  // Datasheets were supplied in Spanish only; other locales link to the Spanish page.
+  fichas: { es: '/fichas-tecnicas/' },
+} as const satisfies Record<string, Partial<Record<Locale, string>> & { es: string }>;
 export type PageKey = keyof typeof pages;
 
+/** True when the page has its own version in this locale. */
+export function hasPage(page: PageKey, locale: Locale): boolean {
+  return locale in pages[page];
+}
+
+/** URL of a page in a locale; falls back to the Spanish page when there is no translation. */
 export function pagePath(page: PageKey, locale: Locale): string {
-  return pages[page][locale];
+  const p = pages[page] as Partial<Record<Locale, string>> & { es: string };
+  return p[locale] ?? p.es;
 }
 
 export function localeRoot(locale: Locale): string {

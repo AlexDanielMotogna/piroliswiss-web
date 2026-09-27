@@ -244,36 +244,43 @@ const company = defineCollection({
     .strict(),
 });
 
-const woods = defineCollection({
-  loader: glob({ pattern: '*.json', base: './src/content/woods' }),
+const fichas = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/fichas' }),
   schema: z
     .object({
       meta: z.object({ title: text, description: text }).strict(),
-      intro: z.object({ label: text, title: text, lede: text }).strict(),
-      pending: text,
+      title: text,
+      label: text,
+      sourceLabel: text,
       species: z
         .array(
           z
             .object({
               id: text,
               name: text,
-              // species without a datasheet yet only carry id + name
-              scientific: z.string().optional(),
-              keyLabel: z.string().optional(),
-              key: z.array(z.object({ label: text, v: text, unit: text }).strict()).optional(),
-              sections: z.array(z.object({ title: text, rows: z.array(z.object({ k: text, v: text }).strict()) }).strict()).optional(),
-              usesLabel: z.string().optional(),
-              uses: z.array(text).optional(),
-              sourcesLabel: z.string().optional(),
-              sources: z.array(z.object({ label: text, text: text }).strict()).optional(),
-              legend: z.string().optional(),
+              scientific: text,
+              summary: text,
+              source: text,
+              blocks: z
+                .array(
+                  z
+                    .object({
+                      title: text,
+                      kind: z.enum(['table', 'text', 'list', 'uses']),
+                      head: z.array(text).length(2).optional(),
+                      rows: z.array(z.object({ k: text, v: text }).strict()).optional(),
+                      items: z.array(z.union([text, z.object({ k: text, v: text }).strict()])).optional(),
+                      text: z.string().optional(),
+                    })
+                    .strict(),
+                )
+                .min(1),
             })
             .strict(),
         )
         .min(1),
-      cta: z.object({ title: text, text: text }).strict(),
     })
     .strict(),
 });
 
-export const collections = { ui, home, company, woods };
+export const collections = { ui, home, company, fichas };

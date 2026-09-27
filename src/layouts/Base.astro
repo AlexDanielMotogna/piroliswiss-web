@@ -4,7 +4,7 @@ import '../styles/site.css';
 import { getEntry } from 'astro:content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { locales, htmlLang, pagePath, defaultLocale, type Locale, type PageKey } from '../i18n/locales';
+import { locales, htmlLang, pagePath, hasPage, defaultLocale, type Locale, type PageKey } from '../i18n/locales';
 
 interface Props {
   locale: Locale;
@@ -26,7 +26,7 @@ const abs = (path: string) => new URL(path, Astro.site).href;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={abs(pagePath(page, locale))} />
-    {locales.map((l) => <link rel="alternate" hreflang={htmlLang[l]} href={abs(pagePath(page, l))} />)}
+    {locales.filter((l) => hasPage(page, l)).map((l) => <link rel="alternate" hreflang={htmlLang[l]} href={abs(pagePath(page, l))} />)}
     <link rel="alternate" hreflang="x-default" href={abs(pagePath(page, defaultLocale))} />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />

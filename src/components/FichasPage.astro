@@ -1,0 +1,67 @@
+---
+/**
+ * Technical datasheets (client change request #12). Spanish only: the client
+ * supplied no translation. Copy comes verbatim from src/content/fichas/es.json;
+ * <i>/<b> tags in it are the client's italics and bold.
+ */
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionHead from './SectionHead.astro';
+
+const entry = await getEntry('fichas', 'es');
+if (!entry) throw new Error('Missing datasheet content');
+const f = entry.data;
+---
+<Base locale="es" page="fichas" title={f.meta.title} description={f.meta.description}>
+  <section class="page-intro">
+    <div class="wrap">
+      <SectionHead label={f.label} title={f.title} level={1} />
+      <nav class="ft-index" aria-label={f.title}>
+        {f.species.map((s) => (
+          <a href={`#${s.id}`}><b>{s.name}</b><i>{s.scientific}</i></a>
+        ))}
+      </nav>
+    </div>
+  </section>
+
+  {f.species.map((s) => (
+    <section class="flush ft" id={s.id}>
+      <div class="wrap">
+        <header class="ft-head">
+          <h2 class="h-l">{s.name}</h2>
+          <p class="ft-sci"><i>{s.scientific}</i></p>
+          <p class="ft-summary">{s.summary}</p>
+        </header>
+
+        <div class="ft-blocks">
+          {s.blocks.map((b) => (
+            <div class="ft-block">
+              {b.kind === 'table' && b.rows ? (
+                <table class="ft-table">
+                  <caption class="label" style="text-align:left;caption-side:top;padding-bottom:14px">{b.title}</caption>
+                  <thead><tr><th scope="col">{b.head?.[0]}</th><th scope="col">{b.head?.[1]}</th></tr></thead>
+                  <tbody>
+                    {b.rows.map((r) => <tr><th scope="row" set:html={r.k} /><td set:html={r.v} /></tr>)}
+                  </tbody>
+                </table>
+              ) : (
+                <Fragment>
+                  <h3 class="label">{b.title}</h3>
+                  {b.kind === 'text' && <p class="ft-text" set:html={b.text} />}
+                  {b.kind === 'list' && (
+                    <dl class="ft-list">
+                      {b.items?.map((it) => typeof it === 'string' ? null : <div><dt>{it.k}</dt><dd set:html={it.v} /></div>)}
+                    </dl>
+                  )}
+                  {b.kind === 'uses' && <p class="ft-uses">{b.items?.filter((it): it is string => typeof it === 'string').join(' · ')}</p>}
+                </Fragment>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <p class="ft-source"><b>{f.sourceLabel}:</b> <span set:html={s.source} /></p>
+      </div>
+    </section>
+  ))}
+</Base>

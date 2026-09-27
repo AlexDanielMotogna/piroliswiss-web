@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "title": "Fichas técnicas · Piroliswiss",
+    "description": "Fichas técnicas de las maderas con las que Piroliswiss produce carbón vegetal: Curupau (Anadenanthera colubrina) y Quebracho Colorado (Schinopsis quebracho-colorado)."
+  },
+  "title": "Fichas técnicas",
+  "label": "Maderas",
+  "species": [
+    {
+      "id": "curupau",
+      "name": "Curupau",
+      "blocks": [
+        {
+          "title": "Identificación",
+          "kind": "table",
+          "head": [
+            "Campo",
+            "Información"
+          ],
+          "rows": [
+            {
+              "k": "Nombre común",
+              "v": "Curupau / Curupay"
+            },
+            {
+              "k": "Nombre científico",
+              "v": "<i>Anadenanthera colubrina</i>"
+            },
+            {
+              "k": "Familia",
+              "v": "Fabaceae"
+            },
+            {
+              "k": "Nombre comercial internacional",
+              "v": "Tigerwood (denominación usada por Exomad)"
+            }
+          ]
+        },
+        {
+          "title": "Área de distribución",
+          "kind": "text",
+          "text": "Se encuentra en bosques que van desde subtropicales húmedos hasta secos y templados. En Bolivia se distribuye en los departamentos de Santa Cruz, Beni, Cochabamba, Chuquisaca, Tarija y La Paz."
+        },
+        {
+          "title": "Descripción del árbol",
+          "kind": "list",
+          "items": [
+            {
+              "k": "Copa del árbol",
+              "v": "Abierta y escasa, de tamaño mediano, con follaje verde amarillento, compuesto y hojas alternas."
+            },
+            {
+              "k": "Tronco",
+              "v": "Recto. Alcanza alturas comerciales de hasta 30 m."
+            },
+            {
+              "k": "Corteza",
+              "v": "Color grisáceo, de textura gruesa, fisurada y agrietada."
+            }
+          ]
+        },
+        {
+          "title": "Características generales",
+          "kind": "table",
+          "head": [
+            "Característica",
+            "Curupau"
+          ],
+          "rows": [
+            {
+              "k": "Color de la albura",
+              "v": "Rosa pálido"
+            },
+            {
+              "k": "Color del duramen",
+              "v": "Marrón oscuro"
+            },
+            {
+              "k": "Olor",
+              "v": "Indistinto"
+            },
+            {
+              "k": "Sabor",
+              "v": "Distintivo y astringente"
+            },
+            {
+              "k": "Brillo",
+              "v": "Medio a brillante"
+            },
+            {
+              "k": "Veteado",
+              "v": "Tenue"
+            },
+            {
+              "k": "Grano",
+              "v": "Entrelazado"
+            },
+            {
+              "k": "Textura",
+              "v": "Media a fina"
+            }
+          ]
+        },
+        {
+          "title": "Propiedades físicas",
+          "kind": "table",
+          "head": [
+            "Propiedad",
+            "Valor"
+          ],
+          "rows": [
+            {
+              "k": "Contenido de humedad — madera verde",
+              "v": "40 %"
+            },
+            {
+              "k": "Densidad básica",
+              "v": "0,85 g/cm³"
+            },
+            {
+              "k": "Densidad al 12 % de humedad",
+              "v": "1,03 g/cm³"
+            },
+            {
+              "k": "Contracción radial",
+              "v": "4,2 %"
+            },
+            {
+              "k": "Contracción tangencial",
+              "v": "8,4 %"
+            },
+            {
+              "k": "Contracción volumétrica",
+              "v": "12,7 %"
+            },
+            {
+              "k": "Relación T/R",
+              "v": "2,0"
+            }
+          ]
+        },
+        {
+          "title": "Resistencia mecánica",
+          "kind": "table",
+          "head": [
+            "Propiedad",
+            "Valor"
+          ],
+          "rows": [
+            {
+              "k": "Módulo de elasticidad",
+              "v": "192.000 kg/cm²"
+            },
+            {
+              "k": "Módulo de ruptura",
+              "v": "1.672 kg/cm²"
+            },
+            {
+              "k": "Compresión paralela a la fibra",
+              "v": "839 kg/cm²"
+            },
+            {
+              "k": "Corte radial",
+              "v": "163 kg/cm²"
+            },
+            {
+              "k": "Dureza lateral",
+              "v": "1.990 kg"
+            },
+            {
+              "k": "Tenacidad / flexión por impacto",
+              "v": "6,43 kg·m"
+            }
+          ]
+        },
+        {
+          "title": "Condiciones técnicas para el procesamiento",
+          "kind": "list",
+          "items": [
+            {
+              "k": "Mecanizado / trabajabilidad",
+              "v": "Buen cepillado al cortar con un ángulo de 15°. Moldeado y barrenado regulares, excelente lijado; buen torneado y acabado. Presenta un alto efecto de embotamiento sobre las herramientas."
+            },
+            {
+              "k": "Preservación",
+              "v": "Impermeable."
+            },
+            {
+              "k": "Durabilidad natural",
+              "v": "Muy durable, incluso en contacto con el suelo."
+            },
+            {
+              "k": "Secado",
+              "v": "El secado al aire es bastante rápido, con tendencia a torcerse y agrietarse. Programas de horno recomendados: T8-B3 y T5-B1 (EE. UU.)."
+            }
+          ]
+        },
+        {
+          "title": "Usos finales",
+          "kind": "uses",
+          "items": [
+            "Construcción pesada",
+            "Marcos de puertas y ventanas",
+            "Mobiliario de jardín",
+            "Decking",
+            "Chapa decorativa",
+            "Tornería",
+            "Traviesas / durmientes",
+            "Suelos",
+            "Escaleras",
+            "Tallas de madera",
+            "Camas de camión"
+          ]
+        }
+      ],
+      "scientific": "Anadenanthera colubrina",
+      "summary": "Especie de alta densidad, muy durable incluso en contacto con el suelo y con elevada resistencia mecánica, utilizada en aplicaciones de alto desgaste.",
+      "source": "Exomad. Ficha técnica Tigerwood / Curupau / Curupay (<i>Anadenanthera colubrina</i>)."
+    },
+    {
+      "id": "quebracho-colorado",
+      "name": "Quebracho Colorado",
+      "blocks": [
+        {
+          "title": "Identificación",
+          "kind": "table",
+          "head": [
+            "Campo",
+            "Información"
+          ],
+          "rows": [
+            {
+              "k": "Nombre común",
+              "v": "Quebracho Colorado"
+            },
+            {
+              "k": "Nombre científico",
+              "v": "<i>Schinopsis quebracho-colorado</i>"
+            },
+            {
+              "k": "Familia",
+              "v": "Anacardiaceae"
+            },
+            {
+              "k": "Nombre comercial internacional",
+              "v": "Quebracho"
+            }
+          ]
+        },
+        {
+          "title": "Área de distribución",
+          "kind": "text",
+          "text": "Se encuentra en bosque seco templado, en los departamentos de Tarija, La Paz, Chuquisaca y Santa Cruz, Bolivia. Es considerada una especie escasa y está clasificada dentro del grupo comercial de especies valiosas."
+        },
+        {
+          "title": "Descripción del árbol",
+          "kind": "list",
+          "items": [
+            {
+              "k": "Copa del árbol",
+              "v": "Redonda, mediana, con follaje de color verde intenso."
+            },
+            {
+              "k": "Tronco",
+              "v": "Recto y cilíndrico. Alcanza una altura total de hasta 20 m."
+            },
+            {
+              "k": "Corteza",
+              "v": "Color castaño oscuro, agrietada y con exudación de una resina cristalina."
+            }
+          ]
+        },
+        {
+          "title": "Características generales",
+          "kind": "table",
+          "head": [
+            "Característica",
+            "Quebracho Colorado"
+          ],
+          "rows": [
+            {
+              "k": "Color de la albura",
+              "v": "Blanco amarillento"
+            },
+            {
+              "k": "Color del duramen",
+              "v": "Marrón claro rojizo"
+            },
+            {
+              "k": "Brillo",
+              "v": "Brillante"
+            },
+            {
+              "k": "Veteado",
+              "v": "Suave"
+            },
+            {
+              "k": "Grano",
+              "v": "Inclinado a entrecruzado"
+            },
+            {
+              "k": "Textura",
+              "v": "Fina"
+            }
+          ]
+        },
+        {
+          "title": "Propiedades físicas",
+          "kind": "table",
+          "head": [
+            "Propiedad",
+            "Valor"
+          ],
+          "rows": [
+            {
+              "k": "Contenido de humedad — madera verde",
+              "v": "28,1 %"
+            },
+            {
+              "k": "Densidad básica",
+              "v": "1,04 g/cm³"
+            },
+            {
+              "k": "Densidad al 12 % de humedad",
+              "v": "1,22 g/cm³"
+            },
+            {
+              "k": "Contracción radial",
+              "v": "3,2 %"
+            },
+            {
+              "k": "Contracción tangencial",
+              "v": "6,0 %"
+            },
+            {
+              "k": "Contracción volumétrica",
+              "v": "9,9 %"
+            },
+            {
+              "k": "Relación T/R",
+              "v": "1,9"
+            }
+          ]
+        },
+        {
+          "title": "Resistencia mecánica",
+          "kind": "table",
+          "head": [
+            "Propiedad",
+            "Valor"
+          ],
+          "rows": [
+            {
+              "k": "Módulo de elasticidad",
+              "v": "122.000 kg/cm²"
+            },
+            {
+              "k": "Módulo de ruptura",
+              "v": "1.481 kg/cm²"
+            },
+            {
+              "k": "Compresión paralela a la fibra",
+              "v": "786 kg/cm²"
+            },
+            {
+              "k": "Corte radial",
+              "v": "242 kg/cm²"
+            },
+            {
+              "k": "Dureza lateral",
+              "v": "2.132 kg"
+            },
+            {
+              "k": "Tenacidad / flexión por impacto",
+              "v": "2,59 kg·m"
+            }
+          ]
+        },
+        {
+          "title": "Condiciones técnicas para el procesamiento",
+          "kind": "list",
+          "items": [
+            {
+              "k": "Mecanizado / trabajabilidad",
+              "v": "Difícil de procesar mecánicamente debido a su dureza. Se recomienda realizar el aserrío en estado húmedo y utilizar herramientas reforzadas. Se logra un buen acabado."
+            },
+            {
+              "k": "Preservación",
+              "v": "Impermeable a cualquier tipo de solución preservadora."
+            },
+            {
+              "k": "Durabilidad natural",
+              "v": "Alta durabilidad natural."
+            },
+            {
+              "k": "Secado",
+              "v": "El presecado es muy lento y presenta tendencia a agrietaduras. Se recomienda utilizar un programa suave de secado artificial, con control permanente debido a la posibilidad de defectos graves."
+            }
+          ]
+        },
+        {
+          "title": "Usos finales",
+          "kind": "uses",
+          "items": [
+            "Construcciones",
+            "Durmientes",
+            "Carbón vegetal premium"
+          ]
+        }
+      ],
+      "scientific": "Schinopsis quebracho-colorado",
+      "summary": "Especie de muy alta densidad, alta durabilidad natural y elevada dureza, característica de bosques secos de Bolivia.",
+      "source": "<i>Información técnica para el procesamiento industrial de 134 especies maderables de Bolivia</i>, ficha Quebracho Colorado, pp. 218–219."
+    }
+  ],
+  "sourceLabel": "Fuente técnica principal"
+}
