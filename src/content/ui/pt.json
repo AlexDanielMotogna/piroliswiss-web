@@ -24,15 +24,15 @@
     },
     {
       "href": "#scale",
-      "label": "Escala"
+      "label": "Escalabilidade"
     }
   ],
   "navLabel": "Principal",
   "menu": "Menu",
   "langLabel": "Idioma",
-  "requestCta": "Solicitar especificações",
+  "requestCta": "Fale conosco para cotar",
   "footer": {
-    "about": "A Piroliswiss S.R.L. produz e exporta carvão vegetal premium e subprodutos da pirólise a partir de resíduo florestal licenciado. Santa Cruz de la Sierra, Bolívia.",
+    "about": "A Piroliswiss S.R.L. produz e exporta carvão vegetal premium e subprodutos da pirólise a partir de resíduo florestal licenciado.",
     "markAlt": "Símbolo da Piroliswiss",
     "columns": [
       {
@@ -52,7 +52,7 @@
           },
           {
             "href": "#scale",
-            "label": "Escala"
+            "label": "Escalabilidade"
           }
         ]
       },

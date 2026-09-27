@@ -6,14 +6,15 @@
   "intro": {
     "label": "Who we are",
     "title": "An industrial producer and exporter of premium charcoal and pyrolysis by-products.",
+    "lede": "Piroliswiss is a company specialised in producing and exporting charcoal and high-value by-products, developed with industrial technology and efficient processes to reach high standards of quality and performance. We operate under a responsible and sustainable model, using forest biomass of legal origin and turning it entirely into high-value products.",
     "items": [
       {
         "label": "Industrial production",
-        "text": "We produce premium charcoal and by-products such as pyroligneous acid and charcoal briquettes for metallurgical, industrial and agricultural uses and premium BBQ markets."
+        "text": "We combine carbonisation technology in industrial metal retorts with controlled processes, joining precision, efficiency and operational control to deliver products of uniform quality, high yield and consistent specifications for demanding markets."
       },
       {
         "label": "Responsible sourcing",
-        "text": "We work only with legally obtained forest residue and biomass from areas designated for land-use change. We avoid open burning of biomass and create value from residue."
+        "text": "We work exclusively with forest biomass of legal origin and authorised provenance, recovering resources that would otherwise be burned or wasted. Through efficient industrial processes we turn them into high-value products, reducing waste, pollution and the loss of raw material with high productive potential."
       },
       {
         "label": "Based in",

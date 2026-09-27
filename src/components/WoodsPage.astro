@@ -24,7 +24,8 @@ const ui = uiEntry.data;
         {w.species.map((s) => (
           <a href={`#${s.id}`}>
             <b>{s.name}</b>
-            {s.scientific ? <i>{s.scientific}</i> : <Tbc text={`[${w.pending}]`} />}
+            {s.scientific && <i>{s.scientific}</i>}
+            {!s.sections && <Tbc text={`[${w.pending}]`} />}
           </a>
         ))}
       </nav>
@@ -36,7 +37,8 @@ const ui = uiEntry.data;
       <div class="wrap">
         <header class="wood-head">
           <h2 class="h-l">{s.name}</h2>
-          {s.scientific ? <p class="wood-sci">{s.scientific}</p> : <p><Tbc text={`[${w.pending}]`} /></p>}
+          {s.scientific && <p class="wood-sci">{s.scientific}</p>}
+          {!s.sections && <p><Tbc text={`[${w.pending}]`} /></p>}
         </header>
 
         {s.key && (

@@ -1,0 +1,37 @@
+---
+/**
+ * Custom line drawings for the three products (owner request 2026-09-27):
+ * white strokes on an olive tile, one red accent each. Not an icon pack.
+ */
+interface Props {
+  name: 'charcoal' | 'acid' | 'briquette';
+}
+const { name } = Astro.props;
+---
+<span class="prod-icon" aria-hidden="true">
+  <svg viewBox="0 0 48 48" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    {name === 'charcoal' && (
+      <Fragment>
+        {/* lump of charcoal with facets */}
+        <path d="M9 31l6-15 13-6 12 7-2 16-13 7-12-3z" stroke="currentColor" />
+        <path d="M15 16l9 10 14 7M24 26l2 14" stroke="currentColor" />
+        <path d="M28 10l-4 16" class="accent" />
+      </Fragment>
+    )}
+    {name === 'acid' && (
+      <Fragment>
+        {/* bottle with liquid line */}
+        <path d="M20 6h8v8l6 8v19a2 2 0 01-2 2H16a2 2 0 01-2-2V22l6-8z" stroke="currentColor" />
+        <path d="M20 6h8" stroke="currentColor" />
+        <path d="M14 30h20" class="accent" />
+      </Fragment>
+    )}
+    {name === 'briquette' && (
+      <Fragment>
+        {/* two pillow briquettes */}
+        <rect x="7" y="13" width="34" height="11" rx="5.5" stroke="currentColor" />
+        <rect x="7" y="27" width="34" height="11" rx="5.5" class="accent" />
+      </Fragment>
+    )}
+  </svg>
+</span>

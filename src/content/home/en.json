@@ -6,41 +6,41 @@
   "hero": {
     "img": "hero",
     "alt": "Freshly discharged hardwood charcoal piled at the Piroliswiss production site under open sky",
-    "title": "Hardwood charcoal from recovered forest residue.",
-    "sub": "Curupaú and Quebracho Colorado hardwoods from licensed land-use change, carbonised in industrial metal retorts for steelworks, agriculture and premium BBQ.",
+    "title": "Premium charcoal with superior performance.",
+    "sub": "Quality at source, precision technology and consistent performance for high-standard markets.",
     "secondary": "See the process"
   },
   "plant": {
     "figure": "1,800",
     "unit": "t / month",
-    "figureLabel": "Projected charcoal capacity per plant",
+    "figureLabel": "Production capacity per plant",
     "facts": [
       "16 metal retorts per plant",
       "80–⁠85 % fixed carbon",
-      "Curupaú and Quebracho Colorado",
-      "Licensed forest residue only"
+      "Curupaú and Quebracho Colorado – Soto",
+      "Selected high-density hardwoods"
     ]
   },
   "problems": {
     "label": "The problems",
-    "title": "Good hardwood is burned in the field while industry and farms pay more for less.",
+    "title": "An untapped resource facing ever-growing demand.",
     "items": [
       {
         "img": "burn",
         "alt": "Forest residue burning in the field",
-        "title": "Forest residue is wasted",
+        "title": "From forest residue to productive opportunity",
         "text": "Millions of tonnes of forest residue are burned, abandoned or underused, causing pollution and economic loss."
       },
       {
         "img": "steel",
         "alt": "Steel plant with raw material yard",
-        "title": "Industrial charcoal is scarce",
+        "title": "Growing industrial demand",
         "text": "In Brazil, growing demand from pulp companies has created a shortage of industrial charcoal for steelworks."
       },
       {
         "img": "tractor",
         "alt": "Tractor working on farmland in Santa Cruz",
-        "title": "Farm inputs cost too much",
+        "title": "The rising cost of farm inputs",
         "text": "High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives."
       }
     ],
@@ -76,7 +76,7 @@
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
-        "desc": "Our main product is a high-quality charcoal made from selected hardwoods such as Curupaú and Quebracho Colorado, known for their high density, strength and excellent energy yield.",
+        "desc": "Our main product is a high-quality charcoal made from selected hardwoods: Curupaú (Anadenanthera colubrina) and Quebracho Colorado – Soto (Schinopsis brasiliensis), known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
           "High fixed carbon content: 80–⁠85 %",
@@ -111,24 +111,23 @@
           },
           {
             "k": "Species",
-            "v": "Curupaú, Quebracho Colorado"
+            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado – Soto (Schinopsis brasiliensis)"
           },
           {
             "k": "Formats",
-            "v": "Bulk · 400 kg big-bag · 5, 10 and 30 kg bags"
+            "v": "Bulk · Big bags · 5, 10 and 30 kg bags"
           },
           {
             "k": "40' HC container",
             "v": "≈ 22 t"
           },
           {
-            "k": "Capacity per plant",
-            "v": "+1,800 t / month",
-            "note": "(projected)"
+            "k": "Production capacity per plant",
+            "v": "+1,800 t / month"
           }
         ],
-        "appLabel": "Industry",
-        "app": "Iron foundry and steelmaking.",
+        "appLabel": "Gastronomy & premium BBQ · Steel industry",
+        "app": "Dense, steady-burning fuel for grilling and gastronomy, and industrial charcoal for steelmaking.",
         "cta": "Request the datasheet",
         "woodsLink": "Wood datasheets"
       },
@@ -139,7 +138,7 @@
         "navLabel": "Pyroligneous acid",
         "tag": "Agricultural and bio-input line",
         "title": "Pyroligneous acid",
-        "desc": "Pyroligneous acid, also known as wood vinegar, is a liquid by-product obtained during the pyrolysis of biomass. Recovering it lets us use the entire production process, producing an input with agricultural, forestry and industrial applications and adding value to the operation.",
+        "desc": "Pyroligneous acid, also known as wood vinegar, is a natural agricultural bio-input obtained by condensing and purifying the vapours released during wood carbonisation. Rich in organic acids and bioactive compounds, it acts as a biostimulant, a root-development promoter, an enhancer of soil biological activity and an aid in managing fungi, bacteria, nematodes and certain pests. It also improves nutrient uptake, crop vigour and composting, adding value to more efficient and sustainable agriculture.",
         "featLabel": "Key characteristics",
         "features": [
           "Activates and stimulates soil microbiology",
@@ -153,10 +152,9 @@
         ],
         "appLabel": "Agriculture",
         "app": "Crop protection, natural pest control and fewer chemical inputs.",
-        "outputLabel": "Output per plant:",
+        "outputLabel": "Production capacity per plant",
         "output": {
-          "v": "≈ 389 t / month",
-          "note": "(projected)"
+          "v": "430 t / month"
         },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
@@ -179,7 +177,7 @@
           },
           {
             "k": "Purity",
-            "v": "Filtered, settled and free of suspended solids"
+            "v": "Settled, filtered and free of suspended solids"
           }
         ]
       },
@@ -187,29 +185,28 @@
         "id": "p-briquettes",
         "img": "embers",
         "alt": "Charcoal burning evenly on a test grate",
-        "navLabel": "Eco charcoal briquettes",
+        "navLabel": "Charcoal briquettes",
         "tag": "Clean, efficient energy line",
-        "title": "Eco charcoal briquettes",
-        "desc": "Made from compacted charcoal fines, briquettes turn a residue of our production process into a higher-value commercial product.",
+        "title": "Charcoal briquettes",
+        "desc": "Charcoal briquettes are a solid fuel made from charcoal fines, compacted and upgraded through a controlled process. They offer higher density, uniform size, easier handling and storage, steadier combustion and efficient use of material, turning the fines generated in production into a high-value commercial product for household, gastronomic and industrial use.",
         "featLabel": "Key characteristics",
         "features": [
+          "High heat",
+          "Long and consistent burn",
+          "Ideal for gastronomy and grilling",
+          "Low ash",
           "100 % natural ingredients",
           "Premium South American hardwood",
           "Natural vegetable binder",
           "No chemical accelerants",
           "No mineral fillers",
-          "High heat",
-          "Long and consistent burn",
-          "Low ash",
-          "Full use of charcoal fines",
-          "Ideal for gastronomy and grilling"
+          "Full use of charcoal fines"
         ],
-        "appLabel": "Premium BBQ",
+        "appLabel": "Gastronomy & premium BBQ",
         "app": "High-performance fuel for grills, gastronomy and gourmet export.",
-        "outputLabel": "Output per plant:",
+        "outputLabel": "Production capacity per plant",
         "output": {
-          "v": "≈ 278 t / month",
-          "note": "(projected)"
+          "v": "95 t / month"
         },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
@@ -240,8 +237,8 @@
   },
   "process": {
     "label": "Process",
-    "title": "Carbonisation is a temperature curve. We run it inside steel.",
-    "lede": "A retort heats wood without air. Each stage happens at its own temperature, and each one is measured inside the kiln with four probes connected to Piroliswiss Control.",
+    "title": "We control temperature, time and process to produce charcoal of superior quality and performance.",
+    "lede": "Wood is carbonised in a closed retort through a controlled thermal process. Each stage is monitored in real time by four probes connected to Piroliswiss Control, ensuring precision, efficiency and uniformity in every cycle.",
     "ui": {
       "stage": "Inside the retort · phase {n} of 4",
       "chimney": "Chimney",
@@ -266,7 +263,7 @@
       "gasres": "Residual gas → burner",
       "charcoal": "Charcoal"
     },
-    "bracket": "Pyroligneous acid condensed · 150–⁠350 °C",
+    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
     "phases": [
       {
         "name": "Drying",
@@ -297,7 +294,7 @@
   "control": {
     "label": "Control and traceability",
     "title": "Every kiln, measured every 30 seconds.",
-    "lede": "Piroliswiss Control is our own kiln-monitoring system. It records the temperature of every retort through the whole cycle, warns when something goes out of range and keeps the curve of every load.",
+    "lede": "Piroliswiss Control is our kiln supervision and monitoring system. It records the temperature of every retort in real time, detects deviations during the cycle and stores the thermal curve of every load to ensure traceability, control and consistent operation.",
     "slides": [
       {
         "img": "control-all",
@@ -343,13 +340,13 @@
   "model": {
     "label": "Operating model",
     "title": "From biomass to final product, in five steps.",
-    "lede": "Every project starts with a legal document, not a chainsaw. We only work on land with an approved change-of-use plan, under a contract with the owner.",
+    "lede": "Five stages that turn selected raw material into products with identity, traceability and purpose.",
     "steps": [
       {
         "img": "loader",
         "alt": "Loader and machinery on site",
         "title": "Biomass collection and sorting",
-        "text": "We collect wood and forest residue from the authorised area and sort it before processing."
+        "text": "We collect forest residue of legal origin and sort it before processing."
       },
       {
         "img": "sawmill",
@@ -367,13 +364,13 @@
         "img": "condenser",
         "alt": "Retort condenser column and piping",
         "title": "By-product separation and processing",
-        "text": "Pyroligneous acid is condensed; charcoal fines go to briquetting."
+        "text": "Pyroligneous acid goes to settling and maturation, charcoal fines to briquetting and charcoal to moisture-protected storage."
       },
       {
         "img": "bigbags",
         "alt": "Filled big-bags ready for dispatch",
         "title": "Packaging, logistics and export",
-        "text": "Bagged on site and shipped to industrial and international buyers."
+        "text": "We integrate packaging, storage and dispatch logistics to take the final product from the plant to industrial customers and international markets."
       }
     ]
   },
@@ -409,8 +406,8 @@
       },
       {
         "k": "Unloading",
-        "us": "Door opens, cooled load comes out",
-        "them": "Workers enter the kiln"
+        "us": "Mechanised, fast operation with minimal manual handling",
+        "them": "Requires workers to enter and more operating time"
       }
     ]
   },
@@ -441,11 +438,11 @@
     ]
   },
   "scale": {
-    "label": "Scale",
-    "title": "One plant is one project. Five plants is the plan.",
+    "label": "Scalability",
+    "title": "One plant creates capacity. Five build presence.",
     "lede": "Each plant runs as an independent unit, so new plants can be replicated on other forest properties.",
     "head": [
-      "Monthly output, projected",
+      "Monthly capacity",
       "Per plant",
       "With 5 plants"
     ],
@@ -458,13 +455,13 @@
       },
       {
         "k": "Pyroligneous acid",
-        "plant": "≈ 389",
-        "five": "≈ 1,945"
+        "plant": "430",
+        "five": "2,150"
       },
       {
-        "k": "Eco charcoal briquettes",
-        "plant": "≈ 278",
-        "five": "≈ 1,390"
+        "k": "Charcoal briquettes",
+        "plant": "95",
+        "five": "475"
       }
     ],
     "phases": [
@@ -474,7 +471,7 @@
         "tag": "Plant 1 · In development",
         "planned": false,
         "title": "First plant",
-        "text": "16 metal retort kilns · +1,800 t/month of charcoal (projected)."
+        "text": "16 metal retort kilns for continuous operation · +1,800 t/month of charcoal."
       },
       {
         "img": "plant-render",
@@ -487,9 +484,9 @@
     ]
   },
   "request": {
-    "label": "Specifications and quotes",
-    "title": "Tell us what you need to burn.",
-    "text": "We reply with the datasheet, available volumes and a quotation for your Incoterm, usually within two business days.",
+    "label": "Contact and quotes",
+    "title": "We design the solution around your operation.",
+    "text": "From product specification to delivery logistics, we build every proposal around the needs of your operation.",
     "fields": {
       "company": "Company",
       "country": "Country",

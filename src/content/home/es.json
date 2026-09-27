@@ -6,41 +6,41 @@
   "hero": {
     "img": "hero",
     "alt": "Carbón de maderas duras recién descargado, apilado al aire libre en el sitio de producción de Piroliswiss",
-    "title": "Carbón de maderas duras a partir de residuo forestal recuperado.",
-    "sub": "Curupaú y Quebracho Colorado provenientes de cambios de uso de suelo autorizados, carbonizados en retortas metálicas industriales para siderurgia, agricultura y parrilla premium.",
+    "title": "Carbón vegetal premium de rendimiento superior.",
+    "sub": "Calidad de origen, tecnología de precisión y rendimiento consistente para mercados de alto estándar.",
     "secondary": "Ver el proceso"
   },
   "plant": {
     "figure": "1.800",
     "unit": "t / mes",
-    "figureLabel": "Capacidad proyectada de carbón por planta",
+    "figureLabel": "Capacidad de producción por planta",
     "facts": [
       "16 retortas metálicas por planta",
       "80–⁠85 % de carbono fijo",
-      "Curupaú y Quebracho Colorado",
-      "Solo residuo forestal autorizado"
+      "Curupaú y Quebracho Colorado – Soto",
+      "Maderas duras seleccionadas de alta densidad"
     ]
   },
   "problems": {
     "label": "Los problemas",
-    "title": "Se quema buena madera dura en el campo mientras la industria y el agro pagan más por menos.",
+    "title": "Un recurso desaprovechado frente a una demanda cada vez mayor.",
     "items": [
       {
         "img": "burn",
         "alt": "Residuo forestal ardiendo en el campo",
-        "title": "El residuo forestal se desperdicia",
+        "title": "De residuos forestales a oportunidad productiva",
         "text": "Millones de toneladas de residuo forestal se queman, se abandonan o se aprovechan mal, con contaminación y pérdidas económicas."
       },
       {
         "img": "steel",
         "alt": "Planta siderúrgica con patio de materias primas",
-        "title": "Escasea el carbón industrial",
+        "title": "Una demanda industrial en crecimiento",
         "text": "En Brasil, la creciente demanda de las empresas de celulosa ha generado un déficit de carbón vegetal industrial para la siderurgia."
       },
       {
         "img": "tractor",
         "alt": "Tractor trabajando en un campo agrícola en Santa Cruz",
-        "title": "Los insumos agrícolas cuestan demasiado",
+        "title": "El creciente costo de los insumos agrícolas",
         "text": "Los altos precios de fertilizantes y agroquímicos reducen el margen del productor y aumentan la necesidad de alternativas locales y sostenibles."
       }
     ],
@@ -76,7 +76,7 @@
         "navLabel": "Carbón vegetal premium",
         "tag": "Producto principal",
         "title": "Carbón vegetal premium",
-        "desc": "Nuestro producto principal es un carbón vegetal de alta calidad elaborado con maderas duras seleccionadas como Curupaú y Quebracho Colorado, reconocidas por su alta densidad, resistencia y excelente rendimiento energético.",
+        "desc": "Nuestro producto principal es un carbón vegetal de alta calidad elaborado con maderas duras seleccionadas: Curupaú (Anadenanthera colubrina) y Quebracho Colorado – Soto (Schinopsis brasiliensis), reconocidas por su alta densidad, resistencia y excelente rendimiento energético.",
         "featLabel": "Características principales",
         "features": [
           "Alto contenido de carbono fijo: 80–⁠85 %",
@@ -111,24 +111,23 @@
           },
           {
             "k": "Especies",
-            "v": "Curupaú, Quebracho Colorado"
+            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado – Soto (Schinopsis brasiliensis)"
           },
           {
             "k": "Formatos",
-            "v": "A granel · big-bag 400 kg · bolsas de 5, 10 y 30 kg"
+            "v": "A granel · Big bags · Bolsas de 5, 10 y 30 kg"
           },
           {
             "k": "Contenedor 40' HC",
             "v": "≈ 22 t"
           },
           {
-            "k": "Capacidad por planta",
-            "v": "+1.800 t / mes",
-            "note": "(proyectado)"
+            "k": "Capacidad de producción por planta",
+            "v": "+1.800 t / mes"
           }
         ],
-        "appLabel": "Industria",
-        "app": "Fundición de hierro y siderurgia.",
+        "appLabel": "Gastronomía & BBQ premium · Industria siderúrgica",
+        "app": "Combustible denso y de combustión estable para parrilla y gastronomía, y carbón industrial para la siderurgia.",
         "cta": "Solicitar la ficha técnica",
         "woodsLink": "Ficha técnica de las maderas"
       },
@@ -139,7 +138,7 @@
         "navLabel": "Ácido piroleñoso",
         "tag": "Línea agrícola y de bioinsumos",
         "title": "Ácido piroleñoso",
-        "desc": "El ácido piroleñoso, también conocido como vinagre de madera, es un subproducto líquido que se obtiene durante la pirólisis de la biomasa. Recuperarlo nos permite aprovechar todo el proceso productivo, obtener un insumo con aplicaciones agrícolas, forestales e industriales y agregar valor a la operación.",
+        "desc": "El ácido piroleñoso, también conocido como vinagre de madera, es un bioinsumo agrícola natural obtenido mediante la condensación y purificación de los vapores generados durante la carbonización de la madera. Rico en ácidos orgánicos y compuestos bioactivos, actúa como bioestimulante, promotor del desarrollo radicular, mejorador de la actividad biológica del suelo y coadyuvante en el manejo de hongos, bacterias, nematodos y ciertas plagas. Además, favorece la absorción de nutrientes, el vigor de los cultivos y los procesos de compostaje, aportando valor a una agricultura más eficiente y sostenible.",
         "featLabel": "Características principales",
         "features": [
           "Activa y estimula la microbiología del suelo",
@@ -153,10 +152,9 @@
         ],
         "appLabel": "Agricultura",
         "app": "Protección de cultivos, control natural de plagas y menos insumos químicos.",
-        "outputLabel": "Producción por planta:",
+        "outputLabel": "Capacidad de producción por planta",
         "output": {
-          "v": "≈ 389 t / mes",
-          "note": "(proyectado)"
+          "v": "430 t / mes"
         },
         "cta": "Consultar disponibilidad",
         "specLabel": "Especificación típica",
@@ -179,7 +177,7 @@
           },
           {
             "k": "Pureza",
-            "v": "Filtrado, decantado y libre de sólidos suspendidos"
+            "v": "Decantado, filtrado y libre de sólidos suspendidos"
           }
         ]
       },
@@ -187,29 +185,28 @@
         "id": "p-briquettes",
         "img": "embers",
         "alt": "Carbón ardiendo de forma pareja en una parrilla de prueba",
-        "navLabel": "Briquetas ecológicas de carbón",
+        "navLabel": "Briquetas de carbón",
         "tag": "Línea de energía limpia y eficiente",
-        "title": "Briquetas ecológicas de carbón",
-        "desc": "Elaboradas con finos de carbón compactados, las briquetas convierten un residuo de nuestro proceso productivo en un producto comercial de mayor valor.",
+        "title": "Briquetas de carbón",
+        "desc": "Las briquetas de carbón son un combustible sólido elaborado a partir de finos de carbón vegetal compactados y valorizados mediante un proceso controlado. Ofrecen mayor densidad, tamaño uniforme, mejor manipulación y almacenamiento, combustión más estable y aprovechamiento eficiente del material, transformando los finos generados en la producción en un producto comercial de alto valor, apto para aplicaciones domésticas, gastronómicas e industriales.",
         "featLabel": "Características principales",
         "features": [
+          "Alto poder calorífico",
+          "Combustión prolongada y uniforme",
+          "Ideales para gastronomía y parrilla",
+          "Baja generación de cenizas",
           "Ingredientes 100 % naturales",
           "Maderas duras premium de Sudamérica",
           "Aglutinante vegetal natural",
           "Sin acelerantes químicos",
           "Sin rellenos minerales",
-          "Alto poder calorífico",
-          "Combustión prolongada y uniforme",
-          "Baja generación de cenizas",
-          "Aprovechamiento total de los finos de carbón",
-          "Ideales para gastronomía y parrilla"
+          "Aprovechamiento total de los finos de carbón"
         ],
-        "appLabel": "Parrilla premium",
+        "appLabel": "Gastronomía & BBQ premium",
         "app": "Combustible de alto rendimiento para parrillas, gastronomía y exportación gourmet.",
-        "outputLabel": "Producción por planta:",
+        "outputLabel": "Capacidad de producción por planta",
         "output": {
-          "v": "≈ 278 t / mes",
-          "note": "(proyectado)"
+          "v": "95 t / mes"
         },
         "cta": "Consultar disponibilidad",
         "specLabel": "Especificación típica",
@@ -240,8 +237,8 @@
   },
   "process": {
     "label": "Proceso",
-    "title": "La carbonización es una curva de temperatura. La controlamos dentro del acero.",
-    "lede": "Una retorta calienta la madera sin aire. Cada etapa ocurre a su propia temperatura, y cada una se mide dentro del horno con cuatro sondas conectadas a Piroliswiss Control.",
+    "title": "Controlamos temperatura, tiempo y proceso para producir carbón vegetal con calidad y desempeño superiores.",
+    "lede": "La madera se carboniza en una retorta cerrada mediante un proceso térmico controlado. Cada etapa es monitoreada en tiempo real por cuatro sondas conectadas a Piroliswiss Control, garantizando precisión, eficiencia y uniformidad en cada ciclo.",
     "ui": {
       "stage": "Interior de la retorta · fase {n} de 4",
       "chimney": "Chimenea",
@@ -266,7 +263,7 @@
       "gasres": "Gas residual → quemador",
       "charcoal": "Carbón vegetal"
     },
-    "bracket": "Condensación del ácido piroleñoso · 150–⁠350 °C",
+    "bracket": "Condensación del ácido piroleñoso · 200–⁠400 °C",
     "phases": [
       {
         "name": "Secado",
@@ -297,7 +294,7 @@
   "control": {
     "label": "Control y trazabilidad",
     "title": "Cada horno, medido cada 30 segundos.",
-    "lede": "Piroliswiss Control es nuestro sistema propio de monitoreo de hornos. Registra la temperatura de cada retorta durante todo el ciclo, avisa cuando algo sale de rango y guarda la curva de cada carga.",
+    "lede": "Piroliswiss Control es nuestro sistema de supervisión y monitoreo de hornos. Registra en tiempo real la temperatura de cada retorta, detecta desviaciones durante el ciclo y almacena la curva térmica de cada carga para asegurar trazabilidad, control y consistencia operativa.",
     "slides": [
       {
         "img": "control-all",
@@ -343,13 +340,13 @@
   "model": {
     "label": "Modelo operativo",
     "title": "De la biomasa al producto final, en cinco pasos.",
-    "lede": "Cada proyecto empieza con un documento legal, no con una motosierra. Solo trabajamos en predios con un plan de cambio de uso de suelo aprobado y con contrato con el propietario.",
+    "lede": "Cinco etapas que convierten materia prima seleccionada en productos con identidad, trazabilidad y propósito.",
     "steps": [
       {
         "img": "loader",
         "alt": "Cargadora y maquinaria en el sitio",
         "title": "Recolección y clasificación de la biomasa",
-        "text": "Recogemos la madera y los residuos forestales del área autorizada y los clasificamos antes de procesarlos."
+        "text": "Recogemos residuos forestales de origen legal y los clasificamos antes de procesarlos."
       },
       {
         "img": "sawmill",
@@ -367,13 +364,13 @@
         "img": "condenser",
         "alt": "Columna de condensación y tuberías de la retorta",
         "title": "Separación y procesamiento de subproductos",
-        "text": "El ácido piroleñoso se condensa; los finos de carbón van a briquetado."
+        "text": "El ácido piroleñoso se destina a decantación y maduración, los finos de carbón al proceso de briquetado y el carbón vegetal a almacenamiento protegido de humedad."
       },
       {
         "img": "bigbags",
         "alt": "Big-bags llenos listos para despacho",
         "title": "Empaque, logística y exportación",
-        "text": "Embolsado en el sitio y despachado a compradores industriales e internacionales."
+        "text": "Integramos empaque, almacenamiento y logística de despacho para llevar el producto final desde planta hasta clientes industriales y mercados internacionales."
       }
     ]
   },
@@ -409,8 +406,8 @@
       },
       {
         "k": "Descarga",
-        "us": "Se abre la puerta y sale la carga ya fría",
-        "them": "Los trabajadores entran al horno"
+        "us": "Operación mecanizada, rápida y con mínima intervención manual",
+        "them": "Requiere ingreso de personal y mayor tiempo operativo"
       }
     ]
   },
@@ -441,11 +438,11 @@
     ]
   },
   "scale": {
-    "label": "Escala",
-    "title": "Una planta es un proyecto. El plan son cinco plantas.",
+    "label": "Escalabilidad",
+    "title": "Una planta crea capacidad. Cinco construyen presencia.",
     "lede": "Cada planta funciona como una unidad independiente, de modo que pueden replicarse nuevas plantas en otras propiedades forestales.",
     "head": [
-      "Producción mensual proyectada",
+      "Capacidad mensual",
       "Por planta",
       "Con 5 plantas"
     ],
@@ -458,13 +455,13 @@
       },
       {
         "k": "Ácido piroleñoso",
-        "plant": "≈ 389",
-        "five": "≈ 1.945"
+        "plant": "430",
+        "five": "2.150"
       },
       {
-        "k": "Briquetas ecológicas de carbón",
-        "plant": "≈ 278",
-        "five": "≈ 1.390"
+        "k": "Briquetas de carbón",
+        "plant": "95",
+        "five": "475"
       }
     ],
     "phases": [
@@ -474,7 +471,7 @@
         "tag": "Planta 1 · En desarrollo",
         "planned": false,
         "title": "Primera planta",
-        "text": "16 hornos metálicos de retorta · +1.800 t/mes de carbón (proyectado)."
+        "text": "16 hornos metálicos de retorta para operación continua · +1.800 t/mes de carbón vegetal."
       },
       {
         "img": "plant-render",
@@ -487,9 +484,9 @@
     ]
   },
   "request": {
-    "label": "Especificaciones y cotizaciones",
-    "title": "Cuéntenos qué necesita quemar.",
-    "text": "Respondemos con la ficha técnica, los volúmenes disponibles y una cotización según su Incoterm, normalmente en dos días hábiles.",
+    "label": "Contacto y cotizaciones",
+    "title": "Diseñamos la solución según su operación.",
+    "text": "Desde la especificación del producto hasta la logística de entrega, estructuramos cada propuesta según las necesidades de su operación.",
     "fields": {
       "company": "Empresa",
       "country": "País",

@@ -6,6 +6,7 @@ import SpecStrip from './SpecStrip.astro';
 import SectionHead from './SectionHead.astro';
 import Photo from './Photo.astro';
 import SolutionIcon from './SolutionIcon.astro';
+import ProductIcon from './ProductIcon.astro';
 import Product from './Product.astro';
 import PyrolysisScale from './PyrolysisScale.astro';
 import StageList from './StageList.astro';
@@ -57,7 +58,7 @@ const ui = uiEntry.data;
       <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} wide />
       <nav class="prod-index" aria-label={t.products.indexLabel}>
         {t.products.items.map((p, i) => (
-          <a href={`#${p.id}`}><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
+          <a href={`#${p.id}`}><ProductIcon name={(['charcoal', 'acid', 'briquette'] as const)[i]!} /><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
         ))}
       </nav>
       {t.products.items.map((p, i) => <Product p={p} n={i + 1} locale={locale} />)}

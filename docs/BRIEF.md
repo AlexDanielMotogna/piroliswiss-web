@@ -177,3 +177,9 @@ Logo: current file is a raster with gradients; needs a vector redraw (full lock-
 - Piroliswiss Control (oven-monitoring app, design in ../piroliswiss-control/design): 4 probes per kiln, reading every 30 s, cycle phases by threshold, alarms, offline queue, CSV export. On the homepage as "Control y trazabilidad", always labelled as in-house system in development with sample data.
 - Owners (2026-09-27): the woods are only Curupaú and Quebracho Colorado (Soto and Cuchi removed site-wide).
 - Wood datasheets: Curupaú (Anadenanthera colubrina) from MDSP/FAO Serie Técnica XI (2002) and Bolivian Woods (1999). Open: confirm "compresión perpendicular" against the Spanish original; datasheet for Quebracho Colorado.
+
+## 10. Owners' change list (2026-09-27)
+
+Applied: contact-for-quote CTA; new hero title and subtitle; no land-clearing mentions (supply described as legal forest residue); species Curupaú (Anadenanthera colubrina) and Quebracho Colorado – Soto (Schinopsis brasiliensis); materia prima "maderas duras seleccionadas de alta densidad"; new About texts; new problem titles; formats bulk / big bags / 5-10-30 kg bags; capacity shown as "capacidad de producción por planta"; new acid and briquette descriptions; acid 200–400 °C; new process, control and model copy; unloading row; Escalabilidad; 5-plant table acid 430/2,150 t and briquettes 95/475 t; new request copy; full logo in footer; product drawings.
+Kept for accuracy: Plant 1 "en desarrollo"; "para operación continua" instead of "en operación continua" (plant not built yet).
+Open: acid 470 vs 430 t/month (item 18 vs item 38); photos to replace tractor, acid, briquettes, the five steps and an image for the operating model; wood photos for the catalogue (example: exomad.com).

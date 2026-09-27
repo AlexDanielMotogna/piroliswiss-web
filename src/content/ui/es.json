@@ -24,15 +24,15 @@
     },
     {
       "href": "#scale",
-      "label": "Escala"
+      "label": "Escalabilidad"
     }
   ],
   "navLabel": "Principal",
   "menu": "Menú",
   "langLabel": "Idioma",
-  "requestCta": "Solicitar especificaciones",
+  "requestCta": "Contáctenos para cotizar",
   "footer": {
-    "about": "Piroliswiss S.R.L. produce y exporta carbón vegetal premium y subproductos de pirólisis a partir de residuo forestal autorizado. Santa Cruz de la Sierra, Bolivia.",
+    "about": "Piroliswiss S.R.L. produce y exporta carbón vegetal premium y subproductos de pirólisis a partir de residuo forestal autorizado.",
     "markAlt": "Isotipo de Piroliswiss",
     "columns": [
       {
@@ -52,7 +52,7 @@
           },
           {
             "href": "#scale",
-            "label": "Escala"
+            "label": "Escalabilidad"
           }
         ]
       },

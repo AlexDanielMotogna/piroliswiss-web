@@ -24,15 +24,15 @@
     },
     {
       "href": "#scale",
-      "label": "Scale"
+      "label": "Scalability"
     }
   ],
   "navLabel": "Main",
   "menu": "Menu",
   "langLabel": "Language",
-  "requestCta": "Request specifications",
+  "requestCta": "Contact us for a quote",
   "footer": {
-    "about": "Piroliswiss S.R.L. produces and exports premium charcoal and pyrolysis by-products from licensed forest residue. Santa Cruz de la Sierra, Bolivia.",
+    "about": "Piroliswiss S.R.L. produces and exports premium charcoal and pyrolysis by-products from licensed forest residue.",
     "markAlt": "Piroliswiss mark",
     "columns": [
       {
@@ -52,7 +52,7 @@
           },
           {
             "href": "#scale",
-            "label": "Scale"
+            "label": "Scalability"
           }
         ]
       },

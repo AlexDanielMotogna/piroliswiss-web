@@ -215,6 +215,7 @@ const company = defineCollection({
         .object({
           label: text,
           title: text,
+          lede: text,
           items: z.array(z.object({ label: text, text: text }).strict()).length(3),
         })
         .strict(),

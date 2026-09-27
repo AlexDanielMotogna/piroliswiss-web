@@ -39,10 +39,8 @@ const num = String(n).padStart(2, '0');
     )}
     <div class="apps">
       <span class="label">{p.appLabel}</span>
-      <p>
-        {p.app}
-        {p.output && <Fragment>{` ${p.outputLabel} ${p.output.v} `}<span class="muted">{p.output.note}</span></Fragment>}
-      </p>
+      <p>{p.app}</p>
+      {p.output && <p class="apps-out"><span>{p.outputLabel}</span><b>{p.output.v}</b></p>}
     </div>
     <div class="prod-links">
       <a class="link" href="#request">{p.cta}</a>

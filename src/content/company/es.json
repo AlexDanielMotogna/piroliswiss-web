@@ -6,14 +6,15 @@
   "intro": {
     "label": "Quiénes somos",
     "title": "Productor y exportador industrial de carbón vegetal premium y subproductos de pirólisis.",
+    "lede": "Piroliswiss es una empresa especializada en la producción y exportación de carbón vegetal y subproductos de alto valor, desarrollados mediante tecnología industrial y procesos eficientes para alcanzar altos estándares de calidad y rendimiento. Operamos bajo un modelo de aprovechamiento responsable y sostenible, utilizando biomasa forestal de origen legal y transformándola integralmente en productos de alto valor.",
     "items": [
       {
         "label": "Producción industrial",
-        "text": "Producimos carbón vegetal premium y subproductos como ácido piroleñoso y briquetas de carbón para usos metalúrgicos, industriales y agrícolas, y para el mercado de parrilla premium."
+        "text": "Integramos tecnología de carbonización en retortas metálicas industriales y procesos controlados, combinando precisión, eficiencia y control operativo para obtener productos de calidad uniforme, alto rendimiento y especificaciones consistentes para mercados exigentes."
       },
       {
         "label": "Abastecimiento responsable",
-        "text": "Trabajamos solo con residuo forestal y biomasa de origen legal, provenientes de áreas autorizadas para cambio de uso de suelo. Evitamos la quema a cielo abierto y generamos valor a partir del residuo."
+        "text": "Trabajamos exclusivamente con biomasa forestal de origen legal y procedencia autorizada, recuperando recursos que de otro modo serían quemados o desaprovechados. Mediante procesos industriales eficientes, los transformamos en productos de alto valor, reduciendo residuos, contaminación y la pérdida de materia prima con alto potencial productivo."
       },
       {
         "label": "Sede",

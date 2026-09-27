@@ -19,7 +19,7 @@ const ui = uiEntry.data;
 <Base locale={locale} page="company" title={c.meta.title} description={c.meta.description}>
   <section class="page-intro">
     <div class="wrap">
-      <SectionHead label={c.intro.label} title={c.intro.title} level={1} />
+      <SectionHead label={c.intro.label} title={c.intro.title} lede={c.intro.lede} level={1} />
       <div class="about">
         {c.intro.items.map((a) => <div><p class="label">{a.label}</p><p>{a.text}</p></div>)}
       </div>
