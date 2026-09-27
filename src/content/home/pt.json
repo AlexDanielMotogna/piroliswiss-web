@@ -32,14 +32,14 @@
         "text": "Milhões de toneladas de resíduo florestal são queimadas, abandonadas ou subaproveitadas, gerando poluição e perdas econômicas."
       },
       {
-        "img": "steel",
-        "alt": "Usina siderúrgica com pátio de matérias-primas",
+        "img": "01-problemas/demanda-industrial-siderurgia",
+        "alt": "Planta siderúrgica con altos hornos",
         "title": "Uma demanda industrial em crescimento",
         "text": "No Brasil, a demanda crescente das empresas de celulose criou um déficit de carvão vegetal industrial para a siderurgia."
       },
       {
-        "img": "tractor",
-        "alt": "Trator trabalhando em lavoura em Santa Cruz",
+        "img": "01-problemas/costo-insumos-agricolas",
+        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
         "title": "O custo crescente dos insumos agrícolas",
         "text": "Os preços altos de fertilizantes e agroquímicos reduzem a margem do produtor e aumentam a necessidade de alternativas locais e sustentáveis."
       }
@@ -47,17 +47,20 @@
     "solutionLabel": "Nossa solução",
     "solutions": [
       {
-        "icon": "residue",
+        "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
+        "alt": "Tronco de madera mitad natural y mitad carbonizada",
         "title": "Transformar resíduo florestal em produtos industriais",
         "text": "A pirólise controlada converte o resíduo florestal em produtos industriais de alto valor."
       },
       {
-        "icon": "supply",
+        "img": "02-nuestra-solucion/abastecimiento-industria",
+        "alt": "Camión cargado de carbón vegetal en carretera",
         "title": "Fornecimento industrial constante",
         "text": "Produção de carvão estável e escalável para a siderurgia, especialmente no Brasil e na Ásia."
       },
       {
-        "icon": "agro",
+        "img": "02-nuestra-solucion/bioinsumos-agricultura",
+        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
         "title": "Insumos agrícolas naturais",
         "text": "Um bioinsumo derivado da biomassa que reduz a dependência de agroquímicos e favorece uma agricultura mais sustentável."
       }
@@ -71,8 +74,8 @@
     "items": [
       {
         "id": "p-charcoal",
-        "img": "hand",
-        "alt": "Pedaço de carvão denso de madeira dura na mão, com fratura vítrea",
+        "img": "04-productos/carbon-vegetal-premium",
+        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
         "navLabel": "Carvão vegetal premium",
         "tag": "Produto principal",
         "title": "Carvão vegetal premium",
@@ -129,12 +132,14 @@
         "appLabel": "Gastronomia & churrasco premium · Indústria siderúrgica",
         "app": "Combustível denso e de queima estável para churrasco e gastronomia, e carvão industrial para a siderurgia.",
         "cta": "Solicitar a ficha técnica",
-        "woodsLink": "Ficha técnica das madeiras"
+        "woodsLink": "Ficha técnica das madeiras",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexAlt": "Trozos de carbón vegetal"
       },
       {
         "id": "p-acid",
-        "img": "retort",
-        "alt": "Retorta metálica com coluna de condensação onde o ácido pirolenhoso é recuperado",
+        "img": "04-productos/acido-pirolenoso",
+        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
         "navLabel": "Ácido pirolenhoso",
         "tag": "Linha agrícola e de bioinsumos",
         "title": "Ácido pirolenhoso",
@@ -179,12 +184,14 @@
             "k": "Pureza",
             "v": "Decantado, filtrado e livre de sólidos em suspensão"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexAlt": "Matraz con ácido piroleñoso"
       },
       {
         "id": "p-briquettes",
-        "img": "embers",
-        "alt": "Carvão queimando de forma uniforme em uma grelha de teste",
+        "img": "04-productos/briquetas-de-carbon",
+        "alt": "Briquetas de carbón encendidas",
         "navLabel": "Briquetes de carvão",
         "tag": "Linha de energia limpa e eficiente",
         "title": "Briquetes de carvão",
@@ -231,7 +238,9 @@
             "k": "Tamanho",
             "v": "Uniforme, > 30 mm"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexAlt": "Briquetas de carbón"
       }
     ]
   },
@@ -343,40 +352,41 @@
     "lede": "Cinco etapas que transformam matéria-prima selecionada em produtos com identidade, rastreabilidade e propósito.",
     "steps": [
       {
-        "img": "loader",
-        "alt": "Carregadeira e maquinário no local",
+        "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
+        "alt": "Madera apilada y clasificada en el monte",
         "title": "Coleta e classificação da biomassa",
         "text": "Coletamos resíduos florestais de origem legal e os classificamos antes do processamento."
       },
       {
-        "img": "sawmill",
-        "alt": "Serra de toras e esteira transportadora no acampamento",
+        "img": "05-modelo-operativo/2-procesamiento-madera",
+        "alt": "Leña cortada lista para la carga",
         "title": "Processamento da madeira",
         "text": "As toras são cortadas e preparadas no local para carregar as retortas."
       },
       {
-        "img": "retort-fire",
-        "alt": "Retorta em operação à noite",
+        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "alt": "Hornos metálicos de retorta en planta",
         "title": "Carbonização industrial",
-        "text": "Pirólise controlada em retortas metálicas."
+        "text": "Pirólise controlada em retortas metálicas.",
+        "note": "Render"
       },
       {
-        "img": "condenser",
-        "alt": "Coluna de condensação e tubulação da retorta",
+        "img": "05-modelo-operativo/4-separacion-subproductos",
+        "alt": "Tanque de recuperación de ácido piroleñoso",
         "title": "Separação e processamento de subprodutos",
         "text": "O ácido pirolenhoso vai para decantação e maturação, os finos de carvão para a briquetagem e o carvão vegetal para armazenamento protegido da umidade."
       },
       {
-        "img": "bigbags",
-        "alt": "Big bags cheios prontos para expedição",
+        "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
+        "alt": "Camión en el centro de carga y despacho",
         "title": "Embalagem, logística e exportação",
         "text": "Integramos embalagem, armazenamento e logística de expedição para levar o produto final da planta aos clientes industriais e mercados internacionais."
       }
     ]
   },
   "compare": {
-    "img": "brick-kiln",
-    "alt": "Forno tradicional de tijolo para carvão liberando fumaça",
+    "img": "06-retorta-vs-horno/horno-de-barro",
+    "alt": "Horno tradicional de barro en funcionamiento",
     "caption": "O padrão regional: um forno de tijolo, vedado com barro e controlado no olho.",
     "label": "Retorta vs. forno de tijolo",
     "title": "O que muda quando o forno é de aço.",
@@ -416,24 +426,24 @@
     "title": "Madeira, retortas e carvão.",
     "photos": [
       {
-        "img": "pile",
-        "alt": "Estoque de carvão no local de produção"
+        "img": "07-operaciones/foto-1",
+        "alt": "Pila de carbón vegetal producido"
       },
       {
-        "img": "sections",
-        "alt": "Cortes transversais de carvão com fissuras radiais"
+        "img": "07-operaciones/foto-2",
+        "alt": "Bosque de donde proviene la biomasa"
       },
       {
-        "img": "quality",
-        "alt": "Teste de queima de carvão em uma grelha à noite"
+        "img": "07-operaciones/foto-3",
+        "alt": "Cargadora forestal apilando troncos"
       },
       {
-        "img": "logs",
-        "alt": "Toras de madeira dura carregadas em uma retorta"
+        "img": "07-operaciones/foto-4",
+        "alt": "Carbón encendido durante una prueba"
       },
       {
-        "img": "truck",
-        "alt": "Caçamba de caminhão carregada com carvão em pedaços"
+        "img": "07-operaciones/foto-5",
+        "alt": "Camión cargado de carbón vegetal"
       }
     ]
   },
@@ -474,8 +484,8 @@
         "text": "+16 fornos metálicos de retorta para operação contínua · +1.800 t/mês de carvão vegetal."
       },
       {
-        "img": "plant-render",
-        "alt": "Render de uma planta de retortas coberta, planejada",
+        "img": "08-escalabilidad/expansion-modular",
+        "alt": "Render de planta modular con hornos de retorta",
         "tag": "Plantas 2–⁠5 · Planejado · Render",
         "planned": true,
         "title": "Expansão modular",

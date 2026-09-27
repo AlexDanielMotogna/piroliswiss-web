@@ -17,7 +17,7 @@
     "facts": [
       "+16 retortas metálicas por planta",
       "80–⁠85 % de carbono fijo",
-      "Curupaú y Quebracho Colorado",
+      "Carbonización industrial controlada",
       "Maderas duras seleccionadas de alta densidad"
     ]
   },
@@ -32,14 +32,14 @@
         "text": "Millones de toneladas de residuo forestal se queman, se abandonan o se aprovechan mal, con contaminación y pérdidas económicas."
       },
       {
-        "img": "steel",
-        "alt": "Planta siderúrgica con patio de materias primas",
+        "img": "01-problemas/demanda-industrial-siderurgia",
+        "alt": "Planta siderúrgica con altos hornos",
         "title": "Una demanda industrial en crecimiento",
-        "text": "En Brasil, la creciente demanda de las empresas de celulosa ha generado un déficit de carbón vegetal industrial para la siderurgia."
+        "text": "La industria siderúrgica enfrenta crecientes desafíos de abastecimiento de carbón vegetal, con una demanda que exige mayor volumen, continuidad y estabilidad en el suministro."
       },
       {
-        "img": "tractor",
-        "alt": "Tractor trabajando en un campo agrícola en Santa Cruz",
+        "img": "01-problemas/costo-insumos-agricolas",
+        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
         "title": "El creciente costo de los insumos agrícolas",
         "text": "Los altos precios de fertilizantes y agroquímicos reducen el margen del productor y aumentan la necesidad de alternativas locales y sostenibles."
       }
@@ -47,32 +47,35 @@
     "solutionLabel": "Nuestra solución",
     "solutions": [
       {
-        "icon": "residue",
-        "title": "Convertir residuo forestal en productos industriales",
-        "text": "La pirólisis controlada transforma el residuo forestal en productos industriales de alto valor."
+        "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
+        "alt": "Tronco de madera mitad natural y mitad carbonizada",
+        "title": "Transformamos biomasa desaprovechada en valor industrial.",
+        "text": "A través de pirólisis controlada, transformamos biomasa forestal en carbón vegetal premium, ácido piroleñoso y briquetas, creando nuevas aplicaciones y valor a partir de un mismo recurso."
       },
       {
-        "icon": "supply",
-        "title": "Suministro industrial constante",
-        "text": "Producción de carbón estable y escalable para la siderurgia, en especial en Brasil y Asia."
+        "img": "02-nuestra-solucion/abastecimiento-industria",
+        "alt": "Camión cargado de carbón vegetal en carretera",
+        "title": "Abastecimiento confiable para la industria.",
+        "text": "Desarrollamos una fuente de abastecimiento sólida y escalable para acompañar las necesidades operativas de la industria siderúrgica."
       },
       {
-        "icon": "agro",
-        "title": "Insumos agrícolas naturales",
-        "text": "Un bioinsumo derivado de la biomasa que reduce la dependencia de agroquímicos y favorece una agricultura más sostenible."
+        "img": "02-nuestra-solucion/bioinsumos-agricultura",
+        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
+        "title": "Bioinsumos para una agricultura más eficiente",
+        "text": "Una solución natural orientada a reducir la dependencia de agroquímicos, proteger la salud del suelo y acompañar cultivos más equilibrados y sostenibles."
       }
     ]
   },
   "products": {
     "label": "Productos",
     "title": "Un proceso, tres productos.",
-    "lede": "El carbón es el núcleo. El líquido y los finos que otros hornos pierden se convierten en dos líneas de producto más.",
+    "lede": "Una sola materia prima, tres productos y una cadena de valor completamente integrada.",
     "indexLabel": "Productos",
     "items": [
       {
         "id": "p-charcoal",
-        "img": "hand",
-        "alt": "Trozo de carbón denso de madera dura en la mano, con fractura vítrea",
+        "img": "04-productos/carbon-vegetal-premium",
+        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
         "navLabel": "Carbón vegetal premium",
         "tag": "Producto principal",
         "title": "Carbón vegetal premium",
@@ -129,12 +132,14 @@
         "appLabel": "Gastronomía & BBQ premium · Industria siderúrgica",
         "app": "Combustible denso y de combustión estable para parrilla y gastronomía, y carbón industrial para la siderurgia.",
         "cta": "Solicitar la ficha técnica",
-        "woodsLink": "Ficha técnica de las maderas"
+        "woodsLink": "Ficha técnica de las maderas",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexAlt": "Trozos de carbón vegetal"
       },
       {
         "id": "p-acid",
-        "img": "retort",
-        "alt": "Retorta metálica con columna de condensación donde se recupera el ácido piroleñoso",
+        "img": "04-productos/acido-pirolenoso",
+        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
         "navLabel": "Ácido piroleñoso",
         "tag": "Línea agrícola y de bioinsumos",
         "title": "Ácido piroleñoso",
@@ -179,12 +184,14 @@
             "k": "Pureza",
             "v": "Decantado, filtrado y libre de sólidos suspendidos"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexAlt": "Matraz con ácido piroleñoso"
       },
       {
         "id": "p-briquettes",
-        "img": "embers",
-        "alt": "Carbón ardiendo de forma pareja en una parrilla de prueba",
+        "img": "04-productos/briquetas-de-carbon",
+        "alt": "Briquetas de carbón encendidas",
         "navLabel": "Briquetas de carbón",
         "tag": "Línea de energía limpia y eficiente",
         "title": "Briquetas de carbón",
@@ -231,7 +238,9 @@
             "k": "Tamaño",
             "v": "Uniforme, > 30 mm"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexAlt": "Briquetas de carbón"
       }
     ]
   },
@@ -343,55 +352,56 @@
     "lede": "Cinco etapas que convierten materia prima seleccionada en productos con identidad, trazabilidad y propósito.",
     "steps": [
       {
-        "img": "loader",
-        "alt": "Cargadora y maquinaria en el sitio",
+        "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
+        "alt": "Madera apilada y clasificada en el monte",
         "title": "Recolección y clasificación de la biomasa",
         "text": "Recogemos residuos forestales de origen legal y los clasificamos antes de procesarlos."
       },
       {
-        "img": "sawmill",
-        "alt": "Sierra de troncos y transportadora en el campamento",
+        "img": "05-modelo-operativo/2-procesamiento-madera",
+        "alt": "Leña cortada lista para la carga",
         "title": "Procesamiento de la madera",
         "text": "Los troncos se cortan y preparan en el sitio para cargar las retortas."
       },
       {
-        "img": "retort-fire",
-        "alt": "Retorta encendida de noche",
+        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "alt": "Hornos metálicos de retorta en planta",
         "title": "Carbonización industrial",
-        "text": "Pirólisis controlada en retortas metálicas."
+        "text": "Pirólisis controlada en retortas metálicas.",
+        "note": "Render"
       },
       {
-        "img": "condenser",
-        "alt": "Columna de condensación y tuberías de la retorta",
+        "img": "05-modelo-operativo/4-separacion-subproductos",
+        "alt": "Tanque de recuperación de ácido piroleñoso",
         "title": "Separación y procesamiento de subproductos",
         "text": "El ácido piroleñoso se destina a decantación y maduración, los finos de carbón al proceso de briquetado y el carbón vegetal a almacenamiento protegido de humedad."
       },
       {
-        "img": "bigbags",
-        "alt": "Big-bags llenos listos para despacho",
+        "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
+        "alt": "Camión en el centro de carga y despacho",
         "title": "Empaque, logística y exportación",
         "text": "Integramos empaque, almacenamiento y logística de despacho para llevar el producto final desde planta hasta clientes industriales y mercados internacionales."
       }
     ]
   },
   "compare": {
-    "img": "brick-kiln",
-    "alt": "Horno tradicional de ladrillo para carbón liberando humo",
+    "img": "06-retorta-vs-horno/horno-de-barro",
+    "alt": "Horno tradicional de barro en funcionamiento",
     "caption": "El estándar regional: un horno de ladrillo, sellado con barro y controlado a ojo.",
     "label": "Retorta vs. horno de ladrillo",
-    "title": "Qué cambia cuando el horno es de acero.",
+    "title": "Del horno tradicional a la carbonización industrial",
     "rowHead": "Criterio",
     "us": "Retorta Piroliswiss",
     "them": "Horno de ladrillo",
     "rows": [
       {
         "k": "Temperatura",
-        "us": "Se lee en un termómetro y se ajusta con la compuerta",
+        "us": "Control de temperatura en tiempo real para asegurar estabilidad y precisión durante todo el ciclo",
         "them": "Se estima por el color del humo"
       },
       {
         "k": "Humo",
-        "us": "Se condensa; los gases se queman en el hogar",
+        "us": "Los condensables se recuperan y los gases combustibles se reutilizan mediante autocombustión del sistema.",
         "them": "Se libera al aire"
       },
       {
@@ -416,24 +426,24 @@
     "title": "Madera, retortas y carbón.",
     "photos": [
       {
-        "img": "pile",
-        "alt": "Stock de carbón en el sitio de producción"
+        "img": "07-operaciones/foto-1",
+        "alt": "Pila de carbón vegetal producido"
       },
       {
-        "img": "sections",
-        "alt": "Cortes transversales de carbón con grietas radiales"
+        "img": "07-operaciones/foto-2",
+        "alt": "Bosque de donde proviene la biomasa"
       },
       {
-        "img": "quality",
-        "alt": "Prueba de combustión de carbón en una parrilla de noche"
+        "img": "07-operaciones/foto-3",
+        "alt": "Cargadora forestal apilando troncos"
       },
       {
-        "img": "logs",
-        "alt": "Troncos de madera dura cargados en una retorta"
+        "img": "07-operaciones/foto-4",
+        "alt": "Carbón encendido durante una prueba"
       },
       {
-        "img": "truck",
-        "alt": "Carrocería de camión cargada con carbón en trozos"
+        "img": "07-operaciones/foto-5",
+        "alt": "Camión cargado de carbón vegetal"
       }
     ]
   },
@@ -471,15 +481,31 @@
         "tag": "Planta 1 · En desarrollo",
         "planned": false,
         "title": "Primera planta",
-        "text": "+16 hornos metálicos de retorta para operación continua · +1.800 t/mes de carbón vegetal."
+        "lines": [
+          "+16 hornos metálicos de retorta para operación continua",
+          "+1.800 t/mes de carbón vegetal"
+        ]
       },
       {
-        "img": "plant-render",
-        "alt": "Render de una planta de retortas techada, planificada",
+        "img": "08-escalabilidad/expansion-modular",
+        "alt": "Render de planta modular con hornos de retorta",
         "tag": "Plantas 2–⁠5 · Planificado · Render",
         "planned": true,
         "title": "Expansión modular",
-        "text": "Planta 2: 2028 · Planta 3: 2029 · Plantas 4 y 5: dentro de los próximos cinco años."
+        "timeline": [
+          {
+            "year": "2028",
+            "label": "Planta 2"
+          },
+          {
+            "year": "2029",
+            "label": "Planta 3"
+          },
+          {
+            "year": "Próximos 5 años",
+            "label": "Plantas 4 & 5"
+          }
+        ]
       }
     ]
   },
@@ -499,7 +525,7 @@
     "productOptions": [
       {
         "value": "charcoal",
-        "label": "Carbón en trozos"
+        "label": "Carbón vegetal"
       },
       {
         "value": "acid",
@@ -507,7 +533,7 @@
       },
       {
         "value": "briquettes",
-        "label": "Briquetas"
+        "label": "Briquetas de carbón"
       },
       {
         "value": "several",

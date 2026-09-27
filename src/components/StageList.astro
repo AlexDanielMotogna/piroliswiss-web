@@ -13,6 +13,7 @@ interface Props {
       <h3>{s.title}</h3>
       <p>{s.text}</p>
       <figure><Photo src={s.img} alt={s.alt} sizes="(max-width: 480px) 100vw, (max-width: 1200px) 33vw, 16vw" /></figure>
+      {s.note && <p class="stg-note label">{s.note}</p>}
     </li>
   ))}
 </ol>

@@ -13,5 +13,11 @@ const { phase } = Astro.props;
   </figure>
   <p class:list={['label', 'phase-tag', { planned: phase.planned }]}>{phase.tag}</p>
   <h3 class="h-m">{phase.title}</h3>
-  <p>{phase.text}</p>
+  {phase.text && <p>{phase.text}</p>}
+  {phase.lines && <ul class="phase-lines">{phase.lines.map((l) => <li>{l}</li>)}</ul>}
+  {phase.timeline && (
+    <table class="phase-timeline">
+      <tbody>{phase.timeline.map((r) => <tr><th scope="row">{r.year}</th><td>{r.label}</td></tr>)}</tbody>
+    </table>
+  )}
 </article>

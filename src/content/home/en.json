@@ -17,7 +17,7 @@
     "facts": [
       "+16 metal retorts per plant",
       "80–⁠85 % fixed carbon",
-      "Curupaú and Quebracho Colorado",
+      "Controlled industrial carbonization",
       "Selected high-density hardwoods"
     ]
   },
@@ -32,14 +32,14 @@
         "text": "Millions of tonnes of forest residue are burned, abandoned or underused, causing pollution and economic loss."
       },
       {
-        "img": "steel",
-        "alt": "Steel plant with raw material yard",
+        "img": "01-problemas/demanda-industrial-siderurgia",
+        "alt": "Planta siderúrgica con altos hornos",
         "title": "Growing industrial demand",
-        "text": "In Brazil, growing demand from pulp companies has created a shortage of industrial charcoal for steelworks."
+        "text": "The steel industry faces growing challenges in sourcing charcoal, with demand that requires greater volume, continuity and stability of supply."
       },
       {
-        "img": "tractor",
-        "alt": "Tractor working on farmland in Santa Cruz",
+        "img": "01-problemas/costo-insumos-agricolas",
+        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
         "title": "The rising cost of farm inputs",
         "text": "High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives."
       }
@@ -47,32 +47,35 @@
     "solutionLabel": "Our solution",
     "solutions": [
       {
-        "icon": "residue",
-        "title": "Turn forest residue into industrial products",
-        "text": "Controlled pyrolysis converts forest residue into high-value industrial products."
+        "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
+        "alt": "Tronco de madera mitad natural y mitad carbonizada",
+        "title": "We turn untapped biomass into industrial value.",
+        "text": "Through controlled pyrolysis, we transform forest biomass into premium charcoal, pyroligneous acid and briquettes, creating new applications and value from a single resource."
       },
       {
-        "icon": "supply",
-        "title": "Constant industrial supply",
-        "text": "Steady, scalable charcoal production for steelworks, especially in Brazil and Asia."
+        "img": "02-nuestra-solucion/abastecimiento-industria",
+        "alt": "Camión cargado de carbón vegetal en carretera",
+        "title": "Reliable supply for industry.",
+        "text": "We are building a solid, scalable source of supply to meet the operational needs of the steel industry."
       },
       {
-        "icon": "agro",
-        "title": "Natural agricultural inputs",
-        "text": "A biomass-derived bio-input that reduces dependence on agrochemicals and supports more sustainable farming."
+        "img": "02-nuestra-solucion/bioinsumos-agricultura",
+        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
+        "title": "Bio-inputs for more efficient agriculture",
+        "text": "A natural solution that reduces dependence on agrochemicals, protects soil health and supports more balanced, sustainable crops."
       }
     ]
   },
   "products": {
     "label": "Products",
     "title": "One process, three products.",
-    "lede": "Charcoal is the core. The liquid and the fines that other kilns lose become two more product lines.",
+    "lede": "One raw material, three products and a fully integrated value chain.",
     "indexLabel": "Products",
     "items": [
       {
         "id": "p-charcoal",
-        "img": "hand",
-        "alt": "Piece of dense hardwood charcoal held in hand, showing a glassy fracture",
+        "img": "04-productos/carbon-vegetal-premium",
+        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
@@ -129,12 +132,14 @@
         "appLabel": "Gastronomy & premium BBQ · Steel industry",
         "app": "Dense, steady-burning fuel for grilling and gastronomy, and industrial charcoal for steelmaking.",
         "cta": "Request the datasheet",
-        "woodsLink": "Wood datasheets"
+        "woodsLink": "Wood datasheets",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexAlt": "Trozos de carbón vegetal"
       },
       {
         "id": "p-acid",
-        "img": "retort",
-        "alt": "Metal retort with condenser column where pyroligneous acid is recovered",
+        "img": "04-productos/acido-pirolenoso",
+        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
         "navLabel": "Pyroligneous acid",
         "tag": "Agricultural and bio-input line",
         "title": "Pyroligneous acid",
@@ -179,12 +184,14 @@
             "k": "Purity",
             "v": "Settled, filtered and free of suspended solids"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexAlt": "Matraz con ácido piroleñoso"
       },
       {
         "id": "p-briquettes",
-        "img": "embers",
-        "alt": "Charcoal burning evenly on a test grate",
+        "img": "04-productos/briquetas-de-carbon",
+        "alt": "Briquetas de carbón encendidas",
         "navLabel": "Charcoal briquettes",
         "tag": "Clean, efficient energy line",
         "title": "Charcoal briquettes",
@@ -231,7 +238,9 @@
             "k": "Size",
             "v": "Uniform, > 30 mm"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexAlt": "Briquetas de carbón"
       }
     ]
   },
@@ -343,55 +352,56 @@
     "lede": "Five stages that turn selected raw material into products with identity, traceability and purpose.",
     "steps": [
       {
-        "img": "loader",
-        "alt": "Loader and machinery on site",
+        "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
+        "alt": "Madera apilada y clasificada en el monte",
         "title": "Biomass collection and sorting",
         "text": "We collect forest residue of legal origin and sort it before processing."
       },
       {
-        "img": "sawmill",
-        "alt": "Log saw and conveyor at the camp",
+        "img": "05-modelo-operativo/2-procesamiento-madera",
+        "alt": "Leña cortada lista para la carga",
         "title": "Wood processing",
         "text": "Logs are cut and prepared on site for loading into the retorts."
       },
       {
-        "img": "retort-fire",
-        "alt": "Retort firing at night",
+        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "alt": "Hornos metálicos de retorta en planta",
         "title": "Industrial carbonisation",
-        "text": "Controlled pyrolysis in metal retorts."
+        "text": "Controlled pyrolysis in metal retorts.",
+        "note": "Rendering"
       },
       {
-        "img": "condenser",
-        "alt": "Retort condenser column and piping",
+        "img": "05-modelo-operativo/4-separacion-subproductos",
+        "alt": "Tanque de recuperación de ácido piroleñoso",
         "title": "By-product separation and processing",
         "text": "Pyroligneous acid goes to settling and maturation, charcoal fines to briquetting and charcoal to moisture-protected storage."
       },
       {
-        "img": "bigbags",
-        "alt": "Filled big-bags ready for dispatch",
+        "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
+        "alt": "Camión en el centro de carga y despacho",
         "title": "Packaging, logistics and export",
         "text": "We integrate packaging, storage and dispatch logistics to take the final product from the plant to industrial customers and international markets."
       }
     ]
   },
   "compare": {
-    "img": "brick-kiln",
-    "alt": "Traditional brick charcoal kiln releasing smoke",
+    "img": "06-retorta-vs-horno/horno-de-barro",
+    "alt": "Horno tradicional de barro en funcionamiento",
     "caption": "The regional standard: a brick kiln, sealed with mud and read by eye.",
     "label": "Retort vs. brick kiln",
-    "title": "What changes when the kiln is steel.",
+    "title": "From traditional kilns to industrial carbonization",
     "rowHead": "Criterion",
     "us": "Piroliswiss retort",
     "them": "Brick kiln",
     "rows": [
       {
         "k": "Temperature",
-        "us": "Read on a gauge, adjusted by damper",
+        "us": "Real-time temperature control for stability and precision throughout the cycle",
         "them": "Judged by smoke colour"
       },
       {
         "k": "Smoke",
-        "us": "Condensed; gases burned in the firebox",
+        "us": "Condensables are recovered and combustible gases are reused through the system's self-combustion.",
         "them": "Released to the air"
       },
       {
@@ -416,24 +426,24 @@
     "title": "Wood, retorts and charcoal.",
     "photos": [
       {
-        "img": "pile",
-        "alt": "Charcoal stock at the production site"
+        "img": "07-operaciones/foto-1",
+        "alt": "Pila de carbón vegetal producido"
       },
       {
-        "img": "sections",
-        "alt": "Cross-sections of charcoal showing radial cracks"
+        "img": "07-operaciones/foto-2",
+        "alt": "Bosque de donde proviene la biomasa"
       },
       {
-        "img": "quality",
-        "alt": "Burn test of charcoal on a grate at night"
+        "img": "07-operaciones/foto-3",
+        "alt": "Cargadora forestal apilando troncos"
       },
       {
-        "img": "logs",
-        "alt": "Hardwood logs loaded into a retort"
+        "img": "07-operaciones/foto-4",
+        "alt": "Carbón encendido durante una prueba"
       },
       {
-        "img": "truck",
-        "alt": "Truck bed loaded with lump charcoal"
+        "img": "07-operaciones/foto-5",
+        "alt": "Camión cargado de carbón vegetal"
       }
     ]
   },
@@ -471,15 +481,31 @@
         "tag": "Plant 1 · In development",
         "planned": false,
         "title": "First plant",
-        "text": "+16 metal retort kilns for continuous operation · +1,800 t/month of charcoal."
+        "lines": [
+          "+16 metal retort kilns for continuous operation",
+          "+1,800 t/month of charcoal"
+        ]
       },
       {
-        "img": "plant-render",
-        "alt": "Rendering of a planned covered retort plant",
+        "img": "08-escalabilidad/expansion-modular",
+        "alt": "Render de planta modular con hornos de retorta",
         "tag": "Plants 2–⁠5 · Planned · Rendering",
         "planned": true,
         "title": "Modular expansion",
-        "text": "Plant 2: 2028 · Plant 3: 2029 · Plants 4 and 5: within the next five years."
+        "timeline": [
+          {
+            "year": "2028",
+            "label": "Plant 2"
+          },
+          {
+            "year": "2029",
+            "label": "Plant 3"
+          },
+          {
+            "year": "Next 5 years",
+            "label": "Plants 4 & 5"
+          }
+        ]
       }
     ]
   },
@@ -499,7 +525,7 @@
     "productOptions": [
       {
         "value": "charcoal",
-        "label": "Lump charcoal"
+        "label": "Charcoal"
       },
       {
         "value": "acid",
@@ -507,7 +533,7 @@
       },
       {
         "value": "briquettes",
-        "label": "Briquettes"
+        "label": "Charcoal briquettes"
       },
       {
         "value": "several",

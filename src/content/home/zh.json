@@ -32,14 +32,14 @@
         "text": "数以百万吨计的林业剩余物被焚烧、丢弃或未被充分利用，造成污染和经济损失。"
       },
       {
-        "img": "steel",
-        "alt": "带原料堆场的钢铁厂",
+        "img": "01-problemas/demanda-industrial-siderurgia",
+        "alt": "Planta siderúrgica con altos hornos",
         "title": "不断增长的工业需求",
         "text": "在巴西，纸浆企业不断增长的需求导致钢铁厂所需的工业木炭供应短缺。"
       },
       {
-        "img": "tractor",
-        "alt": "在圣克鲁斯农田作业的拖拉机",
+        "img": "01-problemas/costo-insumos-agricolas",
+        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
         "title": "农业投入品成本不断上涨",
         "text": "化肥和农药价格高企，压缩了农户利润，也使本地化、可持续的替代品更加必要。"
       }
@@ -47,17 +47,20 @@
     "solutionLabel": "我们的方案",
     "solutions": [
       {
-        "icon": "residue",
+        "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
+        "alt": "Tronco de madera mitad natural y mitad carbonizada",
         "title": "将林业剩余物转化为工业产品",
         "text": "受控热解将林业剩余物转化为高价值的工业产品。"
       },
       {
-        "icon": "supply",
+        "img": "02-nuestra-solucion/abastecimiento-industria",
+        "alt": "Camión cargado de carbón vegetal en carretera",
         "title": "稳定的工业供应",
         "text": "为钢铁厂稳定、可扩展地生产木炭，重点面向巴西和亚洲。"
       },
       {
-        "icon": "agro",
+        "img": "02-nuestra-solucion/bioinsumos-agricultura",
+        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
         "title": "天然农业投入品",
         "text": "源自生物质的生物投入品，减少对农药化肥的依赖，支持更可持续的农业。"
       }
@@ -71,8 +74,8 @@
     "items": [
       {
         "id": "p-charcoal",
-        "img": "hand",
-        "alt": "手中一块致密的硬木木炭，断面呈玻璃光泽",
+        "img": "04-productos/carbon-vegetal-premium",
+        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
         "navLabel": "高品质块状木炭",
         "tag": "核心产品",
         "title": "高品质块状木炭",
@@ -129,12 +132,14 @@
         "appLabel": "餐饮与高端烧烤 · 钢铁工业",
         "app": "致密、燃烧稳定的烧烤与餐饮燃料，以及用于钢铁冶炼的工业木炭。",
         "cta": "索取产品规格书",
-        "woodsLink": "木材技术资料"
+        "woodsLink": "木材技术资料",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexAlt": "Trozos de carbón vegetal"
       },
       {
         "id": "p-acid",
-        "img": "retort",
-        "alt": "带冷凝塔的金属干馏炉，木醋液在此回收",
+        "img": "04-productos/acido-pirolenoso",
+        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
         "navLabel": "木醋液",
         "tag": "农业与生物投入品产品线",
         "title": "木醋液",
@@ -179,12 +184,14 @@
             "k": "纯度",
             "v": "经沉淀、过滤，无悬浮固体"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexAlt": "Matraz con ácido piroleñoso"
       },
       {
         "id": "p-briquettes",
-        "img": "embers",
-        "alt": "在测试炉排上均匀燃烧的木炭",
+        "img": "04-productos/briquetas-de-carbon",
+        "alt": "Briquetas de carbón encendidas",
         "navLabel": "木炭压块",
         "tag": "清洁高效能源产品线",
         "title": "木炭压块",
@@ -231,7 +238,9 @@
             "k": "尺寸",
             "v": "均匀，> 30 mm"
           }
-        ]
+        ],
+        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexAlt": "Briquetas de carbón"
       }
     ]
   },
@@ -343,40 +352,41 @@
     "lede": "五个阶段，将精选原料转化为有身份、可追溯、有意义的产品。",
     "steps": [
       {
-        "img": "loader",
-        "alt": "现场的装载机和机械",
+        "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
+        "alt": "Madera apilada y clasificada en el monte",
         "title": "生物质收集与分类",
         "text": "我们收集来源合法的林业剩余物，并在加工前进行分类。"
       },
       {
-        "img": "sawmill",
-        "alt": "营地中的原木锯和输送机",
+        "img": "05-modelo-operativo/2-procesamiento-madera",
+        "alt": "Leña cortada lista para la carga",
         "title": "木材加工",
         "text": "原木在现场切割和整备，用于装入干馏炉。"
       },
       {
-        "img": "retort-fire",
-        "alt": "夜间运行中的干馏炉",
+        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "alt": "Hornos metálicos de retorta en planta",
         "title": "工业炭化",
-        "text": "在金属干馏炉中进行受控热解。"
+        "text": "在金属干馏炉中进行受控热解。",
+        "note": "效果图"
       },
       {
-        "img": "condenser",
-        "alt": "干馏炉的冷凝塔和管道",
+        "img": "05-modelo-operativo/4-separacion-subproductos",
+        "alt": "Tanque de recuperación de ácido piroleñoso",
         "title": "副产品分离与加工",
         "text": "木醋液进入沉淀与陈化，炭粉进入压块工序，木炭则存放于防潮仓储。"
       },
       {
-        "img": "bigbags",
-        "alt": "装满待发运的吨袋",
+        "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
+        "alt": "Camión en el centro de carga y despacho",
         "title": "包装、物流与出口",
         "text": "我们整合包装、仓储和发运物流，将成品从工厂送达工业客户和国际市场。"
       }
     ]
   },
   "compare": {
-    "img": "brick-kiln",
-    "alt": "正在冒烟的传统砖砌炭窑",
+    "img": "06-retorta-vs-horno/horno-de-barro",
+    "alt": "Horno tradicional de barro en funcionamiento",
     "caption": "当地的通行做法：用泥封口、凭肉眼判断的砖窑。",
     "label": "干馏炉 vs. 砖窑",
     "title": "当炭窑换成钢制，会有什么不同。",
@@ -416,24 +426,24 @@
     "title": "木材、干馏炉与木炭。",
     "photos": [
       {
-        "img": "pile",
-        "alt": "生产场地的木炭库存"
+        "img": "07-operaciones/foto-1",
+        "alt": "Pila de carbón vegetal producido"
       },
       {
-        "img": "sections",
-        "alt": "带放射状裂纹的木炭横截面"
+        "img": "07-operaciones/foto-2",
+        "alt": "Bosque de donde proviene la biomasa"
       },
       {
-        "img": "quality",
-        "alt": "夜间在炉排上进行的木炭燃烧测试"
+        "img": "07-operaciones/foto-3",
+        "alt": "Cargadora forestal apilando troncos"
       },
       {
-        "img": "logs",
-        "alt": "装入干馏炉的硬木原木"
+        "img": "07-operaciones/foto-4",
+        "alt": "Carbón encendido durante una prueba"
       },
       {
-        "img": "truck",
-        "alt": "装满块状木炭的卡车车斗"
+        "img": "07-operaciones/foto-5",
+        "alt": "Camión cargado de carbón vegetal"
       }
     ]
   },
@@ -474,8 +484,8 @@
         "text": "16 台以上金属干馏炉，可连续运行 · 木炭产能 1,800+ 吨/月。"
       },
       {
-        "img": "plant-render",
-        "alt": "规划中的带顶棚干馏炉工厂效果图",
+        "img": "08-escalabilidad/expansion-modular",
+        "alt": "Render de planta modular con hornos de retorta",
         "tag": "第 2–⁠5 座工厂 · 规划中 · 效果图",
         "planned": true,
         "title": "模块化扩张",

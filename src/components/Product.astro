@@ -1,5 +1,6 @@
 ---
 import Photo from './Photo.astro';
+import { img } from '../lib/images';
 import SpecTable from './SpecTable.astro';
 import type { Home } from '../lib/types';
 import { pagePath, type Locale } from '../i18n/locales';
@@ -11,10 +12,13 @@ interface Props {
 }
 const { p, n, locale } = Astro.props;
 const num = String(n).padStart(2, '0');
+// e.g. the acid photo is 550 px wide: keep its own size and ratio instead of cropping to fill the column
+const src = img(p.img);
+const small = src.width < 900;
 ---
 <article class="prod" id={p.id}>
-  <figure>
-    <Photo src={p.img} alt={p.alt} sizes="(max-width: 1000px) 100vw, 40vw" />
+  <figure class:list={[{ natural: small }]} style={small ? `max-width:${src.width}px;aspect-ratio:${src.width}/${src.height}` : undefined}>
+    <Photo src={p.img} alt={p.alt} sizes={small ? `${src.width}px` : '(max-width: 1000px) 100vw, 40vw'} />
   </figure>
   <div class="prod-body">
     <p class="label">{num} · {p.tag}</p>

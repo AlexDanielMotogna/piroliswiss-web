@@ -24,6 +24,8 @@ const product = z
     id: text,
     img: imgKey,
     alt: text,
+    indexImg: imgKey,
+    indexAlt: text,
     navLabel: text,
     tag: text,
     title: text,
@@ -96,7 +98,7 @@ const home = defineCollection({
           items: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(3),
           solutionLabel: text,
           solutions: z
-            .array(z.object({ icon: z.enum(['residue', 'supply', 'agro']), title: text, text: text }).strict())
+            .array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict())
             .length(3),
         })
         .strict(),
@@ -141,7 +143,7 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
-          steps: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(5),
+          steps: z.array(z.object({ img: imgKey, alt: text, title: text, text: text, note: z.string().optional() }).strict()).length(5),
         })
         .strict(),
       compare: z
@@ -173,7 +175,16 @@ const home = defineCollection({
           unit: text,
           rows: z.array(z.object({ k: text, plant: text, five: text }).strict()).length(3),
           phases: z
-            .array(z.object({ img: imgKey, alt: text, tag: text, planned: z.boolean(), title: text, text: text }).strict())
+            .array(z.object({
+                img: imgKey,
+                alt: text,
+                tag: text,
+                planned: z.boolean(),
+                title: text,
+                text: z.string().optional(),
+                lines: z.array(text).optional(),
+                timeline: z.array(z.object({ year: text, label: text }).strict()).optional(),
+              }).strict())
             .length(2),
         })
         .strict(),

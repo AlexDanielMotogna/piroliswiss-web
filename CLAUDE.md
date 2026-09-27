@@ -5,7 +5,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 ## Read first
 - `docs/BRIEF.md`: sitemap, page-by-page content, design tokens, launch checklist. Source of truth.
 - `prototype/index.html`: approved homepage design. Match it pixel-for-pixel when porting; reuse its CSS tokens and component patterns for every other page.
-- `prototype/img/`: approved photos. Use only these (or files the user adds later).
+- `prototype/img/`: original approved photos. Client photos from the Sept 2026 change request live in `src/assets/img/<section>/`; image keys include the subfolder (e.g. `04-productos/acido-pirolenoso`).
 
 ## Stack
 - Astro (static output), TypeScript, plain CSS with custom properties in `src/styles/tokens.css`. No Tailwind, no component libraries, no icon packs.
@@ -15,7 +15,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 
 ## Design rules (non-negotiable)
 - Square corners, except photos (8px radius) and the application cards in Products (white, 10px radius). No text over photos (hero excepted): captions and status go below the image. No box-shadows. No gradients except photo scrims and the pyrolysis scale.
-- No icons, emoji or illustration, except the three custom line icons in "Our solution" (`SolutionIcon.astro`) and the interactive retort diagram in Process (`PyrolysisScale.astro`, from the owner's mockup); probe temperatures there are labelled illustrative. Never use icon packs. Structure comes from type, rules and tables.
+- No icons, emoji or illustration, except the interactive retort diagram in Process (`PyrolysisScale.astro`, from the owner's mockup); probe temperatures there are labelled illustrative. Never use icon packs. Structure comes from type, rules and tables.
 - Left-aligned layouts on a 12-column grid. Nothing centred except where the prototype does it.
 - Brand colours come from the logo (2026-09-26): flag red `--red` #D40000 and leaf green `--leaf` #769B17, with deep olive `--olive` for bands (plant sheet, request form, CTA). Red is for primary buttons, the small square before section labels, step and product numbers, hover and the carbonisation segment; use it sparingly, never for body text. Green for the wordmark, "our" column in comparisons and application notes.
 - Ember orange (`--ember`) is only for temperatures and `[missing data]` placeholders.
