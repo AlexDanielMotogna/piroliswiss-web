@@ -2,6 +2,7 @@
 import SectionHead from './SectionHead.astro';
 import SpecTable from './SpecTable.astro';
 import Tbc from './Tbc.astro';
+import Photo from './Photo.astro';
 import type { Company } from '../lib/types';
 
 interface Props {
@@ -16,7 +17,9 @@ const { team, facts } = Astro.props;
     <ul class="people">
       {team.members.map((m) => (
         <li class="person">
-          <figure><Tbc text={team.photo} /></figure>
+          <figure class:list={[{ 'has-photo': m.photo }]}>
+            {m.photo ? <Photo src={m.photo} alt={m.name} sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 30vw" /> : <Tbc text={team.photo} />}
+          </figure>
           <h3 class="h-m">{m.name}</h3>
           <p class="label">{m.role}</p>
           <a class="mail" href={`mailto:${m.email}`}>{m.email}</a>

@@ -132,6 +132,9 @@ section.flush{padding-top:0}
 .people{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,48px);border-top:3px solid var(--red)}
 .person{display:grid;gap:10px;align-content:start;padding-top:20px}
 .person figure{margin:0 0 8px;aspect-ratio:4/5;background:var(--paper-2);display:flex;align-items:flex-end;padding:14px}
+.person figure.has-photo{padding:0;display:block;position:relative}
+/* portraits come with different backgrounds: same crop, framed from the head */
+.person figure.has-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
 .person .h-m{font-size:clamp(22px,1.9vw,28px)}
 .person .mail{font-size:15px;color:var(--slate);text-decoration:none;overflow-wrap:anywhere;justify-self:start}
 .person .mail:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}

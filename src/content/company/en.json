@@ -30,17 +30,20 @@
       {
         "name": "Frederico Zwald",
         "role": "Founder & CEO",
-        "email": "fredericozwald@piroliswiss.com"
+        "email": "fredericozwald@piroliswiss.com",
+        "photo": "Frederico-Zwald"
       },
       {
         "name": "Christian Vargas",
         "role": "Co-Founder & CFO",
-        "email": "christianvargas@piroliswiss.com"
+        "email": "christianvargas@piroliswiss.com",
+        "photo": "Christian-Vargas"
       },
       {
         "name": "Alex Motogna",
         "role": "Co-Founder & CTO",
-        "email": "alexdanielmotogna@piroliswiss.com"
+        "email": "alexdanielmotogna@piroliswiss.com",
+        "photo": "Alex-Motogna"
       }
     ]
   },
