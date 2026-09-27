@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "木材 · Piroliswiss",
-    "description": "Piroliswiss 用于生产木炭的硬木技术资料：Curupaú (Anadenanthera colubrina) 和 Quebracho Colorado – Soto (Schinopsis brasiliensis)。"
+    "description": "Piroliswiss 用于生产木炭的硬木技术资料：Curupaú (Anadenanthera colubrina) 和 Quebracho Colorado (Schinopsis brasiliensis)。"
   },
   "intro": {
     "label": "木材",
@@ -255,7 +255,7 @@
     },
     {
       "id": "quebracho",
-      "name": "Quebracho Colorado – Soto",
+      "name": "Quebracho Colorado",
       "scientific": "Schinopsis brasiliensis"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Woods · Piroliswiss",
-    "description": "Technical datasheets of the hardwoods Piroliswiss turns into charcoal: Curupaú (Anadenanthera colubrina) and Quebracho Colorado – Soto (Schinopsis brasiliensis)."
+    "description": "Technical datasheets of the hardwoods Piroliswiss turns into charcoal: Curupaú (Anadenanthera colubrina) and Quebracho Colorado (Schinopsis brasiliensis)."
   },
   "intro": {
     "label": "Woods",
@@ -255,7 +255,7 @@
     },
     {
       "id": "quebracho",
-      "name": "Quebracho Colorado – Soto",
+      "name": "Quebracho Colorado",
       "scientific": "Schinopsis brasiliensis"
     }
   ],

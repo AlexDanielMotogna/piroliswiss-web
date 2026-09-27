@@ -15,9 +15,9 @@
     "unit": "吨 / 月",
     "figureLabel": "单厂产能",
     "facts": [
-      "每座工厂 16 台金属干馏炉",
+      "每座工厂 16 台以上金属干馏炉",
       "固定碳 80–⁠85%",
-      "Curupaú 和 Quebracho Colorado – Soto",
+      "Curupaú 和 Quebracho Colorado",
       "精选高密度硬木"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "高品质块状木炭",
         "tag": "核心产品",
         "title": "高品质块状木炭",
-        "desc": "我们的主要产品是以精选硬木制成的高品质木炭：Curupaú (Anadenanthera colubrina) 和 Quebracho Colorado – Soto (Schinopsis brasiliensis)，这些树种以高密度、高强度和出色的能量产出著称。",
+        "desc": "我们的主要产品是以精选硬木制成的高品质木炭：Curupaú (Anadenanthera colubrina) 和 Quebracho Colorado (Schinopsis brasiliensis)，这些树种以高密度、高强度和出色的能量产出著称。",
         "featLabel": "主要特点",
         "features": [
           "固定碳含量高：80–⁠85%",
@@ -111,7 +111,7 @@
           },
           {
             "k": "树种",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado – Soto (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "包装形式",
@@ -471,7 +471,7 @@
         "tag": "第 1 座工厂 · 开发中",
         "planned": false,
         "title": "第一座工厂",
-        "text": "16 台金属干馏炉，可连续运行 · 木炭产能 1,800+ 吨/月。"
+        "text": "16 台以上金属干馏炉，可连续运行 · 木炭产能 1,800+ 吨/月。"
       },
       {
         "img": "plant-render",

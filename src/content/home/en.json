@@ -15,9 +15,9 @@
     "unit": "t / month",
     "figureLabel": "Production capacity per plant",
     "facts": [
-      "16 metal retorts per plant",
+      "+16 metal retorts per plant",
       "80–⁠85 % fixed carbon",
-      "Curupaú and Quebracho Colorado – Soto",
+      "Curupaú and Quebracho Colorado",
       "Selected high-density hardwoods"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
-        "desc": "Our main product is a high-quality charcoal made from selected hardwoods: Curupaú (Anadenanthera colubrina) and Quebracho Colorado – Soto (Schinopsis brasiliensis), known for their high density, strength and excellent energy yield.",
+        "desc": "Our main product is a high-quality charcoal made from selected hardwoods: Curupaú (Anadenanthera colubrina) and Quebracho Colorado (Schinopsis brasiliensis), known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
           "High fixed carbon content: 80–⁠85 %",
@@ -111,7 +111,7 @@
           },
           {
             "k": "Species",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado – Soto (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "Formats",
@@ -471,7 +471,7 @@
         "tag": "Plant 1 · In development",
         "planned": false,
         "title": "First plant",
-        "text": "16 metal retort kilns for continuous operation · +1,800 t/month of charcoal."
+        "text": "+16 metal retort kilns for continuous operation · +1,800 t/month of charcoal."
       },
       {
         "img": "plant-render",

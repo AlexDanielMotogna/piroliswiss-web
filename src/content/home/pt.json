@@ -15,9 +15,9 @@
     "unit": "t / mês",
     "figureLabel": "Capacidade de produção por planta",
     "facts": [
-      "16 retortas metálicas por planta",
+      "+16 retortas metálicas por planta",
       "80–⁠85% de carbono fixo",
-      "Curupaú e Quebracho Colorado – Soto",
+      "Curupaú e Quebracho Colorado",
       "Madeiras duras selecionadas de alta densidade"
     ]
   },
@@ -76,7 +76,7 @@
         "navLabel": "Carvão vegetal premium",
         "tag": "Produto principal",
         "title": "Carvão vegetal premium",
-        "desc": "Nosso produto principal é um carvão vegetal de alta qualidade feito com madeiras duras selecionadas: Curupaú (Anadenanthera colubrina) e Quebracho Colorado – Soto (Schinopsis brasiliensis), conhecidas pela alta densidade, resistência e excelente rendimento energético.",
+        "desc": "Nosso produto principal é um carvão vegetal de alta qualidade feito com madeiras duras selecionadas: Curupaú (Anadenanthera colubrina) e Quebracho Colorado (Schinopsis brasiliensis), conhecidas pela alta densidade, resistência e excelente rendimento energético.",
         "featLabel": "Características principais",
         "features": [
           "Alto teor de carbono fixo: 80–⁠85%",
@@ -111,7 +111,7 @@
           },
           {
             "k": "Espécies",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado – Soto (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "Formatos",
@@ -471,7 +471,7 @@
         "tag": "Planta 1 · Em desenvolvimento",
         "planned": false,
         "title": "Primeira planta",
-        "text": "16 fornos metálicos de retorta para operação contínua · +1.800 t/mês de carvão vegetal."
+        "text": "+16 fornos metálicos de retorta para operação contínua · +1.800 t/mês de carvão vegetal."
       },
       {
         "img": "plant-render",

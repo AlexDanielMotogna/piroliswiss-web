@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Maderas · Piroliswiss",
-    "description": "Fichas técnicas de las maderas duras con las que Piroliswiss produce carbón vegetal: Curupaú (Anadenanthera colubrina) y Quebracho Colorado – Soto (Schinopsis brasiliensis)."
+    "description": "Fichas técnicas de las maderas duras con las que Piroliswiss produce carbón vegetal: Curupaú (Anadenanthera colubrina) y Quebracho Colorado (Schinopsis brasiliensis)."
   },
   "intro": {
     "label": "Maderas",
@@ -255,7 +255,7 @@
     },
     {
       "id": "quebracho",
-      "name": "Quebracho Colorado – Soto",
+      "name": "Quebracho Colorado",
       "scientific": "Schinopsis brasiliensis"
     }
   ],
