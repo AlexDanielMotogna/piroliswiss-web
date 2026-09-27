@@ -60,7 +60,7 @@ const ui = defineCollection({
           about: text,
           markAlt: text,
           columns: z.array(z.object({ title: text, links: z.array(link) }).strict()).length(2),
-          contact: z.object({ title: text, city: text, email: text, address: text, phone: text }).strict(),
+          contact: z.object({ title: text, city: text, email: text, address: text }).strict(),
           copyright: text,
           imprint: text,
           privacy: text,

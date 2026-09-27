@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import { img } from '../lib/images';
-import Tbc from './Tbc.astro';
 import type { Ui } from '../lib/types';
 import { resolveHref, type Locale } from '../i18n/locales';
 
@@ -30,7 +29,6 @@ const f = ui.footer;
           <li><a href={`mailto:${f.contact.email}`}>{f.contact.email}</a></li>
           <li>{f.contact.address}</li>
           <li>{f.contact.city}</li>
-          <li><Tbc text={f.contact.phone} /></li>
         </ul>
       </div>
     </div>
