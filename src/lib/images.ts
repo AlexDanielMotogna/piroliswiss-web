@@ -1,6 +1,6 @@
 import type { ImageMetadata } from 'astro';
 
-const files = import.meta.glob<{ default: ImageMetadata }>('../assets/img/*.{jpg,png}', { eager: true });
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/img/*.{jpg,jpeg,png,webp}', { eager: true });
 
 const byKey: Record<string, ImageMetadata> = Object.fromEntries(
   Object.entries(files).map(([path, mod]) => [path.split('/').pop()!.replace(/\.\w+$/, ''), mod.default]),
