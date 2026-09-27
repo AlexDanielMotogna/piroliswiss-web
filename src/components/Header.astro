@@ -27,6 +27,7 @@ const request = resolveHref('contact', locale);
   <div class="wrap">
     <a class="wordmark" href={localeRoot(locale)} aria-label={ui.home}>PIROLI<span>SWISS</span><svg class="flag" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#D40000"/><path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7z" fill="#fff"/></svg></a>
     <nav class="nav" aria-label={ui.navLabel}>
+      <a href={localeRoot(locale)} aria-current={page === 'home' ? 'page' : undefined}>{ui.crumbHome}</a>
       {nav.map((l) => <a href={l.url} aria-current={l.current ? 'page' : undefined}>{l.label}</a>)}
     </nav>
     <details class="lang" data-dropdown>

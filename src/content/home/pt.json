@@ -17,7 +17,7 @@
     "facts": [
       "+16 retortas metálicas por planta",
       "80–⁠85% de carbono fixo",
-      "Curupaú e Quebracho Colorado",
+      "Carbonização industrial controlada",
       "Madeiras duras selecionadas de alta densidade"
     ]
   },
@@ -55,13 +55,13 @@
       },
       {
         "img": "01-problemas/demanda-industrial-siderurgia",
-        "alt": "Planta siderúrgica con altos hornos",
+        "alt": "Usina siderúrgica com altos-fornos",
         "title": "Uma demanda industrial em crescimento",
-        "text": "No Brasil, a demanda crescente das empresas de celulose criou um déficit de carvão vegetal industrial para a siderurgia."
+        "text": "A indústria siderúrgica enfrenta desafios crescentes de abastecimento de carvão vegetal, com uma demanda que exige maior volume, continuidade e estabilidade no fornecimento."
       },
       {
         "img": "01-problemas/costo-insumos-agricolas",
-        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
+        "alt": "Pulverizador aplicando agroquímicos em uma lavoura",
         "title": "O custo crescente dos insumos agrícolas",
         "text": "Os preços altos de fertilizantes e agroquímicos reduzem a margem do produtor e aumentam a necessidade de alternativas locais e sustentáveis."
       }
@@ -70,34 +70,34 @@
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
-        "alt": "Tronco de madera mitad natural y mitad carbonizada",
-        "title": "Transformar resíduo florestal em produtos industriais",
-        "text": "A pirólise controlada converte o resíduo florestal em produtos industriais de alto valor."
+        "alt": "Tronco de madeira metade natural e metade carbonizado",
+        "title": "Transformamos biomassa desperdiçada em valor industrial.",
+        "text": "Por meio de pirólise controlada, transformamos biomassa florestal em carvão vegetal premium, ácido pirolenhoso e briquetes, criando novas aplicações e valor a partir de um mesmo recurso."
       },
       {
         "img": "02-nuestra-solucion/abastecimiento-industria",
-        "alt": "Camión cargado de carbón vegetal en carretera",
-        "title": "Fornecimento industrial constante",
-        "text": "Produção de carvão estável e escalável para a siderurgia, especialmente no Brasil e na Ásia."
+        "alt": "Caminhão carregado de carvão vegetal na estrada",
+        "title": "Fornecimento confiável para a indústria.",
+        "text": "Desenvolvemos uma fonte de abastecimento sólida e escalável para acompanhar as necessidades operacionais da indústria siderúrgica."
       },
       {
         "img": "02-nuestra-solucion/bioinsumos-agricultura",
-        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
-        "title": "Insumos agrícolas naturais",
-        "text": "Um bioinsumo derivado da biomassa que reduz a dependência de agroquímicos e favorece uma agricultura mais sustentável."
+        "alt": "Aplicação de bioinsumo em uma horta",
+        "title": "Bioinsumos para uma agricultura mais eficiente",
+        "text": "Uma solução natural voltada a reduzir a dependência de agroquímicos, proteger a saúde do solo e acompanhar cultivos mais equilibrados e sustentáveis."
       }
     ]
   },
   "products": {
     "label": "Produtos",
     "title": "Um processo, três produtos.",
-    "lede": "O carvão é o núcleo. O líquido e os finos que outros fornos perdem viram mais duas linhas de produto.",
+    "lede": "Uma única matéria-prima, três produtos e uma cadeia de valor totalmente integrada.",
     "indexLabel": "Produtos",
     "items": [
       {
         "id": "p-charcoal",
         "img": "04-productos/carbon-vegetal-premium",
-        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
+        "alt": "Mão segurando um pedaço de carvão vegetal sobre uma pilha de carvão",
         "navLabel": "Carvão vegetal premium",
         "tag": "Produto principal",
         "title": "Carvão vegetal premium",
@@ -156,12 +156,12 @@
         "cta": "Solicitar a ficha técnica",
         "woodsLink": "Ficha técnica das madeiras",
         "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
-        "indexAlt": "Trozos de carbón vegetal"
+        "indexAlt": "Pedaços de carvão vegetal"
       },
       {
         "id": "p-acid",
         "img": "04-productos/acido-pirolenoso",
-        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
+        "alt": "Garrafa de ácido pirolenhoso em uma lavoura",
         "navLabel": "Ácido pirolenhoso",
         "tag": "Linha agrícola e de bioinsumos",
         "title": "Ácido pirolenhoso",
@@ -208,12 +208,12 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
-        "indexAlt": "Matraz con ácido piroleñoso"
+        "indexAlt": "Frasco com ácido pirolenhoso"
       },
       {
         "id": "p-briquettes",
         "img": "04-productos/briquetas-de-carbon",
-        "alt": "Briquetas de carbón encendidas",
+        "alt": "Briquetes de carvão acesos",
         "navLabel": "Briquetes de carvão",
         "tag": "Linha de energia limpa e eficiente",
         "title": "Briquetes de carvão",
@@ -262,7 +262,7 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
-        "indexAlt": "Briquetas de carbón"
+        "indexAlt": "Briquetes de carvão"
       }
     ]
   },
@@ -294,29 +294,29 @@
       "gasres": "Gás residual → queimador",
       "charcoal": "Carvão vegetal"
     },
-    "bracket": "Condensação do ácido pirolenhoso · 200–⁠400 °C",
+    "bracket": "Condensação do ácido pirolenhoso · 200–⁠400 °C",
     "phases": [
       {
         "name": "Secagem",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "A madeira perde a umidade. O vapor de água sai pela chaminé antes de começar a decomposição.",
         "wood": "Madeira úmida"
       },
       {
         "name": "Torrefação",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "A hemicelulose se decompõe e a madeira escurece. Os primeiros vapores condensam como ácido pirolenhoso.",
         "wood": "Madeira torrada"
       },
       {
         "name": "Carbonização",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "Celulose e lignina se decompõem. O gás que não condensa volta ao queimador e aquece a própria retorta.",
         "wood": "Carbonizando"
       },
       {
         "name": "Refino",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "Os últimos voláteis são expulsos e o carbono fixo sobe. Sai um carvão mais estável e de qualidade constante.",
         "wood": "Carvão vegetal"
       }
@@ -375,32 +375,32 @@
     "steps": [
       {
         "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
-        "alt": "Madera apilada y clasificada en el monte",
+        "alt": "Madeira empilhada e classificada no mato",
         "title": "Coleta e classificação da biomassa",
         "text": "Coletamos resíduos florestais de origem legal e os classificamos antes do processamento."
       },
       {
         "img": "05-modelo-operativo/2-procesamiento-madera",
-        "alt": "Leña cortada lista para la carga",
+        "alt": "Lenha cortada pronta para a carga",
         "title": "Processamento da madeira",
         "text": "As toras são cortadas e preparadas no local para carregar as retortas."
       },
       {
         "img": "05-modelo-operativo/3-carbonizacion-industrial",
-        "alt": "Hornos metálicos de retorta en planta",
+        "alt": "Fornos metálicos de retorta na planta",
         "title": "Carbonização industrial",
         "text": "Pirólise controlada em retortas metálicas.",
         "note": "Render"
       },
       {
         "img": "05-modelo-operativo/4-separacion-subproductos",
-        "alt": "Tanque de recuperación de ácido piroleñoso",
+        "alt": "Tanque de recuperação de ácido pirolenhoso",
         "title": "Separação e processamento de subprodutos",
         "text": "O ácido pirolenhoso vai para decantação e maturação, os finos de carvão para a briquetagem e o carvão vegetal para armazenamento protegido da umidade."
       },
       {
         "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
-        "alt": "Camión en el centro de carga y despacho",
+        "alt": "Caminhão no centro de carga e expedição",
         "title": "Embalagem, logística e exportação",
         "text": "Integramos embalagem, armazenamento e logística de expedição para levar o produto final da planta aos clientes industriais e mercados internacionais."
       }
@@ -408,22 +408,22 @@
   },
   "compare": {
     "img": "06-retorta-vs-horno/horno-de-barro",
-    "alt": "Horno tradicional de barro en funcionamiento",
+    "alt": "Forno tradicional de barro em funcionamento",
     "caption": "O padrão regional: um forno de tijolo, vedado com barro e controlado no olho.",
     "label": "Retorta vs. forno de tijolo",
-    "title": "O que muda quando o forno é de aço.",
+    "title": "Do forno tradicional à carbonização industrial",
     "rowHead": "Critério",
     "us": "Retorta Piroliswiss",
     "them": "Forno de tijolo",
     "rows": [
       {
         "k": "Temperatura",
-        "us": "Lida em um termômetro e ajustada pelo registro",
+        "us": "Controle de temperatura em tempo real para garantir estabilidade e precisão durante todo o ciclo",
         "them": "Estimada pela cor da fumaça"
       },
       {
         "k": "Fumaça",
-        "us": "Condensada; os gases são queimados na fornalha",
+        "us": "Os condensáveis são recuperados e os gases combustíveis são reaproveitados por autocombustão do sistema.",
         "them": "Liberada no ar"
       },
       {
@@ -449,23 +449,23 @@
     "photos": [
       {
         "img": "07-operaciones/foto-1",
-        "alt": "Pila de carbón vegetal producido"
+        "alt": "Pilha de carvão vegetal produzido"
       },
       {
         "img": "07-operaciones/foto-2",
-        "alt": "Bosque de donde proviene la biomasa"
+        "alt": "Floresta de onde vem a biomassa"
       },
       {
         "img": "07-operaciones/foto-3",
-        "alt": "Cargadora forestal apilando troncos"
+        "alt": "Carregadeira florestal empilhando toras"
       },
       {
         "img": "07-operaciones/foto-4",
-        "alt": "Carbón encendido durante una prueba"
+        "alt": "Carvão aceso durante um teste"
       },
       {
         "img": "07-operaciones/foto-5",
-        "alt": "Camión cargado de carbón vegetal"
+        "alt": "Caminhão carregado de carvão vegetal"
       }
     ]
   },
@@ -503,15 +503,31 @@
         "tag": "Planta 1 · Em desenvolvimento",
         "planned": false,
         "title": "Primeira planta",
-        "text": "+16 fornos metálicos de retorta para operação contínua · +1.800 t/mês de carvão vegetal."
+        "lines": [
+          "+16 fornos metálicos de retorta para operação contínua",
+          "+1.800 t/mês de carvão vegetal"
+        ]
       },
       {
         "img": "08-escalabilidad/expansion-modular",
-        "alt": "Render de planta modular con hornos de retorta",
+        "alt": "Render de planta modular com fornos de retorta",
         "tag": "Plantas 2–⁠5 · Planejado · Render",
         "planned": true,
         "title": "Expansão modular",
-        "text": "Planta 2: 2028 · Planta 3: 2029 · Plantas 4 e 5: nos próximos cinco anos."
+        "timeline": [
+          {
+            "year": "2028",
+            "label": "Planta 2"
+          },
+          {
+            "year": "2029",
+            "label": "Planta 3"
+          },
+          {
+            "year": "Próximos 5 anos",
+            "label": "Plantas 4 e 5"
+          }
+        ]
       }
     ]
   },
@@ -532,7 +548,7 @@
         "title": "Carga de referência",
         "lines": [
           "Contêiner 40' HC",
-          "aprox. 22 t de carvão vegetal"
+          "aprox. 22 t de carvão vegetal"
         ]
       },
       {
@@ -577,7 +593,7 @@
     "productOptions": [
       {
         "value": "charcoal",
-        "label": "Carvão em pedaços"
+        "label": "Carvão vegetal"
       },
       {
         "value": "acid",
@@ -585,7 +601,7 @@
       },
       {
         "value": "briquettes",
-        "label": "Briquetes"
+        "label": "Briquetes de carvão"
       },
       {
         "value": "several",

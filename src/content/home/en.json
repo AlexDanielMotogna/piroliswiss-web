@@ -16,7 +16,7 @@
     "figureLabel": "Production capacity per plant",
     "facts": [
       "+16 metal retorts per plant",
-      "80–⁠85 % fixed carbon",
+      "80–⁠85 % fixed carbon",
       "Controlled industrial carbonization",
       "Selected high-density hardwoods"
     ]
@@ -55,13 +55,13 @@
       },
       {
         "img": "01-problemas/demanda-industrial-siderurgia",
-        "alt": "Planta siderúrgica con altos hornos",
+        "alt": "Steel plant with blast furnaces",
         "title": "Growing industrial demand",
         "text": "The steel industry faces growing challenges in sourcing charcoal, with demand that requires greater volume, continuity and stability of supply."
       },
       {
         "img": "01-problemas/costo-insumos-agricolas",
-        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
+        "alt": "Sprayer applying agrochemicals to a crop",
         "title": "The rising cost of farm inputs",
         "text": "High fertiliser and agrochemical prices cut farm margins and raise the need for local, sustainable alternatives."
       }
@@ -70,19 +70,19 @@
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
-        "alt": "Tronco de madera mitad natural y mitad carbonizada",
+        "alt": "Log half natural and half carbonised",
         "title": "We turn untapped biomass into industrial value.",
         "text": "Through controlled pyrolysis, we transform forest biomass into premium charcoal, pyroligneous acid and briquettes, creating new applications and value from a single resource."
       },
       {
         "img": "02-nuestra-solucion/abastecimiento-industria",
-        "alt": "Camión cargado de carbón vegetal en carretera",
+        "alt": "Truck loaded with charcoal on the road",
         "title": "Reliable supply for industry.",
         "text": "We are building a solid, scalable source of supply to meet the operational needs of the steel industry."
       },
       {
         "img": "02-nuestra-solucion/bioinsumos-agricultura",
-        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
+        "alt": "Bio-input being applied to a vegetable crop",
         "title": "Bio-inputs for more efficient agriculture",
         "text": "A natural solution that reduces dependence on agrochemicals, protects soil health and supports more balanced, sustainable crops."
       }
@@ -97,14 +97,14 @@
       {
         "id": "p-charcoal",
         "img": "04-productos/carbon-vegetal-premium",
-        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
+        "alt": "Hand holding a piece of charcoal over a charcoal pile",
         "navLabel": "Premium lump charcoal",
         "tag": "Core product",
         "title": "Premium lump charcoal",
         "desc": "Our main product is a high-quality charcoal made from selected hardwoods: Curupaú (Anadenanthera colubrina) and Quebracho Colorado (Schinopsis brasiliensis), known for their high density, strength and excellent energy yield.",
         "featLabel": "Key characteristics",
         "features": [
-          "High fixed carbon content: 80–⁠85 %",
+          "High fixed carbon content: 80–⁠85 %",
           "High calorific value",
           "Made from premium hardwoods",
           "Higher thermal yield",
@@ -116,7 +116,7 @@
         "spec": [
           {
             "k": "Fixed carbon",
-            "v": "80–⁠85 %"
+            "v": "80–⁠85 %"
           },
           {
             "k": "Calorific value",
@@ -124,11 +124,11 @@
           },
           {
             "k": "Moisture",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Fines (< 10 mm)",
-            "v": "< 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Predominant size",
@@ -156,12 +156,12 @@
         "cta": "Request the datasheet",
         "woodsLink": "Wood datasheets",
         "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
-        "indexAlt": "Trozos de carbón vegetal"
+        "indexAlt": "Pieces of charcoal"
       },
       {
         "id": "p-acid",
         "img": "04-productos/acido-pirolenoso",
-        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
+        "alt": "Bottle of pyroligneous acid in a crop field",
         "navLabel": "Pyroligneous acid",
         "tag": "Agricultural and bio-input line",
         "title": "Pyroligneous acid",
@@ -192,7 +192,7 @@
           },
           {
             "k": "Total acidity",
-            "v": "4–⁠7 %"
+            "v": "4–⁠7 %"
           },
           {
             "k": "Density",
@@ -208,12 +208,12 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
-        "indexAlt": "Matraz con ácido piroleñoso"
+        "indexAlt": "Flask with pyroligneous acid"
       },
       {
         "id": "p-briquettes",
         "img": "04-productos/briquetas-de-carbon",
-        "alt": "Briquetas de carbón encendidas",
+        "alt": "Burning charcoal briquettes",
         "navLabel": "Charcoal briquettes",
         "tag": "Clean, efficient energy line",
         "title": "Charcoal briquettes",
@@ -224,7 +224,7 @@
           "Long and consistent burn",
           "Ideal for gastronomy and grilling",
           "Low ash",
-          "100 % natural ingredients",
+          "100 % natural ingredients",
           "Premium South American hardwood",
           "Natural vegetable binder",
           "No chemical accelerants",
@@ -242,7 +242,7 @@
         "spec": [
           {
             "k": "Fixed carbon",
-            "v": "≥ 80 %"
+            "v": "≥ 80 %"
           },
           {
             "k": "Calorific value",
@@ -250,11 +250,11 @@
           },
           {
             "k": "Moisture",
-            "v": "< 5 %"
+            "v": "< 5 %"
           },
           {
             "k": "Ash",
-            "v": "< 4 %"
+            "v": "< 4 %"
           },
           {
             "k": "Size",
@@ -262,7 +262,7 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
-        "indexAlt": "Briquetas de carbón"
+        "indexAlt": "Charcoal briquettes"
       }
     ]
   },
@@ -294,29 +294,29 @@
       "gasres": "Residual gas → burner",
       "charcoal": "Charcoal"
     },
-    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
+    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
     "phases": [
       {
         "name": "Drying",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "The wood loses its moisture. Water vapour leaves through the chimney before decomposition begins.",
         "wood": "Wet wood"
       },
       {
         "name": "Torrefaction",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "Hemicellulose breaks down and the wood darkens. The first vapours condense as pyroligneous acid.",
         "wood": "Roasted wood"
       },
       {
         "name": "Carbonisation",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "Cellulose and lignin break down. Gas that does not condense returns to the burner and heats the retort itself.",
         "wood": "Carbonising"
       },
       {
         "name": "Refining",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "The last volatiles are driven off and fixed carbon rises. The result is a more stable charcoal of consistent quality.",
         "wood": "Charcoal"
       }
@@ -375,32 +375,32 @@
     "steps": [
       {
         "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
-        "alt": "Madera apilada y clasificada en el monte",
+        "alt": "Wood stacked and sorted in the bush",
         "title": "Biomass collection and sorting",
         "text": "We collect forest residue of legal origin and sort it before processing."
       },
       {
         "img": "05-modelo-operativo/2-procesamiento-madera",
-        "alt": "Leña cortada lista para la carga",
+        "alt": "Cut firewood ready for loading",
         "title": "Wood processing",
         "text": "Logs are cut and prepared on site for loading into the retorts."
       },
       {
         "img": "05-modelo-operativo/3-carbonizacion-industrial",
-        "alt": "Hornos metálicos de retorta en planta",
+        "alt": "Metal retort kilns at the plant",
         "title": "Industrial carbonisation",
         "text": "Controlled pyrolysis in metal retorts.",
         "note": "Rendering"
       },
       {
         "img": "05-modelo-operativo/4-separacion-subproductos",
-        "alt": "Tanque de recuperación de ácido piroleñoso",
+        "alt": "Pyroligneous acid recovery tank",
         "title": "By-product separation and processing",
         "text": "Pyroligneous acid goes to settling and maturation, charcoal fines to briquetting and charcoal to moisture-protected storage."
       },
       {
         "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
-        "alt": "Camión en el centro de carga y despacho",
+        "alt": "Truck at the loading and dispatch centre",
         "title": "Packaging, logistics and export",
         "text": "We integrate packaging, storage and dispatch logistics to take the final product from the plant to industrial customers and international markets."
       }
@@ -408,7 +408,7 @@
   },
   "compare": {
     "img": "06-retorta-vs-horno/horno-de-barro",
-    "alt": "Horno tradicional de barro en funcionamiento",
+    "alt": "Traditional mud kiln in operation",
     "caption": "The regional standard: a brick kiln, sealed with mud and read by eye.",
     "label": "Retort vs. brick kiln",
     "title": "From traditional kilns to industrial carbonization",
@@ -449,23 +449,23 @@
     "photos": [
       {
         "img": "07-operaciones/foto-1",
-        "alt": "Pila de carbón vegetal producido"
+        "alt": "Pile of finished charcoal"
       },
       {
         "img": "07-operaciones/foto-2",
-        "alt": "Bosque de donde proviene la biomasa"
+        "alt": "Forest the biomass comes from"
       },
       {
         "img": "07-operaciones/foto-3",
-        "alt": "Cargadora forestal apilando troncos"
+        "alt": "Forestry loader stacking logs"
       },
       {
         "img": "07-operaciones/foto-4",
-        "alt": "Carbón encendido durante una prueba"
+        "alt": "Charcoal burning during a test"
       },
       {
         "img": "07-operaciones/foto-5",
-        "alt": "Camión cargado de carbón vegetal"
+        "alt": "Truck loaded with charcoal"
       }
     ]
   },
@@ -510,7 +510,7 @@
       },
       {
         "img": "08-escalabilidad/expansion-modular",
-        "alt": "Render de planta modular con hornos de retorta",
+        "alt": "Rendering of a modular plant with retort kilns",
         "tag": "Plants 2–⁠5 · Planned · Rendering",
         "planned": true,
         "title": "Modular expansion",
@@ -548,7 +548,7 @@
         "title": "Reference load",
         "lines": [
           "40' HC container",
-          "approx. 22 t of charcoal"
+          "approx. 22 t of charcoal"
         ]
       },
       {

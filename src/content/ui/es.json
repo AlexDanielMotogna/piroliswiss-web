@@ -53,7 +53,7 @@
         "links": [
           {
             "href": "products#p-charcoal",
-            "label": "Carbón en trozos"
+            "label": "Carbón vegetal"
           },
           {
             "href": "products#p-acid",
@@ -61,7 +61,7 @@
           },
           {
             "href": "products#p-briquettes",
-            "label": "Briquetas"
+            "label": "Briquetas de carbón"
           },
           {
             "href": "fichas",

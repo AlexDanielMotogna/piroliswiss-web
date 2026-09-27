@@ -53,7 +53,7 @@
         "links": [
           {
             "href": "products#p-charcoal",
-            "label": "Carvão em pedaços"
+            "label": "Carvão vegetal"
           },
           {
             "href": "products#p-acid",
@@ -61,11 +61,11 @@
           },
           {
             "href": "products#p-briquettes",
-            "label": "Briquetes"
+            "label": "Briquetes de carvão"
           },
           {
             "href": "fichas",
-            "label": "Madeiras"
+            "label": "Fichas técnicas"
           },
           {
             "href": "export",

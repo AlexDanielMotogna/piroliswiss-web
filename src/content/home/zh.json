@@ -17,7 +17,7 @@
     "facts": [
       "每座工厂 16 台以上金属干馏炉",
       "固定碳 80–⁠85%",
-      "Curupaú 和 Quebracho Colorado",
+      "受控工业炭化",
       "精选高密度硬木"
     ]
   },
@@ -55,13 +55,13 @@
       },
       {
         "img": "01-problemas/demanda-industrial-siderurgia",
-        "alt": "Planta siderúrgica con altos hornos",
+        "alt": "带高炉的钢铁厂",
         "title": "不断增长的工业需求",
-        "text": "在巴西，纸浆企业不断增长的需求导致钢铁厂所需的工业木炭供应短缺。"
+        "text": "钢铁工业在木炭供应方面面临日益严峻的挑战，其需求要求更大的供应量、更好的连续性和稳定性。"
       },
       {
         "img": "01-problemas/costo-insumos-agricolas",
-        "alt": "Pulverizadora aplicando agroquímicos en un cultivo",
+        "alt": "喷雾机正在给作物喷洒农药",
         "title": "农业投入品成本不断上涨",
         "text": "化肥和农药价格高企，压缩了农户利润，也使本地化、可持续的替代品更加必要。"
       }
@@ -70,34 +70,34 @@
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
-        "alt": "Tronco de madera mitad natural y mitad carbonizada",
-        "title": "将林业剩余物转化为工业产品",
-        "text": "受控热解将林业剩余物转化为高价值的工业产品。"
+        "alt": "一半天然、一半炭化的原木",
+        "title": "将被浪费的生物质转化为工业价值。",
+        "text": "通过受控热解，我们将林业生物质转化为高品质木炭、木醋液和木炭压块，从同一资源中创造新的用途和价值。"
       },
       {
         "img": "02-nuestra-solucion/abastecimiento-industria",
-        "alt": "Camión cargado de carbón vegetal en carretera",
-        "title": "稳定的工业供应",
-        "text": "为钢铁厂稳定、可扩展地生产木炭，重点面向巴西和亚洲。"
+        "alt": "公路上满载木炭的卡车",
+        "title": "为工业提供可靠供应。",
+        "text": "我们正在建立稳定、可扩展的供应来源，满足钢铁工业的运营需求。"
       },
       {
         "img": "02-nuestra-solucion/bioinsumos-agricultura",
-        "alt": "Aplicación de bioinsumo en un cultivo de hortalizas",
-        "title": "天然农业投入品",
-        "text": "源自生物质的生物投入品，减少对农药化肥的依赖，支持更可持续的农业。"
+        "alt": "在蔬菜田中施用生物投入品",
+        "title": "助力更高效农业的生物投入品",
+        "text": "一种天然解决方案，帮助减少对农药化肥的依赖，保护土壤健康，支持更均衡、更可持续的种植。"
       }
     ]
   },
   "products": {
     "label": "产品",
     "title": "一套工艺，三种产品。",
-    "lede": "木炭是核心。其他炭窑损失掉的液体和炭粉，成为另外两条产品线。",
+    "lede": "一种原料，三种产品，一条完全整合的价值链。",
     "indexLabel": "产品",
     "items": [
       {
         "id": "p-charcoal",
         "img": "04-productos/carbon-vegetal-premium",
-        "alt": "Mano sosteniendo un trozo de carbón vegetal sobre una pila de carbón",
+        "alt": "手持一块木炭，下方是木炭堆",
         "navLabel": "高品质块状木炭",
         "tag": "核心产品",
         "title": "高品质块状木炭",
@@ -156,12 +156,12 @@
         "cta": "索取产品规格书",
         "woodsLink": "木材技术资料",
         "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
-        "indexAlt": "Trozos de carbón vegetal"
+        "indexAlt": "块状木炭"
       },
       {
         "id": "p-acid",
         "img": "04-productos/acido-pirolenoso",
-        "alt": "Botella de ácido piroleñoso en un campo de cultivo",
+        "alt": "农田中的一瓶木醋液",
         "navLabel": "木醋液",
         "tag": "农业与生物投入品产品线",
         "title": "木醋液",
@@ -208,12 +208,12 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
-        "indexAlt": "Matraz con ácido piroleñoso"
+        "indexAlt": "装有木醋液的烧瓶"
       },
       {
         "id": "p-briquettes",
         "img": "04-productos/briquetas-de-carbon",
-        "alt": "Briquetas de carbón encendidas",
+        "alt": "燃烧中的木炭压块",
         "navLabel": "木炭压块",
         "tag": "清洁高效能源产品线",
         "title": "木炭压块",
@@ -262,7 +262,7 @@
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
-        "indexAlt": "Briquetas de carbón"
+        "indexAlt": "木炭压块"
       }
     ]
   },
@@ -294,29 +294,29 @@
       "gasres": "残余气 → 燃烧器",
       "charcoal": "木炭"
     },
-    "bracket": "木醋液冷凝 · 200–⁠400 °C",
+    "bracket": "木醋液冷凝 · 200–⁠400 °C",
     "phases": [
       {
         "name": "干燥",
-        "range": "< 200 °C",
+        "range": "< 200 °C",
         "text": "木材失去水分。在分解开始前，水蒸气从烟囱排出。",
         "wood": "湿木材"
       },
       {
         "name": "烘焙",
-        "range": "200–⁠280 °C",
+        "range": "200–⁠280 °C",
         "text": "半纤维素分解，木材颜色变深。最初的蒸汽冷凝为木醋液。",
         "wood": "烘焙木材"
       },
       {
         "name": "炭化",
-        "range": "280–⁠450 °C",
+        "range": "280–⁠450 °C",
         "text": "纤维素和木质素分解。不可冷凝的气体回到燃烧器，为干馏炉自身供热。",
         "wood": "炭化中"
       },
       {
         "name": "精炼",
-        "range": "450–⁠550 °C",
+        "range": "450–⁠550 °C",
         "text": "最后的挥发分被排出，固定碳含量上升，得到更稳定、品质一致的木炭。",
         "wood": "木炭"
       }
@@ -375,32 +375,32 @@
     "steps": [
       {
         "img": "05-modelo-operativo/1-recoleccion-clasificacion-biomasa",
-        "alt": "Madera apilada y clasificada en el monte",
+        "alt": "在林地中堆放并分类的木材",
         "title": "生物质收集与分类",
         "text": "我们收集来源合法的林业剩余物，并在加工前进行分类。"
       },
       {
         "img": "05-modelo-operativo/2-procesamiento-madera",
-        "alt": "Leña cortada lista para la carga",
+        "alt": "切好待装炉的木柴",
         "title": "木材加工",
         "text": "原木在现场切割和整备，用于装入干馏炉。"
       },
       {
         "img": "05-modelo-operativo/3-carbonizacion-industrial",
-        "alt": "Hornos metálicos de retorta en planta",
+        "alt": "工厂中的金属干馏炉",
         "title": "工业炭化",
         "text": "在金属干馏炉中进行受控热解。",
         "note": "效果图"
       },
       {
         "img": "05-modelo-operativo/4-separacion-subproductos",
-        "alt": "Tanque de recuperación de ácido piroleñoso",
+        "alt": "木醋液回收罐",
         "title": "副产品分离与加工",
         "text": "木醋液进入沉淀与陈化，炭粉进入压块工序，木炭则存放于防潮仓储。"
       },
       {
         "img": "05-modelo-operativo/5-empaque-logistica-exportacion",
-        "alt": "Camión en el centro de carga y despacho",
+        "alt": "装货发运中心的卡车",
         "title": "包装、物流与出口",
         "text": "我们整合包装、仓储和发运物流，将成品从工厂送达工业客户和国际市场。"
       }
@@ -408,22 +408,22 @@
   },
   "compare": {
     "img": "06-retorta-vs-horno/horno-de-barro",
-    "alt": "Horno tradicional de barro en funcionamiento",
+    "alt": "正在运行的传统泥窑",
     "caption": "当地的通行做法：用泥封口、凭肉眼判断的砖窑。",
     "label": "干馏炉 vs. 砖窑",
-    "title": "当炭窑换成钢制，会有什么不同。",
+    "title": "从传统炭窑到工业化炭化",
     "rowHead": "对比项",
     "us": "Piroliswiss 干馏炉",
     "them": "砖窑",
     "rows": [
       {
         "k": "温度",
-        "us": "读取温度表，通过风门调节",
+        "us": "实时温度控制，确保整个周期稳定、精确",
         "them": "凭烟色判断"
       },
       {
         "k": "烟气",
-        "us": "冷凝回收；可燃气体在燃烧室中烧掉",
+        "us": "可冷凝物被回收，可燃气体通过系统自燃重新利用。",
         "them": "直接排入空气"
       },
       {
@@ -449,23 +449,23 @@
     "photos": [
       {
         "img": "07-operaciones/foto-1",
-        "alt": "Pila de carbón vegetal producido"
+        "alt": "已产出的木炭堆"
       },
       {
         "img": "07-operaciones/foto-2",
-        "alt": "Bosque de donde proviene la biomasa"
+        "alt": "生物质来源的林地"
       },
       {
         "img": "07-operaciones/foto-3",
-        "alt": "Cargadora forestal apilando troncos"
+        "alt": "林业装载机正在堆放原木"
       },
       {
         "img": "07-operaciones/foto-4",
-        "alt": "Carbón encendido durante una prueba"
+        "alt": "测试中燃烧的木炭"
       },
       {
         "img": "07-operaciones/foto-5",
-        "alt": "Camión cargado de carbón vegetal"
+        "alt": "满载木炭的卡车"
       }
     ]
   },
@@ -503,15 +503,31 @@
         "tag": "第 1 座工厂 · 开发中",
         "planned": false,
         "title": "第一座工厂",
-        "text": "16 台以上金属干馏炉，可连续运行 · 木炭产能 1,800+ 吨/月。"
+        "lines": [
+          "16 台以上金属干馏炉，可连续运行",
+          "木炭产能 1,800+ 吨/月"
+        ]
       },
       {
         "img": "08-escalabilidad/expansion-modular",
-        "alt": "Render de planta modular con hornos de retorta",
+        "alt": "带干馏炉的模块化工厂效果图",
         "tag": "第 2–⁠5 座工厂 · 规划中 · 效果图",
         "planned": true,
         "title": "模块化扩张",
-        "text": "第 2 座工厂：2028 年 · 第 3 座工厂：2029 年 · 第 4、5 座工厂：未来五年内。"
+        "timeline": [
+          {
+            "year": "2028 年",
+            "label": "第 2 座工厂"
+          },
+          {
+            "year": "2029 年",
+            "label": "第 3 座工厂"
+          },
+          {
+            "year": "未来五年内",
+            "label": "第 4、5 座工厂"
+          }
+        ]
       }
     ]
   },
@@ -557,7 +573,7 @@
       },
       {
         "img": "07-operaciones/foto-5",
-        "alt": "装满木炭的卡车"
+        "alt": "满载木炭的卡车"
       }
     ]
   },
@@ -577,7 +593,7 @@
     "productOptions": [
       {
         "value": "charcoal",
-        "label": "块状木炭"
+        "label": "木炭"
       },
       {
         "value": "acid",

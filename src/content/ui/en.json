@@ -53,7 +53,7 @@
         "links": [
           {
             "href": "products#p-charcoal",
-            "label": "Lump charcoal"
+            "label": "Charcoal"
           },
           {
             "href": "products#p-acid",
@@ -61,11 +61,11 @@
           },
           {
             "href": "products#p-briquettes",
-            "label": "Briquettes"
+            "label": "Charcoal briquettes"
           },
           {
             "href": "fichas",
-            "label": "Woods"
+            "label": "Datasheets"
           },
           {
             "href": "export",
