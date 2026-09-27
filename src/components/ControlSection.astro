@@ -5,12 +5,13 @@ import type { Home } from '../lib/types';
 
 interface Props {
   control: Home['control'];
+  level?: 1 | 2;
 }
-const { control: c } = Astro.props;
+const { control: c, level = 2 } = Astro.props;
 ---
 <section id="control" class="control">
   <div class="wrap">
-    <SectionHead label={c.label} title={c.title} lede={c.lede} />
+    <SectionHead label={c.label} title={c.title} lede={c.lede} level={level} />
     <div class="control-grid">
       <div class="shots" data-slider>
         <div class="shots-track" tabindex="0">

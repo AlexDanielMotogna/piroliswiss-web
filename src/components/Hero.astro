@@ -1,12 +1,14 @@
 ---
 import Photo from './Photo.astro';
 import type { Home } from '../lib/types';
+import { resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
   hero: Home['hero'];
   cta: string;
+  locale: Locale;
 }
-const { hero, cta } = Astro.props;
+const { hero, cta, locale } = Astro.props;
 ---
 <div class="hero">
   <Photo src={hero.img} alt={hero.alt} sizes="100vw" eager />
@@ -14,8 +16,8 @@ const { hero, cta } = Astro.props;
     <h1 class="h-xl">{hero.title}</h1>
     <p class="sub">{hero.sub}</p>
     <div class="actions">
-      <a class="btn" href="#request">{cta} <span class="arr" aria-hidden="true">→</span></a>
-      <a class="btn ghost" href="#process">{hero.secondary}</a>
+      <a class="btn" href={resolveHref('contact', locale)}>{cta} <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn ghost" href={resolveHref('process', locale)}>{hero.secondary}</a>
     </div>
   </div>
 </div>

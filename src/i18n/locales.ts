@@ -30,6 +30,12 @@ export const langName: Record<Locale, string> = {
 export const pages = {
   home: { es: '/', pt: '/pt/', en: '/en/', zh: '/zh/' },
   company: { es: '/empresa/', pt: '/pt/empresa/', en: '/en/company/', zh: '/zh/company/' },
+  products: { es: '/productos/', pt: '/pt/produtos/', en: '/en/products/', zh: '/zh/products/' },
+  process: { es: '/proceso/', pt: '/pt/processo/', en: '/en/process/', zh: '/zh/process/' },
+  traceability: { es: '/trazabilidad/', pt: '/pt/rastreabilidade/', en: '/en/traceability/', zh: '/zh/traceability/' },
+  model: { es: '/modelo-operativo/', pt: '/pt/modelo-operacional/', en: '/en/operating-model/', zh: '/zh/operating-model/' },
+  scale: { es: '/escalabilidad/', pt: '/pt/escalabilidade/', en: '/en/scalability/', zh: '/zh/scalability/' },
+  contact: { es: '/contacto/', pt: '/pt/contato/', en: '/en/contact/', zh: '/zh/contact/' },
   // Datasheets were supplied in Spanish only; other locales link to the Spanish page.
   fichas: { es: '/fichas-tecnicas/' },
 } as const satisfies Record<string, Partial<Record<Locale, string>> & { es: string }>;

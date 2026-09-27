@@ -184,15 +184,36 @@ section.flush{padding-top:0}
 @media (max-width:640px){.ft-index{grid-template-columns:1fr}.ft-index a+a{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
 
 /* product index: cut-out photos on light tiles */
-.prod-thumb{flex:none;width:72px;height:72px;border-radius:8px;overflow:hidden;background:#fff}
+.prod-thumb{flex:none;width:72px;height:72px;border-radius:8px;overflow:hidden;background:#F7F7F7}
 .prod-thumb img{width:100%;height:100%;object-fit:contain}
-.prod figure.natural{min-height:0;align-self:start;width:100%}
 .stg-note{margin-top:-6px}
 .phase-lines{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--slate)}
 .phase-timeline{border-collapse:collapse;width:100%;max-width:360px}
 .phase-timeline th,.phase-timeline td{text-align:left;padding:8px 0;border-top:1px solid var(--rule);vertical-align:baseline}
 .phase-timeline tr:last-child>*{border-bottom:1px solid var(--rule)}
 .phase-timeline th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.06em;color:var(--slate);width:45%;padding-right:12px}
+
+/* home: links to the inner pages */
+.explore{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.4vw,40px)}
+.explore a{display:grid;gap:12px;align-content:start;text-decoration:none}
+.explore figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:8px}
+.explore img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.explore a:hover img{transform:scale(1.03)}
+.explore h3{margin:0;font-size:clamp(19px,1.5vw,23px);font-weight:600;letter-spacing:-.015em;line-height:1.2}
+.explore .more{font-weight:600;font-size:15px;border-bottom:1px solid currentColor;justify-self:start;padding-bottom:2px}
+.explore a:hover .more,.explore a:hover h3{color:var(--red)}
+.home-products .more-row{margin-top:32px}
+.home-prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,40px)}
+.home-prod-grid a{display:grid;gap:10px;align-content:start;text-decoration:none}
+/* #F7F7F7 is the background baked into the cut-out photos */
+.home-prod-img{display:block;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:#F7F7F7}
+.home-prod-img img{width:100%;height:100%;object-fit:contain;padding:8%;transition:transform .4s}
+.home-prod-grid a:hover img{transform:scale(1.04)}
+.home-prod-grid b{font-size:clamp(20px,1.7vw,26px);font-weight:600;letter-spacing:-.02em}
+.home-prod-grid a:hover b{color:var(--red)}
+@media (max-width:700px){.home-prod-grid{grid-template-columns:1fr}}
+@media (max-width:1100px){.explore{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.explore{grid-template-columns:1fr}}
 
 /* products */
 .products{background:var(--paper-2)}
@@ -207,7 +228,9 @@ section.flush{padding-top:0}
 .prod-index a:hover{color:var(--red)}
 .prod-index .label{color:var(--red)}
 .prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);padding-block:clamp(40px,5vw,72px);border-top:1px solid var(--rule);scroll-margin-top:80px}
-.prod figure{margin:0;position:relative;overflow:hidden;min-height:460px;background:var(--paper)}
+/* every product photo gets the same 4:3 frame (max 560 px, the acid photo's native width),
+   sticky beside the long spec column instead of stretching to its height */
+.prod figure{margin:0;position:sticky;top:96px;align-self:start;width:100%;max-width:560px;aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
 .prod figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .prod-body{display:grid;gap:22px;align-content:start;min-width:0}
 .prod-title{font-size:clamp(30px,3.2vw,48px)}
@@ -230,7 +253,7 @@ section.flush{padding-top:0}
 .apps{display:grid;gap:8px;padding:18px 22px;background:var(--card);border-radius:10px}
 .apps p{font-size:15px}
 @media (max-width:1100px){.prod-cols{grid-template-columns:1fr}}
-@media (max-width:1000px){.prod{grid-template-columns:1fr}.prod figure{min-height:340px}}
+@media (max-width:1000px){.prod{grid-template-columns:1fr}.prod figure{position:relative;top:0}}
 @media (max-width:640px){.feat.two{grid-template-columns:1fr}.prod-index{grid-template-columns:1fr}.prod-index a+a{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
 
 /* pyrolysis band */

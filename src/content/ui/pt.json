@@ -3,27 +3,27 @@
   "home": "Início da Piroliswiss",
   "nav": [
     {
-      "href": "#about",
+      "href": "company",
       "label": "Quem somos"
     },
     {
-      "href": "#products",
+      "href": "products",
       "label": "Produtos"
     },
     {
-      "href": "#process",
+      "href": "process",
       "label": "Processo"
     },
     {
-      "href": "#control",
+      "href": "traceability",
       "label": "Rastreabilidade"
     },
     {
-      "href": "#provenance",
+      "href": "model",
       "label": "Modelo operacional"
     },
     {
-      "href": "#scale",
+      "href": "scale",
       "label": "Escalabilidade"
     }
   ],
@@ -39,19 +39,19 @@
         "title": "Empresa",
         "links": [
           {
-            "href": "#about",
+            "href": "company",
             "label": "Quem somos"
           },
           {
-            "href": "#team",
+            "href": "company#team",
             "label": "Equipe"
           },
           {
-            "href": "#provenance",
+            "href": "model",
             "label": "Modelo operacional"
           },
           {
-            "href": "#scale",
+            "href": "scale",
             "label": "Escalabilidade"
           }
         ]
@@ -60,15 +60,15 @@
         "title": "Produtos",
         "links": [
           {
-            "href": "#p-charcoal",
+            "href": "products#p-charcoal",
             "label": "Carvão em pedaços"
           },
           {
-            "href": "#p-acid",
+            "href": "products#p-acid",
             "label": "Ácido pirolenhoso"
           },
           {
-            "href": "#p-briquettes",
+            "href": "products#p-briquettes",
             "label": "Briquetes"
           },
           {
@@ -76,7 +76,7 @@
             "label": "Madeiras"
           },
           {
-            "href": "#request",
+            "href": "contact",
             "label": "Exportação e logística"
           }
         ]
@@ -92,5 +92,6 @@
     "copyright": "© 2026 Piroliswiss S.R.L. by Grupo Zwald S.R.L.",
     "imprint": "Informações legais",
     "privacy": "Privacidade"
-  }
+  },
+  "more": "Ver mais"
 }

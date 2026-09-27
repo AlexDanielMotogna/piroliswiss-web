@@ -1,38 +1,43 @@
 ---
+/**
+ * Home: a short overview that routes each visitor to the inner pages.
+ * Full content lives on /productos/, /proceso/, /trazabilidad/,
+ * /modelo-operativo/, /escalabilidad/, /empresa/ and /contacto/.
+ */
 import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Hero from './Hero.astro';
 import SpecStrip from './SpecStrip.astro';
 import SectionHead from './SectionHead.astro';
 import Photo from './Photo.astro';
-import Product from './Product.astro';
-import PyrolysisScale from './PyrolysisScale.astro';
-import StageList from './StageList.astro';
-import ControlSection from './ControlSection.astro';
-import CompareTable from './CompareTable.astro';
-import PhotoStrip from './PhotoStrip.astro';
-import ScaleTable from './ScaleTable.astro';
-import Phase from './Phase.astro';
-import RequestForm from './RequestForm.astro';
 import AboutSection from './AboutSection.astro';
-import TeamSection from './TeamSection.astro';
-import type { Locale } from '../i18n/locales';
+import CtaBand from './CtaBand.astro';
+import { resolveHref, type Locale, type PageKey } from '../i18n/locales';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
-const homeEntry = await getEntry('home', locale);
-const uiEntry = await getEntry('ui', locale);
-if (!homeEntry || !uiEntry) throw new Error(`Missing content for locale "${locale}"`);
-const companyEntry = await getEntry('company', locale);
-if (!companyEntry) throw new Error(`Missing company content for locale "${locale}"`);
-const co = companyEntry.data;
+const [homeEntry, uiEntry, companyEntry] = await Promise.all([
+  getEntry('home', locale),
+  getEntry('ui', locale),
+  getEntry('company', locale),
+]);
+if (!homeEntry || !uiEntry || !companyEntry) throw new Error(`Missing content for locale "${locale}"`);
 const t = homeEntry.data;
 const ui = uiEntry.data;
+const co = companyEntry.data;
+
+// Teasers for the inner pages: each reuses its section's own label and headline.
+const explore: { page: PageKey; img: string; alt: string; label: string; title: string }[] = [
+  { page: 'process', img: 'retort-fire', alt: t.model.steps[2]!.title, label: t.process.label, title: t.process.title },
+  { page: 'traceability', img: 'control-all', alt: t.control.label, label: t.control.label, title: t.control.title },
+  { page: 'model', img: '05-modelo-operativo/1-recoleccion-clasificacion-biomasa', alt: t.model.steps[0]!.alt, label: t.model.label, title: t.model.title },
+  { page: 'scale', img: 'site', alt: t.scale.phases[0]!.alt, label: t.scale.label, title: t.scale.title },
+];
 ---
 <Base locale={locale} page="home" title={t.meta.title} description={t.meta.description}>
-  <Hero hero={t.hero} cta={ui.requestCta} />
+  <Hero hero={t.hero} cta={ui.requestCta} locale={locale} />
   <SpecStrip plant={t.plant} />
 
   <AboutSection intro={co.intro} />
@@ -58,58 +63,36 @@ const ui = uiEntry.data;
     </div>
   </section>
 
-  <section class="products" id="products">
+  <section class="products home-products">
     <div class="wrap">
       <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} wide />
-      <nav class="prod-index" aria-label={t.products.indexLabel}>
+      <div class="home-prod-grid">
         {t.products.items.map((p, i) => (
-          <a href={`#${p.id}`}><span class="prod-thumb"><Photo src={p.indexImg} alt={p.indexAlt} sizes="96px" /></span><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
+          <a href={resolveHref(`products#${p.id}`, locale)}>
+            <span class="home-prod-img"><Photo src={p.indexImg} alt={p.indexAlt} sizes="(max-width: 700px) 100vw, 30vw" /></span>
+            <span class="label"><span class="prod-num">{String(i + 1).padStart(2, '0')}</span> · {p.tag}</span>
+            <b>{p.navLabel}</b>
+          </a>
         ))}
-      </nav>
-      {t.products.items.map((p, i) => <Product p={p} n={i + 1} locale={locale} />)}
+      </div>
+      <p class="more-row"><a class="link" href={resolveHref('products', locale)}>{ui.more} <span aria-hidden="true">→</span></a></p>
     </div>
   </section>
 
-  <section class="band" id="process">
+  <section>
     <div class="wrap">
-      <SectionHead label={t.process.label} title={t.process.title} lede={t.process.lede} mutedLede={false} />
-      <PyrolysisScale process={t.process} />
-    </div>
-  </section>
-
-  <ControlSection control={t.control} />
-
-  <section id="provenance">
-    <div class="wrap">
-      <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} wide />
-      <StageList steps={t.model.steps} />
-    </div>
-  </section>
-
-  <section class="flush">
-    <CompareTable compare={t.compare} />
-  </section>
-
-  <section class="ops" id="operations">
-    <div class="wrap">
-      <SectionHead label={t.ops.label} title={t.ops.title} />
-      <PhotoStrip photos={t.ops.photos} />
-    </div>
-  </section>
-
-  <section id="scale" class="flush">
-    <div class="wrap">
-      <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} wide />
-      <div class="scale-grid">
-        <ScaleTable scale={t.scale} />
-        <div class="roadmap">
-          {t.scale.phases.map((ph) => <Phase phase={ph} />)}
-        </div>
+      <div class="explore">
+        {explore.map((e) => (
+          <a href={resolveHref(e.page, locale)}>
+            <figure><Photo src={e.img} alt={e.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" /></figure>
+            <p class="label">{e.label}</p>
+            <h3>{e.title}</h3>
+            <span class="more">{ui.more} <span aria-hidden="true">→</span></span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <TeamSection team={co.team} facts={co.facts} />
-
-  <RequestForm req={t.request} />
+  <CtaBand title={co.cta.title} text={co.cta.text} cta={ui.requestCta} href={resolveHref('contact', locale)} />
 </Base>

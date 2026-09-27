@@ -20,7 +20,7 @@ interface Props {
 }
 const { ui, locale, page } = Astro.props;
 const nav = ui.nav.map((l) => ({ ...l, url: resolveHref(l.href, locale), current: l.href === page }));
-const request = resolveHref('#request', locale);
+const request = resolveHref('contact', locale);
 ---
 <a class="skip" href="#main">{ui.skip}</a>
 <header class="top" id="top">

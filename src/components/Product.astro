@@ -1,9 +1,8 @@
 ---
 import Photo from './Photo.astro';
-import { img } from '../lib/images';
 import SpecTable from './SpecTable.astro';
 import type { Home } from '../lib/types';
-import { pagePath, type Locale } from '../i18n/locales';
+import { pagePath, resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
   p: Home['products']['items'][number];
@@ -12,13 +11,10 @@ interface Props {
 }
 const { p, n, locale } = Astro.props;
 const num = String(n).padStart(2, '0');
-// e.g. the acid photo is 550 px wide: keep its own size and ratio instead of cropping to fill the column
-const src = img(p.img);
-const small = src.width < 900;
 ---
 <article class="prod" id={p.id}>
-  <figure class:list={[{ natural: small }]} style={small ? `max-width:${src.width}px;aspect-ratio:${src.width}/${src.height}` : undefined}>
-    <Photo src={p.img} alt={p.alt} sizes={small ? `${src.width}px` : '(max-width: 1000px) 100vw, 40vw'} />
+  <figure>
+    <Photo src={p.img} alt={p.alt} sizes="(max-width: 600px) 100vw, 560px" />
   </figure>
   <div class="prod-body">
     <p class="label">{num} · {p.tag}</p>
@@ -47,7 +43,7 @@ const small = src.width < 900;
       {p.output && <p class="apps-out"><span>{p.outputLabel}</span><b>{p.output.v}</b></p>}
     </div>
     <div class="prod-links">
-      <a class="link" href="#request">{p.cta}</a>
+      <a class="link" href={resolveHref('contact', locale)}>{p.cta}</a>
       {p.woodsLink && <a class="link link-2" href={pagePath('fichas', locale)} hreflang={locale === 'es' ? undefined : 'es'}>{p.woodsLink} <span aria-hidden="true">→</span></a>}
     </div>
   </div>

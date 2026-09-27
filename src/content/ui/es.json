@@ -3,27 +3,27 @@
   "home": "Inicio de Piroliswiss",
   "nav": [
     {
-      "href": "#about",
+      "href": "company",
       "label": "Quiénes somos"
     },
     {
-      "href": "#products",
+      "href": "products",
       "label": "Productos"
     },
     {
-      "href": "#process",
+      "href": "process",
       "label": "Proceso"
     },
     {
-      "href": "#control",
+      "href": "traceability",
       "label": "Trazabilidad"
     },
     {
-      "href": "#provenance",
+      "href": "model",
       "label": "Modelo operativo"
     },
     {
-      "href": "#scale",
+      "href": "scale",
       "label": "Escalabilidad"
     }
   ],
@@ -39,19 +39,19 @@
         "title": "Empresa",
         "links": [
           {
-            "href": "#about",
+            "href": "company",
             "label": "Quiénes somos"
           },
           {
-            "href": "#team",
+            "href": "company#team",
             "label": "Equipo"
           },
           {
-            "href": "#provenance",
+            "href": "model",
             "label": "Modelo operativo"
           },
           {
-            "href": "#scale",
+            "href": "scale",
             "label": "Escalabilidad"
           }
         ]
@@ -60,15 +60,15 @@
         "title": "Productos",
         "links": [
           {
-            "href": "#p-charcoal",
+            "href": "products#p-charcoal",
             "label": "Carbón en trozos"
           },
           {
-            "href": "#p-acid",
+            "href": "products#p-acid",
             "label": "Ácido piroleñoso"
           },
           {
-            "href": "#p-briquettes",
+            "href": "products#p-briquettes",
             "label": "Briquetas"
           },
           {
@@ -76,7 +76,7 @@
             "label": "Fichas técnicas"
           },
           {
-            "href": "#request",
+            "href": "contact",
             "label": "Exportación y logística"
           }
         ]
@@ -92,5 +92,6 @@
     "copyright": "© 2026 Piroliswiss S.R.L. by Grupo Zwald S.R.L.",
     "imprint": "Aviso legal",
     "privacy": "Privacidad"
-  }
+  },
+  "more": "Ver más"
 }

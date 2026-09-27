@@ -3,6 +3,7 @@ import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import AboutSection from './AboutSection.astro';
 import TeamSection from './TeamSection.astro';
+import CtaBand from './CtaBand.astro';
 import { resolveHref, type Locale } from '../i18n/locales';
 
 interface Props {
@@ -19,11 +20,5 @@ const ui = uiEntry.data;
   <AboutSection intro={c.intro} level={1} class="page-intro" />
   <TeamSection team={c.team} facts={c.facts} />
 
-  <section class="cta-band">
-    <div class="wrap">
-      <h2 class="h-l">{c.cta.title}</h2>
-      <p>{c.cta.text}</p>
-      <a class="btn" href={resolveHref('#request', locale)}>{ui.requestCta} <span class="arr" aria-hidden="true">→</span></a>
-    </div>
-  </section>
+  <CtaBand title={c.cta.title} text={c.cta.text} cta={ui.requestCta} href={resolveHref('contact', locale)} />
 </Base>

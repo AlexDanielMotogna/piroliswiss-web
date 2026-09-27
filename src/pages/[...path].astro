@@ -1,0 +1,23 @@
+---
+/** Generates the inner pages (products, process, …) for every locale from the page map. */
+import type { GetStaticPaths } from 'astro';
+import SectionPage, { type InnerPage } from '../components/SectionPage.astro';
+import { locales, pages, type Locale } from '../i18n/locales';
+
+export const getStaticPaths = (() => {
+  const inner: InnerPage[] = ['products', 'process', 'traceability', 'model', 'scale', 'contact'];
+  return inner.flatMap((page) =>
+    locales.map((locale) => ({
+      params: { path: pages[page][locale].replace(/^\/|\/$/g, '') },
+      props: { page, locale },
+    })),
+  );
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: InnerPage;
+  locale: Locale;
+}
+const { page, locale } = Astro.props;
+---
+<SectionPage page={page} locale={locale} />

@@ -1,0 +1,117 @@
+---
+/**
+ * Inner pages built from the home content: products, process, traceability,
+ * operating model, scalability and contact. The first heading on each page is
+ * its <h1>; every page except contact closes with the contact band.
+ */
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionHead from './SectionHead.astro';
+import Photo from './Photo.astro';
+import Product from './Product.astro';
+import PyrolysisScale from './PyrolysisScale.astro';
+import StageList from './StageList.astro';
+import ControlSection from './ControlSection.astro';
+import CompareTable from './CompareTable.astro';
+import PhotoStrip from './PhotoStrip.astro';
+import ScaleTable from './ScaleTable.astro';
+import Phase from './Phase.astro';
+import RequestForm from './RequestForm.astro';
+import CtaBand from './CtaBand.astro';
+import { resolveHref, type Locale } from '../i18n/locales';
+
+export type InnerPage = 'products' | 'process' | 'traceability' | 'model' | 'scale' | 'contact';
+
+interface Props {
+  locale: Locale;
+  page: InnerPage;
+}
+const { locale, page } = Astro.props;
+const [homeEntry, uiEntry, companyEntry] = await Promise.all([
+  getEntry('home', locale),
+  getEntry('ui', locale),
+  getEntry('company', locale),
+]);
+if (!homeEntry || !uiEntry || !companyEntry) throw new Error(`Missing content for locale "${locale}"`);
+const t = homeEntry.data;
+const ui = uiEntry.data;
+const co = companyEntry.data;
+
+// Page title and description come from each section's own heading copy.
+const meta = {
+  products: { label: t.products.label, text: t.products.lede },
+  process: { label: t.process.label, text: t.process.lede },
+  traceability: { label: t.control.label, text: t.control.lede },
+  model: { label: t.model.label, text: t.model.lede },
+  scale: { label: t.scale.label, text: t.scale.lede },
+  contact: { label: t.request.label, text: t.request.text },
+}[page];
+---
+<Base locale={locale} page={page} title={`${meta.label} · Piroliswiss`} description={meta.text}>
+  {page === 'products' && (
+    <section class="products page-top">
+      <div class="wrap">
+        <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} wide level={1} />
+        <nav class="prod-index" aria-label={t.products.indexLabel}>
+          {t.products.items.map((p, i) => (
+            <a href={`#${p.id}`}><span class="prod-thumb"><Photo src={p.indexImg} alt={p.indexAlt} sizes="96px" /></span><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
+          ))}
+        </nav>
+        {t.products.items.map((p, i) => <Product p={p} n={i + 1} locale={locale} />)}
+      </div>
+    </section>
+  )}
+
+  {page === 'process' && (
+    <Fragment>
+      <section class="band page-top">
+        <div class="wrap">
+          <SectionHead label={t.process.label} title={t.process.title} lede={t.process.lede} mutedLede={false} level={1} />
+          <PyrolysisScale process={t.process} />
+        </div>
+      </section>
+      <section>
+        <CompareTable compare={t.compare} />
+      </section>
+    </Fragment>
+  )}
+
+  {page === 'traceability' && <ControlSection control={t.control} level={1} />}
+
+  {page === 'model' && (
+    <Fragment>
+      <section class="page-top">
+        <div class="wrap">
+          <SectionHead label={t.model.label} title={t.model.title} lede={t.model.lede} wide level={1} />
+          <StageList steps={t.model.steps} />
+        </div>
+      </section>
+      <section class="ops">
+        <div class="wrap">
+          <SectionHead label={t.ops.label} title={t.ops.title} />
+          <PhotoStrip photos={t.ops.photos} />
+        </div>
+      </section>
+    </Fragment>
+  )}
+
+  {page === 'scale' && (
+    <section class="page-top">
+      <div class="wrap">
+        <SectionHead label={t.scale.label} title={t.scale.title} lede={t.scale.lede} wide level={1} />
+        <div class="scale-grid">
+          <ScaleTable scale={t.scale} />
+          <div class="roadmap">
+            {t.scale.phases.map((ph) => <Phase phase={ph} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page === 'contact' && <RequestForm req={t.request} level={1} />}
+
+  {page !== 'contact' && (
+    <CtaBand title={co.cta.title} text={co.cta.text} cta={ui.requestCta} href={resolveHref('contact', locale)} />
+  )}
+</Base>

@@ -54,6 +54,7 @@ const ui = defineCollection({
       menu: text,
       langLabel: text,
       requestCta: text,
+      more: text,
       footer: z
         .object({
           about: text,

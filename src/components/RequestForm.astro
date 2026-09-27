@@ -3,14 +3,16 @@ import type { Home } from '../lib/types';
 
 interface Props {
   req: Home['request'];
+  level?: 1 | 2;
 }
-const { req: r } = Astro.props;
+const { req: r, level = 2 } = Astro.props;
+const Heading = level === 1 ? 'h1' : 'h2';
 ---
 <section class="request" id="request">
   <div class="wrap req">
     <div class="intro">
       <p class="label">{r.label}</p>
-      <h2 class="h-l">{r.title}</h2>
+      <Heading class="h-l">{r.title}</Heading>
       <p>{r.text}</p>
     </div>
     <form id="spec-form" novalidate data-error={r.error} data-done={r.done}>
