@@ -99,6 +99,7 @@ const home = defineCollection({
           title: text,
           items: z.array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict()).length(3),
           solutionLabel: text,
+          solutionTitle: text,
           solutions: z
             .array(z.object({ img: imgKey, alt: text, title: text, text: text }).strict())
             .length(3),

@@ -67,6 +67,7 @@
       }
     ],
     "solutionLabel": "Nuestra solución",
+    "solutionTitle": "Del recurso desaprovechado a soluciones de alto valor.",
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
@@ -320,7 +321,7 @@
   },
   "control": {
     "label": "Control y trazabilidad",
-    "title": "Cada horno, monitoreado en tiempo real.",
+    "title": "Monitoreo inteligente en cada ciclo.",
     "lede": "Piroliswiss Control es nuestro sistema de supervisión y monitoreo de hornos. Registra en tiempo real la temperatura de cada retorta, detecta desviaciones durante el ciclo y almacena la curva térmica de cada carga para asegurar trazabilidad, control y consistencia operativa.",
     "slides": [
       {

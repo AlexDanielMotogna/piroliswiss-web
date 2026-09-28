@@ -66,8 +66,11 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
       </div>
       <div class="solutions">
         <p class="label">{t.problems.solutionLabel}</p>
-        <div class="sol-grid">
-          {t.problems.solutions.map((s) => <div><figure class="sol-photo"><Photo src={s.img} alt={s.alt} sizes="(max-width: 1000px) 100vw, 25vw" /></figure><h3>{s.title}</h3><p>{s.text}</p></div>)}
+        <div class="sol-body">
+          <h2 class="h-m sol-title">{t.problems.solutionTitle}</h2>
+          <div class="sol-grid">
+            {t.problems.solutions.map((s) => <div><figure class="sol-photo"><Photo src={s.img} alt={s.alt} sizes="(max-width: 1000px) 100vw, 25vw" /></figure><h3>{s.title}</h3><p>{s.text}</p></div>)}
+          </div>
         </div>
       </div>
     </div>

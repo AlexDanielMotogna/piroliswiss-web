@@ -67,6 +67,7 @@
       }
     ],
     "solutionLabel": "Our solution",
+    "solutionTitle": "From an untapped resource to high-value solutions.",
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
@@ -320,7 +321,7 @@
   },
   "control": {
     "label": "Control and traceability",
-    "title": "Every kiln, monitored in real time.",
+    "title": "Smart monitoring in every cycle.",
     "lede": "Piroliswiss Control is our kiln supervision and monitoring system. It records the temperature of every retort in real time, detects deviations during the cycle and stores the thermal curve of every load to ensure traceability, control and consistent operation.",
     "slides": [
       {

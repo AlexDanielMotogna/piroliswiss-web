@@ -67,6 +67,7 @@
       }
     ],
     "solutionLabel": "我们的方案",
+    "solutionTitle": "从被浪费的资源，到高价值的解决方案。",
     "solutions": [
       {
         "img": "02-nuestra-solucion/biomasa-a-valor-industrial",
@@ -320,7 +321,7 @@
   },
   "control": {
     "label": "控制与可追溯性",
-    "title": "每座炉，实时监控。",
+    "title": "每个周期，智能监控。",
     "lede": "Piroliswiss Control 是我们的炉窑监督与监控系统。它实时记录每台干馏炉的温度，检测周期中的偏差，并保存每一炉的热曲线，以确保可追溯性、可控性和运行一致性。",
     "slides": [
       {
