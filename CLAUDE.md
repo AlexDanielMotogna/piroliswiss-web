@@ -18,7 +18,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 - Contact form e-mail by SMTP. Railway variables: `SMTP_HOST`, `SMTP_PORT` (465 or 587), `SMTP_USER`, `SMTP_PASS`, optional `SMTP_SECURE`, `MAIL_FROM` (default SMTP_USER), `MAIL_TO` (default sales@piroliswiss.com), `SITE_URL` (https://piroliswiss.com once the domain points here). Local test without sending: `MAIL_TRANSPORT=json npm start` logs the e-mail.
 - Each request sends two e-mails: to sales@ (sender name "<company> vía web", Reply-To the customer) and a fixed-text confirmation to the customer in their language (Reply-To sales@; never echoes what the visitor typed, so the form cannot relay spam). `MAIL_CONFIRM=false` turns the confirmation off.
 - Without SMTP the form answers "could not send" and tells visitors to write to sales@.
-- Legal notice and privacy pages are drafts (visible draft label); NIT and legal representative are placeholders.
+- Legal notice and privacy pages are drafts (visible draft label). Legal representative: Frederico Zwald. No NIT yet (only once investors join): add a NIT row to the legal notice then.
 
 ## Design rules (non-negotiable)
 - Square corners, except photos (8px radius) and the application cards in Products (white, 10px radius). No text over photos (hero excepted): captions and status go below the image. No box-shadows. No gradients except photo scrims and the pyrolysis scale.

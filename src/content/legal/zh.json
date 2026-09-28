@@ -22,12 +22,8 @@
             "v": "office@piroliswiss.com"
           },
           {
-            "k": "税号（NIT）",
-            "tbc": "[NIT 办理中]"
-          },
-          {
             "k": "法定代表人",
-            "tbc": "[法定代表人]"
+            "v": "Frederico Zwald"
           }
         ]
       },

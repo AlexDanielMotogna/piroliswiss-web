@@ -22,12 +22,8 @@
             "v": "office@piroliswiss.com"
           },
           {
-            "k": "Tax ID (NIT)",
-            "tbc": "[NIT in progress]"
-          },
-          {
             "k": "Legal representative",
-            "tbc": "[legal representative]"
+            "v": "Frederico Zwald"
           }
         ]
       },
