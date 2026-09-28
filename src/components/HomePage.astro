@@ -96,7 +96,7 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
           <a href={resolveHref(e.href, locale)}>
             <figure><Photo src={e.img} alt={e.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" /></figure>
             <p class="label">{e.label}</p>
-            <h3>{e.title}</h3>
+            <h3>{e.title.replace(/[.。]$/, '')}</h3>
             <span class="more">{ui.more}</span>
           </a>
         ))}
