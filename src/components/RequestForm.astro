@@ -6,16 +6,19 @@ interface Props {
   req: Home['request'];
   locale: Locale;
   level?: 1 | 2;
+  /** Optional heading/intro overrides (the home page uses the shorter quote copy). */
+  title?: string;
+  text?: string;
 }
-const { req: r, locale, level = 2 } = Astro.props;
+const { req: r, locale, level = 2, title = r.title, text = r.text } = Astro.props;
 const Heading = level === 1 ? 'h1' : 'h2';
 ---
 <section class="request" id="request">
   <div class="wrap req">
     <div class="intro">
       <p class="label">{r.label}</p>
-      <Heading class="h-l">{r.title}</Heading>
-      <p>{r.text}</p>
+      <Heading class="h-l">{title}</Heading>
+      <p>{text}</p>
     </div>
     <form
       id="spec-form"
