@@ -33,8 +33,8 @@ const navLabel = (k: string) => ui.nav.find((n) => n.href === k)?.label ?? '';
 const explore: { href: string; img: string; alt: string; label: string; title: string }[] = [
   { href: 'process', img: 'retort-fire', alt: t.model.steps[2]!.title, label: navLabel('process'), title: t.process.title },
   { href: 'process#control', img: 'control-all', alt: t.control.label, label: t.control.label, title: t.control.title },
-  { href: 'export', img: '07-operaciones/foto-5', alt: t.export.photos[1]!.alt, label: t.export.label, title: t.export.title },
   { href: 'fichas', img: '07-operaciones/foto-3', alt: t.ops.photos[2]!.alt, label: t.products.label, title: t.products.items[0]!.woodsLink ?? '' },
+  { href: 'export', img: '07-operaciones/foto-5', alt: t.export.photos[1]!.alt, label: t.export.label, title: t.export.title },
 ];
 ---
 <Base locale={locale} page="home" title={t.meta.title} description={t.meta.description}>
