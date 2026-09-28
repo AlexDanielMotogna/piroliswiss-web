@@ -143,10 +143,6 @@
             "v": "Bulk · Big bags · 5, 10 and 30 kg bags"
           },
           {
-            "k": "40' HC container",
-            "v": "≈ 22 t"
-          },
-          {
             "k": "Production capacity per plant",
             "v": "+1,800 t / month"
           }
@@ -542,13 +538,6 @@
           "Bulk",
           "Big bags",
           "5, 10 and 30 kg bags"
-        ]
-      },
-      {
-        "title": "Reference load",
-        "lines": [
-          "40' HC container",
-          "approx. 22 t of charcoal"
         ]
       },
       {

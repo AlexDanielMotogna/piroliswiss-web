@@ -138,7 +138,7 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
-          blocks: z.array(z.object({ title: text, lines: z.array(text).min(1) }).strict()).length(4),
+          blocks: z.array(z.object({ title: text, lines: z.array(text).min(1) }).strict()).min(1),
           photos: z.array(z.object({ img: imgKey, alt: text }).strict()).length(2),
         })
         .strict(),

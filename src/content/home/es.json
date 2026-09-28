@@ -143,10 +143,6 @@
             "v": "A granel · Big bags · Bolsas de 5, 10 y 30 kg"
           },
           {
-            "k": "Contenedor 40' HC",
-            "v": "≈ 22 t"
-          },
-          {
             "k": "Capacidad de producción por planta",
             "v": "+1.800 t / mes"
           }
@@ -542,13 +538,6 @@
           "A granel",
           "Big bags",
           "Bolsas de 5, 10 y 30 kg"
-        ]
-      },
-      {
-        "title": "Carga de referencia",
-        "lines": [
-          "Contenedor 40' HC",
-          "aprox. 22 t de carbón vegetal"
         ]
       },
       {

@@ -143,10 +143,6 @@
             "v": "A granel · Big bags · Sacos de 5, 10 e 30 kg"
           },
           {
-            "k": "Contêiner 40' HC",
-            "v": "≈ 22 t"
-          },
-          {
             "k": "Capacidade de produção por planta",
             "v": "+1.800 t / mês"
           }
@@ -542,13 +538,6 @@
           "A granel",
           "Big bags",
           "Sacos de 5, 10 e 30 kg"
-        ]
-      },
-      {
-        "title": "Carga de referência",
-        "lines": [
-          "Contêiner 40' HC",
-          "aprox. 22 t de carvão vegetal"
         ]
       },
       {
