@@ -13,12 +13,25 @@
  */
 import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
-import { confirmationEmail, salesEmail } from '../../lib/email-templates';
+import { confirmationEmail, salesEmail, inlineImages } from '../../lib/email-templates';
+import { fileURLToPath } from 'node:url';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { locales, type Locale } from '../../i18n/locales';
 
 export const prerender = false;
 
 const env = (k: string) => process.env[k]?.trim() || undefined;
+
+// Static files of the built site (dist/client), where the e-mail images live.
+// The bundled route lives under dist/server/(chunks/), so look for the first candidate that exists.
+const PUBLIC_DIR =
+  [
+    fileURLToPath(new URL('../../client', import.meta.url)),
+    fileURLToPath(new URL('../client', import.meta.url)),
+    join(process.cwd(), 'dist', 'client'),
+    join(process.cwd(), 'public'),
+  ].find((dir) => existsSync(join(dir, 'email', 'mark.png'))) ?? join(process.cwd(), 'dist', 'client');
 
 const LIMITS = { company: 200, country: 100, email: 200, product: 60, volume: 60, incoterm: 60, message: 5000, locale: 5 };
 type Field = keyof typeof LIMITS;
@@ -89,8 +102,9 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     ['Incoterm', data.incoterm || '—'],
     ['Idioma de la web', data.locale || '—'],
   ];
-  // Links and the logo point at the domain the visitor used (works before the custom domain is live).
-  const site = env('SITE_URL') ?? new URL(request.url).origin;
+  // Links always point at the brand domain: links to a shared host (*.up.railway.app) are a spam signal.
+  const site = (env('SITE_URL') ?? 'https://piroliswiss.com').replace(/\/$/, '');
+  const attachments = inlineImages(PUBLIC_DIR);
   const locale: Locale = (locales as readonly string[]).includes(data.locale) ? (data.locale as Locale) : 'es';
   const notice = salesEmail(site, { company: data.company, email: data.email, rows, message: data.message });
 
@@ -107,6 +121,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       subject: `Solicitud de cotización · ${data.company}${data.product ? ` · ${data.product}` : ''}`,
       text: notice.text,
       html: notice.html,
+      attachments,
     });
     if (env('MAIL_TRANSPORT') === 'json') console.log('[contact] (json transport)', info.message);
   } catch (err) {
@@ -128,6 +143,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
         headers: { 'Auto-Submitted': 'auto-replied' },
         text: c.text,
         html: c.html,
+        attachments,
       });
       if (env('MAIL_TRANSPORT') === 'json') console.log('[contact] (json transport, confirmation)', info.message);
     } catch (err) {

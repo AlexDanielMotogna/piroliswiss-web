@@ -11,12 +11,21 @@ const C = {
 };
 const FONT = "Arial, 'Helvetica Neue', Helvetica, sans-serif";
 
+/** Images travel inside the e-mail (Content-ID), so no external image host is needed. */
+export const CID = { mark: 'mark@piroliswiss', flag: 'flag@piroliswiss' };
+export function inlineImages(publicDir: string) {
+  return [
+    { filename: 'piroliswiss.png', path: `${publicDir}/email/mark.png`, cid: CID.mark },
+    { filename: 'flag.png', path: `${publicDir}/email/flag.png`, cid: CID.flag },
+  ];
+}
+
 export const esc = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
 /** Shared frame: logo header, red rule, white card, olive footer. */
-function frame(opts: { site: string; lang: string; preheader: string; body: string; footer: string }) {
-  const { site, lang, preheader, body, footer } = opts;
+function frame(opts: { lang: string; preheader: string; body: string; footer: string }) {
+  const { lang, preheader, body, footer } = opts;
   return `<!doctype html>
 <html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>Piroliswiss</title></head>
 <body style="margin:0;padding:0;background:${C.bg};">
@@ -26,8 +35,9 @@ function frame(opts: { site: string; lang: string; preheader: string; body: stri
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:${C.card};border-radius:8px;overflow:hidden;">
   <tr><td style="padding:28px 36px 22px;">
     <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-      <td style="vertical-align:middle;padding-right:14px;"><a href="${site}"><img src="${site}/email/mark.png" width="44" height="45" alt="Piroliswiss" style="display:block;border:0;"></a></td>
-      <td style="vertical-align:middle;font:600 17px/1 ${FONT};letter-spacing:5px;color:${C.ink};">PIROLI<span style="color:${C.leaf};">SWISS</span></td>
+      <td style="vertical-align:middle;padding-right:14px;"><img src="cid:${CID.mark}" width="44" height="45" alt="Piroliswiss" style="display:block;border:0;"></td>
+      <td style="vertical-align:middle;font:600 17px/1 ${FONT};letter-spacing:5px;color:${C.ink};white-space:nowrap;">PIROLI<span style="color:${C.leaf};">SWISS</span></td>
+      <td style="vertical-align:middle;padding-left:4px;"><img src="cid:${CID.flag}" width="15" height="15" alt="" style="display:block;border:0;"></td>
     </tr></table>
   </td></tr>
   <tr><td style="height:3px;line-height:3px;font-size:0;background:${C.red};">&nbsp;</td></tr>
@@ -52,9 +62,9 @@ type Copy = {
 const COPY: Record<Locale, Copy> = {
   es: {
     subject: 'Hemos recibido su solicitud · Piroliswiss',
-    preheader: 'Gracias por contactar con Piroliswiss. Le responderemos en breve.',
+    preheader: 'Gracias por contactar con Piroliswiss S.R.L. Le responderemos en breve.',
     title: 'Hemos recibido su solicitud',
-    intro: 'Gracias por contactar con Piroliswiss. Nuestro equipo comercial revisará su solicitud y le responderá en breve desde {sales}.',
+    intro: 'Gracias por contactar con Piroliswiss S.R.L. Nuestro equipo comercial revisará su solicitud y le responderá en breve desde {sales}.',
     steps: 'Qué sigue',
     step: ['Revisamos su aplicación y el volumen que necesita.', 'Le enviamos la ficha técnica y una cotización según su Incoterm.', 'Coordinamos formato de entrega, documentación y logística.'],
     reply: 'Si desea añadir algún dato, responda directamente a este correo.',
@@ -64,9 +74,9 @@ const COPY: Record<Locale, Copy> = {
   },
   pt: {
     subject: 'Recebemos a sua solicitação · Piroliswiss',
-    preheader: 'Obrigado por entrar em contato com a Piroliswiss. Responderemos em breve.',
+    preheader: 'Obrigado por entrar em contato com a Piroliswiss S.R.L. Responderemos em breve.',
     title: 'Recebemos a sua solicitação',
-    intro: 'Obrigado por entrar em contato com a Piroliswiss. A nossa equipe comercial vai analisar a sua solicitação e responderá em breve pelo endereço {sales}.',
+    intro: 'Obrigado por entrar em contato com a Piroliswiss S.R.L. A nossa equipe comercial vai analisar a sua solicitação e responderá em breve pelo endereço {sales}.',
     steps: 'Próximos passos',
     step: ['Analisamos a sua aplicação e o volume de que precisa.', 'Enviamos a ficha técnica e uma cotação de acordo com o seu Incoterm.', 'Coordenamos o formato de entrega, a documentação e a logística.'],
     reply: 'Se quiser acrescentar alguma informação, basta responder a este e-mail.',
@@ -76,9 +86,9 @@ const COPY: Record<Locale, Copy> = {
   },
   en: {
     subject: 'We have received your request · Piroliswiss',
-    preheader: 'Thank you for contacting Piroliswiss. We will reply shortly.',
+    preheader: 'Thank you for contacting Piroliswiss S.R.L. We will reply shortly.',
     title: 'We have received your request',
-    intro: 'Thank you for contacting Piroliswiss. Our sales team will review your request and reply shortly from {sales}.',
+    intro: 'Thank you for contacting Piroliswiss S.R.L. Our sales team will review your request and reply shortly from {sales}.',
     steps: 'What happens next',
     step: ['We review your application and the volume you need.', 'We send you the datasheet and a quote for your Incoterm.', 'We coordinate delivery format, documents and logistics.'],
     reply: 'If you would like to add any details, simply reply to this e-mail.',
@@ -88,9 +98,9 @@ const COPY: Record<Locale, Copy> = {
   },
   zh: {
     subject: '我们已收到您的询价 · Piroliswiss',
-    preheader: '感谢您联系 Piroliswiss，我们将尽快回复。',
+    preheader: '感谢您联系 Piroliswiss S.R.L.，我们将尽快回复。',
     title: '我们已收到您的询价',
-    intro: '感谢您联系 Piroliswiss。我们的销售团队将审阅您的请求，并尽快通过 {sales} 回复您。',
+    intro: '感谢您联系 Piroliswiss S.R.L.。我们的销售团队将审阅您的请求，并尽快通过 {sales} 回复您。',
     steps: '后续步骤',
     step: ['了解您的用途和所需数量。', '按您选择的贸易术语发送产品规格书和报价。', '协调交货形式、单证和物流。'],
     reply: '如需补充信息，请直接回复本邮件。',
@@ -120,7 +130,7 @@ export function confirmationEmail(locale: Locale, site: string, sales: string) {
     <br><span style="font-size:11px;">${esc(c.why)}</span>`;
   const text = [c.title, '', intro, '', `${c.steps}:`, ...c.step.map((s, i) => `${i + 1}. ${s}`), '', c.reply, '',
     `${c.products}: ${site}${pagePath('products', locale)}`, '', 'Piroliswiss S.R.L.', c.place, sales, site].join('\n');
-  return { subject: c.subject, html: frame({ site, lang: locale, preheader: c.preheader, body, footer }), text };
+  return { subject: c.subject, html: frame({ lang: locale, preheader: c.preheader, body, footer }), text };
 }
 
 /* ---------------------------------------------------------------- internal notice */
@@ -142,5 +152,5 @@ export function salesEmail(site: string, d: { company: string; email: string; ro
     <p style="margin:8px 0 0;font:13px/1.5 ${FONT};color:${C.slate};">También puede pulsar «Responder»: la respuesta va a ${esc(d.email)}.</p>`;
   const footer = `Enviado desde el formulario de contacto de <a href="${site}" style="color:${C.oliveFg};">${site.replace(/^https?:\/\//, '')}</a>.`;
   const text = `Nueva solicitud de cotización\n\n${d.rows.map(([k, v]) => `${k}: ${v}`).join('\n')}\n\nAplicación y requisitos:\n${d.message || '—'}\n`;
-  return { html: frame({ site, lang: 'es', preheader: `${d.company} · ${d.email}`, body, footer }), text };
+  return { html: frame({ lang: 'es', preheader: `${d.company} · ${d.email}`, body, footer }), text };
 }
