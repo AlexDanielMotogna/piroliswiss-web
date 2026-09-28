@@ -16,7 +16,7 @@ const { hero, cta, locale } = Astro.props;
     <h1 class="h-xl">{hero.title}</h1>
     <p class="sub">{hero.sub}</p>
     <div class="actions">
-      <a class="btn" href={resolveHref('contact', locale)}>{cta} <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn" href={resolveHref('contact', locale)}>{cta}</a>
       <a class="btn ghost" href={resolveHref('process', locale)}>{hero.secondary}</a>
     </div>
   </div>

@@ -44,7 +44,7 @@ const num = String(n).padStart(2, '0');
     </div>
     <div class="prod-links">
       <a class="link" href={resolveHref('contact', locale)}>{p.cta}</a>
-      {p.woodsLink && <a class="link link-2" href={pagePath('fichas', locale)} hreflang={locale === 'es' ? undefined : 'es'}>{p.woodsLink} <span aria-hidden="true">→</span></a>}
+      {p.woodsLink && <a class="link link-2" href={pagePath('fichas', locale)} hreflang={locale === 'es' ? undefined : 'es'}>{p.woodsLink}</a>}
     </div>
   </div>
 </article>

@@ -49,7 +49,6 @@ p{margin:0}
 .btn:hover{background:var(--red-2);border-color:var(--red-2)}
 .btn.ghost{background:transparent;color:inherit;border-color:currentColor}
 .btn.ghost:hover{background:rgba(255,255,255,.1)}
-.btn .arr{font-family:var(--mono);font-weight:400}
 /* fix: the prototype hid the nav below 1080 px with no replacement */
 .menu{display:none;position:static}
 .menu summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:10px 12px;border:1px solid var(--ink);line-height:1}

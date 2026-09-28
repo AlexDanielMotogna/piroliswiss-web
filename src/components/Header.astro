@@ -47,14 +47,14 @@ const request = resolveHref('contact', locale);
         ))}
       </ul>
     </details>
-    <a class="btn" href={request}>{ui.requestCta} <span class="arr" aria-hidden="true">→</span></a>
+    <a class="btn" href={request}>{ui.requestCta}</a>
     <details class="menu" data-dropdown>
       <summary>{ui.menu}</summary>
       <div class="menu-panel">
         <ul>
           <li><a href={localeRoot(locale)} aria-current={markCurrent && page === 'home' ? 'page' : undefined}>{ui.crumbHome}</a></li>
           {nav.map((l) => <li><a href={l.url} aria-current={l.current ? 'page' : undefined}>{l.label}</a></li>)}
-          <li><a href={request}>{ui.requestCta} <span aria-hidden="true">→</span></a></li>
+          <li><a href={request}>{ui.requestCta}</a></li>
         </ul>
       </div>
     </details>

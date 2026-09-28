@@ -85,7 +85,7 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
           </a>
         ))}
       </div>
-      <p class="more-row"><a class="link" href={resolveHref('products', locale)}>{ui.more} <span aria-hidden="true">→</span></a></p>
+      <p class="more-row"><a class="link" href={resolveHref('products', locale)}>{ui.more}</a></p>
     </div>
   </section>
 
@@ -97,7 +97,7 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
             <figure><Photo src={e.img} alt={e.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" /></figure>
             <p class="label">{e.label}</p>
             <h3>{e.title}</h3>
-            <span class="more">{ui.more} <span aria-hidden="true">→</span></span>
+            <span class="more">{ui.more}</span>
           </a>
         ))}
       </div>

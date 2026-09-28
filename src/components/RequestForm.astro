@@ -44,7 +44,7 @@ const Heading = level === 1 ? 'h1' : 'h2';
         <select id="f-inco" name="incoterm">{r.incotermOptions.map((o) => <option>{o}</option>)}</select></div>
       <div class="f full"><label for="f-msg">{r.fields.message}</label><textarea id="f-msg" name="message" rows="3" maxlength="5000"></textarea></div>
       <div class="form-end">
-        <button class="btn" type="submit">{r.submit} <span class="arr" aria-hidden="true">→</span></button>
+        <button class="btn" type="submit">{r.submit}</button>
         <span class="form-note" id="form-note" aria-live="polite">{r.note} <a href={pagePath('privacy', locale)}>{r.privacyLink}</a></span>
       </div>
     </form>
