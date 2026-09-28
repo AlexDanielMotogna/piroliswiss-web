@@ -264,7 +264,7 @@
   },
   "process": {
     "label": "Processo",
-    "title": "Controlamos temperatura, tempo e processo para produzir carvão vegetal com qualidade e desempenho superiores.",
+    "title": "Precisão térmica e controle de processo em cada ciclo de carbonização.",
     "lede": "A madeira é carbonizada em uma retorta fechada por meio de um processo térmico controlado. Cada etapa é monitorada em tempo real por quatro sondas conectadas ao Piroliswiss Control, garantindo precisão, eficiência e uniformidade em cada ciclo.",
     "ui": {
       "stage": "Interior da retorta / fase {n} de 4",

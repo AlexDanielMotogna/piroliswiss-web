@@ -264,7 +264,7 @@
   },
   "process": {
     "label": "Process",
-    "title": "We control temperature, time and process to produce charcoal of superior quality and performance.",
+    "title": "Thermal precision and process control in every carbonisation cycle.",
     "lede": "Wood is carbonised in a closed retort through a controlled thermal process. Each stage is monitored in real time by four probes connected to Piroliswiss Control, ensuring precision, efficiency and uniformity in every cycle.",
     "ui": {
       "stage": "Inside the retort / phase {n} of 4",
