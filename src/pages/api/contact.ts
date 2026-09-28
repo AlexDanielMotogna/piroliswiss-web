@@ -67,9 +67,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   if (limited(ip)) return json(429, { ok: false, error: 'rate' });
 
   const data = Object.fromEntries(
-    (Object.keys(LIMITS) as Field[]).map((k) => [k, String(form.get(k) ?? '').replace(/
-?/g, '
-').trim().slice(0, LIMITS[k])]),
+    (Object.keys(LIMITS) as Field[]).map((k) => [k, String(form.get(k) ?? '').replace(/\r\n?/g, '\n').trim().slice(0, LIMITS[k])]),
   ) as Record<Field, string>;
 
   if (!data.company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
