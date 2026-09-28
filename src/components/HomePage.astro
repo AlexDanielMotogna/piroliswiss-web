@@ -80,7 +80,7 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
         {t.products.items.map((p, i) => (
           <a href={resolveHref(`products#${p.id}`, locale)}>
             <span class="home-prod-img"><Photo src={p.indexImg} alt={p.indexAlt} sizes="(max-width: 700px) 100vw, 30vw" /></span>
-            <span class="label"><span class="prod-num">{String(i + 1).padStart(2, '0')}</span> · {p.tag}</span>
+            <span class="label"><span class="prod-num">{String(i + 1).padStart(2, '0')}</span> / {p.tag}</span>
             <b>{p.navLabel}</b>
           </a>
         ))}

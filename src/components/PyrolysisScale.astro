@@ -144,7 +144,7 @@ const data = JSON.stringify({ phases, ui, start: START });
 
   <div class="rt-detail">
     <div class="rt-phase">
-      <span class="rt-kicker" data-k="kicker">{ui.phase} 0{START + 1} · {s.range}</span>
+      <span class="rt-kicker" data-k="kicker">{ui.phase} 0{START + 1} / {s.range}</span>
       <h3 data-k="name">{s.name}</h3>
       <p data-k="text">{s.text}</p>
     </div>
@@ -168,7 +168,7 @@ const data = JSON.stringify({ phases, ui, start: START });
       <p class="rt-note">{ui.note}</p>
     </div>
     <div class="rt-gauge">
-      <svg viewBox="0 0 160 160" role="img" data-k="gaugeSvg" aria-label={`${ui.door} · ${s.door} °C`}>
+      <svg viewBox="0 0 160 160" role="img" data-k="gaugeSvg" aria-label={`${ui.door} / ${s.door} °C`}>
         <rect width="160" height="160" fill="#B80000" />
         <circle cx="80" cy="80" r="72" fill="#C9CCC6" />
         <circle cx="80" cy="80" r="68" fill="#F2F1EC" />
@@ -180,7 +180,7 @@ const data = JSON.stringify({ phases, ui, start: START });
         <line data-k="needle" x1="80" y1="80" x2={n0.x} y2={n0.y} stroke="#17181B" stroke-width="3" stroke-linecap="round" />
         <circle cx="80" cy="80" r="6" fill="#17181B" />
       </svg>
-      <span class="rt-gauge-l" data-k="doorLabel">{ui.door} · {s.door} °C</span>
+      <span class="rt-gauge-l" data-k="doorLabel">{ui.door} / {s.door} °C</span>
     </div>
   </div>
 </div>
@@ -231,7 +231,7 @@ const data = JSON.stringify({ phases, ui, start: START });
       });
       const avg = Math.round((p.t[0]! + p.t[1]! + p.t[2]!) / 3);
       ($('marker') as unknown as HTMLElement).style.left = `${((avg / 600) * 100).toFixed(2)}%`;
-      $('kicker').textContent = `${ui.phase} 0${n + 1} · ${p.range}`;
+      $('kicker').textContent = `${ui.phase} 0${n + 1} / ${p.range}`;
       $('name').textContent = p.name;
       $('text').textContent = p.text;
       $('outputs').innerHTML = p.outputs
@@ -240,8 +240,8 @@ const data = JSON.stringify({ phases, ui, start: START });
       const a = ((135 + (p.door / 600) * 270) * Math.PI) / 180;
       $('needle').setAttribute('x2', (80 + 52 * Math.cos(a)).toFixed(1));
       $('needle').setAttribute('y2', (80 + 52 * Math.sin(a)).toFixed(1));
-      $('doorLabel').textContent = `${ui.door} · ${p.door} °C`;
-      $('gaugeSvg').setAttribute('aria-label', `${ui.door} · ${p.door} °C`);
+      $('doorLabel').textContent = `${ui.door} / ${p.door} °C`;
+      $('gaugeSvg').setAttribute('aria-label', `${ui.door} / ${p.door} °C`);
       tabs.forEach((t, k) => t.setAttribute('aria-pressed', String(k === n)));
     };
     tabs.forEach((t) => t.addEventListener('click', () => { show(Number(t.dataset.go)); }));

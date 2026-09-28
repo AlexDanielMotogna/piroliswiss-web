@@ -61,7 +61,7 @@ type Copy = {
 };
 const COPY: Record<Locale, Copy> = {
   es: {
-    subject: 'Hemos recibido su solicitud · Piroliswiss',
+    subject: 'Hemos recibido su solicitud | Piroliswiss',
     preheader: 'Gracias por contactar con Piroliswiss S.R.L. Le responderemos en breve.',
     title: 'Hemos recibido su solicitud',
     intro: 'Gracias por contactar con Piroliswiss S.R.L. Nuestro equipo comercial revisará su solicitud y le responderá en breve desde {sales}.',
@@ -73,7 +73,7 @@ const COPY: Record<Locale, Copy> = {
     why: 'Recibe este correo porque envió una solicitud en piroliswiss.com.',
   },
   pt: {
-    subject: 'Recebemos a sua solicitação · Piroliswiss',
+    subject: 'Recebemos a sua solicitação | Piroliswiss',
     preheader: 'Obrigado por entrar em contato com a Piroliswiss S.R.L. Responderemos em breve.',
     title: 'Recebemos a sua solicitação',
     intro: 'Obrigado por entrar em contato com a Piroliswiss S.R.L. A nossa equipe comercial vai analisar a sua solicitação e responderá em breve pelo endereço {sales}.',
@@ -85,7 +85,7 @@ const COPY: Record<Locale, Copy> = {
     why: 'Você recebeu este e-mail porque enviou uma solicitação em piroliswiss.com.',
   },
   en: {
-    subject: 'We have received your request · Piroliswiss',
+    subject: 'We have received your request | Piroliswiss',
     preheader: 'Thank you for contacting Piroliswiss S.R.L. We will reply shortly.',
     title: 'We have received your request',
     intro: 'Thank you for contacting Piroliswiss S.R.L. Our sales team will review your request and reply shortly from {sales}.',
@@ -97,7 +97,7 @@ const COPY: Record<Locale, Copy> = {
     why: 'You are receiving this e-mail because you sent a request on piroliswiss.com.',
   },
   zh: {
-    subject: '我们已收到您的询价 · Piroliswiss',
+    subject: '我们已收到您的询价 | Piroliswiss',
     preheader: '感谢您联系 Piroliswiss S.R.L.，我们将尽快回复。',
     title: '我们已收到您的询价',
     intro: '感谢您联系 Piroliswiss S.R.L.。我们的销售团队将审阅您的请求，并尽快通过 {sales} 回复您。',
@@ -126,7 +126,7 @@ export function confirmationEmail(locale: Locale, site: string, sales: string) {
     <p style="margin:0 0 24px;color:${C.slate};">${esc(c.reply)}</p>
     ${button(site + pagePath('products', locale), c.products)}${button(site + pagePath('fichas', locale), c.sheets, false)}`;
   const footer = `<b style="color:${C.oliveFg};">Piroliswiss S.R.L.</b><br>${esc(c.place)}<br>
-    <a href="mailto:${sales}" style="color:${C.oliveFg};">${sales}</a> · <a href="${site}" style="color:${C.oliveFg};">${site.replace(/^https?:\/\//, '')}</a>
+    <a href="mailto:${sales}" style="color:${C.oliveFg};">${sales}</a> / <a href="${site}" style="color:${C.oliveFg};">${site.replace(/^https?:\/\//, '')}</a>
     <br><span style="font-size:11px;">${esc(c.why)}</span>`;
   const text = [c.title, '', intro, '', `${c.steps}:`, ...c.step.map((s, i) => `${i + 1}. ${s}`), '', c.reply, '',
     `${c.products}: ${site}${pagePath('products', locale)}`, '', 'Piroliswiss S.R.L.', c.place, sales, site].join('\n');
@@ -141,7 +141,7 @@ export function salesEmail(site: string, d: { company: string; email: string; ro
       <td style="width:40%;vertical-align:top;padding:11px 16px 11px 0;border-top:1px solid ${C.rule};font:12px/1.5 ${FONT};letter-spacing:1px;text-transform:uppercase;color:${C.slate};">${esc(k)}</td>
       <td style="vertical-align:top;padding:11px 0;border-top:1px solid ${C.rule};font:15px/1.5 ${FONT};color:${C.ink};">${esc(v)}</td></tr>`)
     .join('');
-  const replyHref = `mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent('Piroliswiss · ' + d.company)}`;
+  const replyHref = `mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent('Piroliswiss | ' + d.company)}`;
   const body = `
     <p style="margin:0 0 8px;font:12px/1 ${FONT};letter-spacing:1.5px;text-transform:uppercase;color:${C.red};">Nueva solicitud de cotización</p>
     <h1 style="margin:0 0 24px;font:600 28px/1.15 ${FONT};letter-spacing:-0.5px;color:${C.ink};">${esc(d.company)}</h1>
@@ -152,5 +152,5 @@ export function salesEmail(site: string, d: { company: string; email: string; ro
     <p style="margin:8px 0 0;font:13px/1.5 ${FONT};color:${C.slate};">También puede pulsar «Responder»: la respuesta va a ${esc(d.email)}.</p>`;
   const footer = `Enviado desde el formulario de contacto de <a href="${site}" style="color:${C.oliveFg};">${site.replace(/^https?:\/\//, '')}</a>.`;
   const text = `Nueva solicitud de cotización\n\n${d.rows.map(([k, v]) => `${k}: ${v}`).join('\n')}\n\nAplicación y requisitos:\n${d.message || '—'}\n`;
-  return { html: frame({ lang: 'es', preheader: `${d.company} · ${d.email}`, body, footer }), text };
+  return { html: frame({ lang: 'es', preheader: `${d.company} / ${d.email}`, body, footer }), text };
 }

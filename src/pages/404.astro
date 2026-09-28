@@ -7,7 +7,7 @@ import { locales, localeRoot, langName } from '../i18n/locales';
 const entries = await Promise.all(locales.map((l) => getEntry('legal', l)));
 const es = entries[0]!.data.notFound;
 ---
-<Base locale="es" page="home" title={`${es.title} · Piroliswiss`} description={es.text} noindex>
+<Base locale="es" page="home" title={`${es.title} | Piroliswiss`} description={es.text} noindex>
   <section class="page-top notfound">
     <div class="wrap">
       <p class="label">404</p>
@@ -15,7 +15,7 @@ const es = entries[0]!.data.notFound;
       <p class="lede muted">{es.text}</p>
       <ul>
         {locales.map((l, i) => (
-          <li><a class="link" href={localeRoot(l)} lang={l}>{entries[i]!.data.notFound.back} <span class="muted">· {langName[l]}</span></a></li>
+          <li><a class="link" href={localeRoot(l)} lang={l}>{entries[i]!.data.notFound.back} <span class="muted">/ {langName[l]}</span></a></li>
         ))}
       </ul>
     </div>

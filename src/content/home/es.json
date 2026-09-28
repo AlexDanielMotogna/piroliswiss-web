@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piroliswiss · Carbón vegetal premium de rendimiento superior",
+    "title": "Piroliswiss | Carbón vegetal premium de rendimiento superior",
     "description": "Productor y exportador de carbón vegetal de maderas duras, ácido piroleñoso y briquetas de carbón, elaborados en retortas metálicas a partir de residuo forestal autorizado. Santa Cruz de la Sierra, Bolivia."
   },
   "hero": {
@@ -136,11 +136,11 @@
           },
           {
             "k": "Especies",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) / Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "Formatos",
-            "v": "A granel · Big bags · Bolsas de 5, 10 y 30 kg"
+            "v": "A granel / Big bags / Bolsas de 5, 10 y 30 kg"
           },
           {
             "k": "Capacidad de producción por planta",
@@ -267,7 +267,7 @@
     "title": "Controlamos temperatura, tiempo y proceso para producir carbón vegetal con calidad y desempeño superiores.",
     "lede": "La madera se carboniza en una retorta cerrada mediante un proceso térmico controlado. Cada etapa es monitoreada en tiempo real por cuatro sondas conectadas a Piroliswiss Control, garantizando precisión, eficiencia y uniformidad en cada ciclo.",
     "ui": {
-      "stage": "Interior de la retorta · fase {n} de 4",
+      "stage": "Interior de la retorta / fase {n} de 4",
       "chimney": "Chimenea",
       "retort": "Retorta de acero",
       "condenser": "Condensador",
@@ -290,7 +290,7 @@
       "gasres": "Gas residual → quemador",
       "charcoal": "Carbón vegetal"
     },
-    "bracket": "Condensación del ácido piroleñoso · 200–⁠400 °C",
+    "bracket": "Condensación del ácido piroleñoso / 200–⁠400 °C",
     "phases": [
       {
         "name": "Secado",
@@ -496,7 +496,7 @@
       {
         "img": "site",
         "alt": "Sitio de la primera planta",
-        "tag": "Planta 1 · En desarrollo",
+        "tag": "Planta 1 / En desarrollo",
         "planned": false,
         "title": "Primera planta",
         "lines": [
@@ -507,7 +507,7 @@
       {
         "img": "08-escalabilidad/expansion-modular",
         "alt": "Render de planta modular con hornos de retorta",
-        "tag": "Plantas 2–⁠5 · Planificado · Render",
+        "tag": "Plantas 2–⁠5 / Planificado / Render",
         "planned": true,
         "title": "Expansión modular",
         "timeline": [

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piroliswiss · 性能卓越的高品质木炭",
+    "title": "Piroliswiss | 性能卓越的高品质木炭",
     "description": "硬木块状木炭、木醋液和木炭压块的生产商与出口商，以合法许可的林业剩余物为原料，在金属干馏炉中生产。玻利维亚圣克鲁斯。"
   },
   "hero": {
@@ -136,11 +136,11 @@
           },
           {
             "k": "树种",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) / Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "包装形式",
-            "v": "散装 · 吨袋 · 5、10、30 kg 袋装"
+            "v": "散装 / 吨袋 / 5、10、30 kg 袋装"
           },
           {
             "k": "单厂产能",
@@ -267,7 +267,7 @@
     "title": "我们控制温度、时间和工艺，生产品质与性能更卓越的木炭。",
     "lede": "木材在封闭的干馏炉中通过受控热工艺炭化。每个阶段都由连接 Piroliswiss Control 的四个探头实时监测，确保每个周期的精度、效率和均匀性。",
     "ui": {
-      "stage": "干馏炉内部 · 第 {n} 阶段，共 4 阶段",
+      "stage": "干馏炉内部 / 第 {n} 阶段，共 4 阶段",
       "chimney": "烟囱",
       "retort": "钢制干馏炉",
       "condenser": "冷凝器",
@@ -290,7 +290,7 @@
       "gasres": "残余气 → 燃烧器",
       "charcoal": "木炭"
     },
-    "bracket": "木醋液冷凝 · 200–⁠400 °C",
+    "bracket": "木醋液冷凝 / 200–⁠400 °C",
     "phases": [
       {
         "name": "干燥",
@@ -496,7 +496,7 @@
       {
         "img": "site",
         "alt": "第一座工厂场地",
-        "tag": "第 1 座工厂 · 开发中",
+        "tag": "第 1 座工厂 / 开发中",
         "planned": false,
         "title": "第一座工厂",
         "lines": [
@@ -507,7 +507,7 @@
       {
         "img": "08-escalabilidad/expansion-modular",
         "alt": "带干馏炉的模块化工厂效果图",
-        "tag": "第 2–⁠5 座工厂 · 规划中 · 效果图",
+        "tag": "第 2–⁠5 座工厂 / 规划中 / 效果图",
         "planned": true,
         "title": "模块化扩张",
         "timeline": [

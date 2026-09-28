@@ -21,6 +21,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 - Legal notice and privacy pages are drafts (visible draft label). Legal representative: Frederico Zwald. No NIT yet (only once investors join): add a NIT row to the legal notice then.
 
 ## Design rules (non-negotiable)
+- No middle dot (·) as a separator (owner: reads as AI-generated). Use " / " in labels, eyebrows and inline lists; " | " in browser titles and e-mail subjects.
 - Square corners, except photos (8px radius) and the application cards in Products (white, 10px radius). No text over photos (hero excepted): captions and status go below the image. No box-shadows. No gradients except photo scrims and the pyrolysis scale.
 - No icons, emoji or illustration, except the interactive retort diagram in Process (`PyrolysisScale.astro`, from the owner's mockup); probe temperatures there are labelled illustrative. Never use icon packs. Structure comes from type, rules and tables.
 - Left-aligned layouts on a 12-column grid. Nothing centred except where the prototype does it.

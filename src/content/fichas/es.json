@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Fichas técnicas · Piroliswiss",
+    "title": "Fichas técnicas | Piroliswiss",
     "description": "Fichas técnicas de las maderas con las que Piroliswiss produce carbón vegetal: Curupau (Anadenanthera colubrina) y Quebracho Colorado (Schinopsis quebracho-colorado)."
   },
   "title": "Fichas técnicas",
@@ -169,7 +169,7 @@
             },
             {
               "k": "Tenacidad / flexión por impacto",
-              "v": "6,43 kg·m"
+              "v": "6,43 kg/m"
             }
           ]
         },
@@ -372,7 +372,7 @@
             },
             {
               "k": "Tenacidad / flexión por impacto",
-              "v": "2,59 kg·m"
+              "v": "2,59 kg/m"
             }
           ]
         },

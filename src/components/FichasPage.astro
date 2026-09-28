@@ -53,7 +53,7 @@ const f = entry.data;
                       {b.items?.map((it) => typeof it === 'string' ? null : <div><dt>{it.k}</dt><dd set:html={it.v} /></div>)}
                     </dl>
                   )}
-                  {b.kind === 'uses' && <p class="ft-uses">{b.items?.filter((it): it is string => typeof it === 'string').join(' · ')}</p>}
+                  {b.kind === 'uses' && <p class="ft-uses">{b.items?.filter((it): it is string => typeof it === 'string').join(' / ')}</p>}
                 </Fragment>
               )}
             </div>

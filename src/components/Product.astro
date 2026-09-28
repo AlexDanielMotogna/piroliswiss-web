@@ -17,7 +17,7 @@ const num = String(n).padStart(2, '0');
     <Photo src={p.img} alt={p.alt} sizes="(max-width: 600px) 100vw, 560px" />
   </figure>
   <div class="prod-body">
-    <p class="label">{num} · {p.tag}</p>
+    <p class="label">{num} / {p.tag}</p>
     <h3 class="h-l prod-title">{p.title}</h3>
     <p class="prod-desc">{p.desc}</p>
     {p.spec ? (

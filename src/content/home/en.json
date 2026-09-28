@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Piroliswiss · Premium charcoal with superior performance",
+    "title": "Piroliswiss | Premium charcoal with superior performance",
     "description": "Producer and exporter of hardwood lump charcoal, pyroligneous acid and charcoal briquettes, made in metal retorts from licensed forest residue. Santa Cruz de la Sierra, Bolivia."
   },
   "hero": {
@@ -136,11 +136,11 @@
           },
           {
             "k": "Species",
-            "v": "Curupaú (Anadenanthera colubrina) · Quebracho Colorado (Schinopsis brasiliensis)"
+            "v": "Curupaú (Anadenanthera colubrina) / Quebracho Colorado (Schinopsis brasiliensis)"
           },
           {
             "k": "Formats",
-            "v": "Bulk · Big bags · 5, 10 and 30 kg bags"
+            "v": "Bulk / Big bags / 5, 10 and 30 kg bags"
           },
           {
             "k": "Production capacity per plant",
@@ -267,7 +267,7 @@
     "title": "We control temperature, time and process to produce charcoal of superior quality and performance.",
     "lede": "Wood is carbonised in a closed retort through a controlled thermal process. Each stage is monitored in real time by four probes connected to Piroliswiss Control, ensuring precision, efficiency and uniformity in every cycle.",
     "ui": {
-      "stage": "Inside the retort · phase {n} of 4",
+      "stage": "Inside the retort / phase {n} of 4",
       "chimney": "Chimney",
       "retort": "Steel retort",
       "condenser": "Condenser",
@@ -290,7 +290,7 @@
       "gasres": "Residual gas → burner",
       "charcoal": "Charcoal"
     },
-    "bracket": "Pyroligneous acid condensed · 200–⁠400 °C",
+    "bracket": "Pyroligneous acid condensed / 200–⁠400 °C",
     "phases": [
       {
         "name": "Drying",
@@ -496,7 +496,7 @@
       {
         "img": "site",
         "alt": "Site of the first plant",
-        "tag": "Plant 1 · In development",
+        "tag": "Plant 1 / In development",
         "planned": false,
         "title": "First plant",
         "lines": [
@@ -507,7 +507,7 @@
       {
         "img": "08-escalabilidad/expansion-modular",
         "alt": "Rendering of a modular plant with retort kilns",
-        "tag": "Plants 2–⁠5 · Planned · Rendering",
+        "tag": "Plants 2–⁠5 / Planned / Rendering",
         "planned": true,
         "title": "Modular expansion",
         "timeline": [

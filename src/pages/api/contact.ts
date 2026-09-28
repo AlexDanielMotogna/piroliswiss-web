@@ -118,7 +118,7 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       from: `"${company} vía web" <${fromAddress}>`,
       to: salesAddress,
       replyTo: `"${company}" <${data.email}>`,
-      subject: `Solicitud de cotización · ${data.company}${data.product ? ` · ${data.product}` : ''}`,
+      subject: `Solicitud de cotización | ${data.company}${data.product ? ` | ${data.product}` : ''}`,
       text: notice.text,
       html: notice.html,
       attachments,

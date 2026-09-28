@@ -17,11 +17,11 @@ if (!entry) throw new Error(`Missing legal content for locale "${locale}"`);
 const L = entry.data;
 const d = L[page];
 ---
-<Base locale={locale} page={page} title={`${d.title} · Piroliswiss`} description={d.meta} crumb={d.title}>
+<Base locale={locale} page={page} title={`${d.title} | Piroliswiss`} description={d.meta} crumb={d.title}>
   <section class="page-top legal-page">
     <div class="wrap">
       <SectionHead label={d.label} title={d.title} level={1} />
-      <p class="legal-meta"><Tbc text={L.draft} /> · {L.updated}</p>
+      <p class="legal-meta"><Tbc text={L.draft} /> / {L.updated}</p>
       <div class="legal-body">
         {d.sections.map((s) => (
           <section>
