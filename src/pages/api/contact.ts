@@ -8,6 +8,7 @@
  *   SMTP_SECURE   "true" for port 465 (default: true when port is 465)
  *   MAIL_FROM     sender, default SMTP_USER
  *   MAIL_TO       recipient, default sales@piroliswiss.com
+ *   MAIL_CONFIRM  "false" to stop the confirmation e-mail to the customer
  *   MAIL_TRANSPORT=json  development only: log the e-mail instead of sending
  */
 import type { APIRoute } from 'astro';
@@ -93,19 +94,95 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
     .map(([k, v]) => `<tr><td style="color:#586166;border-bottom:1px solid #ddd">${esc(k)}</td><td style="border-bottom:1px solid #ddd">${esc(v)}</td></tr>`)
     .join('')}</table><p style="font:14px/1.5 Arial,sans-serif;white-space:pre-wrap"><b>Aplicación y requisitos</b><br>${esc(data.message || '—')}</p>`;
 
+  const fromAddress = env('MAIL_FROM') ?? env('SMTP_USER') ?? 'no-reply@piroliswiss.com';
+  const salesAddress = env('MAIL_TO') ?? 'sales@piroliswiss.com';
+  const company = displayName(data.company);
+
   try {
     const info = await tx.sendMail({
-      from: `"Web Piroliswiss" <${env('MAIL_FROM') ?? env('SMTP_USER') ?? 'no-reply@piroliswiss.com'}>`,
-      to: env('MAIL_TO') ?? 'sales@piroliswiss.com',
-      replyTo: `"${data.company.replace(/"/g, '')}" <${data.email}>`,
+      // Sent from our mailbox (a website cannot send as the customer), but the inbox shows who wrote.
+      from: `"${company} vía web" <${fromAddress}>`,
+      to: salesAddress,
+      replyTo: `"${company}" <${data.email}>`,
       subject: `Solicitud de cotización · ${data.company}${data.product ? ` · ${data.product}` : ''}`,
       text,
       html,
     });
     if (env('MAIL_TRANSPORT') === 'json') console.log('[contact] (json transport)', info.message);
-    return json(200, { ok: true });
   } catch (err) {
     console.error('[contact] send failed:', err);
     return json(502, { ok: false, error: 'send' });
   }
+
+  // Confirmation to the customer. Fixed text only (nothing the visitor typed is echoed),
+  // so the form cannot be used to send arbitrary content to third parties.
+  // A failure here does not fail the request: sales already has it.
+  if (env('MAIL_CONFIRM') !== 'false') {
+    const c = CONFIRM[(data.locale as Lang) in CONFIRM ? (data.locale as Lang) : 'es'];
+    const site = env('SITE_URL') ?? 'https://piroliswiss.com';
+    const paras = c.body.map((p) => p.replace('{sales}', salesAddress));
+    const body = [...paras, '', 'Piroliswiss S.R.L.', c.place, salesAddress, site];
+    try {
+      const info = await tx.sendMail({
+        from: `"Piroliswiss" <${fromAddress}>`,
+        to: data.email,
+        replyTo: salesAddress,
+        subject: c.subject,
+        headers: { 'Auto-Submitted': 'auto-replied' },
+        text: `${body.join('\n')}\n`,
+        html: `<div style="font:15px/1.6 Arial,sans-serif;color:#15181A">${paras.map((p) => `<p>${esc(p)}</p>`).join('')}<p style="color:#586166;font-size:13px">Piroliswiss S.R.L.<br>${esc(c.place)}<br><a href="mailto:${salesAddress}">${salesAddress}</a><br><a href="${site}">${site.replace(/^https?:\/\//, '')}</a></p></div>`,
+      });
+      if (env('MAIL_TRANSPORT') === 'json') console.log('[contact] (json transport, confirmation)', info.message);
+    } catch (err) {
+      console.error('[contact] confirmation failed:', err);
+    }
+  }
+
+  return json(200, { ok: true });
+};
+
+type Lang = 'es' | 'pt' | 'en' | 'zh';
+
+/** Company name safe for a mail display name: one line, no quotes, max 60 chars. */
+function displayName(s: string): string {
+  return s.replace(/[\r\n"<>]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 60);
+}
+
+const CONFIRM: Record<Lang, { subject: string; body: string[]; place: string }> = {
+  es: {
+    subject: 'Hemos recibido su solicitud · Piroliswiss',
+    body: [
+      'Hola:',
+      'Gracias por contactar con Piroliswiss. Hemos recibido su solicitud de cotización y nuestro equipo le responderá en breve desde {sales}.',
+      'Si desea añadir algún dato, puede responder directamente a este mensaje.',
+    ],
+    place: 'Santa Cruz de la Sierra, Bolivia',
+  },
+  pt: {
+    subject: 'Recebemos a sua solicitação · Piroliswiss',
+    body: [
+      'Olá,',
+      'Obrigado por entrar em contato com a Piroliswiss. Recebemos a sua solicitação de cotação e a nossa equipe responderá em breve pelo endereço {sales}.',
+      'Se quiser acrescentar alguma informação, basta responder a esta mensagem.',
+    ],
+    place: 'Santa Cruz de la Sierra, Bolívia',
+  },
+  en: {
+    subject: 'We have received your request · Piroliswiss',
+    body: [
+      'Hello,',
+      'Thank you for contacting Piroliswiss. We have received your quote request and our team will reply shortly from {sales}.',
+      'If you would like to add any details, simply reply to this message.',
+    ],
+    place: 'Santa Cruz de la Sierra, Bolivia',
+  },
+  zh: {
+    subject: '我们已收到您的询价 · Piroliswiss',
+    body: [
+      '您好：',
+      '感谢您联系 Piroliswiss。我们已收到您的询价请求，团队将尽快通过 {sales} 回复您。',
+      '如需补充信息，请直接回复本邮件。',
+    ],
+    place: '玻利维亚圣克鲁斯',
+  },
 };
