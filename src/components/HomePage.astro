@@ -30,8 +30,9 @@ const co = companyEntry.data;
 
 // Teasers for the inner pages: each reuses its section's own label and headline.
 const navLabel = (k: string) => ui.nav.find((n) => n.href === k)?.label ?? '';
-const explore: { href: string; img: string; alt: string; label: string; title: string }[] = [
-  { href: 'process', img: 'retort-fire', alt: t.model.steps[2]!.title, label: navLabel('process'), title: t.process.title },
+// `note` marks images that are renderings, not photos.
+const explore: { href: string; img: string; alt: string; label: string; title: string; note?: string }[] = [
+  { href: 'process', img: 'ProcesoYcalidad', alt: t.model.steps[2]!.alt, label: navLabel('process'), title: t.process.title, note: t.model.steps[2]!.note },
   { href: 'process#control', img: 'control-all', alt: t.control.label, label: t.control.label, title: t.control.title },
   { href: 'fichas', img: '07-operaciones/foto-3', alt: t.ops.photos[2]!.alt, label: t.products.label, title: t.products.items[0]!.woodsLink ?? '' },
   { href: 'export', img: '07-operaciones/foto-5', alt: t.export.photos[1]!.alt, label: t.export.label, title: t.export.title },
@@ -97,7 +98,7 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
       <div class="explore">
         {explore.map((e) => (
           <a href={resolveHref(e.href, locale)}>
-            <figure><Photo src={e.img} alt={e.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" /></figure>
+            <figure><Photo src={e.img} alt={e.alt} sizes="(max-width: 560px) 100vw, (max-width: 1100px) 50vw, 25vw" />{e.note && <span class="explore-note">{e.note}</span>}</figure>
             <p class="label">{e.label}</p>
             <h3>{e.title.replace(/[.。]$/, '')}</h3>
             <span class="more">{ui.more}</span>
