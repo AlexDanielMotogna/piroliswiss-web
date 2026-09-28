@@ -266,6 +266,77 @@ section.flush{padding-top:0}
 .legal a{color:inherit;text-decoration:none}
 .legal a:hover{text-decoration:underline;text-underline-offset:3px}
 
+/* problem -> solution, scroll-driven (ProblemSolution.astro) */
+.ps{--head:68px;position:relative;padding:0}
+.ps-stage{padding-block:clamp(56px,7vw,104px)}
+.ps-inner{display:grid;gap:clamp(28px,3vw,44px)}
+.ps-head{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:first baseline}
+.ps-head>.ps-swap:first-child{grid-column:1/4}
+.ps-head>.ps-swap:last-child{grid-column:4/12}
+.ps-head .label{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.ps-head .label::before{content:"";width:8px;height:8px;background:var(--red);flex:none}
+.ps-swap{display:grid}
+.ps-swap>*{grid-area:1/1}
+.ps-scene{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,4vw,64px);align-items:center}
+.ps-fig{position:relative;margin:0;aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--paper-2)}
+.ps-img{position:absolute;inset:0}
+.ps-img img{width:100%;height:100%;object-fit:cover}
+.ps-img-a img{filter:grayscale(.85) contrast(.95) brightness(.92)}
+.ps-img-b{clip-path:inset(0 calc(100% - var(--p) * 100%) 0 0)}
+.ps-line{opacity:min(clamp(0, var(--p) * 25, 1), clamp(0, (1 - var(--p)) * 25, 1));position:absolute;top:0;bottom:0;left:calc(var(--p) * 100%);width:3px;margin-left:-1.5px;background:var(--red);}
+.ps-line::after{content:"";position:absolute;top:50%;left:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--red);border:3px solid #fff}
+.ps-copy{display:grid;gap:18px;align-content:center}
+.ps-count{margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--slate)}
+.ps-count b{font-size:28px;font-weight:500;color:var(--red);letter-spacing:0}
+.ps-text>div{display:grid;gap:12px;align-content:start}
+.ps-text .label{display:flex;align-items:center;gap:10px}
+.ps-text .h-m{font-size:clamp(24px,2.2vw,34px);line-height:1.1}
+.ps-body{color:var(--slate);max-width:44ch}
+.ps-progress{display:none}
+/* problem (a) -> solution (b): the old copy fades out completely before the new one fades in */
+.ps-a{transition:opacity .22s ease .22s,transform .44s ease}
+.ps-b{opacity:0;transform:translateY(10px);transition:opacity .22s ease,transform .44s ease}
+.is-b .ps-a,.is-b>.ps-inner .ps-a{opacity:0;transform:translateY(-10px);transition:opacity .22s ease,transform .44s ease}
+.is-b .ps-b,.is-b>.ps-inner .ps-b{opacity:1;transform:none;transition:opacity .22s ease .22s,transform .44s ease}
+.ps-scene .ps-b .label{color:var(--forest)}
+
+/* pinned: stage sticks under the header, scenes stack in one place */
+.ps-pinned{height:calc((var(--n) + 1) * 85svh)}
+.ps-pinned .ps-stage{position:sticky;top:calc(var(--head) + env(safe-area-inset-top,0px));height:calc(100svh - var(--head));display:flex;align-items:center;padding-block:clamp(24px,3vw,40px)}
+.ps-pinned .ps-inner{width:100%}
+/* short screens: the headline also scales with height so the pinned stage fits */
+.ps-pinned .ps-head .h-l{font-size:min(clamp(32px,4.2vw,64px),6.4svh)}
+.ps-pinned .ps-scenes{display:grid}
+.ps-pinned .ps-scene{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s}
+.ps-pinned .ps-scene.is-active{opacity:1;visibility:visible}
+.ps-pinned .ps-fig{aspect-ratio:auto;height:min(52svh,560px)}
+.ps-pinned .ps-progress{display:grid;grid-template-columns:repeat(var(--n),1fr);gap:8px}
+.ps-progress span{height:3px;background:var(--rule);overflow:hidden}
+.ps-progress i{display:block;height:100%;background:var(--red);transform-origin:left;transform:scaleX(var(--f,0))}
+
+/* flow: narrow screens, scenes stacked, each wipes on its own */
+.ps-flow .ps-head .ps-b,.ps-static .ps-head .ps-b{display:none}
+.ps-flow .ps-scenes,.ps-static .ps-scenes{display:grid;gap:clamp(48px,8vw,80px)}
+.ps-flow .ps-text{display:grid;gap:28px}
+.ps-flow .ps-text>*{grid-area:auto}
+.ps-flow .ps-scene .ps-a,.ps-flow .ps-scene .ps-b{opacity:1;transform:none;transition:none}
+
+/* static: no JS or reduced motion, both photos and both texts */
+.ps-static .ps-fig{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:8px;background:none}
+.ps-static .ps-img{position:relative;inset:auto;aspect-ratio:4/3;border-radius:8px;overflow:hidden}
+.ps-static .ps-img-b{clip-path:none}
+.ps-static .ps-line{display:none}
+.ps-static .ps-text{display:grid;gap:28px}
+.ps-static .ps-text>*,.ps-static .ps-scene .ps-a,.ps-static .ps-scene .ps-b{grid-area:auto;opacity:1;transform:none;transition:none}
+
+@media (max-width:860px){
+  .ps-head{grid-template-columns:1fr;gap:14px}
+  .ps-head>.ps-swap:first-child,.ps-head>.ps-swap:last-child{grid-column:1/-1}
+  .ps-scene{grid-template-columns:1fr}
+  .ps-static .ps-fig{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.ps-a,.ps-b,.ps-scene{transition:none!important}}
+
 /* products */
 .products{background:var(--paper-2)}
 .tbc{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.02em}

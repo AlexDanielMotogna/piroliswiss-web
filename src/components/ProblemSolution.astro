@@ -1,0 +1,125 @@
+---
+/**
+ * "From problem to solution": three scenes pinned while the visitor scrolls.
+ * In each scene a red line sweeps across the photo and turns the problem
+ * into its solution; heading and text switch with it.
+ *
+ * Modes (set by the script):
+ *  - pinned  (wide screens): the stage sticks, scroll drives scene + wipe.
+ *  - flow    (narrow screens): scenes stack, each wipes as it crosses the viewport.
+ *  - static  (no JS, or prefers-reduced-motion): problem and solution side by side.
+ */
+import Photo from './Photo.astro';
+import type { Home } from '../lib/types';
+
+interface Props {
+  problems: Home['problems'];
+}
+const { problems: p } = Astro.props;
+const scenes = p.items.map((item, i) => ({ problem: item, solution: p.solutions[i]! }));
+const total = String(scenes.length).padStart(2, '0');
+---
+<section class="ps ps-static" data-ps style={`--n:${scenes.length}`}>
+  <div class="ps-stage">
+    <div class="wrap ps-inner">
+      <header class="ps-head">
+        <div class="ps-swap">
+          <p class="label ps-a">{p.label}</p>
+          <p class="label ps-b">{p.solutionLabel}</p>
+        </div>
+        <div class="ps-swap">
+          <h2 class="h-l ps-a">{p.title}</h2>
+          <h2 class="h-l ps-b">{p.solutionTitle}</h2>
+        </div>
+      </header>
+
+      <div class="ps-scenes">
+        {scenes.map((s, i) => (
+          <article class="ps-scene" data-scene={i} style="--p:0">
+            <figure class="ps-fig">
+              <div class="ps-img ps-img-a"><Photo src={s.problem.img} alt={s.problem.alt} sizes="(max-width: 860px) 100vw, 58vw" /></div>
+              <div class="ps-img ps-img-b"><Photo src={s.solution.img} alt={s.solution.alt} sizes="(max-width: 860px) 100vw, 58vw" /></div>
+              <span class="ps-line" aria-hidden="true"></span>
+            </figure>
+            <div class="ps-copy">
+              <p class="ps-count" aria-hidden="true"><b>{String(i + 1).padStart(2, '0')}</b> / {total}</p>
+              <div class="ps-swap ps-text">
+                <div class="ps-a">
+                  <p class="label">{p.label}</p>
+                  <h3 class="h-m">{s.problem.title}</h3>
+                  <p class="ps-body">{s.problem.text}</p>
+                </div>
+                <div class="ps-b">
+                  <p class="label">{p.solutionLabel}</p>
+                  <h3 class="h-m">{s.solution.title}</h3>
+                  <p class="ps-body">{s.solution.text}</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="ps-progress" aria-hidden="true">
+        {scenes.map((_, i) => <span data-bar={i}><i></i></span>)}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+  // Wipe happens in the middle of each scene's scroll span, with a short hold at both ends.
+  const ease = (t: number) => clamp((t - 0.18) / 0.64);
+
+  document.querySelectorAll<HTMLElement>('[data-ps]').forEach((root) => {
+    const scenes = [...root.querySelectorAll<HTMLElement>('[data-scene]')];
+    const bars = [...root.querySelectorAll<HTMLElement>('[data-bar] i')];
+    const stage = root.querySelector<HTMLElement>('.ps-stage')!;
+    const n = scenes.length;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const wide = window.matchMedia('(min-width: 861px) and (min-height: 620px)');
+    let mode = '';
+    let frame = 0;
+
+    const setMode = () => {
+      const next = reduced.matches ? 'static' : wide.matches ? 'pinned' : 'flow';
+      if (next === mode) return;
+      mode = next;
+      root.classList.remove('ps-static', 'ps-pinned', 'ps-flow');
+      root.classList.add(`ps-${mode}`);
+      update();
+    };
+
+    const update = () => {
+      frame = 0;
+      if (mode === 'pinned') {
+        const r = root.getBoundingClientRect();
+        const span = r.height - stage.offsetHeight;
+        const P = clamp(-r.top / Math.max(span, 1)) * n; // 0..n
+        const active = Math.min(n - 1, Math.floor(P));
+        scenes.forEach((s, i) => {
+          const p = ease(clamp(P - i));
+          s.style.setProperty('--p', String(p));
+          s.classList.toggle('is-active', i === active);
+          s.classList.toggle('is-b', p >= 0.5);
+        });
+        bars.forEach((b, i) => b.style.setProperty('--f', String(clamp(P - i))));
+        root.classList.toggle('is-b', ease(clamp(P - active)) >= 0.5);
+      } else if (mode === 'flow') {
+        const vh = window.innerHeight;
+        scenes.forEach((s) => {
+          const r = s.querySelector('.ps-fig')!.getBoundingClientRect();
+          s.style.setProperty('--p', String(clamp((vh * 0.8 - r.top) / (vh * 0.5))));
+        });
+      }
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    reduced.addEventListener('change', setMode);
+    wide.addEventListener('change', setMode);
+    setMode();
+  });
+</script>
