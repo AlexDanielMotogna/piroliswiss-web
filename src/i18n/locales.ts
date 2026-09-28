@@ -34,6 +34,8 @@ export const pages = {
   process: { es: '/proceso/', pt: '/pt/processo/', en: '/en/process/', zh: '/zh/process/' },
   export: { es: '/exportacion/', pt: '/pt/exportacao/', en: '/en/export/', zh: '/zh/export/' },
   contact: { es: '/contacto/', pt: '/pt/contato/', en: '/en/contact/', zh: '/zh/contact/' },
+  legal: { es: '/aviso-legal/', pt: '/pt/informacoes-legais/', en: '/en/legal-notice/', zh: '/zh/legal-notice/' },
+  privacy: { es: '/privacidad/', pt: '/pt/privacidade/', en: '/en/privacy/', zh: '/zh/privacy/' },
   // Datasheets were supplied in Spanish only; other locales link to the Spanish page.
   fichas: { es: '/fichas-tecnicas/' },
 } as const satisfies Record<string, Partial<Record<Locale, string>> & { es: string }>;

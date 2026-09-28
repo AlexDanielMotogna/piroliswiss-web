@@ -1,0 +1,109 @@
+{
+  "draft": "[Borrador pendiente de revisión legal]",
+  "updated": "Última actualización: 28 de septiembre de 2026",
+  "legal": {
+    "label": "Legal",
+    "title": "Aviso legal",
+    "meta": "Aviso legal de Piroliswiss S.R.L.: titular del sitio web, domicilio y contacto.",
+    "sections": [
+      {
+        "title": "Titular del sitio web",
+        "rows": [
+          {
+            "k": "Razón social",
+            "v": "Piroliswiss S.R.L. by Grupo Zwald S.R.L."
+          },
+          {
+            "k": "Domicilio",
+            "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolivia"
+          },
+          {
+            "k": "Correo",
+            "v": "office@piroliswiss.com"
+          },
+          {
+            "k": "NIT",
+            "tbc": "[NIT en trámite]"
+          },
+          {
+            "k": "Representante legal",
+            "tbc": "[representante legal]"
+          }
+        ]
+      },
+      {
+        "title": "Objeto",
+        "text": [
+          "Este sitio web presenta la actividad de Piroliswiss S.R.L.: producción y exportación de carbón vegetal y subproductos de pirólisis. La información publicada es orientativa; las especificaciones, volúmenes y condiciones comerciales se confirman en cada cotización."
+        ]
+      },
+      {
+        "title": "Propiedad intelectual",
+        "text": [
+          "Los textos, imágenes, logotipos y diseños de este sitio pertenecen a Piroliswiss S.R.L. o se usan con autorización de sus titulares. No se permite su reproducción sin autorización previa por escrito."
+        ]
+      },
+      {
+        "title": "Alojamiento",
+        "text": [
+          "El sitio web está alojado por Railway Corp., proveedor de infraestructura en la nube."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "label": "Legal",
+    "title": "Política de privacidad",
+    "meta": "Cómo trata Piroliswiss S.R.L. los datos enviados a través del formulario de contacto.",
+    "sections": [
+      {
+        "title": "Responsable",
+        "text": [
+          "Piroliswiss S.R.L. by Grupo Zwald S.R.L., Calle Clara 2885, Santa Cruz de la Sierra, Bolivia. Contacto: office@piroliswiss.com."
+        ]
+      },
+      {
+        "title": "Qué datos tratamos",
+        "text": [
+          "Los datos que usted nos envía en el formulario de contacto: empresa, país, correo electrónico, producto, volumen, Incoterm y mensaje.",
+          "Además, el servidor registra de forma técnica la dirección IP de cada envío, solo para seguridad y para evitar envíos abusivos."
+        ]
+      },
+      {
+        "title": "Para qué los usamos",
+        "text": [
+          "Para responder a su solicitud, preparar cotizaciones y gestionar la relación comercial que se derive de ella. No enviamos publicidad sin su consentimiento y no vendemos ni cedemos sus datos."
+        ]
+      },
+      {
+        "title": "Quién los recibe",
+        "text": [
+          "Nuestro equipo comercial. También los proveedores técnicos que alojan este sitio web y nuestro correo electrónico, únicamente para prestar ese servicio."
+        ]
+      },
+      {
+        "title": "Cuánto tiempo los conservamos",
+        "text": [
+          "Durante el tiempo necesario para atender su solicitud y la relación comercial derivada, y después durante los plazos que exija la ley."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "text": [
+          "Este sitio web no utiliza cookies ni herramientas de analítica o publicidad."
+        ]
+      },
+      {
+        "title": "Sus derechos",
+        "text": [
+          "Puede solicitar el acceso, la rectificación o la eliminación de sus datos, u oponerse a su tratamiento, escribiendo a office@piroliswiss.com."
+        ]
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "La dirección que buscaba no existe o ha cambiado.",
+    "back": "Volver al inicio"
+  }
+}

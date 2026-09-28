@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import node from '@astrojs/node';
+import sitemap from '@astrojs/sitemap';
 
 /** @type {Record<string, string | undefined>} */
 const env = /** @type {any} */ (globalThis).process?.env ?? {};
@@ -11,7 +13,16 @@ const site =
 
 export default defineConfig({
   site,
+  // Static pages plus one on-demand route (/api/contact) served by the Node adapter.
   output: 'static',
+  adapter: node({ mode: 'standalone' }),
+  integrations: [
+    sitemap({
+      i18n: { defaultLocale: 'es', locales: { es: 'es', pt: 'pt-BR', en: 'en', zh: 'zh-Hans' } },
+      // redirect stubs are not real pages
+      filter: (page) => !/\/(maderas|trazabilidad|modelo-operativo|escalabilidad|madeiras|woods|rastreabilidade|modelo-operacional|escalabilidade|traceability|operating-model|scalability)\/$/.test(page),
+    }),
+  ],
   // The woods page became /fichas-tecnicas/ (Spanish only).
   redirects: {
     '/maderas': '/fichas-tecnicas',
@@ -32,7 +43,7 @@ export default defineConfig({
     '/en/scalability': '/en/company/#scale',
     '/zh/scalability': '/zh/company/#scale',
   },
-  // `astro preview` serves dist/ on Railway; allow its generated domain.
+  // Allow Railway's generated domain in dev/preview.
   server: { host: true, allowedHosts: true },
   i18n: {
     defaultLocale: 'es',

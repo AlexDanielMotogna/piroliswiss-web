@@ -225,6 +225,9 @@ const home = defineCollection({
           note: text,
           error: text,
           done: text,
+          sending: text,
+          failed: text,
+          privacyLink: text,
         })
         .strict(),
     })
@@ -297,4 +300,36 @@ const fichas = defineCollection({
     .strict(),
 });
 
-export const collections = { ui, home, company, fichas };
+const legalPage = z
+  .object({
+    label: text,
+    title: text,
+    meta: text,
+    sections: z
+      .array(
+        z
+          .object({
+            title: text,
+            rows: z.array(z.object({ k: text, v: z.string().optional(), tbc: z.string().optional() }).strict()).optional(),
+            text: z.array(text).optional(),
+          })
+          .strict(),
+      )
+      .min(1),
+  })
+  .strict();
+
+const legal = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/legal' }),
+  schema: z
+    .object({
+      draft: text,
+      updated: text,
+      legal: legalPage,
+      privacy: legalPage,
+      notFound: z.object({ title: text, text: text, back: text }).strict(),
+    })
+    .strict(),
+});
+
+export const collections = { ui, home, company, fichas, legal };

@@ -1,0 +1,36 @@
+---
+/** Legal notice and privacy policy. Drafts: the draft label stays until a lawyer signs off. */
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import SectionHead from './SectionHead.astro';
+import SpecTable from './SpecTable.astro';
+import Tbc from './Tbc.astro';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+  page: 'legal' | 'privacy';
+}
+const { locale, page } = Astro.props;
+const entry = await getEntry('legal', locale);
+if (!entry) throw new Error(`Missing legal content for locale "${locale}"`);
+const L = entry.data;
+const d = L[page];
+---
+<Base locale={locale} page={page} title={`${d.title} · Piroliswiss`} description={d.meta} crumb={d.title}>
+  <section class="page-top legal-page">
+    <div class="wrap">
+      <SectionHead label={d.label} title={d.title} level={1} />
+      <p class="legal-meta"><Tbc text={L.draft} /> · {L.updated}</p>
+      <div class="legal-body">
+        {d.sections.map((s) => (
+          <section>
+            <h2 class="label">{s.title}</h2>
+            {s.rows && <SpecTable rows={s.rows} />}
+            {s.text?.map((t) => <p>{t}</p>)}
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

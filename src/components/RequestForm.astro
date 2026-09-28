@@ -1,11 +1,13 @@
 ---
 import type { Home } from '../lib/types';
+import { pagePath, type Locale } from '../i18n/locales';
 
 interface Props {
   req: Home['request'];
+  locale: Locale;
   level?: 1 | 2;
 }
-const { req: r, level = 2 } = Astro.props;
+const { req: r, locale, level = 2 } = Astro.props;
 const Heading = level === 1 ? 'h1' : 'h2';
 ---
 <section class="request" id="request">
@@ -15,20 +17,32 @@ const Heading = level === 1 ? 'h1' : 'h2';
       <Heading class="h-l">{r.title}</Heading>
       <p>{r.text}</p>
     </div>
-    <form id="spec-form" novalidate data-error={r.error} data-done={r.done}>
-      <div class="f"><label for="f-company">{r.fields.company}</label><input id="f-company" name="company" autocomplete="organization" required /></div>
-      <div class="f"><label for="f-country">{r.fields.country}</label><input id="f-country" name="country" autocomplete="country-name" /></div>
-      <div class="f"><label for="f-email">{r.fields.email}</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+    <form
+      id="spec-form"
+      method="post"
+      action="/api/contact"
+      novalidate
+      data-error={r.error}
+      data-done={r.done}
+      data-sending={r.sending}
+      data-failed={r.failed}
+    >
+      <input type="hidden" name="locale" value={locale} />
+      <!-- honeypot: hidden from people, filled by bots -->
+      <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off" /></label></div>
+      <div class="f"><label for="f-company">{r.fields.company}</label><input id="f-company" name="company" autocomplete="organization" maxlength="200" required /></div>
+      <div class="f"><label for="f-country">{r.fields.country}</label><input id="f-country" name="country" autocomplete="country-name" maxlength="100" /></div>
+      <div class="f"><label for="f-email">{r.fields.email}</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required /></div>
       <div class="f"><label for="f-product">{r.fields.product}</label>
         <select id="f-product" name="product">{r.productOptions.map((o) => <option value={o.value}>{o.label}</option>)}</select></div>
       <div class="f"><label for="f-volume">{r.fields.volume}</label>
         <select id="f-volume" name="volume">{r.volumeOptions.map((o) => <option>{o}</option>)}</select></div>
       <div class="f"><label for="f-inco">{r.fields.incoterm}</label>
         <select id="f-inco" name="incoterm">{r.incotermOptions.map((o) => <option>{o}</option>)}</select></div>
-      <div class="f full"><label for="f-msg">{r.fields.message}</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+      <div class="f full"><label for="f-msg">{r.fields.message}</label><textarea id="f-msg" name="message" rows="3" maxlength="5000"></textarea></div>
       <div class="form-end">
         <button class="btn" type="submit">{r.submit} <span class="arr" aria-hidden="true">→</span></button>
-        <span class="form-note" id="form-note" aria-live="polite">{r.note}</span>
+        <span class="form-note" id="form-note" aria-live="polite">{r.note} <a href={pagePath('privacy', locale)}>{r.privacyLink}</a></span>
       </div>
     </form>
   </div>
@@ -36,10 +50,37 @@ const Heading = level === 1 ? 'h1' : 'h2';
 <script>
   const form = document.getElementById('spec-form') as HTMLFormElement;
   const note = document.getElementById('form-note') as HTMLElement;
-  form.addEventListener('submit', (e) => {
+  const button = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const say = (key: 'error' | 'done' | 'sending' | 'failed', state: string) => {
+    note.textContent = form.dataset[key] ?? '';
+    note.dataset.state = state;
+  };
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const company = (document.getElementById('f-company') as HTMLInputElement).value.trim();
     const email = (document.getElementById('f-email') as HTMLInputElement).value.trim();
-    note.textContent = (!company || !/.+@.+\..+/.test(email) ? form.dataset.error : form.dataset.done) ?? '';
+    if (!company || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return say('error', 'error');
+
+    const data = new FormData(form);
+    // send the product as the visitor saw it, plus the stable value
+    const product = document.getElementById('f-product') as HTMLSelectElement;
+    data.set('product', `${product.selectedOptions[0]?.text ?? ''} (${product.value})`);
+
+    button.disabled = true;
+    say('sending', 'sending');
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { accept: 'application/json' } });
+      if (res.ok) {
+        form.reset();
+        say('done', 'done');
+      } else {
+        say(res.status === 422 ? 'error' : 'failed', 'error');
+      }
+    } catch {
+      say('failed', 'error');
+    } finally {
+      button.disabled = false;
+    }
   });
 </script>

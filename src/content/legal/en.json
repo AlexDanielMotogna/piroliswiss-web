@@ -1,0 +1,109 @@
+{
+  "draft": "[Draft pending legal review]",
+  "updated": "Last updated: 28 September 2026",
+  "legal": {
+    "label": "Legal",
+    "title": "Legal notice",
+    "meta": "Legal notice of Piroliswiss S.R.L.: website owner, registered address and contact.",
+    "sections": [
+      {
+        "title": "Website owner",
+        "rows": [
+          {
+            "k": "Company name",
+            "v": "Piroliswiss S.R.L. by Grupo Zwald S.R.L."
+          },
+          {
+            "k": "Address",
+            "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolivia"
+          },
+          {
+            "k": "Email",
+            "v": "office@piroliswiss.com"
+          },
+          {
+            "k": "Tax ID (NIT)",
+            "tbc": "[NIT in progress]"
+          },
+          {
+            "k": "Legal representative",
+            "tbc": "[legal representative]"
+          }
+        ]
+      },
+      {
+        "title": "Purpose",
+        "text": [
+          "This website presents the business of Piroliswiss S.R.L.: production and export of charcoal and pyrolysis by-products. The information published is indicative; specifications, volumes and commercial terms are confirmed in each quote."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "text": [
+          "The texts, images, logos and designs on this website belong to Piroliswiss S.R.L. or are used with the permission of their owners. They may not be reproduced without prior written permission."
+        ]
+      },
+      {
+        "title": "Hosting",
+        "text": [
+          "The website is hosted by Railway Corp., a cloud infrastructure provider."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "label": "Legal",
+    "title": "Privacy policy",
+    "meta": "How Piroliswiss S.R.L. handles the data sent through the contact form.",
+    "sections": [
+      {
+        "title": "Controller",
+        "text": [
+          "Piroliswiss S.R.L. by Grupo Zwald S.R.L., Calle Clara 2885, Santa Cruz de la Sierra, Bolivia. Contact: office@piroliswiss.com."
+        ]
+      },
+      {
+        "title": "What data we process",
+        "text": [
+          "The data you send us through the contact form: company, country, email, product, volume, Incoterm and message.",
+          "The server also technically records the IP address of each submission, only for security and to prevent abuse."
+        ]
+      },
+      {
+        "title": "What we use it for",
+        "text": [
+          "To answer your request, prepare quotes and manage the business relationship that follows. We do not send advertising without your consent and we do not sell or share your data."
+        ]
+      },
+      {
+        "title": "Who receives it",
+        "text": [
+          "Our sales team. Also the technical providers that host this website and our email, solely to provide that service."
+        ]
+      },
+      {
+        "title": "How long we keep it",
+        "text": [
+          "For as long as needed to handle your request and the resulting business relationship, and afterwards for the periods required by law."
+        ]
+      },
+      {
+        "title": "Cookies",
+        "text": [
+          "This website does not use cookies or any analytics or advertising tools."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "text": [
+          "You can ask to access, correct or delete your data, or object to its processing, by writing to office@piroliswiss.com."
+        ]
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The address you were looking for does not exist or has changed.",
+    "back": "Back to home"
+  }
+}

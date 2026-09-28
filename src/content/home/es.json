@@ -624,6 +624,9 @@
     "submit": "Enviar solicitud",
     "note": "Sus datos se usan solo para responder a esta solicitud.",
     "error": "Indique el nombre de su empresa y un correo corporativo válido para enviar la solicitud.",
-    "done": "Solicitud preparada. En este prototipo el formulario todavía no está conectado a un buzón."
+    "done": "Gracias. Hemos recibido su solicitud y le responderemos por correo.",
+    "sending": "Enviando…",
+    "failed": "No se pudo enviar. Inténtelo de nuevo o escríbanos a sales@piroliswiss.com.",
+    "privacyLink": "Política de privacidad"
   }
 }

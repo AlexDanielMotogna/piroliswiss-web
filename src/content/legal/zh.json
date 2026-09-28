@@ -1,0 +1,109 @@
+{
+  "draft": "[草稿，待法律审核]",
+  "updated": "最后更新：2026 年 9 月 28 日",
+  "legal": {
+    "label": "法律",
+    "title": "法律声明",
+    "meta": "Piroliswiss S.R.L. 法律声明：网站所有者、注册地址及联系方式。",
+    "sections": [
+      {
+        "title": "网站所有者",
+        "rows": [
+          {
+            "k": "公司名称",
+            "v": "Piroliswiss S.R.L. by Grupo Zwald S.R.L."
+          },
+          {
+            "k": "地址",
+            "v": "Calle Clara 2885, Santa Cruz de la Sierra, Bolivia"
+          },
+          {
+            "k": "邮箱",
+            "v": "office@piroliswiss.com"
+          },
+          {
+            "k": "税号（NIT）",
+            "tbc": "[NIT 办理中]"
+          },
+          {
+            "k": "法定代表人",
+            "tbc": "[法定代表人]"
+          }
+        ]
+      },
+      {
+        "title": "网站用途",
+        "text": [
+          "本网站介绍 Piroliswiss S.R.L. 的业务：木炭及热解副产品的生产与出口。所发布的信息仅供参考；产品规格、数量和商业条件以每次报价为准。"
+        ]
+      },
+      {
+        "title": "知识产权",
+        "text": [
+          "本网站的文字、图片、标志和设计归 Piroliswiss S.R.L. 所有，或经其所有者授权使用。未经事先书面许可，不得复制。"
+        ]
+      },
+      {
+        "title": "托管",
+        "text": [
+          "本网站由云基础设施提供商 Railway Corp. 托管。"
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "label": "法律",
+    "title": "隐私政策",
+    "meta": "Piroliswiss S.R.L. 如何处理通过联系表单提交的数据。",
+    "sections": [
+      {
+        "title": "数据控制者",
+        "text": [
+          "Piroliswiss S.R.L. by Grupo Zwald S.R.L.，Calle Clara 2885, Santa Cruz de la Sierra, Bolivia。联系邮箱：office@piroliswiss.com。"
+        ]
+      },
+      {
+        "title": "我们处理哪些数据",
+        "text": [
+          "您通过联系表单提交的数据：公司、国家、电子邮箱、产品、数量、贸易术语和留言。",
+          "此外，服务器会以技术方式记录每次提交的 IP 地址，仅用于安全和防止滥用。"
+        ]
+      },
+      {
+        "title": "数据用途",
+        "text": [
+          "用于答复您的请求、准备报价以及管理由此产生的业务关系。未经您同意，我们不会发送广告，也不会出售或转让您的数据。"
+        ]
+      },
+      {
+        "title": "数据接收方",
+        "text": [
+          "我们的销售团队，以及托管本网站和我们电子邮件的技术服务商，仅用于提供相应服务。"
+        ]
+      },
+      {
+        "title": "保存期限",
+        "text": [
+          "在处理您的请求及由此产生的业务关系所需的期限内保存，之后按法律要求的期限保存。"
+        ]
+      },
+      {
+        "title": "Cookie",
+        "text": [
+          "本网站不使用 Cookie，也不使用任何分析或广告工具。"
+        ]
+      },
+      {
+        "title": "您的权利",
+        "text": [
+          "您可以发送邮件至 office@piroliswiss.com，要求查阅、更正或删除您的数据，或反对对其进行处理。"
+        ]
+      }
+    ]
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "text": "您要访问的地址不存在或已更改。",
+    "back": "返回首页"
+  }
+}

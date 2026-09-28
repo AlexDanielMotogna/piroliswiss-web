@@ -92,7 +92,7 @@ const crumb = ui.nav.find((n) => n.href === page)?.label ?? meta.label;
     </section>
   )}
 
-  {page === 'contact' && <RequestForm req={t.request} level={1} />}
+  {page === 'contact' && <RequestForm req={t.request} locale={locale} level={1} />}
 
   {page !== 'contact' && (
     <CtaBand title={co.cta.title} text={co.cta.text} cta={ui.requestCta} href={resolveHref('contact', locale)} />

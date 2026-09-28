@@ -4,6 +4,8 @@ import '../styles/site.css';
 import { getEntry } from 'astro:content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getImage } from 'astro:assets';
+import { img } from '../lib/images';
 import { locales, htmlLang, pagePath, hasPage, defaultLocale, type Locale, type PageKey } from '../i18n/locales';
 
 interface Props {
@@ -13,8 +15,12 @@ interface Props {
   description: string;
   /** Name of the page in the breadcrumb (inner pages only). */
   crumb?: string;
+  /** Error pages: no canonical, no alternates, not indexed. */
+  noindex?: boolean;
 }
-const { locale, page, title, description, crumb } = Astro.props;
+const { locale, page, title, description, crumb, noindex = false } = Astro.props;
+// Preview image for WhatsApp, LinkedIn, etc.: the hero photo at 1200×630.
+const og = await getImage({ src: img('hero'), width: 1200, height: 630, fit: 'cover', format: 'jpg' });
 const uiEntry = await getEntry('ui', locale);
 if (!uiEntry) throw new Error(`Missing ui content for locale "${locale}"`);
 const ui = uiEntry.data;
@@ -27,18 +33,28 @@ const abs = (path: string) => new URL(path, Astro.site).href;
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={abs(pagePath(page, locale))} />
-    {locales.filter((l) => hasPage(page, l)).map((l) => <link rel="alternate" hreflang={htmlLang[l]} href={abs(pagePath(page, l))} />)}
-    <link rel="alternate" hreflang="x-default" href={abs(pagePath(page, defaultLocale))} />
+    {noindex ? <meta name="robots" content="noindex" /> : (
+      <Fragment>
+        <link rel="canonical" href={abs(pagePath(page, locale))} />
+        {locales.filter((l) => hasPage(page, l)).map((l) => <link rel="alternate" hreflang={htmlLang[l]} href={abs(pagePath(page, l))} />)}
+        <link rel="alternate" hreflang="x-default" href={abs(pagePath(page, defaultLocale))} />
+      </Fragment>
+    )}
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:locale" content={htmlLang[locale].replace('-', '_')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Piroliswiss" />
+    <meta property="og:image" content={abs(og.src)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
-    <Header ui={ui} locale={locale} page={page} />
+    <Header ui={ui} locale={locale} page={page} markCurrent={!noindex} />
     <main id="main">
       {crumb && (
         <nav class="crumbs wrap" aria-label="Breadcrumb">

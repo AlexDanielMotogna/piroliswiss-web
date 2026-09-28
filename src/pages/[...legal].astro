@@ -1,0 +1,21 @@
+---
+/** Legal notice and privacy policy for every locale. */
+import type { GetStaticPaths } from 'astro';
+import LegalPage from '../components/LegalPage.astro';
+import { locales, pages, type Locale } from '../i18n/locales';
+
+export const getStaticPaths = (() =>
+  (['legal', 'privacy'] as const).flatMap((page) =>
+    locales.map((locale) => ({
+      params: { legal: pages[page][locale].replace(/^\/|\/$/g, '') },
+      props: { page, locale },
+    })),
+  )) satisfies GetStaticPaths;
+
+interface Props {
+  page: 'legal' | 'privacy';
+  locale: Locale;
+}
+const { page, locale } = Astro.props;
+---
+<LegalPage page={page} locale={locale} />
