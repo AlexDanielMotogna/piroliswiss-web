@@ -43,6 +43,15 @@ export default defineConfig({
     '/en/scalability': '/en/company/#scale',
     '/zh/scalability': '/zh/company/#scale',
   },
+  // Behind Railway's proxy the app sees http + an internal host; trust X-Forwarded-Proto/Host
+  // for these domains so Astro's origin check accepts same-site form posts.
+  security: {
+    allowedDomains: [
+      { hostname: 'piroliswiss.com', protocol: 'https' },
+      { hostname: 'www.piroliswiss.com', protocol: 'https' },
+      { hostname: '**.up.railway.app', protocol: 'https' },
+    ],
+  },
   // Allow Railway's generated domain in dev/preview.
   server: { host: true, allowedHosts: true },
   i18n: {
