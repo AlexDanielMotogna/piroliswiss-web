@@ -225,7 +225,8 @@ section.flush{padding-top:0}
 /* home: why Piroliswiss */
 .why{padding-bottom:0}
 .why-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:3px solid var(--red)}
-.why-grid li{display:grid;gap:8px;align-content:start;padding:22px 24px 0 0}
+/* title and text share subgrid rows, so every text starts at the same height */
+.why-grid li{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:8px;align-content:start;padding:22px 24px 0 0}
 .why-grid li+li{padding-left:24px;border-left:1px solid var(--rule)}
 .why-grid h3{margin:0;font-size:clamp(18px,1.4vw,21px);font-weight:600;letter-spacing:-.015em;line-height:1.25}
 .why-grid p{color:var(--slate);font-size:15px}
