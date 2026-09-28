@@ -320,7 +320,7 @@
   },
   "control": {
     "label": "Control and traceability",
-    "title": "Every kiln, measured every 30 seconds.",
+    "title": "Every kiln, monitored in real time.",
     "lede": "Piroliswiss Control is our kiln supervision and monitoring system. It records the temperature of every retort in real time, detects deviations during the cycle and stores the thermal curve of every load to ensure traceability, control and consistent operation.",
     "slides": [
       {

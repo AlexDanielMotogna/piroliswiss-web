@@ -320,7 +320,7 @@
   },
   "control": {
     "label": "Controle e rastreabilidade",
-    "title": "Cada forno, medido a cada 30 segundos.",
+    "title": "Cada forno, monitorado em tempo real.",
     "lede": "O Piroliswiss Control é o nosso sistema de supervisão e monitoramento de fornos. Registra em tempo real a temperatura de cada retorta, detecta desvios durante o ciclo e armazena a curva térmica de cada carga para garantir rastreabilidade, controle e consistência operacional.",
     "slides": [
       {
