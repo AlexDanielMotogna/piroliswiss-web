@@ -175,10 +175,6 @@
         ],
         "appLabel": "Agriculture",
         "app": "Crop protection, natural pest control and fewer chemical inputs.",
-        "outputLabel": "Production capacity per plant",
-        "output": {
-          "v": "430 t / month"
-        },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
         "spec": [
@@ -201,6 +197,10 @@
           {
             "k": "Purity",
             "v": "Settled, filtered and free of suspended solids"
+          },
+          {
+            "k": "Production capacity per plant",
+            "v": "430 t / month"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
@@ -229,10 +229,6 @@
         ],
         "appLabel": "Gastronomy & premium BBQ",
         "app": "High-performance fuel for grills, gastronomy and gourmet export.",
-        "outputLabel": "Production capacity per plant",
-        "output": {
-          "v": "95 t / month"
-        },
         "cta": "Ask about availability",
         "specLabel": "Typical specification",
         "spec": [
@@ -255,6 +251,10 @@
           {
             "k": "Size",
             "v": "Uniform, > 30 mm"
+          },
+          {
+            "k": "Production capacity per plant",
+            "v": "95 t / month"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",

@@ -175,10 +175,6 @@
         ],
         "appLabel": "Agricultura",
         "app": "Proteção de cultivos, controle natural de pragas e menos insumos químicos.",
-        "outputLabel": "Capacidade de produção por planta",
-        "output": {
-          "v": "430 t / mês"
-        },
         "cta": "Consultar disponibilidade",
         "specLabel": "Especificação típica",
         "spec": [
@@ -201,6 +197,10 @@
           {
             "k": "Pureza",
             "v": "Decantado, filtrado e livre de sólidos em suspensão"
+          },
+          {
+            "k": "Capacidade de produção por planta",
+            "v": "430 t / mês"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
@@ -229,10 +229,6 @@
         ],
         "appLabel": "Gastronomia & churrasco premium",
         "app": "Combustível de alto desempenho para churrasqueiras, gastronomia e exportação gourmet.",
-        "outputLabel": "Capacidade de produção por planta",
-        "output": {
-          "v": "95 t / mês"
-        },
         "cta": "Consultar disponibilidade",
         "specLabel": "Especificação típica",
         "spec": [
@@ -255,6 +251,10 @@
           {
             "k": "Tamanho",
             "v": "Uniforme, > 30 mm"
+          },
+          {
+            "k": "Capacidade de produção por planta",
+            "v": "95 t / mês"
           }
         ],
         "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
