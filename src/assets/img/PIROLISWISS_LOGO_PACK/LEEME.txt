@@ -1,0 +1,6 @@
+PIROLISWISS - Logo Pack
+
+Cada variante está en un archivo PDF separado y, adicionalmente, en PNG.
+Incluye: logo completo, sin slogan, símbolo, nombre, nombre+slogan, slogan, variantes transparentes, negro, blanco/invertido e iconos cuadrados.
+
+Nota: estos archivos se han preparado a partir de la imagen raster original proporcionada. Para un SVG vectorial 100% editable y geométricamente fiel, conviene disponer del archivo vectorial original (AI/EPS/SVG/PDF vectorial) o reconstruir el logo manualmente.

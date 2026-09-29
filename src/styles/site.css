@@ -566,6 +566,11 @@ footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
 .foot a{text-decoration:none}.foot a:hover{text-decoration:underline}
 .foot .brand{display:grid;gap:18px;align-content:start}
 .foot .brand .foot-logo{width:120px;height:auto}
+/* the black flame disappears on the dark footer: swap to the white symbol */
+.foot .logo-on-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .foot .logo-on-light{display:none}:root:not([data-theme="light"]) .foot .logo-on-dark{display:block}}
+:root[data-theme="dark"] .foot .logo-on-light{display:none}
+:root[data-theme="dark"] .foot .logo-on-dark{display:block}
 .foot .brand p{color:var(--slate);font-size:15px;max-width:34ch}
 .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--slate);font-variant-numeric:tabular-nums}
 @media (max-width:860px){.foot{grid-template-columns:1fr 1fr}.foot .brand{grid-column:1/-1}}
