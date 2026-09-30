@@ -157,7 +157,7 @@
       },
       {
         "id": "p-acid",
-        "img": "04-productos/botella-acido-pirolenoso",
+        "img": "04-productos/acido-pirolenoso",
         "alt": "Botella de ácido piroleñoso en un campo de cultivo",
         "navLabel": "Ácido piroleñoso",
         "tag": "Línea agrícola y de bioinsumos",
@@ -204,7 +204,7 @@
             "v": "430 t / mes"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexImg": "04-productos/botella-acido-pirolenoso",
         "indexAlt": "Matraz con ácido piroleñoso"
       },
       {

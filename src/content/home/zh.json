@@ -157,7 +157,7 @@
       },
       {
         "id": "p-acid",
-        "img": "04-productos/botella-acido-pirolenoso",
+        "img": "04-productos/acido-pirolenoso",
         "alt": "农田中的一瓶木醋液",
         "navLabel": "木醋液",
         "tag": "农业与生物投入品产品线",
@@ -204,7 +204,7 @@
             "v": "430 吨 / 月"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/acido-pirolenoso",
+        "indexImg": "04-productos/botella-acido-pirolenoso",
         "indexAlt": "装有木醋液的烧瓶"
       },
       {
