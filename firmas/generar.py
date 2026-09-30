@@ -21,9 +21,9 @@ LEAF = "#769B17"
 
 # (slug, nombre, cargo, correo, teléfono)
 PEOPLE = [
-    ("frederico-zwald", "Frederico Zwald", "Fundador y CEO", "fredericozwald@piroliswiss.com", ""),
-    ("christian-vargas", "Christian Vargas", "Cofundador y CFO", "christianvargas@piroliswiss.com", ""),
-    ("alex-motogna", "Alex Motogna", "Cofundador y CTO", "alexdanielmotogna@piroliswiss.com", ""),
+    ("frederico-zwald", "Frederico Zwald", "Founder &amp; CEO", "fredericozwald@piroliswiss.com", ""),
+    ("christian-vargas", "Christian Vargas", "Co-Founder &amp; CFO", "christianvargas@piroliswiss.com", ""),
+    ("alex-motogna", "Alex Motogna", "Co-Founder &amp; CTO", "alexdanielmotogna@piroliswiss.com", ""),
 ]
 
 
@@ -65,7 +65,7 @@ def signature(slug: str, name: str, role: str, email: str, phone: str) -> str:
 
 def page(title: str, body: str) -> str:
     return f"""<!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <title>{title}</title>
@@ -80,5 +80,5 @@ def page(title: str, body: str) -> str:
 out = Path(__file__).parent
 for slug, name, role, email, phone in PEOPLE:
     f = out / f"firma-{slug}.html"
-    f.write_text(page(f"Firma {name} | Piroliswiss", signature(slug, name, role, email, phone)), encoding="utf-8")
+    f.write_text(page(f"Signature {name} | Piroliswiss", signature(slug, name, role, email, phone)), encoding="utf-8")
     print("ok", f.name)
