@@ -24,6 +24,9 @@ PEOPLE = [
     ("frederico-zwald", "Frederico Zwald", "Founder &amp; CEO", "fredericozwald@piroliswiss.com", ""),
     ("christian-vargas", "Christian Vargas", "Co-Founder &amp; CFO", "christianvargas@piroliswiss.com", ""),
     ("alex-motogna", "Alex Motogna", "Co-Founder &amp; CTO", "alexdanielmotogna@piroliswiss.com", ""),
+    # Buzones compartidos: nombre del equipo en lugar de una persona.
+    ("sales", "Sales Team", "Piroliswiss S.R.L.", "sales@piroliswiss.com", ""),
+    ("office", "Office", "Piroliswiss S.R.L.", "office@piroliswiss.com", ""),
 ]
 
 
