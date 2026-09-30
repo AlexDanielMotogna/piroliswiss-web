@@ -558,12 +558,12 @@
     ],
     "photos": [
       {
-        "img": "bigbags",
-        "alt": "Filled big bags ready for dispatch"
-      },
-      {
         "img": "ExportacionYlogistica",
         "alt": "Truck carrying a 40 ft shipping container ready for loading"
+      },
+      {
+        "img": "07-operaciones/foto-5",
+        "alt": "Truck loaded with charcoal"
       }
     ]
   },

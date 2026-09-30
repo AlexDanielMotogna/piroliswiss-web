@@ -558,12 +558,12 @@
     ],
     "photos": [
       {
-        "img": "bigbags",
-        "alt": "Big bags cheios prontos para expedição"
-      },
-      {
         "img": "ExportacionYlogistica",
         "alt": "Caminhão com um contêiner marítimo de 40 pés pronto para o carregamento"
+      },
+      {
+        "img": "07-operaciones/foto-5",
+        "alt": "Caminhão carregado de carvão vegetal"
       }
     ]
   },
