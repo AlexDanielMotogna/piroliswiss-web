@@ -63,10 +63,6 @@ const crumb = ui.nav.find((n) => n.href === page)?.label ?? meta.label;
       <section class="band page-top">
         <div class="wrap">
           <SectionHead label={t.process.label} title={t.process.title} lede={t.process.lede} mutedLede={false} level={1} />
-          <figure class="proc-photo">
-            <Photo src={t.process.img} alt={t.process.alt} sizes="(max-width: 1240px) 100vw, 1200px" eager />
-            <figcaption>{t.process.caption}</figcaption>
-          </figure>
           <PyrolysisScale process={t.process} />
         </div>
       </section>

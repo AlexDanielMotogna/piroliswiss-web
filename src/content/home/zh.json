@@ -267,9 +267,6 @@
     "label": "工艺",
     "title": "每一个炭化周期，都有精确的温度与工艺控制。",
     "lede": "木材在封闭的干馏炉中通过受控热工艺炭化。每个阶段都由连接 Piroliswiss Control 的四个探头实时监测，确保每个周期的精度、效率和均匀性。",
-    "img": "06-retorta-vs-horno/retorta-render",
-    "alt": "金属干馏炉效果图",
-    "caption": "金属干馏炉 / 效果图",
     "ui": {
       "stage": "干馏炉内部 / 第 {n} 阶段，共 4 阶段",
       "chimney": "烟囱",
