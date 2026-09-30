@@ -267,6 +267,9 @@
     "label": "Process",
     "title": "Thermal precision and process control in every carbonisation cycle.",
     "lede": "Wood is carbonised in a closed retort through a controlled thermal process. Each stage is monitored in real time by four probes connected to Piroliswiss Control, ensuring precision, efficiency and uniformity in every cycle.",
+    "img": "06-retorta-vs-horno/retorta-render",
+    "alt": "Rendering of a metal retort kiln",
+    "caption": "Metal retort kiln / Rendering",
     "ui": {
       "stage": "Inside the retort / phase {n} of 4",
       "chimney": "Chimney",
@@ -383,7 +386,7 @@
         "text": "Logs are cut and prepared on site for loading into the retorts."
       },
       {
-        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "img": "06-retorta-vs-horno/retorta-render",
         "alt": "Metal retort kilns at the plant",
         "title": "Industrial carbonisation",
         "text": "Controlled pyrolysis in metal retorts.",
@@ -495,9 +498,9 @@
     ],
     "phases": [
       {
-        "img": "site",
-        "alt": "Site of the first plant",
-        "tag": "Plant 1 / In development",
+        "img": "08-escalabilidad/planta-1",
+        "alt": "Rendering of Plant 1 with retort kilns",
+        "tag": "Plant 1 / In development / Rendering",
         "planned": false,
         "title": "First plant",
         "lines": [

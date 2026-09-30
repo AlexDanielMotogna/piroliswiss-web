@@ -119,6 +119,9 @@ const home = defineCollection({
           label: text,
           title: text,
           lede: text,
+          img: imgKey,
+          alt: text,
+          caption: text,
           ui: z
             .object({
               stage: text, chimney: text, retort: text, condenser: text, acid: text,

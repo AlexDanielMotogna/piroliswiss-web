@@ -267,6 +267,9 @@
     "label": "Proceso",
     "title": "Precisión térmica y control de proceso en cada ciclo de carbonización.",
     "lede": "La madera se carboniza en una retorta cerrada mediante un proceso térmico controlado. Cada etapa es monitoreada en tiempo real por cuatro sondas conectadas a Piroliswiss Control, garantizando precisión, eficiencia y uniformidad en cada ciclo.",
+    "img": "06-retorta-vs-horno/retorta-render",
+    "alt": "Render de horno de retorta metálico",
+    "caption": "Horno de retorta metálico / Render",
     "ui": {
       "stage": "Interior de la retorta / fase {n} de 4",
       "chimney": "Chimenea",
@@ -383,7 +386,7 @@
         "text": "Los troncos se cortan y preparan en el sitio para cargar las retortas."
       },
       {
-        "img": "05-modelo-operativo/3-carbonizacion-industrial",
+        "img": "06-retorta-vs-horno/retorta-render",
         "alt": "Hornos metálicos de retorta en planta",
         "title": "Carbonización industrial",
         "text": "Pirólisis controlada en retortas metálicas.",
@@ -495,9 +498,9 @@
     ],
     "phases": [
       {
-        "img": "site",
-        "alt": "Sitio de la primera planta",
-        "tag": "Planta 1 / En desarrollo",
+        "img": "08-escalabilidad/planta-1",
+        "alt": "Render de la Planta 1 con hornos de retorta",
+        "tag": "Planta 1 / En desarrollo / Render",
         "planned": false,
         "title": "Primera planta",
         "lines": [

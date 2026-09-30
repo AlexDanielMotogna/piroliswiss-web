@@ -493,6 +493,10 @@ section.flush{padding-top:0}
 .compare figure{margin:0;display:grid;gap:10px}
 .compare figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
 .compare figcaption{font-family:var(--mono);font-size:12px;color:var(--slate)}
+/* process page: retort render between the heading and the diagram */
+.proc-photo{margin:clamp(24px,4vw,48px) 0 clamp(32px,5vw,64px);display:grid;gap:10px}
+.proc-photo img{aspect-ratio:3/2;object-fit:cover;width:100%;max-height:640px}
+.proc-photo figcaption{font-family:var(--mono);font-size:12px;color:var(--slate)}
 .compare .label{margin-bottom:18px}
 .compare .h-l{margin-bottom:36px;font-size:clamp(28px,3vw,46px)}
 .ctable-box{overflow-x:auto}
@@ -585,7 +589,7 @@ footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
 :lang(zh) .lede{max-width:28em}
 
 /* photos: 8px radius, no text over the image (owner request 2026-09-26) */
-.problem figure,.prod figure,.gauge img,.stg figure,.compare figure img,.strip figure,.phase figure,.person figure{border-radius:8px;overflow:hidden}
+.problem figure,.prod figure,.gauge img,.stg figure,.compare figure img,.proc-photo img,.strip figure,.phase figure,.person figure{border-radius:8px;overflow:hidden}
 /* phase status sits under the photo; renders keep their "Planned / Rendering" label */
 .phase-tag{margin-top:-6px;display:flex;align-items:center;gap:10px}
 .phase-tag.planned::before{content:"";width:8px;height:8px;background:var(--red);flex:none}
