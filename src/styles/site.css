@@ -586,6 +586,23 @@ footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
 :lang(zh) .label{font-size:13px}
 :lang(zh) .lede{max-width:28em}
 
+/* scrollbars: square, site colours; slate thumb that turns red on hover.
+   Chrome/Edge/Safari use ::-webkit-scrollbar, Firefox the standard properties. */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--paper-2)}
+::-webkit-scrollbar-thumb{background:var(--slate);border:2px solid var(--paper-2)}
+::-webkit-scrollbar-thumb:hover{background:var(--red)}
+::-webkit-scrollbar-corner{background:var(--paper-2)}
+.ctable-box::-webkit-scrollbar,.rt-drawing::-webkit-scrollbar{height:6px}
+.band ::-webkit-scrollbar-track,.band ::-webkit-scrollbar-corner{background:var(--band-2)}
+.band ::-webkit-scrollbar-thumb{background:var(--band-mute);border-color:var(--band-2)}
+.band ::-webkit-scrollbar-thumb:hover{background:var(--red)}
+@supports not selector(::-webkit-scrollbar){
+  html{scrollbar-color:var(--slate) var(--paper-2)}
+  .ctable-box,.rt-drawing{scrollbar-width:thin}
+  .band{scrollbar-color:var(--band-mute) var(--band-2)}
+}
+
 /* photos: 8px radius, no text over the image (owner request 2026-09-26) */
 .problem figure,.prod figure,.gauge img,.stg figure,.compare figure img,.strip figure,.phase figure,.person figure{border-radius:8px;overflow:hidden}
 /* phase status sits under the photo; renders keep their "Planned / Rendering" label */
