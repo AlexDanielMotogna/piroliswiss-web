@@ -349,6 +349,8 @@ section.flush{padding-top:0}
 .prod-index a+a{padding-left:16px;border-left:1px solid var(--rule)}
 .prod-index a:hover{color:var(--red)}
 .prod-index .label{color:var(--red)}
+/* number and name share a baseline (the label face sits lower than Geist when centred) */
+.prod-index .prod-name{display:flex;align-items:baseline;gap:14px}
 .prod{display:grid;grid-template-columns:5fr 7fr;gap:clamp(24px,4vw,72px);padding-block:clamp(40px,5vw,72px);border-top:1px solid var(--rule);scroll-margin-top:80px}
 /* every product photo gets the same 4:3 frame (max 560 px, the acid photo's native width),
    sticky beside the long spec column instead of stretching to its height */

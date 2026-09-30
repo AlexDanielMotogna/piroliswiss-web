@@ -50,7 +50,7 @@ const crumb = ui.nav.find((n) => n.href === page)?.label ?? meta.label;
         <SectionHead label={t.products.label} title={t.products.title} lede={t.products.lede} wide level={1} />
         <nav class="prod-index" aria-label={t.products.indexLabel}>
           {t.products.items.map((p, i) => (
-            <a href={`#${p.id}`}><span class="prod-thumb"><Photo src={p.indexImg} alt={p.indexAlt} sizes="96px" /></span><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</a>
+            <a href={`#${p.id}`}><span class="prod-thumb"><Photo src={p.indexImg} alt={p.indexAlt} sizes="96px" /></span><span class="prod-name"><span class="label">{String(i + 1).padStart(2, '0')}</span>{p.navLabel}</span></a>
           ))}
         </nav>
         {t.products.items.map((p, i) => <Product p={p} n={i + 1} locale={locale} />)}
