@@ -43,15 +43,6 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
   <Hero hero={t.hero} cta={ui.requestCta} locale={locale} />
   <SpecStrip plant={t.plant} />
 
-  <section class="why">
-    <div class="wrap">
-      <SectionHead label={t.why.label} title={t.why.title} />
-      <ol class="why-grid">
-        {t.why.items.map((w) => <li><h3>{w.title}</h3><p>{w.text}</p></li>)}
-      </ol>
-    </div>
-  </section>
-
   <AboutSection intro={co.intro} />
 
   <ProblemSolution problems={t.problems} />
@@ -69,6 +60,15 @@ const explore: { href: string; img: string; alt: string; label: string; title: s
         ))}
       </div>
       <p class="more-row"><a class="link" href={resolveHref('products', locale)}>{ui.more}</a></p>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <SectionHead label={t.why.label} title={t.why.title} />
+      <ol class="why-grid">
+        {t.why.items.map((w) => <li><h3>{w.title}</h3><p>{w.text}</p></li>)}
+      </ol>
     </div>
   </section>
 
