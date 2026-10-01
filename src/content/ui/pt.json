@@ -41,6 +41,13 @@
       "description": "Solicite uma cotação de carvão vegetal, ácido pirolenhoso ou briquetes de carvão. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolívia."
     }
   },
+  "consent": {
+    "text": "Usamos cookies do Google Analytics para saber quantas pessoas visitam o site e de onde. Elas só são ativadas se você aceitar.",
+    "accept": "Aceitar",
+    "reject": "Recusar",
+    "more": "Política de privacidade",
+    "label": "Aviso de cookies"
+  },
   "navLabel": "Principal",
   "menu": "Menu",
   "langLabel": "Idioma",

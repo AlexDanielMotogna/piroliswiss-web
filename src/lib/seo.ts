@@ -2,6 +2,9 @@
  * Structured data (schema.org JSON-LD) for search engines. Facts only, taken
  * from the company data shown on /empresa/ and the legal notice; not visible copy.
  */
+/** Google Analytics 4 measurement ID (stream https://www.piroliswiss.com, 2026-10-01). */
+export const GA_ID = 'G-9TN0VX7TGH';
+
 export const org = {
   name: 'Piroliswiss',
   legalName: 'Piroliswiss S.R.L.',

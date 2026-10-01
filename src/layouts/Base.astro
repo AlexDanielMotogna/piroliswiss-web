@@ -6,7 +6,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getImage } from 'astro:assets';
 import { img } from '../lib/images';
-import { jsonLd } from '../lib/seo';
+import { jsonLd, GA_ID } from '../lib/seo';
+import ConsentBanner from '../components/ConsentBanner.astro';
 import { locales, htmlLang, pagePath, hasPage, defaultLocale, type Locale, type PageKey } from '../i18n/locales';
 
 interface Props {
@@ -40,6 +41,17 @@ const ld = jsonLd({
 <html lang={htmlLang[locale]}>
   <head>
     <meta charset="utf-8" />
+    <!-- Google Analytics in consent mode: no analytics cookies until the visitor accepts (ConsentBanner) -->
+    <script is:inline define:vars={{ GA_ID }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+      try { if (localStorage.getItem('px-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    </script>
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -80,5 +92,6 @@ const ld = jsonLd({
       <slot />
     </main>
     <Footer ui={ui} locale={locale} />
+    <ConsentBanner ui={ui} locale={locale} />
   </body>
 </html>

@@ -1,0 +1,43 @@
+---
+/**
+ * Cookie notice for Google Analytics (2026-10-01). Analytics runs in Google
+ * consent mode: storage is denied until the visitor accepts here. The choice
+ * is kept in localStorage ("px-consent": granted | denied) and the bar only
+ * shows while there is none.
+ */
+import { pagePath, type Locale } from '../i18n/locales';
+import type { Ui } from '../lib/types';
+
+interface Props {
+  ui: Ui;
+  locale: Locale;
+}
+const { ui, locale } = Astro.props;
+const c = ui.consent;
+---
+<div class="consent" role="region" aria-label={c.label} hidden>
+  <div class="wrap">
+    <p>{c.text} <a href={pagePath('privacy', locale)}>{c.more}</a></p>
+    <div class="consent-actions">
+      <button type="button" class="btn ghost" data-consent="denied">{c.reject}</button>
+      <button type="button" class="btn" data-consent="granted">{c.accept}</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('.consent');
+  let stored: string | null = null;
+  try { stored = localStorage.getItem('px-consent'); } catch {}
+  if (bar && !stored) {
+    bar.hidden = false;
+    for (const b of bar.querySelectorAll<HTMLButtonElement>('[data-consent]')) {
+      b.addEventListener('click', () => {
+        const choice = b.dataset.consent!;
+        try { localStorage.setItem('px-consent', choice); } catch {}
+        if (choice === 'granted') (window as any).gtag?.('consent', 'update', { analytics_storage: 'granted' });
+        bar.hidden = true;
+      });
+    }
+  }
+</script>

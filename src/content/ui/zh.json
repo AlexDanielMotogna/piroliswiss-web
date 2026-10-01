@@ -41,6 +41,13 @@
       "description": "索取硬木木炭、木醋液或木炭压块报价。Piroliswiss S.R.L.，玻利维亚圣克鲁斯。"
     }
   },
+  "consent": {
+    "text": "我们使用 Google Analytics Cookie 了解网站的访问人数及访客来源。仅在您同意后才会启用。",
+    "accept": "接受",
+    "reject": "拒绝",
+    "more": "隐私政策",
+    "label": "Cookie 提示"
+  },
   "navLabel": "主导航",
   "menu": "菜单",
   "langLabel": "语言",

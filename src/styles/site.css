@@ -637,3 +637,14 @@ footer{padding-block:64px 40px;border-top:1px solid var(--rule)}
 .phase-tag.planned::before{content:"";width:8px;height:8px;background:var(--red);flex:none}
 
 @media (prefers-reduced-motion:reduce){.hero img{animation:none;transform:none}*{transition:none!important}}
+
+/* cookie notice (Google Analytics consent), fixed to the bottom edge */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);border-top:1px solid var(--rule)}
+.consent[hidden]{display:none}
+.consent .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px 32px;padding-block:16px;flex-wrap:wrap}
+.consent p{margin:0;font-size:14px;color:var(--slate);max-width:72ch}
+.consent p a{color:var(--ink)}
+.consent-actions{display:flex;gap:10px}
+.consent .btn{padding:11px 18px}
+.consent .btn.ghost{color:var(--ink)}
+.consent .btn.ghost:hover{background:var(--paper-2)}

@@ -41,6 +41,13 @@
       "description": "Request a quote for hardwood charcoal, pyroligneous acid or charcoal briquettes. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolivia."
     }
   },
+  "consent": {
+    "text": "We use Google Analytics cookies to learn how many people visit the site and where they come from. They are only set if you accept.",
+    "accept": "Accept",
+    "reject": "Decline",
+    "more": "Privacy policy",
+    "label": "Cookie notice"
+  },
   "navLabel": "Main",
   "menu": "Menu",
   "langLabel": "Language",

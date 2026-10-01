@@ -86,7 +86,8 @@
       {
         "title": "Cookie",
         "text": [
-          "本网站不使用 Cookie，也不使用任何分析或广告工具。"
+          "我们使用 Google Analytics（Google LLC）对访问情况进行汇总统计：浏览的页面、大致国家和城市、访问来源及设备类型。仅当您在 Cookie 提示中同意后，才会保存分析 Cookie。",
+        "如您拒绝，Google Analytics 不会在您的设备上保存 Cookie，只接收不含标识符的匿名信号。我们不使用广告 Cookie。您可以在浏览器中清除本网站数据以更改选择。"
         ]
       },
       {

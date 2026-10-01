@@ -50,6 +50,8 @@ const ui = defineCollection({
       skip: text,
       home: text,
       nav: z.array(link).length(5),
+      // cookie notice for Google Analytics (consent mode)
+      consent: z.object({ text: text, accept: text, reject: text, more: text, label: text }).strict(),
       // <title> and meta description of the inner pages (search results)
       seo: z.object({ products: z.object({ title: text, description: text }).strict(), process: z.object({ title: text, description: text }).strict(), export: z.object({ title: text, description: text }).strict(), contact: z.object({ title: text, description: text }).strict() }).strict(),
       navLabel: text,

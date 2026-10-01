@@ -41,6 +41,13 @@
       "description": "Solicite una cotización de carbón vegetal, ácido piroleñoso o briquetas de carbón. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolivia."
     }
   },
+  "consent": {
+    "text": "Usamos cookies de Google Analytics para saber cuántas personas visitan la web y desde dónde. Solo se activan si usted las acepta.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "more": "Política de privacidad",
+    "label": "Aviso de cookies"
+  },
   "navLabel": "Principal",
   "menu": "Menú",
   "langLabel": "Idioma",
