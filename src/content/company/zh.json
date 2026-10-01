@@ -31,18 +31,21 @@
         "name": "Frederico Zwald",
         "role": "创始人兼 CEO",
         "email": "fredericozwald@piroliswiss.com",
+        "linkedin": "https://www.linkedin.com/in/frederico-zwald-aa6618306/",
         "photo": "Frederico-Zwald"
       },
       {
         "name": "Christian Vargas",
         "role": "联合创始人兼 CFO",
         "email": "christianvargas@piroliswiss.com",
+        "linkedin": "https://www.linkedin.com/in/christian-vargas-gonzales-032857169/",
         "photo": "Christian-Vargas"
       },
       {
         "name": "Alex Motogna",
         "role": "联合创始人兼 CTO",
         "email": "alexdanielmotogna@piroliswiss.com",
+        "linkedin": "https://www.linkedin.com/in/alex-daniel-motogna-96a519137/",
         "photo": "Alex-Motogna"
       }
     ]

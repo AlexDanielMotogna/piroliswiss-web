@@ -23,6 +23,7 @@ const { team, facts } = Astro.props;
           <h3 class="h-m">{m.name}</h3>
           <p class="label">{m.role}</p>
           <a class="mail" href={`mailto:${m.email}`}>{m.email}</a>
+          {m.linkedin && <a class="mail" href={m.linkedin} target="_blank" rel="noopener">LinkedIn</a>}
         </li>
       ))}
     </ul>

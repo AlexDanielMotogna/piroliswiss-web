@@ -255,7 +255,7 @@ const company = defineCollection({
           label: text,
           title: text,
           photo: text,
-          members: z.array(z.object({ name: text, role: text, email: z.email(), photo: imgKey.optional() }).strict()).min(1),
+          members: z.array(z.object({ name: text, role: text, email: z.email(), linkedin: z.url().optional(), photo: imgKey.optional() }).strict()).min(1),
         })
         .strict(),
       facts: z.object({ label: text, rows: z.array(z.object({ k: text, ...cell.shape }).strict()) }).strict(),
