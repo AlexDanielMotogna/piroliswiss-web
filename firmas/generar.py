@@ -18,6 +18,7 @@ IMG = f"{SITE}/email"
 FONT = "Arial, Helvetica, sans-serif"
 INK, SLATE = "#1F2326", "#5F676C"
 LEAF = "#769B17"
+WORDMARK = "#28560E"  # "SWISS" in the logo lock-up
 
 # (slug, nombre, cargo, correo, teléfono)
 PEOPLE = [
@@ -50,7 +51,7 @@ def signature(slug: str, name: str, role: str, email: str, phone: str) -> str:
   <tr>
     <td style="padding:0 26px 0 0;vertical-align:middle;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr>
-        <td style="vertical-align:middle;font:700 22px/1 {FONT};letter-spacing:4px;color:{INK};white-space:nowrap;">PIROLI<span style="color:{LEAF};">SWISS</span></td>
+        <td style="vertical-align:middle;font:700 22px/1 {FONT};letter-spacing:4px;color:{INK};white-space:nowrap;">PIROLI<span style="color:{WORDMARK};">SWISS</span></td>
         <td style="padding:0 0 0 6px;vertical-align:middle;"><img src="{IMG}/flag.png" width="18" height="18" alt="" style="display:block;width:18px;height:18px;border:0;"></td>
       </tr></table>
     </td>
