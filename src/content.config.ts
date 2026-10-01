@@ -289,6 +289,9 @@ const fichas = defineCollection({
                       rows: z.array(z.object({ k: text, v: text }).strict()).optional(),
                       items: z.array(z.union([text, z.object({ k: text, v: text }).strict()])).optional(),
                       text: z.string().optional(),
+                      // distribution map: ISO 3166 numeric codes of the countries to highlight
+                      range: z.array(text).optional(),
+                      rangeCaption: z.string().optional(),
                     })
                     .strict(),
                 )

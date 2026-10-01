@@ -7,6 +7,7 @@
 import { getEntry } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import SectionHead from './SectionHead.astro';
+import RangeMap from './RangeMap.astro';
 
 const entry = await getEntry('fichas', 'es');
 if (!entry) throw new Error('Missing datasheet content');
@@ -35,7 +36,7 @@ const f = entry.data;
 
         <div class="ft-blocks">
           {s.blocks.map((b) => (
-            <div class="ft-block">
+            <div class:list={['ft-block', { 'ft-block-map': b.range }]}>
               {b.kind === 'table' && b.rows ? (
                 <table class="ft-table">
                   <caption class="label" style="text-align:left;caption-side:top;padding-bottom:14px">{b.title}</caption>
@@ -48,6 +49,7 @@ const f = entry.data;
                 <Fragment>
                   <h3 class="label">{b.title}</h3>
                   {b.kind === 'text' && <p class="ft-text" set:html={b.text} />}
+                  {b.range && <RangeMap range={b.range} caption={b.rangeCaption ?? b.title} />}
                   {b.kind === 'list' && (
                     <dl class="ft-list">
                       {b.items?.map((it) => typeof it === 'string' ? null : <div><dt>{it.k}</dt><dd set:html={it.v} /></div>)}

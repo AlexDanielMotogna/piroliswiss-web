@@ -1,0 +1,24 @@
+---
+/**
+ * World map with the countries where a species grows highlighted in leaf green
+ * (datasheets, owner request 2026-10-01). Paths are pre-projected in
+ * src/data/world-map.json (Natural Earth 1:110m, Natural Earth projection);
+ * `range` holds ISO 3166 numeric codes. Colours come from the tokens, so the
+ * map follows light and dark mode.
+ */
+import map from '../data/world-map.json';
+
+interface Props {
+  range: string[];
+  caption: string;
+}
+const { range, caption } = Astro.props;
+const on = new Set(range);
+const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Number(on.has(b.id)));
+---
+<figure class="range-map">
+  <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-label={caption}>
+    {countries.map((c) => <path d={c.d} class={on.has(c.id) ? 'on' : undefined}><title>{c.name}</title></path>)}
+  </svg>
+  <figcaption>{caption}</figcaption>
+</figure>

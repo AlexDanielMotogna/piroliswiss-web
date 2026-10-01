@@ -181,6 +181,14 @@ section.flush{padding-top:0}
 .ft-uses{font-size:16px;line-height:1.7;padding-top:11px;border-top:1px solid var(--rule)}
 .ft-source{margin-top:clamp(32px,4vw,48px);padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--slate)}
 .ft-source b{color:var(--ink);font-weight:600}
+/* distribution map: full row, grey land, leaf green where the species grows */
+.ft-block-map{grid-column:1/-1}
+.ft-block-map .ft-text{max-width:80ch}
+.range-map{margin:8px 0 0;display:grid;gap:10px}
+.range-map svg{display:block;width:100%;height:auto;max-width:1100px}
+.range-map path{fill:var(--rule);stroke:var(--paper);stroke-width:.5}
+.range-map path.on{fill:var(--leaf)}
+.range-map figcaption{font-family:var(--mono);font-size:12px;color:var(--slate)}
 @media (max-width:1000px){.ft-blocks{grid-template-columns:1fr}}
 @media (max-width:640px){.ft-index{grid-template-columns:1fr}.ft-index a+a{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
 

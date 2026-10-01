@@ -39,7 +39,9 @@
         {
           "title": "Área de distribución",
           "kind": "text",
-          "text": "Se encuentra en bosques que van desde subtropicales húmedos hasta secos y templados. En Bolivia se distribuye en los departamentos de Santa Cruz, Beni, Cochabamba, Chuquisaca, Tarija y La Paz."
+          "text": "Se encuentra en bosques que van desde subtropicales húmedos hasta secos y templados. En Bolivia se distribuye en los departamentos de Santa Cruz, Beni, Cochabamba, Chuquisaca, Tarija y La Paz.",
+          "range": ["032", "068", "076", "218", "600", "604"],
+          "rangeCaption": "Distribución natural: Argentina, Bolivia, Brasil, Ecuador, Paraguay y Perú"
         },
         {
           "title": "Descripción del árbol",
