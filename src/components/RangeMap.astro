@@ -2,23 +2,89 @@
 /**
  * World map with the countries where a species grows highlighted in leaf green
  * (datasheets, owner request 2026-10-01). Paths are pre-projected in
- * src/data/world-map.json (Natural Earth 1:110m, Natural Earth projection);
- * `range` holds ISO 3166 numeric codes. Colours come from the tokens, so the
- * map follows light and dark mode.
+ * src/data/world-map.json (Natural Earth 1:110m, Natural Earth projection,
+ * Spanish country names); `range` holds ISO 3166 numeric codes. Hovering or
+ * tapping a country shows its name, plus the range label and any per-country
+ * data from `data` (keyed by the same codes). Colours come from the tokens.
  */
 import map from '../data/world-map.json';
 
 interface Props {
   range: string[];
   caption: string;
+  status: string;
+  data?: Record<string, string>;
 }
-const { range, caption } = Astro.props;
+const { range, caption, status, data = {} } = Astro.props;
 const on = new Set(range);
 const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Number(on.has(b.id)));
 ---
 <figure class="range-map">
-  <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-label={caption}>
-    {countries.map((c) => <path d={c.d} class={on.has(c.id) ? 'on' : undefined}><title>{c.name}</title></path>)}
-  </svg>
+  <div class="range-stage">
+    <svg viewBox={`0 0 ${map.width} ${map.height}`} role="img" aria-label={caption}>
+      {countries.map((c) => (
+        <path
+          d={c.d}
+          class={on.has(c.id) ? 'on' : undefined}
+          data-name={c.name}
+          data-status={on.has(c.id) ? status : undefined}
+          data-info={data[c.id]}
+        />
+      ))}
+    </svg>
+    <div class="range-tip" role="status" hidden></div>
+  </div>
   <figcaption>{caption}</figcaption>
 </figure>
+
+<script>
+  for (const fig of document.querySelectorAll<HTMLElement>('.range-map')) {
+    const stage = fig.querySelector<HTMLElement>('.range-stage')!;
+    const tip = fig.querySelector<HTMLElement>('.range-tip')!;
+    let active: SVGPathElement | null = null;
+
+    const show = (path: SVGPathElement, x: number, y: number) => {
+      if (path !== active) {
+        active?.classList.remove('hot');
+        path.classList.add('hot');
+        active = path;
+        const { name = '', status, info } = path.dataset;
+        tip.replaceChildren();
+        const b = document.createElement('b');
+        b.textContent = name;
+        tip.append(b);
+        for (const line of [status, info]) {
+          if (!line) continue;
+          const s = document.createElement('span');
+          s.textContent = line;
+          tip.append(s);
+        }
+        tip.classList.toggle('on', !!status);
+        tip.hidden = false;
+      }
+      const r = stage.getBoundingClientRect();
+      const left = Math.min(x - r.left + 14, r.width - tip.offsetWidth);
+      const top = y - r.top - tip.offsetHeight - 12;
+      tip.style.left = `${Math.max(0, left)}px`;
+      tip.style.top = `${top < 0 ? y - r.top + 18 : top}px`;
+    };
+    const hide = () => {
+      active?.classList.remove('hot');
+      active = null;
+      tip.hidden = true;
+    };
+
+    stage.addEventListener('pointermove', (e) => {
+      const t = e.target;
+      if (t instanceof SVGPathElement) show(t, e.clientX, e.clientY);
+      else hide();
+    });
+    stage.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hide(); });
+    // touch: tap a country to show it, tap the sea to close
+    stage.addEventListener('click', (e) => {
+      const t = e.target;
+      if (t instanceof SVGPathElement) show(t, e.clientX, e.clientY);
+      else hide();
+    });
+  }
+</script>

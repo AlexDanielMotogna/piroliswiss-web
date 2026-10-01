@@ -49,7 +49,7 @@ const f = entry.data;
                 <Fragment>
                   <h3 class="label">{b.title}</h3>
                   {b.kind === 'text' && <p class="ft-text" set:html={b.text} />}
-                  {b.range && <RangeMap range={b.range} caption={b.rangeCaption ?? b.title} />}
+                  {b.range && <RangeMap range={b.range} caption={b.rangeCaption ?? b.title} status={b.rangeStatus ?? b.title} data={b.rangeData} />}
                   {b.kind === 'list' && (
                     <dl class="ft-list">
                       {b.items?.map((it) => typeof it === 'string' ? null : <div><dt>{it.k}</dt><dd set:html={it.v} /></div>)}
