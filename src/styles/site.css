@@ -181,6 +181,10 @@ section.flush{padding-top:0}
 .ft-uses{font-size:16px;line-height:1.7;padding-top:11px;border-top:1px solid var(--rule)}
 .ft-source{margin-top:clamp(32px,4vw,48px);padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--slate)}
 .ft-source b{color:var(--ink);font-weight:600}
+/* distribution map: Bolivia (home) in deep forest green, lighter in dark mode */
+.range-map{--olive-home:#2F420A;--olive-home-hot:#22300B}
+:root[data-theme="dark"] .range-map{--olive-home:#C9E27A;--olive-home-hot:#DDEFA3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .range-map{--olive-home:#C9E27A;--olive-home-hot:#DDEFA3}}
 /* distribution map: full row, grey land, leaf green where the species grows */
 .ft-block-map{grid-column:1/-1}
 .ft-block-map .ft-text{max-width:80ch}
@@ -190,6 +194,13 @@ section.flush{padding-top:0}
 .range-map path.on{fill:var(--leaf)}
 .range-map path.hot{fill:var(--slate)}
 .range-map path.on.hot{fill:var(--forest)}
+.range-map path.home{fill:var(--olive-home)}
+.range-map path.home.hot{fill:var(--olive-home-hot)}
+.range-tip.home{border-left-color:var(--olive-home)}
+.range-map figcaption{display:flex;flex-wrap:wrap;gap:6px 24px}
+.range-key{display:inline-flex;align-items:center;gap:8px}
+.range-key i{width:10px;height:10px;flex:none;background:var(--leaf)}
+.range-key i.sw-home{background:var(--olive-home)}
 .range-stage{position:relative}
 .range-tip{position:absolute;z-index:2;pointer-events:none;display:grid;gap:2px;max-width:240px;padding:8px 12px;background:var(--card);border:1px solid var(--rule);font-size:14px;line-height:1.35}
 .range-tip[hidden]{display:none}

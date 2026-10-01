@@ -5,7 +5,8 @@
  * src/data/world-map.json (Natural Earth 1:110m, Natural Earth projection,
  * Spanish country names); `range` holds ISO 3166 numeric codes. Hovering or
  * tapping a country shows its name, plus the range label and any per-country
- * data from `data` (keyed by the same codes). Colours come from the tokens.
+ * data from `data` (keyed by the same codes). `home` (Bolivia) gets its own
+ * colour and label. A legend under the map explains both colours.
  */
 import map from '../data/world-map.json';
 
@@ -14,10 +15,15 @@ interface Props {
   caption: string;
   status: string;
   data?: Record<string, string>;
+  home?: string;
+  homeLabel?: string;
 }
-const { range, caption, status, data = {} } = Astro.props;
+const { range, caption, status, data = {}, home, homeLabel } = Astro.props;
 const on = new Set(range);
-const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Number(on.has(b.id)));
+// highlighted countries last so their borders draw on top; home on top of all
+const rank = (id: string) => (id === home ? 2 : on.has(id) ? 1 : 0);
+const countries = [...map.countries].sort((a, b) => rank(a.id) - rank(b.id));
+const homeName = map.countries.find((c) => c.id === home)?.name;
 ---
 <figure class="range-map">
   <div class="range-stage">
@@ -25,8 +31,9 @@ const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Numbe
       {countries.map((c) => (
         <path
           d={c.d}
-          class={on.has(c.id) ? 'on' : undefined}
+          class:list={{ on: on.has(c.id), home: c.id === home }}
           data-name={c.name}
+          data-home={c.id === home ? homeLabel : undefined}
           data-status={on.has(c.id) ? status : undefined}
           data-info={data[c.id]}
         />
@@ -34,7 +41,10 @@ const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Numbe
     </svg>
     <div class="range-tip" role="status" hidden></div>
   </div>
-  <figcaption>{caption}</figcaption>
+  <figcaption>
+    <span class="range-key"><i class="sw-on"></i>{caption}</span>
+    {home && homeLabel && <span class="range-key"><i class="sw-home"></i>{homeName} / {homeLabel}</span>}
+  </figcaption>
 </figure>
 
 <script>
@@ -48,18 +58,19 @@ const countries = [...map.countries].sort((a, b) => Number(on.has(a.id)) - Numbe
         active?.classList.remove('hot');
         path.classList.add('hot');
         active = path;
-        const { name = '', status, info } = path.dataset;
+        const { name = '', home, status, info } = path.dataset;
         tip.replaceChildren();
         const b = document.createElement('b');
         b.textContent = name;
         tip.append(b);
-        for (const line of [status, info]) {
+        for (const line of [home, status, info]) {
           if (!line) continue;
           const s = document.createElement('span');
           s.textContent = line;
           tip.append(s);
         }
-        tip.classList.toggle('on', !!status);
+        tip.classList.toggle('on', !!(status || home));
+        tip.classList.toggle('home', path.classList.contains('home'));
         tip.hidden = false;
       }
       const r = stage.getBoundingClientRect();

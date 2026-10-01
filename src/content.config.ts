@@ -294,6 +294,8 @@ const fichas = defineCollection({
                       rangeCaption: z.string().optional(),
                       rangeStatus: z.string().optional(),
                       rangeData: z.record(z.string(), text).optional(),
+                      rangeHome: z.string().optional(),
+                      rangeHomeLabel: z.string().optional(),
                     })
                     .strict(),
                 )
