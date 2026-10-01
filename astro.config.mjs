@@ -19,8 +19,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: { defaultLocale: 'es', locales: { es: 'es', pt: 'pt-BR', en: 'en', zh: 'zh-Hans' } },
-      // redirect stubs are not real pages
-      filter: (page) => !/\/(maderas|trazabilidad|modelo-operativo|escalabilidad|madeiras|woods|rastreabilidade|modelo-operacional|escalabilidade|traceability|operating-model|scalability)\/$/.test(page),
+      // redirect stubs are not real pages; draft legal pages stay out of search (noindex)
+      filter: (page) => !/\/(maderas|trazabilidad|modelo-operativo|escalabilidad|madeiras|woods|rastreabilidade|modelo-operacional|escalabilidade|traceability|operating-model|scalability|aviso-legal|informacoes-legais|legal-notice|privacidad|privacidade|privacy)\/$/.test(page),
     }),
   ],
   // The woods page became /fichas-tecnicas/ (Spanish only).

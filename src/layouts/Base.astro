@@ -16,7 +16,7 @@ interface Props {
   description: string;
   /** Name of the page in the breadcrumb (inner pages only). */
   crumb?: string;
-  /** Error pages: no canonical, no alternates, not indexed. */
+  /** Error pages and draft legal pages: no canonical, no alternates, not indexed. */
   noindex?: boolean;
 }
 const { locale, page, title, description, crumb, noindex = false } = Astro.props;
