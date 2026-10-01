@@ -43,7 +43,7 @@ const meta = {
 // Breadcrumb/title: the menu label where the page is in the menu, otherwise the section label.
 const crumb = ui.nav.find((n) => n.href === page)?.label ?? meta.label;
 ---
-<Base locale={locale} page={page} title={`${crumb} | Piroliswiss`} description={meta.text} crumb={crumb}>
+<Base locale={locale} page={page} title={ui.seo[page].title} description={ui.seo[page].description} crumb={crumb}>
   {page === 'products' && (
     <section class="products page-top">
       <div class="wrap">

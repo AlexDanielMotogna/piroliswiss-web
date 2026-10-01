@@ -23,6 +23,24 @@
       "label": "公司"
     }
   ],
+  "seo": {
+    "products": {
+      "title": "硬木木炭、木醋液与木炭压块 | Piroliswiss",
+      "description": "来自玻利维亚的高品质硬木木炭（固定碳 80–85%）、木醋液与木炭压块。散装、吨袋及 5、10、30 公斤袋装。"
+    },
+    "process": {
+      "title": "金属干馏炉炭化工艺 | 工艺与质量 | Piroliswiss",
+      "description": "在金属干馏炉中以受控热解生产木炭，每座炉配四个探头实时监测温度。玻利维亚。"
+    },
+    "export": {
+      "title": "从玻利维亚出口木炭 | Piroliswiss",
+      "description": "我们从玻利维亚出口木炭、木醋液与木炭压块：散装、吨袋或袋装，附林业原产地证书（CFO）与 SENASAG 证书。"
+    },
+    "contact": {
+      "title": "木炭报价 | 联系我们 | Piroliswiss",
+      "description": "索取硬木木炭、木醋液或木炭压块报价。Piroliswiss S.R.L.，玻利维亚圣克鲁斯。"
+    }
+  },
   "navLabel": "主导航",
   "menu": "菜单",
   "langLabel": "语言",

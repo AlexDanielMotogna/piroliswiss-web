@@ -6,6 +6,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getImage } from 'astro:assets';
 import { img } from '../lib/images';
+import { jsonLd } from '../lib/seo';
 import { locales, htmlLang, pagePath, hasPage, defaultLocale, type Locale, type PageKey } from '../i18n/locales';
 
 interface Props {
@@ -25,6 +26,15 @@ const uiEntry = await getEntry('ui', locale);
 if (!uiEntry) throw new Error(`Missing ui content for locale "${locale}"`);
 const ui = uiEntry.data;
 const abs = (path: string) => new URL(path, Astro.site).href;
+const url = abs(pagePath(page, locale));
+const ld = jsonLd({
+  site: abs('/'),
+  url,
+  lang: htmlLang[locale],
+  description,
+  logo: abs('/icon-512.png'),
+  crumbs: crumb ? [{ name: ui.crumbHome, url: abs(pagePath('home', locale)) }, { name: crumb, url }] : undefined,
+});
 ---
 <!doctype html>
 <html lang={htmlLang[locale]}>
@@ -35,7 +45,9 @@ const abs = (path: string) => new URL(path, Astro.site).href;
     <meta name="description" content={description} />
     {noindex ? <meta name="robots" content="noindex" /> : (
       <Fragment>
-        <link rel="canonical" href={abs(pagePath(page, locale))} />
+        <link rel="canonical" href={url} />
+        <meta property="og:url" content={url} />
+        <script type="application/ld+json" set:html={ld} />
         {locales.filter((l) => hasPage(page, l)).map((l) => <link rel="alternate" hreflang={htmlLang[l]} href={abs(pagePath(page, l))} />)}
         <link rel="alternate" hreflang="x-default" href={abs(pagePath(page, defaultLocale))} />
       </Fragment>

@@ -23,6 +23,24 @@
       "label": "Empresa"
     }
   ],
+  "seo": {
+    "products": {
+      "title": "Carvão vegetal, ácido pirolenhoso e briquetes | Piroliswiss",
+      "description": "Carvão vegetal premium de madeira dura com 80–85 % de carbono fixo, ácido pirolenhoso e briquetes de carvão da Bolívia. A granel, big bags e sacos de 5, 10 e 30 kg."
+    },
+    "process": {
+      "title": "Carbonização em retortas metálicas | Processo | Piroliswiss",
+      "description": "Carvão vegetal produzido em retortas metálicas com pirólise controlada e monitoramento de temperatura em tempo real com quatro sondas por forno. Bolívia."
+    },
+    "export": {
+      "title": "Exportação de carvão vegetal da Bolívia | Piroliswiss",
+      "description": "Exportamos carvão vegetal, ácido pirolenhoso e briquetes da Bolívia: a granel, big bags ou sacos, com Certificado Florestal de Origem (CFO) e SENASAG."
+    },
+    "contact": {
+      "title": "Cotação de carvão vegetal | Contato | Piroliswiss",
+      "description": "Solicite uma cotação de carvão vegetal, ácido pirolenhoso ou briquetes de carvão. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolívia."
+    }
+  },
   "navLabel": "Principal",
   "menu": "Menu",
   "langLabel": "Idioma",

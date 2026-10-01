@@ -50,6 +50,8 @@ const ui = defineCollection({
       skip: text,
       home: text,
       nav: z.array(link).length(5),
+      // <title> and meta description of the inner pages (search results)
+      seo: z.object({ products: z.object({ title: text, description: text }).strict(), process: z.object({ title: text, description: text }).strict(), export: z.object({ title: text, description: text }).strict(), contact: z.object({ title: text, description: text }).strict() }).strict(),
       navLabel: text,
       menu: text,
       langLabel: text,

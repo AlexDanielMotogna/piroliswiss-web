@@ -23,6 +23,24 @@
       "label": "Company"
     }
   ],
+  "seo": {
+    "products": {
+      "title": "Lump charcoal, wood vinegar and briquettes | Piroliswiss",
+      "description": "Premium hardwood lump charcoal with 80–85 % fixed carbon, pyroligneous acid (wood vinegar) and charcoal briquettes from Bolivia. Bulk, big bags and 5, 10 and 30 kg bags."
+    },
+    "process": {
+      "title": "Carbonisation in metal retorts | Process | Piroliswiss",
+      "description": "Charcoal made in metal retorts with controlled pyrolysis and real-time temperature monitoring, four probes per kiln. Bolivia."
+    },
+    "export": {
+      "title": "Charcoal export from Bolivia | Piroliswiss",
+      "description": "We export lump charcoal, wood vinegar and briquettes from Bolivia: bulk, big bags or bags, with Forest Certificate of Origin (CFO) and SENASAG certificate."
+    },
+    "contact": {
+      "title": "Charcoal quote | Contact | Piroliswiss",
+      "description": "Request a quote for hardwood charcoal, pyroligneous acid or charcoal briquettes. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolivia."
+    }
+  },
   "navLabel": "Main",
   "menu": "Menu",
   "langLabel": "Language",

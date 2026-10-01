@@ -23,6 +23,24 @@
       "label": "Empresa"
     }
   ],
+  "seo": {
+    "products": {
+      "title": "Carbón vegetal, ácido piroleñoso y briquetas | Piroliswiss",
+      "description": "Carbón vegetal premium de maderas duras con 80–85 % de carbono fijo, ácido piroleñoso y briquetas de carbón de Bolivia. A granel, big bags y bolsas de 5, 10 y 30 kg."
+    },
+    "process": {
+      "title": "Carbonización en retortas metálicas | Proceso | Piroliswiss",
+      "description": "Carbón vegetal producido en retortas metálicas con pirólisis controlada y monitoreo de temperatura en tiempo real con cuatro sondas por horno. Bolivia."
+    },
+    "export": {
+      "title": "Exportación de carbón vegetal desde Bolivia | Piroliswiss",
+      "description": "Exportamos carbón vegetal, ácido piroleñoso y briquetas desde Bolivia: a granel, big bags o bolsas, con Certificado Forestal de Origen (CFO) y SENASAG."
+    },
+    "contact": {
+      "title": "Cotización de carbón vegetal | Contacto | Piroliswiss",
+      "description": "Solicite una cotización de carbón vegetal, ácido piroleñoso o briquetas de carbón. Piroliswiss S.R.L., Santa Cruz de la Sierra, Bolivia."
+    }
+  },
   "navLabel": "Principal",
   "menu": "Menú",
   "langLabel": "Idioma",
