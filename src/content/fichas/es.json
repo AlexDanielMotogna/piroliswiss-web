@@ -255,7 +255,12 @@
         {
           "title": "Área de distribución",
           "kind": "text",
-          "text": "Se encuentra en bosque seco templado, en los departamentos de Tarija, La Paz, Chuquisaca y Santa Cruz, Bolivia. Es considerada una especie escasa y está clasificada dentro del grupo comercial de especies valiosas."
+          "text": "Se encuentra en bosque seco templado, en los departamentos de Tarija, La Paz, Chuquisaca y Santa Cruz, Bolivia. Es considerada una especie escasa y está clasificada dentro del grupo comercial de especies valiosas.",
+          "range": ["032", "068", "600"],
+          "rangeCaption": "Distribución natural: Argentina, Bolivia y Paraguay (Gran Chaco)",
+          "rangeStatus": "Distribución natural del quebracho colorado",
+          "rangeHome": "068",
+          "rangeHomeLabel": "Sede de Piroliswiss"
         },
         {
           "title": "Descripción del árbol",
