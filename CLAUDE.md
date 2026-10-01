@@ -14,7 +14,7 @@ Corporate B2B site for Piroliswiss S.R.L. (Santa Cruz de la Sierra, Bolivia): pr
 - Images through `astro:assets` (AVIF/WebP, responsive `srcset`).
 
 ## Deploy (Railway)
-- Static pages plus one on-demand route, `/api/contact` (Node adapter, standalone). Build: `npm run build`. Start: `npm start` (`node ./dist/server/entry.mjs`; Railway sets PORT).
+- Static pages plus one on-demand route, `/api/contact` (Node adapter, standalone). Build: `npm run build`. Start: `npm start` (`node ./server.mjs`: wraps the Astro standalone handler and 301-redirects www.piroliswiss.com to piroliswiss.com; Railway sets PORT).
 - Contact form e-mail by SMTP. Railway variables: `SMTP_HOST`, `SMTP_PORT` (465 or 587), `SMTP_USER`, `SMTP_PASS`, optional `SMTP_SECURE`, `MAIL_FROM` (default SMTP_USER), `MAIL_TO` (default sales@piroliswiss.com), `SITE_URL` (https://piroliswiss.com once the domain points here). Local test without sending: `MAIL_TRANSPORT=json npm start` logs the e-mail.
 - Each request sends two e-mails: to sales@ (sender name "<company> vía web", Reply-To the customer) and a fixed-text confirmation to the customer in their language (Reply-To sales@; never echoes what the visitor typed, so the form cannot relay spam). `MAIL_CONFIRM=false` turns the confirmation off.
 - Without SMTP the form answers "could not send" and tells visitors to write to sales@.
