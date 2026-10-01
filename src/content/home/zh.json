@@ -152,7 +152,7 @@
         "app": "致密、燃烧稳定的烧烤与餐饮燃料，以及用于钢铁冶炼的工业木炭。",
         "cta": "索取产品规格书",
         "woodsLink": "木材技术资料",
-        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal-icono",
         "indexAlt": "块状木炭"
       },
       {
@@ -258,7 +258,7 @@
             "v": "95 吨 / 月"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexImg": "03-un-proceso-tres-productos/briquetas-icono",
         "indexAlt": "木炭压块"
       }
     ]

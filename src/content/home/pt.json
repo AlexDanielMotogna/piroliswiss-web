@@ -152,7 +152,7 @@
         "app": "Combustível denso e de queima estável para churrasco e gastronomia, e carvão industrial para a siderurgia.",
         "cta": "Solicitar a ficha técnica",
         "woodsLink": "Ficha técnica das madeiras",
-        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal-icono",
         "indexAlt": "Pedaços de carvão vegetal"
       },
       {
@@ -258,7 +258,7 @@
             "v": "95 t / mês"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexImg": "03-un-proceso-tres-productos/briquetas-icono",
         "indexAlt": "Briquetes de carvão"
       }
     ]

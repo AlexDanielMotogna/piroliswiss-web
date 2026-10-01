@@ -152,7 +152,7 @@
         "app": "Dense, steady-burning fuel for grilling and gastronomy, and industrial charcoal for steelmaking.",
         "cta": "Request the datasheet",
         "woodsLink": "Wood datasheets",
-        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal-icono",
         "indexAlt": "Pieces of charcoal"
       },
       {
@@ -258,7 +258,7 @@
             "v": "95 t / month"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexImg": "03-un-proceso-tres-productos/briquetas-icono",
         "indexAlt": "Charcoal briquettes"
       }
     ]

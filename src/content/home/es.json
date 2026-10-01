@@ -152,7 +152,7 @@
         "app": "Combustible denso y de combustión estable para parrilla y gastronomía, y carbón industrial para la siderurgia.",
         "cta": "Solicitar la ficha técnica",
         "woodsLink": "Fichas técnicas de las maderas",
-        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal",
+        "indexImg": "03-un-proceso-tres-productos/carbon-vegetal-icono",
         "indexAlt": "Trozos de carbón vegetal"
       },
       {
@@ -258,7 +258,7 @@
             "v": "95 t / mes"
           }
         ],
-        "indexImg": "03-un-proceso-tres-productos/briquetas-de-carbon",
+        "indexImg": "03-un-proceso-tres-productos/briquetas-icono",
         "indexAlt": "Briquetas de carbón"
       }
     ]
