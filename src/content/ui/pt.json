@@ -7,6 +7,10 @@
       "label": "Produtos"
     },
     {
+      "href": "fichas",
+      "label": "Fichas técnicas"
+    },
+    {
       "href": "process",
       "label": "Processo e qualidade"
     },

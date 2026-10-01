@@ -7,6 +7,10 @@
       "label": "产品"
     },
     {
+      "href": "fichas",
+      "label": "技术资料"
+    },
+    {
       "href": "process",
       "label": "工艺与质量"
     },

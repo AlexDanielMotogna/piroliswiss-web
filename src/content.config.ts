@@ -49,7 +49,7 @@ const ui = defineCollection({
     .object({
       skip: text,
       home: text,
-      nav: z.array(link).length(4),
+      nav: z.array(link).length(5),
       navLabel: text,
       menu: text,
       langLabel: text,
