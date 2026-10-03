@@ -483,7 +483,7 @@ section.flush{padding-top:0}
 .shots{display:grid;gap:14px;min-width:0}
 .shots>*{min-width:0}
 /* the mockups are exported on white, so the track is a white panel */
-.shots-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-radius:8px;background:#fff}
+.shots-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;border-radius:8px;background:transparent}
 .shots-track::-webkit-scrollbar{display:none}
 .shots-track:focus-visible{outline:2px solid var(--ember);outline-offset:4px}
 .shot{position:relative;flex:0 0 100%;margin:0;aspect-ratio:16/10;scroll-snap-align:start}
