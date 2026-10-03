@@ -10,7 +10,8 @@
 @font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;size-adjust:128%;src:url("/fonts/barlow-condensed-latin-ext-500-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 
 :root{
-  --paper:#E7E9E6; --paper-2:#DCDFDB; --ink:#15181A; --slate:#586166; --rule:#C3C8C4;
+  /* white page (owner request 2026-10-04); paper-2 is the light grey for alternate bands */
+  --paper:#FFFFFF; --paper-2:#F2F3F1; --ink:#15181A; --slate:#586166; --rule:#D5D9D5;
   /* brand, sampled from the logo: flag red and leaf green */
   --red:#D40000; --red-2:#A80000; --leaf:#769B17;
   --forest:#4A650D; --forest-2:#6A8C14; --ember:#D4521C;
@@ -18,7 +19,7 @@
   --wordmark:#28560E;
   --olive:#22300B; --olive-fg:#EEF2E4; --olive-mute:#A9B98A; --olive-rule:rgba(238,242,228,.16);
   --band:#0F130B; --band-2:#1A2013; --band-fg:#E4E7E4; --band-mute:#8D9699; --band-rule:#2C3235;
-  --field:#F2F3F1; --card:#FFFFFF;
+  --field:#F4F5F3; --card:#FFFFFF;
   --cjk:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC";
   --display:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
   --sans:"Geist","Helvetica Neue",Arial,var(--cjk),sans-serif;
