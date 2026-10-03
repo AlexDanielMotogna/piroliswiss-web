@@ -18,6 +18,13 @@ export const org = {
   languages: ['es', 'pt', 'en', 'zh'],
 };
 
+/** Founders (team on /empresa/), so search engines link the company to its people. */
+export const founders = [
+  { id: 'frederico-zwald', name: 'Frederico Zwald', jobTitle: 'Founder & CEO', linkedin: 'https://www.linkedin.com/in/frederico-zwald-aa6618306/' },
+  { id: 'christian-vargas', name: 'Christian Vargas', jobTitle: 'Co-Founder & CFO', linkedin: 'https://www.linkedin.com/in/christian-vargas-gonzales-032857169/' },
+  { id: 'alex-motogna', name: 'Alex Motogna', jobTitle: 'Co-Founder & CTO', linkedin: 'https://www.linkedin.com/in/alex-daniel-motogna-96a519137/' },
+];
+
 interface Crumb { name: string; url: string }
 
 export function jsonLd(opts: { site: string; url: string; lang: string; description: string; logo: string; crumbs?: Crumb[] }) {
@@ -34,7 +41,16 @@ export function jsonLd(opts: { site: string; url: string; lang: string; descript
       description: opts.description,
       address: { '@type': 'PostalAddress', ...org.address },
       contactPoint: [{ '@type': 'ContactPoint', contactType: 'sales', email: org.email, availableLanguage: org.languages }],
+      founder: founders.map((f) => ({ '@id': `${opts.site}#${f.id}` })),
     },
+    ...founders.map((f) => ({
+      '@type': 'Person',
+      '@id': `${opts.site}#${f.id}`,
+      name: f.name,
+      jobTitle: f.jobTitle,
+      worksFor: { '@id': orgId },
+      sameAs: [f.linkedin],
+    })),
     {
       '@type': 'WebSite',
       '@id': `${opts.site}#website`,
